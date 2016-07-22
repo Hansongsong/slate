@@ -91,7 +91,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;curl&quot;,&quot;php&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;,&quot;nodejs&quot;]">
+  <body class="index" data-languages="[&quot;Curl&quot;,&quot;Php&quot;,&quot;Java&quot;,&quot;Ruby&quot;,&quot;Node.js&quot;,&quot;Python&quot;,&quot;Go&quot;,&quot;C#&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -101,12 +101,14 @@
     <div class="tocify-wrapper">
       <img src="images/logo.png" />
         <div class="lang-selector">
-              <a href="#" data-language-name="curl">curl</a>
-              <a href="#" data-language-name="php">php</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
-              <a href="#" data-language-name="nodejs">nodejs</a>
+              <a href="#" data-language-name="Curl">Curl</a>
+              <a href="#" data-language-name="Php">Php</a>
+              <a href="#" data-language-name="Java">Java</a>
+              <a href="#" data-language-name="Ruby">Ruby</a>
+              <a href="#" data-language-name="Node.js">Node.js</a>
+              <a href="#" data-language-name="Python">Python</a>
+              <a href="#" data-language-name="Go">Go</a>
+              <a href="#" data-language-name="C#">C#</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -115,20 +117,32 @@
       <div id="toc">
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='#'>测 试 页 面</a></li>
             <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="introduction">Introduction</h1>
+        <h1 id="api">API文档介绍</h1>
 
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Ping++ API 采用 REST 风格设计。所有接口请求地址都是可预期的以及面向资源的。使用规范的 HTTP 响应代码来表示请求结果的正确或错误信息。使用 HTTP 内置的特性，如 HTTP Authentication 和 HTTP 请求方法让接口易于理解。所有的 API 请求都会以规范友好的 JSON 对象格式返回（包括错误信息）。</p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<blockquote>
+<p>To test, I try to use this code:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Curl:Ping++ API 主站地址：https://api.pingxx.com
+</code></pre>
+<pre class="highlight plaintext"><code>Php:Ping++ API 主站地址：https://api.pingxx.com
+</code></pre>
+<pre class="highlight plaintext"><code>Java:Ping++ API 主站地址：https://api.pingxx.com
+</code></pre>
+<pre class="highlight plaintext"><code>Ruby:Ping++ API 主站地址：https://api.pingxx.com
+</code></pre>
 
-<p>This example API documentation page was created with <a href="https://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&rsquo;s documentation.</p>
+<h1 id="pagination">Pagination 分页机制</h1>
+
+<p>所有的 Ping++ 资源都可以被 list API 方法支持，例如分页 charges 和 refunds。这些 list API 方法拥有相同的数据结构。Ping++ 是基于 cursor 的分页机制，使用参数 starting_after 来决定列表从何处开始。</p>
 
 <h1 id="authentication">Authentication</h1>
 
@@ -169,23 +183,23 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 <h1 id="kittens">Kittens</h1>
 
 <h2 id="get-all-kittens">Get All Kittens</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<pre class="highlight plaintext"><code>require 'kittn'
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get
 </code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<pre class="highlight plaintext"><code>import kittn
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get()
 </code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
+<pre class="highlight plaintext"><code>curl "http://example.com/api/kittens"
+  -H "Authorization: meowmeowmeow"
 </code></pre>
-<pre class="highlight javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<pre class="highlight plaintext"><code>const kittn = require('kittn');
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+let api = kittn.authorize('meowmeowmeow');
+let kittens = api.kittens.get();
 </code></pre>
 
 <blockquote>
@@ -211,7 +225,7 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 <p>This endpoint retrieves all kittens.</p>
 
-<h3 id="http-request">HTTP Request</h3>
+<h3 id="http-request">HTTP Request他</h3>
 
 <p><code class="prettyprint">GET http://example.com/api/kittens</code></p>
 
@@ -294,6 +308,35 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </tbody></table>
 
+<h1 id="chagres">Chagres支付</h1>
+<pre class="highlight plaintext"><code>require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get
+</code></pre>
+
+<h3 id="www">www参数（三级标题 貌似不支持纯中文）</h3>
+
+<p>所有和支付相关的要素信息都存储在 charge 这个对象中，你可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个支付对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。</p>
+
+<p>表格 有待优化的说</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>description</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>支付对象 id ，由 Ping++ 生成，27 位长度字符串。</td>
+<td>√</td>
+</tr>
+</tbody></table>
+
           <h1 id="errors">Errors</h1>
 
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
@@ -352,15 +395,75 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </tbody></table>
 
+          <h1 id="test">Test</h1>
+
+<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request &ndash; Your request sucks</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized &ndash; Your API key is wrong</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found &ndash; The specified kitten could not be found</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone &ndash; The kitten requested has been removed from our servers</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&rsquo;m a teapot</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>5012913</td>
+<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
+</tr>
+</tbody></table>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="curl">curl</a>
-                <a href="#" data-language-name="php">php</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
-                <a href="#" data-language-name="nodejs">nodejs</a>
+                <a href="#" data-language-name="Curl">Curl</a>
+                <a href="#" data-language-name="Php">Php</a>
+                <a href="#" data-language-name="Java">Java</a>
+                <a href="#" data-language-name="Ruby">Ruby</a>
+                <a href="#" data-language-name="Node.js">Node.js</a>
+                <a href="#" data-language-name="Python">Python</a>
+                <a href="#" data-language-name="Go">Go</a>
+                <a href="#" data-language-name="C#">C#</a>
           </div>
       </div>
     </div>
