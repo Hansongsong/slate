@@ -2,30 +2,46 @@
 title: API Songsong Test
 
 language_tabs:
-  - curl
-  - php
-  - ruby
-  - python
-  - javascript
-  - nodejs
+  - Curl
+  - Php
+  - Java
+  - Ruby
+  - Node.js
+  - Python
+  - Go
+  - C#
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='#'>测 试 页 面</a>
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
   - errors
-
+  - Test
 search: true
 ---
 
-# Introduction
+# API文档介绍
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Ping++ API 采用 REST 风格设计。所有接口请求地址都是可预期的以及面向资源的。使用规范的 HTTP 响应代码来表示请求结果的正确或错误信息。使用 HTTP 内置的特性，如 HTTP Authentication 和 HTTP 请求方法让接口易于理解。所有的 API 请求都会以规范友好的 JSON 对象格式返回（包括错误信息）。
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+> To test, I try to use this code:
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+```Curl
+Curl:Ping++ API 主站地址：https://api.pingxx.com
+```
+```Php
+Php:Ping++ API 主站地址：https://api.pingxx.com
+```
+```Java
+Java:Ping++ API 主站地址：https://api.pingxx.com
+```
+```Ruby
+Ruby:Ping++ API 主站地址：https://api.pingxx.com
+```
+# Pagination 分页机制
+
+所有的 Ping++ 资源都可以被 list API 方法支持，例如分页 charges 和 refunds。这些 list API 方法拥有相同的数据结构。Ping++ 是基于 cursor 的分页机制，使用参数 starting_after 来决定列表从何处开始。
 
 # Authentication
 
@@ -71,26 +87,26 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 ## Get All Kittens
 
-```ruby
+```Curl
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 api.kittens.get
 ```
 
-```python
+```Php
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
 api.kittens.get()
 ```
 
-```shell
+```Java
 curl "http://example.com/api/kittens"
   -H "Authorization: meowmeowmeow"
 ```
 
-```javascript
+```Ruby
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
@@ -120,7 +136,7 @@ let kittens = api.kittens.get();
 
 This endpoint retrieves all kittens.
 
-### HTTP Request
+### HTTP Request他
 
 `GET http://example.com/api/kittens`
 
@@ -188,4 +204,26 @@ This endpoint retrieves a specific kitten.
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to retrieve
+
+# Chagres支付
+
+
+```Curl
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get
+```
+### www参数（三级标题 貌似不支持纯中文）
+
+所有和支付相关的要素信息都存储在 charge 这个对象中，你可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个支付对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。
+
+表格 有待优化的说
+
+Parameter | Type |  description | 是否必须
+--------- | ---- |  ---------------- | --------
+id | string | 支付对象 id ，由 Ping++ 生成，27 位长度字符串。| √
+
+
+
 
