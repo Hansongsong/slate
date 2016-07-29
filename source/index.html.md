@@ -43,6 +43,26 @@ Ruby:Ping++ API 主站地址：https://api.pingxx.com
 
 所有的 Ping++ 资源都可以被 list API 方法支持，例如分页 charges 和 refunds。这些 list API 方法拥有相同的数据结构。Ping++ 是基于 cursor 的分页机制，使用参数 starting_after 来决定列表从何处开始。
 
+###参数
+参数 | 类型 |描述 | 是否必须
+---- | ---- |---- | ----
+limit | int | 限制有多少对象可以被返回，限制范围是从 1-100 项，默认是 10 项。 |**optional**
+starting_after | obj| 在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 `id` 是 `obj_end`，你可以使用 `starting_after` = `obj_end` 去获取下一页。|**optional**
+ending_before | obj | 在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的最后一项的 `id` 是 `obj_start`，你可以使用 `ending_before` = `obj_start` 去获取上一页。|**optional** 
+created | timestamp | 对象的创建时间，用 Unix 时间戳表示。具体参考[created参数说明](链接)|**optional**
+###created参数说明
+参数 | 描述 | 是否必须
+---- |---- | ----
+created[gt] | 大于 charge 对象的创建时间，用 Unix 时间戳表示。|**optional**
+created[gte] | 大于或等于 charge 对象的创建时间，用 Unix 时间戳表示。|**optional**
+created[lt] | 小于 charge 对象的创建时间，用 Unix 时间戳表示。|**optional**
+created[lte] | 小于或等于 charge 对象的创建时间，用 Unix 时间戳表示。|**optional**
+
+###返回
+参数 | 类型 |描述 
+---- | ---- |----
+object | string|值为list
+
 # Authentication
 
 > To authorize, use this code:
