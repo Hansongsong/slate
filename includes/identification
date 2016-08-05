@@ -1,4 +1,4 @@
-<h1 id="2">2身份证银行卡信息认证接口</h1>
+<h1 id="ssss">身份证银行卡信息认证接口ssss</h1>
 
 <p>根据姓名、身份证、银行卡、手机号码，检测信息是否匹配。</p>
 
@@ -28,7 +28,7 @@
 </tr>
 <tr>
 <td>result_code</td>
-<td>返回码 详情参照API文档附录的认证接口result_code说明。</td>
+<td>返回码 详情参照API文档附录的<a href="https://www.pingxx.com/document/api#api-appendix-3">认证接口result_code说明</a>。</td>
 <td><strong>int</strong></td>
 </tr>
 <tr>
@@ -146,28 +146,28 @@
 <tr>
 <th>参数</th>
 <th>描述</th>
-<th>类型</th>
+<th>是否必须</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>id_name</td>
 <td>身份证姓名(1~16位)</td>
-<td><strong>string</strong></td>
+<td><strong>required</strong></td>
 </tr>
 <tr>
 <td>id_number</td>
 <td>身份证号码(15位或18位)</td>
-<td><strong>string</strong></td>
+<td><strong>required</strong></td>
 </tr>
 <tr>
 <td>card_number</td>
 <td>银行卡号(12～19位) 仅在type参数为bankcard的时候必需要传此参数</td>
-<td><strong>string</strong></td>
+<td><strong>required</strong></td>
 </tr>
 <tr>
 <td>phone_number</td>
 <td>手机号(11位) 仅在type参数为bankcard的时候可以选择是否传此参数，暂不支持178开头的手机号</td>
-<td><strong>string</strong></td>
+<td><strong>optional</strong></td>
 </tr>
 </tbody></table>
 

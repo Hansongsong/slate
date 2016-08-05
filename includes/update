@@ -1,0 +1,70 @@
+<h1 id="api">API更新</h1>
+
+<h3 id="2016-08-03">2016-08-03</h3>
+
+<ol>
+<li>新增 <code class="prettyprint">alipay_wap</code> 渠道extra字段 <code class="prettyprint">app_pay</code> 参数，用于判断是否使用支付宝客户端支付；修改 <code class="prettyprint">cancel_url</code> 参数说明，当 <code class="prettyprint">app_pay</code> 为true时，<code class="prettyprint">cancel_url</code> 字段无效，接入规则参考<a href="https://www.pingxx.com/document/api#api-charges">API文档</a>。</li>
+<li>修改招行一网通extra字段参数说明，<code class="prettyprint">p_no</code>, <code class="prettyprint">seq</code>, <code class="prettyprint">m_uid</code>, <code class="prettyprint">mobile</code> 这几个参数决定是否签约，传同样的参数，就不会重新签约,具体请参考<a href="https://www.pingxx.com/document/api#api-charges">API文档</a>。</li>
+<li>新增 <code class="prettyprint">jdpay_wap</code> 渠道extra字段 <code class="prettyprint">order_type</code> 和 <code class="prettyprint">is_mobile</code> 参数，接入规则请参考<a href="https://www.pingxx.com/document/api#api-charges">API文档</a>。</li>
+</ol>
+
+<h3 id="2016-07-27">2016-07-27</h3>
+
+<ol>
+<li>身份证银行卡信息认证接口更新phone_number参数，添加说明：暂不支持178开头的手机号，请参考<a href="https://www.pingxx.com/document/api#api-identification">API文档</a>。</li>
+<li>身份证银行卡信息认证接口添加php，ruby对应SDK请求示例和返回示例，接入规则请参考<a href="https://www.pingxx.com/document/api#api-i-new">API文档</a>。</li>
+</ol>
+
+<h3 id="2016-07-20">2016-07-20</h3>
+
+<ol>
+<li>新增 <strong>更新 Transfer 对象接口</strong>：接入规则请参考<a href="https://www.pingxx.com/document/api#api-update-transfer">API文档</a>；</li>
+<li>修改 Customer 对象，Card 对象请求参数：添加<code class="prettyprint">sms_code[id]</code> 和 <code class="prettyprint">sms_code[code]</code> 参数,修改 Customer 对象 和 Card 对象请求示例，请参考<a href="https://www.pingxx.com/document/api#api-customer-new">API文档</a>。</li>
+</ol>
+
+<h3 id="2016-07-13">2016-07-13</h3>
+
+<ol>
+<li>新增支付渠道： 微信WAP支付 <code class="prettyprint">wx_wap</code> ，接入规则请参考 <a href="https://www.pingxx.com/document/api#api-charges">API 文档</a>；使用该渠道，需更新客户端 SDK ，请参考 <a href="https://github.com/PingPlusPlus/pingpp-js">pingpp-js</a>；</li>
+<li>修改 <strong>身份证银行卡信息认证接口</strong>参数：<code class="prettyprint">app_id</code> 改成 <code class="prettyprint">app</code>、<code class="prettyprint">idcard</code> 改成 <code class="prettyprint">id_card</code>、<code class="prettyprint">bankcard</code> 改成 <code class="prettyprint">bank_card</code>、<code class="prettyprint">user_name</code> 改成 <code class="prettyprint">id_name</code>，接入规则请参考 <a href="https://www.pingxx.com/document/api#api-identification">API 文档</a>；</li>
+<li>修改 <strong>报关接口</strong>参数：<code class="prettyprint">app_id</code> 改成 <code class="prettyprint">app</code>，接入规则请参考 <a href="https://www.pingxx.com/document/api#api-customs">API 文档</a>。</li>
+</ol>
+
+<h3 id="2016-07-06">2016-07-06</h3>
+
+<ol>
+<li>新增 <strong>报关接口</strong>，接入规则请参考 <a href="https://www.pingxx.com/document/api#api-customs">API 文档</a>；</li>
+<li>新增 <strong>企业付款（银行卡）接口</strong>，接入规则请参考 <a href="https://www.pingxx.com/document/api#api-transfer">API 文档</a>。</li>
+</ol>
+
+<h3 id="2016-06-30">2016-06-30</h3>
+
+<ol>
+<li>新增支付渠道： 招行一网通 <code class="prettyprint">cmb_wallet</code> ，接入规则请参考 <a href="https://www.pingxx.com/api#api-charges">API 文档</a> ；</li>
+<li>新增 <strong>身份证银行卡信息认证接口</strong> ，接口规则请参考 <a href="https://www.pingxx.com/document/api#api-identification">API 文档</a>。</li>
+</ol>
+
+<h3 id="2016-06-22">2016-06-22</h3>
+
+<p>退款 Refund 对象中增加商户订单号 <code class="prettyprint">charge_order_no</code> 字段，请求退款之后会在返回的 Refund 中带回付款订单的的商户订单号，详情参考 <a href="https://www.pingxx.com/api#api-refunds">API 文档</a>。</p>
+
+<h3 id="2016-06-16">2016-06-16</h3>
+
+<p>升级支付宝手机网站（alipay_wap）支付接口，针对已经接入旧接口的用户请在 3 个月内更新成新接口。旧接口的用户更新只需要三步：
+- 更新客户端 <a href="https://github.com/PingPlusPlus/pingpp-js">H5 SDK</a>；
+- 在服务端请求中增加额外的请求字段 <code class="prettyprint">new_version</code> ，详细步骤请参照 <a href="https://help.pingxx.com/article/174737">alipay_wap 接口更新说明</a>；
+- 更新 Ping++ 管理平台上的支付宝手机网站支付的渠道参数，更新成支付宝的 <strong>合作伙伴密钥</strong> 对应的参数，详情参考<a href="https://help.pingxx.com/article/123325">帮助中心</a>；
+- 更新到新接口之后，alipay_wap渠道的同步返回参数也会有相应的变更，具体内容参考 <a href="https://help.pingxx.com/article/132329/">帮助中心</a>。</p>
+
+<h3 id="2016-05-18">2016-05-18</h3>
+
+<p>红包接口和微信官方接口同步：下线 <code class="prettyprint">extra</code> 参数中的 <code class="prettyprint">nick_name</code>、<code class="prettyprint">logo</code>、<code class="prettyprint">share_url</code>、<code class="prettyprint">share_content</code> 和 <code class="prettyprint">share_img</code> 字段。兼容旧接口，已接入用户可忽略该变更；未接入用户请参考 <a href="https://www.pingxx.com/api#api-envelope">API 文档</a> 进行接入。</p>
+
+<h3 id="2016-04-27">2016-04-27</h3>
+
+<ol>
+<li>API－微信类接口增加 <code class="prettyprint">goods_tag</code> 字段；具体使用方法请参见： <a href="https://www.pingxx.com/api#api-c-new">API 文档</a>；</li>
+<li>API－支付宝即时到帐可选参数 <code class="prettyprint">anti_phishing_key</code> 变更为 <code class="prettyprint">enable_anti_phishing_key</code>，为布尔值，具体使用方法请参见： <a href="https://www.pingxx.com/api#api-c-new">API 文档</a>；</li>
+<li>API－修复代理商 App 创建微信企业付款( transfer )时报错信息错误的问题；</li>
+<li>API－修复红包在测试模式 <code class="prettyprint">transaction_no</code> 值为 <code class="prettyprint">null</code> 的问题。</li>
+</ol>

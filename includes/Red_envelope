@@ -199,7 +199,7 @@
 
 <p>同步返回红包支付结果。如果发生错误，则会返回错误码和错误详情，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
 
-<h3 id="red-envelope">查询 Red envelope 对象</h3>
+<h2 id="red-envelope">查询 Red envelope 对象</h2>
 
 <p>通过 <code class="prettyprint">red_envelope</code> 对象的 id 查询一个已创建的 <code class="prettyprint">red_envelope</code> 对象。</p>
 
@@ -301,3 +301,7 @@
 <td><strong>optional</strong></td>
 </tr>
 </tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>根据请求参数返回一个 <code class="prettyprint">red_envelope</code> 对象列表，如果列表为空，则返回的 <code class="prettyprint">data</code> 为空数组。遇到错误时返回相应错误信息，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>

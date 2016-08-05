@@ -117,8 +117,7 @@
       <div id="toc">
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>测 试 页 面</a></li>
-            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://www.pingxx.com/document/api#ppp-ovw'>旧版API文档</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -196,7 +195,7 @@ Ping++ API 使用 HTTP Basic Auth 进行认证。 将 API Key 作为 basic auth 
 
 </code></pre>
 
-<h1 id="errors">Errors 错误处理</h1>
+<h1 id="errors">Errors 错误处理机制</h1>
 
 <p>Ping++ 使用 HTTP 状态码来表明一个 API 请求的成功或失败。通常，返回值 2xx 表明 API 请求成功。返回值 4xx 表明 API 请求时被提供了错误的信息（比如参数缺失，参数错误，支付渠道错误等）。返回值 5xx 表明 API 请求时，Ping++ 服务器发生了错误。</p>
 
@@ -397,9 +396,7 @@ Ping++ API 使用 HTTP Basic Auth 进行认证。 将 API Key 作为 basic auth 
 
 <p>所有的 Ping++ 资源都可以被 list API 方法支持，例如分页 charges 和 refunds。这些 list API 方法拥有相同的数据结构。Ping++ 是基于 cursor 的分页机制，使用参数 starting_after 来决定列表从何处开始。</p>
 
-<p>/<em>###参数</em>/有问题 加了这个标题 就不行了</p>
-
-<h3 id="canshu">canshu</h3>
+<h3 id="canshu">canshu 所有标题不支持纯中文</h3>
 
 <table><thead>
 <tr>
@@ -535,138 +532,132 @@ Ping++ API 使用 HTTP Basic Auth 进行认证。 将 API Key 作为 basic auth 
 <h1 id="metadate">Metadate 元数据</h1>
 
 <p>一些 Ping++ 对象支持加入用户指定的 <code class="prettyprint">metadata</code> 参数。你可以使用键值对的形式来构建自己的 <code class="prettyprint">metadata</code>，例如 metadata[color] = red，你可以在每一个 <code class="prettyprint">charge</code> 对象中加入订单的一些详情，如颜色、型号等属性，在查询时获得更多信息。每一个对象的 <code class="prettyprint">metadata</code> 最多可以拥有 10 个键值对，数据总长度在 1000 个 Unicode 字符以内。</p>
-<pre class="highlight plaintext"><code>    这里的所有的请求示例 和 返回示例 在admin上都加好了 可以直接复制粘贴 这里不在加过来了。
+<pre class="highlight plaintext"><code>  curl https://api.pingxx.com/v1/charges \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC: \
+  -d order_no=123456789 \
+  -d amount=100 \
+  -d app[id]=app_1Gqj58ynP0mHeX1q \
+  -d channel=upacp \
+  -d currency=cny \
+  -d client_ip=127.0.0.1 \
+  -d subject="Your Subject" \
+  -d body="Your Body" \
+  -d metadata[color]=red
 </code></pre>
+<pre class="highlight php"><code>  \Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
 
-<h1 id="test">Test暂时留着</h1>
-
-<h2 id="get-all-kittens">Get All Kittens</h2>
-<pre class="highlight plaintext"><code>require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
+  \Pingpp\Charge::create(array(
+    'order_no'  =<span class="ni">&amp;gt;</span> '123456789',
+    'amount'    =<span class="ni">&amp;gt;</span> '100',
+    'app'       =<span class="ni">&amp;gt;</span> array('id' =<span class="ni">&amp;gt;</span> 'app_1Gqj58ynP0mHeX1q'),
+    'channel'   =<span class="ni">&amp;gt;</span> 'upacp',
+    'currency'  =<span class="ni">&amp;gt;</span> 'cny',
+    'client_ip' =<span class="ni">&amp;gt;</span> '127.0.0.1',
+    'subject'   =<span class="ni">&amp;gt;</span> 'Your Subject',
+    'body'      =<span class="ni">&amp;gt;</span> 'Your Body'
+    'metadata'  =<span class="ni">&amp;gt;</span> array('color'=<span class="ni">&amp;gt;</span>'red')
+  ));
 </code></pre>
-<pre class="highlight plaintext"><code>import kittn
+<pre class="highlight java"><code>  <span class="n">Pingpp</span><span class="o">.</span><span class="na">apiKey</span> <span class="o">=</span> <span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="o">;</span>
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-</code></pre>
-<pre class="highlight plaintext"><code>curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-</code></pre>
-<pre class="highlight plaintext"><code>const kittn = require('kittn');
+  <span class="n">Map</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="n">chargeParams</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;();</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"order_no"</span><span class="o">,</span>  <span class="s">"123456789"</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"amount"</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span>
+  <span class="n">Map</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="n">app</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;();</span>
+  <span class="n">app</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"app"</span><span class="o">,</span> <span class="n">app</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"channel"</span><span class="o">,</span>  <span class="s">"upacp"</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"currency"</span><span class="o">,</span> <span class="s">"cny"</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"client_ip"</span><span class="o">,</span>  <span class="s">"127.0.0.1"</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"subject"</span><span class="o">,</span>  <span class="s">"Your Subject"</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"body"</span><span class="o">,</span>  <span class="s">"Your Body"</span><span class="o">);</span>
+  <span class="n">Map</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="n">initialMetadata</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;();</span>
+  <span class="n">initialMetadata</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"color"</span><span class="o">,</span> <span class="s">"red"</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"metadata"</span><span class="o">,</span> <span class="n">initialMetadata</span><span class="o">);</span>
 
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+  <span class="n">Charge</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">chargeParams</span><span class="o">);</span>
 </code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<pre class="highlight ruby"><code>  <span class="nb">require</span> <span class="s2">"pingpp"</span>
+  <span class="no">Pingpp</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span>
+  <span class="no">Pingpp</span><span class="o">::</span><span class="no">Charge</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span>
+    <span class="ss">:subject</span>  <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"Your Subject"</span><span class="p">,</span>
+    <span class="ss">:body</span>     <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"Your Body"</span><span class="p">,</span>
+    <span class="ss">:amount</span>   <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="ss">:order_no</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"123456789"</span><span class="p">,</span>
+    <span class="ss">:channel</span>  <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"upacp"</span><span class="p">,</span>
+    <span class="ss">:currency</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"cny"</span><span class="p">,</span>
+    <span class="ss">:client_ip</span><span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s1">'127.0.0.1'</span><span class="p">,</span>
+    <span class="ss">:app</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="p">{</span><span class="s1">'id'</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"app_1Gqj58ynP0mHeX1q"</span><span class="p">},</span>
+    <span class="ss">:metadata</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="p">{</span><span class="s1">'color'</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"red"</span><span class="p">}</span>
+  <span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  pingpp.charges.create({
+    subject: "Your Subject",
+    body: "Your Body",
+    amount: 100,
+    order_no: "123456789",
+    channel: "upacp",
+    currency: "cny",
+    client_ip: "127.0.0.1",
+    app: {id: "app_1Gqj58ynP0mHeX1q"},
+    metadata: {'color': 'red'}
+  }, function(err, charge) {
+    // 异步调用
+  });
+</code></pre>
+<pre class="highlight python"><code><span class="n">ch</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">Charge</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+  <span class="n">order_no</span><span class="o">=</span><span class="s">'1234567890'</span><span class="p">,</span>
+  <span class="n">amount</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+  <span class="n">app</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s">'app_1Gqj58ynP0mHeX1q'</span><span class="p">),</span>
+  <span class="n">channel</span><span class="o">=</span><span class="s">'upacp'</span><span class="p">,</span>
+  <span class="n">currency</span><span class="o">=</span><span class="s">'cny'</span><span class="p">,</span>
+  <span class="n">client_ip</span><span class="o">=</span><span class="s">'127.0.0.1'</span><span class="p">,</span>
+  <span class="n">subject</span><span class="o">=</span><span class="s">'Your Subject'</span><span class="p">,</span>
+  <span class="n">body</span><span class="o">=</span><span class="s">'Your Body'</span><span class="p">,</span>
+  <span class="n">metadata</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'red'</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">    </span><span class="n">metadata</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="nb">make</span><span class="p">(</span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="k">interface</span><span class="p">{})</span><span class="x">
+    </span><span class="n">metadata</span><span class="p">[</span><span class="s">"color"</span><span class="p">]</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="s">"red"</span><span class="x">
+    </span><span class="n">params</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">pingpp</span><span class="o">.</span><span class="n">ChargeParams</span><span class="p">{</span><span class="x">
+        </span><span class="n">Order_no</span><span class="o">:</span><span class="x">  </span><span class="s">"1234567890"</span><span class="p">,</span><span class="x">
+        </span><span class="n">App</span><span class="o">:</span><span class="x">       </span><span class="n">pingpp</span><span class="o">.</span><span class="n">App</span><span class="p">{</span><span class="n">Id</span><span class="o">:</span><span class="x"> </span><span class="s">"APP-ID"</span><span class="p">},</span><span class="x">
+        </span><span class="n">Amount</span><span class="o">:</span><span class="x">    </span><span class="m">100</span><span class="p">,</span><span class="x">
+        </span><span class="n">Channel</span><span class="o">:</span><span class="x">   </span><span class="s">"upacp"</span><span class="p">,</span><span class="x">
+        </span><span class="n">Currency</span><span class="o">:</span><span class="x">  </span><span class="s">"cny"</span><span class="p">,</span><span class="x">
+        </span><span class="n">Client_ip</span><span class="o">:</span><span class="x"> </span><span class="s">"127.0.0.1"</span><span class="p">,</span><span class="x">
+        </span><span class="n">Subject</span><span class="o">:</span><span class="x">   </span><span class="s">"Your Subject"</span><span class="p">,</span><span class="x">
+        </span><span class="n">Body</span><span class="o">:</span><span class="x">      </span><span class="s">"Your Body"</span><span class="p">,</span><span class="x">
+        </span><span class="n">Metadata</span><span class="o">:</span><span class="x">  </span><span class="n">metadata</span><span class="p">,</span><span class="x">
+    </span><span class="p">}</span><span class="x">
+    </span><span class="c">//返回的第一个参数是 charge 对象，你需要将其转换成 json 给客户端，或者客户端接收后转换。</span><span class="x">
+    </span><span class="n">ch</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">charge</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="n">params</span><span class="p">)</span><span class="x">
 </span></code></pre>
-
-<p>This endpoint retrieves all kittens.</p>
-
-<h3 id="http-request">HTTP Request他</h3>
-
-<p><code class="prettyprint">GET http://example.com/api/kittens</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-<h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
-<pre class="highlight javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<pre class="highlight csharp"><code>
+    <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">app</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;();</span>
+    <span class="n">app</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"id"</span><span class="p">,</span> <span class="n">app_1Gqj58ynP0mHeX1q</span><span class="p">);</span>
+    <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span><span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">extra</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span><span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;();</span>
+    <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="k">params</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;();</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"amount"</span><span class="p">,</span> <span class="m">100</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"currency"</span><span class="p">,</span> <span class="s">"cny"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"subject"</span><span class="p">,</span> <span class="s">"Your Subject"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"body"</span><span class="p">,</span> <span class="s">"Your Body"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"order_no"</span><span class="p">,</span> <span class="s">"123456789"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"channel"</span><span class="p">,</span> <span class="s">"upacp"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"client_ip"</span><span class="p">,</span> <span class="s">"127.0.0.1"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"app"</span><span class="p">,</span> <span class="n">app</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"extra"</span><span class="p">,</span> <span class="n">extra</span><span class="p">);</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="c1">//发起交易请求
+</span>        <span class="n">Charge</span> <span class="n">ch</span> <span class="p">=</span> <span class="n">Charge</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="k">params</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">ch</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+    <span class="p">}</span>
 </code></pre>
 
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can&rsquo;t use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET http://example.com/kittens/&lt;ID&gt;</code></p>
-
-<h3 id="url-parameters">URL Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-
-<h1 id="charges">Charges支付</h1>
+          <h1 id="charges">Charges支付</h1>
 <pre class="highlight plaintext"><code>admin可以复制粘贴
 </code></pre>
 
@@ -1191,6 +1182,8 @@ wx_wap:
 
 <h2 id="charge">查询 Charge 对象列表</h2>
 
+<p>返回之前创建过 <code class="prettyprint">charge</code> 对象的一个列表。列表是按创建时间进行排序，总是将最新的 <code class="prettyprint">charge</code> 对象显示在最前。</p>
+
 <table><thead>
 <tr>
 <th>参数</th>
@@ -1271,125 +1264,9 @@ wx_wap:
 </tr>
 </tbody></table>
 
-<h3 id=">返回内容</h3>
+<h3 id="1">返回内容1</h3>
 
 <p>返回一个已存在的 <code class="prettyprint">charge</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
-
-          <h1 id="errors">Errors</h1>
-
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request &ndash; Your request sucks</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized &ndash; Your API key is wrong</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found &ndash; The specified kitten could not be found</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone &ndash; The kitten requested has been removed from our servers</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&rsquo;m a teapot</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
-</tr>
-</tbody></table>
-
-          <h1 id="test">Test</h1>
-
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request &ndash; Your request sucks</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized &ndash; Your API key is wrong</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found &ndash; The specified kitten could not be found</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone &ndash; The kitten requested has been removed from our servers</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&rsquo;m a teapot</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>5012913</td>
-<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
-</tr>
-</tbody></table>
 
           <h1 id="refunds">Refunds退款</h1>
 
@@ -1541,7 +1418,7 @@ wx_wap:
 
 <p>返回一个已存在的 <code class="prettyprint">refund</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
 
-<h3 id="refund">查询 Refund 对象列表</h3>
+<h2 id="refund">查询 Refund 对象列表</h2>
 
 <p>返回之前创建 <code class="prettyprint">charge</code> 对象的一个 <code class="prettyprint">refund</code> 对象列表。列表是按创建时间进行排序，总是将最新的 <code class="prettyprint">refund</code> 对象显示在最前。</p>
 
@@ -1776,7 +1653,7 @@ wx_wap:
 
 <p>同步返回红包支付结果。如果发生错误，则会返回错误码和错误详情，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
 
-<h3 id="red-envelope">查询 Red envelope 对象</h3>
+<h2 id="red-envelope">查询 Red envelope 对象</h2>
 
 <p>通过 <code class="prettyprint">red_envelope</code> 对象的 id 查询一个已创建的 <code class="prettyprint">red_envelope</code> 对象。</p>
 
@@ -1879,6 +1756,10 @@ wx_wap:
 </tr>
 </tbody></table>
 
+<h3 id="fanhui">fanhui</h3>
+
+<p>根据请求参数返回一个 <code class="prettyprint">red_envelope</code> 对象列表，如果列表为空，则返回的 <code class="prettyprint">data</code> 为空数组。遇到错误时返回相应错误信息，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
           <h1 id="event">Event事件</h1>
 
 <p><code class="prettyprint">Event</code> 对象属性定义如下。</p>
@@ -1914,7 +1795,7 @@ wx_wap:
 </tr>
 <tr>
 <td>data</td>
-<td>绑定在事件上的数据对象，详情参考<a href="link">date参数说明</a>。</td>
+<td>绑定在事件上的数据对象，详情参考<a href="link">data参数说明</a>。</td>
 <td><strong>hash</strong></td>
 </tr>
 <tr>
@@ -1934,7 +1815,7 @@ wx_wap:
 </tr>
 </tbody></table>
 
-<h3 id="date">date参数说明</h3>
+<h3 id="data">data参数说明</h3>
 
 <table><thead>
 <tr>
@@ -1955,7 +1836,7 @@ wx_wap:
 </tr>
 </tbody></table>
 
-<h2 id="s">事件类型s</h2>
+<h2 id="1">事件类型1</h2>
 
 <p>目前支持的事件包括：</p>
 
@@ -2248,7 +2129,7 @@ wx_wap:
 </tr>
 </tbody></table>
 
-<h3 id="extra-extra-html-extra-optional-required">extra参数说明  所有extra参数怎么写是个问题 若使用表格 那么这里需要改下语法 要么就要用html了 extra中不使用参数类型 只用optional 和required</h3>
+<h3 id="extra">extra参数说明</h3>
 
 <table><thead>
 <tr>
@@ -2607,9 +2488,19 @@ wx_wap:
 
 <h3 id="canshu">canshu</h3>
 
-<p>参数 | 描述 | 是否必须
-&mdash;- | &mdash;-
-<dt>{TOKEN_ID}:  | Token 对象 id | <strong>required</strong></p>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><dt>{TOKEN_ID}:</td>
+<td>Token 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
 
           <h1 id="customer">Customer 顾客</h1>
 
@@ -2938,7 +2829,7 @@ wx_wap:
 </tr>
 </tbody></table>
 
-<h3 id=">返回</h3>
+<h3 id="1">返回1</h3>
 
 <p>返回一个 Card 对象。</p>
 
@@ -3063,7 +2954,7 @@ wx_wap:
 </tr>
 </tbody></table>
 
-          <h1 id="2">2身份证银行卡信息认证接口</h1>
+          <h1 id="ssss">身份证银行卡信息认证接口ssss</h1>
 
 <p>根据姓名、身份证、银行卡、手机号码，检测信息是否匹配。</p>
 
@@ -3093,7 +2984,7 @@ wx_wap:
 </tr>
 <tr>
 <td>result_code</td>
-<td>返回码 详情参照API文档附录的认证接口result_code说明。</td>
+<td>返回码 详情参照API文档附录的<a href="https://www.pingxx.com/document/api#api-appendix-3">认证接口result_code说明</a>。</td>
 <td><strong>int</strong></td>
 </tr>
 <tr>
@@ -3211,28 +3102,28 @@ wx_wap:
 <tr>
 <th>参数</th>
 <th>描述</th>
-<th>类型</th>
+<th>是否必须</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>id_name</td>
 <td>身份证姓名(1~16位)</td>
-<td><strong>string</strong></td>
+<td><strong>required</strong></td>
 </tr>
 <tr>
 <td>id_number</td>
 <td>身份证号码(15位或18位)</td>
-<td><strong>string</strong></td>
+<td><strong>required</strong></td>
 </tr>
 <tr>
 <td>card_number</td>
 <td>银行卡号(12～19位) 仅在type参数为bankcard的时候必需要传此参数</td>
-<td><strong>string</strong></td>
+<td><strong>required</strong></td>
 </tr>
 <tr>
 <td>phone_number</td>
 <td>手机号(11位) 仅在type参数为bankcard的时候可以选择是否传此参数，暂不支持178开头的手机号</td>
-<td><strong>string</strong></td>
+<td><strong>optional</strong></td>
 </tr>
 </tbody></table>
 
@@ -3240,7 +3131,7 @@ wx_wap:
 
 <p>请求成功，返回result_code字段为返回码，详情参照API文档附录的认证接口result_code说明；message中是错误描述信息，仅在成功时返回success;paid表示本次调用接口认证是否产生费用，paid为true则需要付费，false不产生费用。</p>
 
-          <h1 id="2">报关接口2</h1>
+          <h1 id="ssss">报关接口ssss</h1>
 
 <p>目前只针对支付成功的订单进行报关，报关金额为订单金额；
 目前暂不支持拆单报关，报关渠道是支持的，
@@ -3350,7 +3241,7 @@ customs_code<br />是海关编号字段说明。</p>
 </tr>
 </tbody></table>
 
-<h2 id="111">请求报关接口111</h2>
+<h2 id="sss">请求报关接口sss</h2>
 
 <p>请求报关接口，目前只针对支付成功的订单charge id进行报关请求，报关金额为订单金额，目前渠道限于alipay和wx，目前不支持拆单报关(报关渠道是支持的)，customs_code(海关编号)字段说明。<b style="color: #f15467;">注意：此接口强制要求签名（Pingplusplus-Signature），需在管理平台上配置商户公钥，但无须开启。</b></p>
 
@@ -3418,11 +3309,11 @@ customs_code<br />是海关编号字段说明。</p>
 </tr>
 </tbody></table>
 
-<h3 id="1">返回1</h3>
+<h3 id="sss">返回sss</h3>
 
 <p>返回一个<code class="prettyprint">customs</code>报关对象，其中status为报关结果，为true时成功，false失败；<code class="prettyprint">transaction_no</code>为渠道报关流水号。</p>
 
-<h2 id="2">查询报关接口2</h2>
+<h2 id="sss">查询报关接口sss</h2>
 
 <p>通过<code class="prettyprint">customs</code>对象的id查询一个已创建的<code class="prettyprint">customs</code>对象。通过查询接口确认报关的状态。</p>
 
@@ -3446,9 +3337,9 @@ customs_code<br />是海关编号字段说明。</p>
 
 <p>返回一个已存在的 <code class="prettyprint">customs</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
 
-          <h1 id="11">附录11</h1>
+          <h1 id="sss">附录sss</h1>
 
-<h2 id="1">易宝支付1</h2>
+<h2 id="s">易宝支付s</h2>
 
 <h3 id="1">附录一 易宝支付附表1</h3>
 
@@ -3518,7 +3409,7 @@ customs_code<br />是海关编号字段说明。</p>
 </tr>
 </tbody></table>
 
-<h4 id="1">表二 用户标识类型码表1</h4>
+<h4 id="s">表二 用户标识类型码表s</h4>
 
 <table><thead>
 <tr>
@@ -3569,9 +3460,9 @@ customs_code<br />是海关编号字段说明。</p>
 </tr>
 </tbody></table>
 
-<h2 id="1">应用内快捷支付1</h2>
+<h2 id="s">应用内快捷支付s</h2>
 
-<h3 id="1">附录二 应用内快捷支付附表1</h3>
+<h3 id="s">附录二 应用内快捷支付附表s</h3>
 
 <h4 id="1">表一 银行编码1</h4>
 
@@ -3847,7 +3738,7 @@ customs_code<br />是海关编号字段说明。</p>
 </tr>
 </tbody></table>
 
-<h4 id=">表六 测试模式 - 外卡信用卡</h4>
+<h4 id="sss">表六 测试模式 - 外卡信用卡sss</h4>
 
 <p>参数  |值
 card_number|    4111111111111200
@@ -3896,11 +3787,11 @@ cvc |300</p>
 </tr>
 </tbody></table>
 
-<h2 id="1">认证接口1</h2>
+<h2 id="s">认证接口s</h2>
 
-<h3 id="1">附录三 认证接口1</h3>
+<h3 id="s">附录三 认证接口s</h3>
 
-<h4 id="result_code-1">表一 result_code 说明1</h4>
+<h4 id="result_code-s">表一 result_code 说明s</h4>
 
 <table><thead>
 <tr>
@@ -3974,11 +3865,11 @@ cvc |300</p>
 </tr>
 </tbody></table>
 
-<h2 id="1">报关接口1</h2>
+<h2 id="s">报关接口s</h2>
 
-<h3 id="1">附录四 报关接口1</h3>
+<h3 id="s">附录四 报关接口s</h3>
 
-<h4 id="1">表一 微信海关编号说明1</h4>
+<h4 id="s">表一 微信海关编号说明s</h4>
 
 <table><thead>
 <tr>
@@ -4016,7 +3907,7 @@ cvc |300</p>
 </tr>
 </tbody></table>
 
-<h4 id="1">表二 支付宝海关编号说明1</h4>
+<h4 id="s">表二 支付宝海关编号说明s</h4>
 
 <table><thead>
 <tr>
@@ -4077,6 +3968,77 @@ cvc |300</p>
 <td>海关总署</td>
 </tr>
 </tbody></table>
+
+          <h1 id="api">API更新</h1>
+
+<h3 id="2016-08-03">2016-08-03</h3>
+
+<ol>
+<li>新增 <code class="prettyprint">alipay_wap</code> 渠道extra字段 <code class="prettyprint">app_pay</code> 参数，用于判断是否使用支付宝客户端支付；修改 <code class="prettyprint">cancel_url</code> 参数说明，当 <code class="prettyprint">app_pay</code> 为true时，<code class="prettyprint">cancel_url</code> 字段无效，接入规则参考<a href="https://www.pingxx.com/document/api#api-charges">API文档</a>。</li>
+<li>修改招行一网通extra字段参数说明，<code class="prettyprint">p_no</code>, <code class="prettyprint">seq</code>, <code class="prettyprint">m_uid</code>, <code class="prettyprint">mobile</code> 这几个参数决定是否签约，传同样的参数，就不会重新签约,具体请参考<a href="https://www.pingxx.com/document/api#api-charges">API文档</a>。</li>
+<li>新增 <code class="prettyprint">jdpay_wap</code> 渠道extra字段 <code class="prettyprint">order_type</code> 和 <code class="prettyprint">is_mobile</code> 参数，接入规则请参考<a href="https://www.pingxx.com/document/api#api-charges">API文档</a>。</li>
+</ol>
+
+<h3 id="2016-07-27">2016-07-27</h3>
+
+<ol>
+<li>身份证银行卡信息认证接口更新phone_number参数，添加说明：暂不支持178开头的手机号，请参考<a href="https://www.pingxx.com/document/api#api-identification">API文档</a>。</li>
+<li>身份证银行卡信息认证接口添加php，ruby对应SDK请求示例和返回示例，接入规则请参考<a href="https://www.pingxx.com/document/api#api-i-new">API文档</a>。</li>
+</ol>
+
+<h3 id="2016-07-20">2016-07-20</h3>
+
+<ol>
+<li>新增 <strong>更新 Transfer 对象接口</strong>：接入规则请参考<a href="https://www.pingxx.com/document/api#api-update-transfer">API文档</a>；</li>
+<li>修改 Customer 对象，Card 对象请求参数：添加<code class="prettyprint">sms_code[id]</code> 和 <code class="prettyprint">sms_code[code]</code> 参数,修改 Customer 对象 和 Card 对象请求示例，请参考<a href="https://www.pingxx.com/document/api#api-customer-new">API文档</a>。</li>
+</ol>
+
+<h3 id="2016-07-13">2016-07-13</h3>
+
+<ol>
+<li>新增支付渠道： 微信WAP支付 <code class="prettyprint">wx_wap</code> ，接入规则请参考 <a href="https://www.pingxx.com/document/api#api-charges">API 文档</a>；使用该渠道，需更新客户端 SDK ，请参考 <a href="https://github.com/PingPlusPlus/pingpp-js">pingpp-js</a>；</li>
+<li>修改 <strong>身份证银行卡信息认证接口</strong>参数：<code class="prettyprint">app_id</code> 改成 <code class="prettyprint">app</code>、<code class="prettyprint">idcard</code> 改成 <code class="prettyprint">id_card</code>、<code class="prettyprint">bankcard</code> 改成 <code class="prettyprint">bank_card</code>、<code class="prettyprint">user_name</code> 改成 <code class="prettyprint">id_name</code>，接入规则请参考 <a href="https://www.pingxx.com/document/api#api-identification">API 文档</a>；</li>
+<li>修改 <strong>报关接口</strong>参数：<code class="prettyprint">app_id</code> 改成 <code class="prettyprint">app</code>，接入规则请参考 <a href="https://www.pingxx.com/document/api#api-customs">API 文档</a>。</li>
+</ol>
+
+<h3 id="2016-07-06">2016-07-06</h3>
+
+<ol>
+<li>新增 <strong>报关接口</strong>，接入规则请参考 <a href="https://www.pingxx.com/document/api#api-customs">API 文档</a>；</li>
+<li>新增 <strong>企业付款（银行卡）接口</strong>，接入规则请参考 <a href="https://www.pingxx.com/document/api#api-transfer">API 文档</a>。</li>
+</ol>
+
+<h3 id="2016-06-30">2016-06-30</h3>
+
+<ol>
+<li>新增支付渠道： 招行一网通 <code class="prettyprint">cmb_wallet</code> ，接入规则请参考 <a href="https://www.pingxx.com/api#api-charges">API 文档</a> ；</li>
+<li>新增 <strong>身份证银行卡信息认证接口</strong> ，接口规则请参考 <a href="https://www.pingxx.com/document/api#api-identification">API 文档</a>。</li>
+</ol>
+
+<h3 id="2016-06-22">2016-06-22</h3>
+
+<p>退款 Refund 对象中增加商户订单号 <code class="prettyprint">charge_order_no</code> 字段，请求退款之后会在返回的 Refund 中带回付款订单的的商户订单号，详情参考 <a href="https://www.pingxx.com/api#api-refunds">API 文档</a>。</p>
+
+<h3 id="2016-06-16">2016-06-16</h3>
+
+<p>升级支付宝手机网站（alipay_wap）支付接口，针对已经接入旧接口的用户请在 3 个月内更新成新接口。旧接口的用户更新只需要三步：
+- 更新客户端 <a href="https://github.com/PingPlusPlus/pingpp-js">H5 SDK</a>；
+- 在服务端请求中增加额外的请求字段 <code class="prettyprint">new_version</code> ，详细步骤请参照 <a href="https://help.pingxx.com/article/174737">alipay_wap 接口更新说明</a>；
+- 更新 Ping++ 管理平台上的支付宝手机网站支付的渠道参数，更新成支付宝的 <strong>合作伙伴密钥</strong> 对应的参数，详情参考<a href="https://help.pingxx.com/article/123325">帮助中心</a>；
+- 更新到新接口之后，alipay_wap渠道的同步返回参数也会有相应的变更，具体内容参考 <a href="https://help.pingxx.com/article/132329/">帮助中心</a>。</p>
+
+<h3 id="2016-05-18">2016-05-18</h3>
+
+<p>红包接口和微信官方接口同步：下线 <code class="prettyprint">extra</code> 参数中的 <code class="prettyprint">nick_name</code>、<code class="prettyprint">logo</code>、<code class="prettyprint">share_url</code>、<code class="prettyprint">share_content</code> 和 <code class="prettyprint">share_img</code> 字段。兼容旧接口，已接入用户可忽略该变更；未接入用户请参考 <a href="https://www.pingxx.com/api#api-envelope">API 文档</a> 进行接入。</p>
+
+<h3 id="2016-04-27">2016-04-27</h3>
+
+<ol>
+<li>API－微信类接口增加 <code class="prettyprint">goods_tag</code> 字段；具体使用方法请参见： <a href="https://www.pingxx.com/api#api-c-new">API 文档</a>；</li>
+<li>API－支付宝即时到帐可选参数 <code class="prettyprint">anti_phishing_key</code> 变更为 <code class="prettyprint">enable_anti_phishing_key</code>，为布尔值，具体使用方法请参见： <a href="https://www.pingxx.com/api#api-c-new">API 文档</a>；</li>
+<li>API－修复代理商 App 创建微信企业付款( transfer )时报错信息错误的问题；</li>
+<li>API－修复红包在测试模式 <code class="prettyprint">transaction_no</code> 值为 <code class="prettyprint">null</code> 的问题。</li>
+</ol>
 
       </div>
       <div class="dark-box">

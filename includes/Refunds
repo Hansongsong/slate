@@ -148,7 +148,7 @@
 
 <p>返回一个已存在的 <code class="prettyprint">refund</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
 
-<h3 id="refund">查询 Refund 对象列表</h3>
+<h2 id="refund">查询 Refund 对象列表</h2>
 
 <p>返回之前创建 <code class="prettyprint">charge</code> 对象的一个 <code class="prettyprint">refund</code> 对象列表。列表是按创建时间进行排序，总是将最新的 <code class="prettyprint">refund</code> 对象显示在最前。</p>
 

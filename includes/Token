@@ -64,6 +64,16 @@
 
 <h3 id="canshu">canshu</h3>
 
-<p>参数 | 描述 | 是否必须
-&mdash;- | &mdash;-
-<dt>{TOKEN_ID}:  | Token 对象 id | <strong>required</strong></p>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><dt>{TOKEN_ID}:</td>
+<td>Token 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>

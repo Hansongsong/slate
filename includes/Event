@@ -33,7 +33,7 @@
 </tr>
 <tr>
 <td>data</td>
-<td>绑定在事件上的数据对象，详情参考<a href="link">date参数说明</a>。</td>
+<td>绑定在事件上的数据对象，详情参考<a href="link">data参数说明</a>。</td>
 <td><strong>hash</strong></td>
 </tr>
 <tr>
@@ -53,7 +53,7 @@
 </tr>
 </tbody></table>
 
-<h3 id="date">date参数说明</h3>
+<h3 id="data">data参数说明</h3>
 
 <table><thead>
 <tr>
@@ -74,7 +74,7 @@
 </tr>
 </tbody></table>
 
-<h2 id="s">事件类型s</h2>
+<h2 id="1">事件类型1</h2>
 
 <p>目前支持的事件包括：</p>
 
