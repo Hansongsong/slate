@@ -47,7 +47,7 @@ charge | **required** 退款的 `charge` 对象 `id`。
 ###fan回
 返回一个已存在的 `refund` 对象或者一个错误，[详见 Errors 错误处理机制](#api-errors)。
 
-###查询 Refund 对象列表
+##查询 Refund 对象列表
 
 返回之前创建 `charge` 对象的一个 `refund` 对象列表。列表是按创建时间进行排序，总是将最新的 `refund` 对象显示在最前。
 

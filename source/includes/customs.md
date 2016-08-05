@@ -1,4 +1,4 @@
-#报关接口2
+#报关接口ssss
 
 目前只针对支付成功的订单进行报关，报关金额为订单金额；
 目前暂不支持拆单报关，报关渠道是支持的，
@@ -30,7 +30,7 @@ transaction_no | 渠道报关流水号 | **string**
 alipay | 支付宝手机支付
 wx | 微信支付
 
-##请求报关接口111
+##请求报关接口sss
 
 请求报关接口，目前只针对支付成功的订单charge id进行报关请求，报关金额为订单金额，目前渠道限于alipay和wx，目前不支持拆单报关(报关渠道是支持的)，customs_code(海关编号)字段说明。<b style="color: #f15467;">注意：此接口强制要求签名（Pingplusplus-Signature），需在管理平台上配置商户公钥，但无须开启。</b>
 
@@ -53,11 +53,11 @@ extra | 自定义参数 | **optional**
 alipay | 支付宝手机支付
 wx | 微信支付
 
-###返回1
+###返回sss
 
 返回一个`customs`报关对象，其中status为报关结果，为true时成功，false失败；`transaction_no`为渠道报关流水号。
 
-##查询报关接口2
+##查询报关接口sss
 通过`customs`对象的id查询一个已创建的`customs`对象。通过查询接口确认报关的状态。
 
 ###canshu

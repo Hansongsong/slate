@@ -21,7 +21,7 @@ description | 备注信息，最多 255 个 Unicode 字符,渠道为 chinapay �
 transaction_no | 交易流水号，由于第三方渠道提供。| **string**
 extra | 支付渠道相关的附加参数，参考[extra参数说明]()。| **object**
 
-###extra参数说明  所有extra参数怎么写是个问题 若使用表格 那么这里需要改下语法 要么就要用html了 extra中不使用参数类型 只用optional 和required
+###extra参数说明  
 参数 | 描述 | 类型
 ---- | ---- | ----
 wx(微信新渠道) | 参数 `user_name`[string] 收款人姓名。当该参数为空，则不校验收款人姓名 | optional

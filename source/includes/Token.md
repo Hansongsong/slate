@@ -19,7 +19,7 @@ sms_code | SMS Code 对象。外卡时，该对象内容为空 | **hash**
 可根据 `token id` 查询某条 `token` 对象中的 `card` 信息。
 ###canshu
 参数 | 描述 | 是否必须
----- | ----
+---- | ---- | ----
 <dt>{TOKEN_ID}:  | Token 对象 id | **required**
 
 

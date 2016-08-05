@@ -25,7 +25,7 @@ source | Token 对象 id | **required**
 sms_code[id] | SMS Code 对象 id| **required**
 sms_code[code] | 短信验证码| **required**
 
-###返回
+###返回1
 返回一个 Card 对象。
 
 ##删除 Card 对象

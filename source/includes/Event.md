@@ -9,18 +9,18 @@ id | 事件对象 id ，由 Ping++ 生成，28 位长度字符串。| **string**
 object | 值为 event。| **string** 
 livemode | 事件是否发生在生产环境。| **boolean** 
 created | 事件发生的时间。| **timestamp** 
-data | 绑定在事件上的数据对象，详情参考[date参数说明](link)。| **hash** 
+data | 绑定在事件上的数据对象，详情参考[data参数说明](link)。| **hash** 
 pending_webhooks | 推送未成功的 webhooks 数量。| **positive integer or zero** 
 type | 事件类型，详见事件类型。| **string** 
 request | API Request ID。值 null 表示该事件不是由 API 请求触发的。| **string** 
 
-###date参数说明
+###data参数说明
 参数 | 描述 | 类型
 ---- | ---- | ----
 object | 值为Event| **hash**
 previous_attributes | 绑定对象属性变化之前的值。只有 *.updated 事件有这个属性。| **hash** 
 
-##事件类型s
+##事件类型1
 目前支持的事件包括：
 
 事件类型 | 作用域 | 描述
