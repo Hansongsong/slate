@@ -1,0 +1,215 @@
+<h1 id="card">Card卡片</h1>
+
+<p>卡片对象，依附于 Customer 对象的资源列表。相同的卡片信息 + 同一个 App 对应唯一的 Card Number。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Card 对象 id</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>object</td>
+<td>值为 card</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>卡片第一次的创建时间</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>last4:</td>
+<td>卡号末 4 位</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>funding</td>
+<td>卡片借贷记类型 &ldquo;credit&rdquo; 信用卡，&quot;debit&quot; 储蓄卡，&quot;unknown&quot; 未知</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>brand</td>
+<td>卡品牌，值为 &ldquo;UnionPay&rdquo;, &ldquo;Visa&rdquo;, &ldquo;MasterCard&rdquo;, &ldquo;JCB&rdquo; 其中一种</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>bank</td>
+<td>发卡行，如 &ldquo;icbc&rdquo; 工商银行，具体<a href="#nocard_bank_id">银行列表见附录</a>。外卡此参数为 null</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>customer</td>
+<td>依附的 Customer 对象的 id</td>
+<td><strong>string</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="card">创建 Card 对象</h2>
+
+<p>在 Customer 对象的资源列表上添加一个新的卡片，之后就可以选卡支付，即绑卡。<br>
+注：暂时不允许通过外卡创建。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{CUS_ID}:</td>
+<td>Customer 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>source</td>
+<td>Token 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>sms_code[id]</td>
+<td>SMS Code 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>sms_code[code]</td>
+<td>短信验证码</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id=">返回</h3>
+
+<p>返回一个 Card 对象。</p>
+
+<h2 id="card">删除 Card 对象</h2>
+
+<p>取消与 Customer 对象的关联。删除的如果是该所属 Customer 对象的 default_source, 则 default_source 为最近一张绑定的资源 id 如果删除后资源列表为空，则 default_source 值为 null</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{CUS_ID}:</td>
+<td>Customer 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>{CARD_ID}:</td>
+<td>要删除的 Card 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="card">查询 Card 对象</h2>
+
+<p>通过 <code class="prettyprint">Card</code> 对象的 <code class="prettyprint">id</code> 查询一个已经创建的 <code class="prettyprint">Card</code> 对象的详细信息。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{CUS_ID}:</td>
+<td>Customer 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>{CARD_ID}:</td>
+<td>Card 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="card">查询 Card 对象列表</h2>
+
+<p>可以查询某 <code class="prettyprint">Customer</code> 对象中关联的所有 <code class="prettyprint">Card</code> 对象列表。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{CUS_ID}:</td>
+<td>Customer 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>limit</td>
+<td>限制每页可以返回多少对象，范围为 1-100 项，默认是 10 项。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>starting_after</td>
+<td>在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 id 是 obj_end，你可以使用 starting_after=obj_end 去获取下一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>ending_before</td>
+<td>在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的最后一项的 id 是 obj_start，你可以使用 ending_before=obj_start 去获取上一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>对象的创建时间，用 Unix 时间戳表示，参考<a href="#">created参数说明</a>。</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="created">created参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created[gt]</td>
+<td>大于 <code class="prettyprint">Customer</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[gte]</td>
+<td>大于或等于 <code class="prettyprint">Customer</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lt]</td>
+<td>小于 <code class="prettyprint">Customer</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lte]</td>
+<td>小于或等于 <code class="prettyprint">Customer</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>

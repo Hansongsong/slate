@@ -91,7 +91,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;Curl&quot;,&quot;Php&quot;,&quot;Java&quot;,&quot;Ruby&quot;,&quot;Node.js&quot;,&quot;Python&quot;,&quot;Go&quot;,&quot;C#&quot;]">
+  <body class="index" data-languages="[&quot;Curl&quot;,&quot;PHP&quot;,&quot;Java&quot;,&quot;Ruby&quot;,&quot;Node.js&quot;,&quot;Python&quot;,&quot;Go&quot;,&quot;C#&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -102,7 +102,7 @@
       <img src="images/logo.png" />
         <div class="lang-selector">
               <a href="#" data-language-name="Curl">Curl</a>
-              <a href="#" data-language-name="Php">Php</a>
+              <a href="#" data-language-name="PHP">PHP</a>
               <a href="#" data-language-name="Java">Java</a>
               <a href="#" data-language-name="Ruby">Ruby</a>
               <a href="#" data-language-name="Node.js">Node.js</a>
@@ -133,54 +133,412 @@
 </blockquote>
 <pre class="highlight plaintext"><code>Curl:Ping++ API 主站地址：https://api.pingxx.com
 </code></pre>
-<pre class="highlight plaintext"><code>Php:Ping++ API 主站地址：https://api.pingxx.com
+<pre class="highlight plaintext"><code>PHP:Ping++ API 主站地址：https://api.pingxx.com
 </code></pre>
 <pre class="highlight plaintext"><code>Java:Ping++ API 主站地址：https://api.pingxx.com
 </code></pre>
 <pre class="highlight plaintext"><code>Ruby:Ping++ API 主站地址：https://api.pingxx.com
 </code></pre>
+<pre class="highlight plaintext"><code>Node.js:Ping++ API 主站地址：https://api.pingxx.com
+</code></pre>
+<pre class="highlight plaintext"><code>Python:Ping++ API 主站地址：https://api.pingxx.com
+</code></pre>
+<pre class="highlight plaintext"><code>Go:Ping++ API 主站地址：https://api.pingxx.com
+</code></pre>
+<pre class="highlight plaintext"><code>C#:Ping++ API 主站地址：https://api.pingxx.com
+</code></pre>
+
+<h1 id="authentication">Authentication认证</h1>
+
+<p>在调用 API 时，必须提供 API Key 作为每个请求的身份验证。你可以在管理平台内管理你的 API Key。API Key 是商户在 Ping++ 系统中的身份标识，请安全存储，确保其不要被泄露。如需更新，也可以在管理平台的「基本信息」内进行更新。</p>
+
+<p>API Key 分为 live 和 test 两种模式。分别对应真实交易环境和模拟测试交易环境并且可以实时切换。测试模式下的 API Key 会模拟交易等请求，但是不会产生任何真实交易行为和费用，便于调试和接入。 所有的 API 请求必须通过 HTTPS 发送，使用 HTTP 会被 Ping++ 服务器拒绝。</p>
+<pre class="highlight plaintext"><code>curl https://api.pingxx.com/v1/charges \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC:
+
+  注意将示例中的 sk_test_ibbTe5jLGCi5rzfH4OqPW9KC 替换成你自己的 API Key。
+Ping++ API 使用 HTTP Basic Auth 进行认证。 将 API Key 作为 basic auth 的用户名。不需要填写密码。
+</code></pre>
+<pre class="highlight plaintext"><code> \Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+
+  注意将示例中的 sk_test_ibbTe5jLGCi5rzfH4OqPW9KC 替换成你自己的 API Key。
+调用 \Pingpp\Pingpp::setApiKey() 方法使用你的 API Key。 Ping++ SDK PHP 库文件会自动的将这个 key 应用到每个请求中。
+
+```Java
+ Pingpp.apiKey = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC";
+
+  注意将示例中的 sk_test_ibbTe5jLGCi5rzfH4OqPW9KC 替换成你自己的 API Key。
+  将 Pingpp.apiKey 设置为你的 API Key。 Ping++ SDK Java 库文件会自动的将这个 key 应用到每个请求中
+</code></pre>
+<pre class="highlight plaintext"><code>Pingpp.api_key = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"
+
+  注意将示例中的 sk_test_ibbTe5jLGCi5rzfH4OqPW9KC 替换成你自己的 API Key。
+  使用 Pingpp.api_key = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC" 设置你的 API Key Ping++ SDK ruby 库文件会自动的将这个 key 应用到每个请求中
+</code></pre>
+<pre class="highlight plaintext"><code> var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+
+  注意将示例中的 sk_test_ibbTe5jLGCi5rzfH4OqPW9KC 替换成你自己的 API Key。
+  调用 var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'); 使用你的 API Key。
+</code></pre>
+<pre class="highlight plaintext"><code>pingpp.api_key = 'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'
+
+  注意将示例中的 sk_test_ibbTe5jLGCi5rzfH4OqPW9KC 替换成你自己的 API Key。
+  使用 pingpp.api_key = 'API-KEY'; 设置你的 API Key。
+</code></pre>
+<pre class="highlight plaintext"><code>Pingpp.Key = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"
+
+  注意将示例中的 sk_test_ibbTe5jLGCi5rzfH4OqPW9KC 替换成你自己的 API Key。
+  Pingpp.Key = “sk_test_ibbTe5jLGCi5rzfH4OqPW9KC” 设置你的 API Key。
+</code></pre>
+<pre class="highlight plaintext"><code>Pingpp.apiKey = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"
+
+  注意将示例中的 sk_test_ibbTe5jLGCi5rzfH4OqPW9KC 替换成你自己的 API Key。
+
+</code></pre>
+
+<h1 id="errors">Errors 错误处理</h1>
+
+<p>Ping++ 使用 HTTP 状态码来表明一个 API 请求的成功或失败。通常，返回值 2xx 表明 API 请求成功。返回值 4xx 表明 API 请求时被提供了错误的信息（比如参数缺失，参数错误，支付渠道错误等）。返回值 5xx 表明 API 请求时，Ping++ 服务器发生了错误。</p>
+
+<h3 id="attribute">Attribute</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>错误类型，可以是 <code class="prettyprint">invalid_request_error</code>、<code class="prettyprint">api_error</code>、<code class="prettyprint">channel_error</code> 或 <code class="prettyprint">card_error</code>。</td>
+</tr>
+<tr>
+<td>message</td>
+<td>返回具体的错误描述。</td>
+</tr>
+<tr>
+<td>code</td>
+<td>错误码，由第三方支付渠道返回的错误代码，optional。</td>
+</tr>
+<tr>
+<td>param</td>
+<td>当发生参数错误时返回具体的参数名，如 id，optional。</td>
+</tr>
+</tbody></table>
+
+<h3 id="http">HTTP 返回状态码</h3>
+
+<table><thead>
+<tr>
+<th>状态码</th>
+<th>解释</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK，一切正常。</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request，一般由缺失参数，参数格式不正确等引起。</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized，没有提供正确的 API Key。</td>
+</tr>
+<tr>
+<td>402</td>
+<td>Request Failed，参数格式正确但是请求失败，一般由业务错误引起。</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden，调用接口超过 Ping++ 套餐的并发限制，请<a href="https://dashboard.pingxx.com/pricing">升级套餐</a>或限流。</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found，请求的资源不存在。</td>
+</tr>
+<tr>
+<td>500、502、503、504</td>
+<td>Server errors，Ping++ 服务器错误。</td>
+</tr>
+</tbody></table>
+
+<h3 id=">错误类型</h3>
+
+<table><thead>
+<tr>
+<th>报错类型</th>
+<th>错误解释</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>invalid_request_error</td>
+<td>请求误，传入了不正确的地址，参数或值。</td>
+</tr>
+<tr>
+<td>api_error</td>
+<td>Ping++ 服务器出现的异常错误。</td>
+</tr>
+<tr>
+<td>channel_error</td>
+<td>第三方支付渠道出现的错误导致请求出现错误。通常你需要对这些可能出现的情况进行处理或者联系我们。</td>
+</tr>
+<tr>
+<td>card_error</td>
+<td>用户进行绑卡或使用卡片进行支付时出现的卡片错误,通常你需要对这些可能出现的情况进行处理。</td>
+</tr>
+</tbody></table>
+
+<h3 id=">错误码</h3>
+
+<table><thead>
+<tr>
+<th>错误码</th>
+<th>错误解释</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>charge_closed</td>
+<td>支付订单已结束，不能进行后续操作。</td>
+</tr>
+<tr>
+<td>charge_unexpected_status</td>
+<td>支付返回意外的状态码。</td>
+</tr>
+<tr>
+<td>refund_wait_operation</td>
+<td>退款需要等待用户进一步操作。</td>
+</tr>
+<tr>
+<td>refund_refused</td>
+<td>退款失败，被支付渠道拒绝。</td>
+</tr>
+<tr>
+<td>refund_retry</td>
+<td>退款失败，需要重新发起退款。</td>
+</tr>
+<tr>
+<td>refund_manual_intervention</td>
+<td>退款失败，需要通过线下或转账进行退款。</td>
+</tr>
+<tr>
+<td>refund_unexpected_status</td>
+<td>退款返回意外的状态码。</td>
+</tr>
+<tr>
+<td>channel_connection_error</td>
+<td>支付渠道通讯异常。</td>
+</tr>
+<tr>
+<td>channel_request_error</td>
+<td>请求支付渠道接口失败。</td>
+</tr>
+<tr>
+<td>channel_parse_error</td>
+<td>支付渠道返回意外的数据格式发生的解析错误。</td>
+</tr>
+<tr>
+<td>channel_sign_error</td>
+<td>支付渠道返回的数据没有通过签名验证。</td>
+</tr>
+<tr>
+<td>card_declined</td>
+<td>卡片信息有误或未开通银联无卡支付业务。</td>
+</tr>
+<tr>
+<td>under_verification</td>
+<td>卡片信息核实中，请稍后再试。</td>
+</tr>
+<tr>
+<td>already_bound</td>
+<td>卡片已经进行过了绑定。</td>
+</tr>
+<tr>
+<td>binding_unauthorized</td>
+<td>卡片绑定操作未授权。</td>
+</tr>
+<tr>
+<td>cardholder_not_match</td>
+<td>绑定的卡片与原持卡人不匹配。</td>
+</tr>
+<tr>
+<td>send_sms_failed</td>
+<td>支付短信发送失败。</td>
+</tr>
+</tbody></table>
 
 <h1 id="pagination">Pagination 分页机制</h1>
+<pre class="highlight plaintext"><code>  curl https://api.pingxx.com/v1/charges \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC:
+</code></pre>
+<pre class="highlight plaintext"><code>\Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  \Pingpp\Charge::all();
+</code></pre>
+<pre class="highlight plaintext"><code>  Pingpp.apiKey = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC";
+  Charge.all(new HashMap&lt;String, Object&gt;());
+</code></pre>
+<pre class="highlight plaintext"><code>  require "pingpp"
+  Pingpp.api_key = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"
+  Pingpp::Charge.all()
+</code></pre>
+<pre class="highlight plaintext"><code>var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  pingpp.charges.list({}, function(err, charges) {
+    // YOUR CODE
+  });
+</code></pre>
+<pre class="highlight plaintext"><code> ch = pingpp.Charge.all()
+</code></pre>
+<pre class="highlight plaintext"><code>charge.List(params)
+</code></pre>
+<pre class="highlight plaintext"><code> Pingpp.apiKey = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC";
+  Charge.list(new Dictionary&lt;String, Object&gt;());
+</code></pre>
 
 <p>所有的 Ping++ 资源都可以被 list API 方法支持，例如分页 charges 和 refunds。这些 list API 方法拥有相同的数据结构。Ping++ 是基于 cursor 的分页机制，使用参数 starting_after 来决定列表从何处开始。</p>
 
-<h1 id="authentication">Authentication</h1>
+<p>/<em>###参数</em>/有问题 加了这个标题 就不行了</p>
 
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h3 id="canshu">canshu</h3>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>int</td>
+<td>限制有多少对象可以被返回，限制范围是从 1-100 项，默认是 10 项。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>starting_after</td>
+<td>obj</td>
+<td>在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_end</code>，你可以使用 <code class="prettyprint">starting_after</code> = <code class="prettyprint">obj_end</code> 去获取下一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>ending_before</td>
+<td>obj</td>
+<td>在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_start</code>，你可以使用 <code class="prettyprint">ending_before</code> = <code class="prettyprint">obj_start</code> 去获取上一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>timestamp</td>
+<td>对象的创建时间，用 Unix 时间戳表示。具体参考<a href="created参数说明">created参数说明</a></td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="created">created参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created[gt]</td>
+<td>大于 charge 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[gte]</td>
+<td>大于或等于 charge 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lt]</td>
+<td>小于 charge 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lte]</td>
+<td>小于或等于 charge 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="canshu">返回canshu //目前这种字段不支持纯中文的标题</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>object</td>
+<td>string</td>
+<td>值为list</td>
+</tr>
+<tr>
+<td>date</td>
+<td>array</td>
+<td>包含一个由请求参数分页后的返回元素实体。</td>
+</tr>
+<tr>
+<td>has_more</td>
+<td>boolean</td>
+<td>表明获取列表之后是否还有更多的元素实体。如果值为 false，表明当前页是最后一页。</td>
+</tr>
+<tr>
+<td>url</td>
+<td>string</td>
+<td>表明获取该列表所使用的 URL。</td>
+</tr>
+</tbody></table>
+
+<h1 id="expanding">Expanding 展开对象</h1>
+<pre class="highlight plaintext"><code>
+  curl https://api.pingxx.com/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD?expand%5b%5d=app \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC:
 </code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+<pre class="highlight php"><code>  \Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  \Pingpp\Charge::retrieve(array('id' =<span class="ni">&amp;gt;</span> 'ch_Hm5uTSifDOuTy9iLeLPSurrD', 'expand' =<span class="ni">&amp;gt;</span> array('app')));
 </code></pre>
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
+<pre class="highlight java"><code>
+  <span class="n">Ping</span><span class="o">++</span> <span class="n">SDK</span> <span class="n">Java</span> <span class="err">库暂不支持这个特性。</span>
 </code></pre>
-<pre class="highlight javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<pre class="highlight ruby"><code>  <span class="nb">require</span> <span class="s2">"pingpp"</span>
+  <span class="no">Pingpp</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span>
+  <span class="no">Pingpp</span><span class="o">::</span><span class="no">Charge</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="ss">:id</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"ch_Hm5uTSifDOuTy9iLeLPSurrD"</span><span class="p">,</span> <span class="ss">:expand</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="p">[</span><span class="s1">'app'</span><span class="p">])</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  pingpp.charges.retrieve(
+    "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+    { expand: ["app"] },
+    function(err, charge) {
+      // 异步调用
+    }
+  );
+</code></pre>
+<pre class="highlight python"><code>  <span class="kn">import</span> <span class="nn">pingpp</span>
+  <span class="n">pingpp</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'</span>
+  <span class="n">ch</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">Charge</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s">'ch_Hm5uTSifDOuTy9iLeLPSurrD'</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="s">'app'</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">Ping</span><span class="o">++</span><span class="x"> </span><span class="n">SDK</span><span class="x"> </span><span class="n">Go</span><span class="x"> </span><span class="n">库暂不支持这个特性</span><span class="err">。</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>  <span class="n">Ping</span><span class="p">++</span> <span class="n">SDK</span> <span class="n">C</span><span class="err">#</span> <span class="err">库暂不支持这个特性。</span>
 </code></pre>
 
-<blockquote>
-<p>Make sure to replace <code class="prettyprint">meowmeowmeow</code> with your API key.</p>
-</blockquote>
+<p>Ping++ 内有很多对象包含了其他对象的 id，如果这些对象带有 <code class="prettyprint">expand</code> 展开特性，你可以在请求参数后加入额外的展开参数来展开子对象。例如在创建 <code class="prettyprint">charge</code> 对象时，使用 expand[] = app 参数来展开返回 <code class="prettyprint">charge</code> 对象内部的 <code class="prettyprint">app</code> 对象。</p>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<h1 id="metadate">Metadate 元数据</h1>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>一些 Ping++ 对象支持加入用户指定的 <code class="prettyprint">metadata</code> 参数。你可以使用键值对的形式来构建自己的 <code class="prettyprint">metadata</code>，例如 metadata[color] = red，你可以在每一个 <code class="prettyprint">charge</code> 对象中加入订单的一些详情，如颜色、型号等属性，在查询时获得更多信息。每一个对象的 <code class="prettyprint">metadata</code> 最多可以拥有 10 个键值对，数据总长度在 1000 个 Unicode 字符以内。</p>
+<pre class="highlight plaintext"><code>    这里的所有的请求示例 和 返回示例 在admin上都加好了 可以直接复制粘贴 这里不在加过来了。
+</code></pre>
 
-<p><code class="prettyprint">Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-<h1 id="kittens">Kittens</h1>
+<h1 id="test">Test暂时留着</h1>
 
 <h2 id="get-all-kittens">Get All Kittens</h2>
 <pre class="highlight plaintext"><code>require 'kittn'
@@ -308,34 +666,614 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </tbody></table>
 
-<h1 id="chagres">Chagres支付</h1>
-<pre class="highlight plaintext"><code>require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
+<h1 id="charges">Charges支付</h1>
+<pre class="highlight plaintext"><code>admin可以复制粘贴
 </code></pre>
 
-<h3 id="www">www参数（三级标题 貌似不支持纯中文）</h3>
+<p>一些 Ping++ 对象支持加入用户指定的 <code class="prettyprint">metadata</code> 参数。你可以使用键值对的形式来构建自己的 <code class="prettyprint">metadata</code>，例如 metadata[color] = red，你可以在每一个 <code class="prettyprint">charge</code> 对象中加入订单的一些详情，如颜色、型号等属性，在查询时获得更多信息。每一个对象的 <code class="prettyprint">metadata</code> 最多可以拥有 10 个键值对，数据总长度在 1000 个 Unicode 字符以内。</p>
 
-<p>所有和支付相关的要素信息都存储在 charge 这个对象中，你可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个支付对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。</p>
-
-<p>表格 有待优化的说</p>
+<h3 id="1">1参数</h3>
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>description</th>
-<th>是否必须</th>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>id</td>
-<td>string</td>
+<td><strong>string</strong></td>
 <td>支付对象 id ，由 Ping++ 生成，27 位长度字符串。</td>
-<td>√</td>
+</tr>
+<tr>
+<td>object</td>
+<td><strong>string</strong></td>
+<td>值为 charge。</td>
+</tr>
+<tr>
+<td>created</td>
+<td><strong>timestamp</strong></td>
+<td>支付创建的时间，用 Unix 时间戳表示。</td>
+</tr>
+<tr>
+<td>livemode</td>
+<td><strong>boolean</strong></td>
+<td>支付是否处于 live 模式。</td>
+</tr>
+<tr>
+<td>paid</td>
+<td><strong>boolean</strong></td>
+<td>是否已付款。</td>
+</tr>
+<tr>
+<td>refunded</td>
+<td><strong>boolean</strong></td>
+<td>是否存在退款信息，无论退款是否成功。</td>
+</tr>
+<tr>
+<td>app</td>
+<td><strong>string</strong></td>
+<td>支付使用的 <code class="prettyprint">app</code> 对象的 <code class="prettyprint">id</code>。expandable 可展开。</td>
+</tr>
+<tr>
+<td>channel</td>
+<td><strong>string</strong></td>
+<td>支付使用的第三方支付渠道，详情参考<a href="#channel">取值范围</a>。</td>
+</tr>
+<tr>
+<td>order_no</td>
+<td><strong>string</strong></td>
+<td>商户订单号，适配每个渠道对此参数的要求，必须在商户系统内唯一。(alipay: 1-64 位， wx: 1-32 位，bfb: 1-20 位，upacp: 8-40 位，yeepay_wap:1-50 位，jdpay_wap:1-30 位，cnp_u:8-20 位，cnp_f:8-20 位，推荐使用 8-20 位，要求数字或字母，不允许特殊字符)。</td>
+</tr>
+<tr>
+<td>client_ip</td>
+<td><strong>ip address</strong></td>
+<td>发起支付请求终端的 ip 地址，格式为 IPV4 整型，如 127.0.0.1。</td>
+</tr>
+<tr>
+<td>amount</td>
+<td><strong>integer and &gt; 0</strong></td>
+<td>订单总金额，单位为对应币种的最小货币单位，例如：<b style="color: #f15467;">人民币为分</b>（如订单总金额为 1 元，此处请填 100）。</td>
+</tr>
+<tr>
+<td>amount_settle</td>
+<td><strong>integer</strong></td>
+<td>清算金额，单位为对应币种的最小货币单位，例如：人民币为分。</td>
+</tr>
+<tr>
+<td>currency</td>
+<td><strong>currency</strong></td>
+<td>三位 ISO 货币代码，人民币为 <code class="prettyprint">cny</code>。</td>
+</tr>
+<tr>
+<td>subject</td>
+<td><strong>string</strong></td>
+<td>商品的标题，该参数最长为 32 个 Unicode 字符，银联全渠道（upacp/upacp_wap）限制在 32 个字节。</td>
+</tr>
+<tr>
+<td>body</td>
+<td><strong>string</strong></td>
+<td>商品的描述信息，该参数最长为 128 个 Unicode 字符，yeepay_wap 对于该参数长度限制为 100 个 Unicode 字符。</td>
+</tr>
+<tr>
+<td>extra</td>
+<td><strong>object</strong></td>
+<td>特定渠道发起交易时需要的额外参数以及部分渠道支付成功返回的额外参数，详细参考<a href="#">extra参数说明</a>。</td>
+</tr>
+<tr>
+<td>time_paid</td>
+<td><strong>timestamp</strong></td>
+<td>订单支付完成时间，用 Unix 时间戳表示。</td>
+</tr>
+<tr>
+<td>time_expire</td>
+<td><strong>timestamp</strong></td>
+<td>订单失效时间，用 Unix 时间戳表示。时间范围在订单创建后的 1 分钟到 15 天，默认为 1 天，创建时间以 Ping++ 服务器时间为准。 微信对该参数的有效值限制为 2 小时内；银联对该参数的有效值限制为 1 小时内。</td>
+</tr>
+<tr>
+<td>time_settle</td>
+<td><strong>timestamp</strong></td>
+<td>订单清算时间，用 Unix 时间戳表示。（仅针对个人开发者）</td>
+</tr>
+<tr>
+<td>transaction_no</td>
+<td><strong>string</strong></td>
+<td>支付渠道返回的交易流水号。</td>
+</tr>
+<tr>
+<td>refunds</td>
+<td><strong>list</strong></td>
+<td>退款详情列表，详见 refund 退款对象。</td>
+</tr>
+<tr>
+<td>amount_refunded</td>
+<td><strong>integer and &gt; 0</strong></td>
+<td>已退款总金额，单位为对应币种的最小货币单位，例如：人民币为分。</td>
+</tr>
+<tr>
+<td>failure_code</td>
+<td><strong>string</strong></td>
+<td>订单的错误码，<a href="https://www.pingxx.com/document/api#api-errors">详见 Errors 错误处理机制</a>中的错误码描述。</td>
+</tr>
+<tr>
+<td>failure_msg</td>
+<td><strong>string</strong></td>
+<td>订单的错误消息的描述。</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td><strong>metadata hash</strong></td>
+<td><a href="https://www.pingxx.com/document/api#api-metadata">参考 Metadata 元数据。</a></td>
+</tr>
+<tr>
+<td>credential</td>
+<td><strong>object</strong></td>
+<td>支付凭证，用于客户端发起支付。</td>
+</tr>
+<tr>
+<td>description</td>
+<td><strong>string</strong></td>
+<td>订单附加说明，最多 255 个 Unicode 字符。</td>
 </tr>
 </tbody></table>
+
+<h3 id="channel">channel 参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>对应渠道</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>alipay</td>
+<td>支付宝手机支付</td>
+</tr>
+<tr>
+<td>alipay_wap</td>
+<td>支付宝手机网页支付</td>
+</tr>
+<tr>
+<td>alipay_pc_direct</td>
+<td>支付宝 PC 网页支付</td>
+</tr>
+<tr>
+<td>alipay_qr</td>
+<td>支付宝扫码支付</td>
+</tr>
+<tr>
+<td>bfb</td>
+<td>百度钱包移动快捷支付</td>
+</tr>
+<tr>
+<td>bfb_wap</td>
+<td>百度钱包手机网页支付</td>
+</tr>
+<tr>
+<td>upacp</td>
+<td>银联全渠道支付（2015 年 1 月 1 日后的银联新商户使用。若有疑问，请与 Ping++ 或者相关的收单行联系）</td>
+</tr>
+<tr>
+<td>upacp_wap</td>
+<td>银联全渠道手机网页支付（2015 年 1 月 1 日后的银联新商户使用。若有疑问，请与 Ping++ 或者相关的收单行联系）</td>
+</tr>
+<tr>
+<td>upacp_pc</td>
+<td>银联 PC 网页支付</td>
+</tr>
+<tr>
+<td>cp_b2b</td>
+<td>银联企业网银支付</td>
+</tr>
+<tr>
+<td>wx</td>
+<td>微信支付</td>
+</tr>
+<tr>
+<td>wx_pub</td>
+<td>微信公众号支付</td>
+</tr>
+<tr>
+<td>wx_pub_qr</td>
+<td>微信公众号扫码支付</td>
+</tr>
+<tr>
+<td>wx_wap</td>
+<td>微信WAP支付</td>
+</tr>
+<tr>
+<td>yeepay_wap</td>
+<td>易宝手机网页支付</td>
+</tr>
+<tr>
+<td>jdpay_wap</td>
+<td>京东手机网页支付</td>
+</tr>
+<tr>
+<td>cnp_u</td>
+<td>应用内快捷支付（银联）</td>
+</tr>
+<tr>
+<td>cnp_f</td>
+<td>应用内快捷支付（外卡）</td>
+</tr>
+<tr>
+<td>applepay_upacp</td>
+<td>Apple Pay</td>
+</tr>
+<tr>
+<td>fqlpay_wap</td>
+<td>分期乐支付</td>
+</tr>
+<tr>
+<td>qgbc_wap</td>
+<td>量化派支付</td>
+</tr>
+<tr>
+<td>cmb_wallet</td>
+<td>招行一网通</td>
+</tr>
+</tbody></table>
+
+<h4>extra参数说明:</h4>
+
+<p>1.这个是Charges支付对应的表格:
+<table border="1">
+    <tr>
+        <th>渠道</th>
+        <th>参数</th>
+        <th>类型</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td rowspan="4" valign="middle">alipay(支付宝手机支付)</td>
+        <th>extern_token</th>
+        <th>optional</th>
+        <th>开放平台返回的包含账户信息的 token（授权令牌，商户在一定时间内对支付宝某些服务的访问权限）。通过授权登录后获取的 alipay_open_id，作为该参数的 value，登录授权账户即会为支付账户，32 位字符串.</th>
+    </tr>
+    <tr>
+        <th>rn_check</th>
+        <th>optional</th>
+        <th>是否发起实名校验，T 代表发起实名校验；F 代表不发起实名校验</th>
+    </tr>
+    <tr>
+        <th>buyer_account</th>
+        <th>返回参数</th>
+        <th>支付完成将额外返回付款用户的支付宝账号</th>
+    </tr>
+    <tr><th colspan="3">注:p_no, seq, m_uid, mobile 这几个参数决定是否签约，传同样的参数，就不会重新签约；所以，同一个用户，最好用同一套参数，否则签约次数超限，就无法正常使用，且目前没有提供解约接口。</th></tr>
+</table></p>
+
+<p>2.这个是创建Charge对象对应的表格
+<table border="1">
+    <tr>
+        <th>渠道</th>
+        <th>参数</th>
+        <th>描述</th>
+        <th>是否必须</th>
+    </tr>
+    <tr>
+        <td rowspan="4" valign="middle">alipay(支付宝手机支付)</td>
+        <th>extern_token</th>
+        <th>开放平台返回的包含账户信息的 token（授权令牌，商户在一定时间内对支付宝某些服务的访问权限）。通过授权登录后获取的 alipay_open_id，作为该参数的 value，登录授权账户即会为支付账户，32 位字符串。</th>
+        <th>optional</th>
+    </tr>
+    <tr>
+        <th>rn_check</th>
+        <th>是否发起实名校验，T 代表发起实名校验；F 代表不发起实名校验</th>
+        <th>optional</th>
+    </tr>
+    <tr>
+        <th>buyer_account</th>
+        <th>支付完成将额外返回付款用户的支付宝账号</th>
+        <th>返回参数</th>
+    </tr>
+    <tr><th colspan="3">注:p_no, seq, m_uid, mobile 这几个参数决定是否签约，传同样的参数，就不会重新签约；所以，同一个用户，最好用同一套参数，否则签约次数超限，就无法正常使用，且目前没有提供解约接口。</th></tr>
+</table></p>
+
+<h3 id="extra">extra参数说明 好像只能这么写 下面就暂时不写表格了</h3>
+
+<table><thead>
+<tr>
+<th>渠道</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>alipay(支付宝手机支付)</td>
+<td>extern_token[string]</td>
+<td>开放平台返回的包含账户信息的 token（授权令牌，商户在一定时间内对支付宝某些服务的访问权限）。通过授权登录后获取的 alipay_open_id，作为该参数的 value，登录授权账户即会为支付账户，32 位字符串，optional；</td>
+</tr>
+<tr>
+<td>alipay(支付宝手机支付)</td>
+<td>rn_check[string]</td>
+<td>是否发起实名校验，T 代表发起实名校验；F 代表不发起实名校验；optional；</td>
+</tr>
+<tr>
+<td>alipay(支付宝手机支付)</td>
+<td>buyer_account</td>
+<td>支付完成将额外返回付款用户的支付宝账号。</td>
+</tr>
+</tbody></table>
+
+<p>alipay_wap (支付宝手机网页支付)。
+参数 success_url[string] 为支付成功的回调地址，required；
+参数 cancel_url[string] 为支付取消的回调地址，optional；
+参数 new_version[boolean] 2016 年 6 月 16 日之前登录 Ping++ 管理平台填写支付宝手机网站的渠道参数的旧接口商户，需要更新接口时设置此参数值为true，6月16号后接入的新接口商户不需要设置该参数，optional；
+支付完成将额外返回付款用户的支付宝账号 buyer_account。
+alipay_pc_direct:
+(支付宝 PC 网页支付)。
+参数 success_url[string] 为支付成功的回调地址，required；
+参数 enable_anti_phishing_key[boolean]为是否开启防钓鱼网站的验证参数（如果已申请开通防钓鱼时间戳验证，则此字段必填），optional；
+参数 exter_invoke_ip[string] 为客户端 IP ，用户在创建交易时，该用户当前所使用机器的IP（如果商户申请后台开通防钓鱼IP地址检查选项，此字段必填，校验用），optional；
+wx:
+(微信支付)。
+参数 limit_pay[string] 为指定支付方式，指定不能使用信用卡支付可设置为no_credit，optional；
+支付完成将额外返回付款用户的 open_id 和付款银行类型 bank_type 。
+参数 goods_tag[string] 为商品标记，代金券或立减优惠功能的参数，optional；
+wx_pub:
+(微信
+公众号支付)。
+参数 limit_pay[string] 为指定支付方式，指定不能使用信用卡支付可设置为no_credit，optional；
+参数 open_id[string] 为用户在商户 appid 下的唯一标识，required；
+支付完成将额外返回付款银行类型 bank_type 。
+参数 goods_tag[string] 为商品标记，代金券或立减优惠功能的参数，optional；
+upacp_wap:
+(银联全渠道 
+手机网页支付)。
+参数 result_url[string] 为支付完成的回调地址，required；
+upacp_pc:
+(银联 PC 网页支付)。
+参数 result_url[string] 为支付完成的回调地址，required；
+bfb_wap:
+(百度钱包 
+手机网页支付)。
+参数 result_url[string] 为支付完成的回调地址，required；
+参数 bfb_login[boolean] 为是否需要登录百度钱包来进行支付，required；
+wx_pub_qr:
+(微信公众号
+扫码支付)。
+参数 limit_pay[string] 为指定支付方式，指定不能使用信用卡支付可设置为no_credit，optional；
+参数 product_id[string] 为商品 ID，1-32 位字符串。此 id 为二维码中包含的商品 ID，商户自行维护，required；
+支付完成将额外返回付款用户的 open_id 和付款银行类型 bank_type。
+参数 goods_tag[string] 为商品标记，代金券或立减优惠功能的参数，optional；
+yeepay_wap:
+(易宝
+手机网页支付)。
+参数 product_category[string] 为商品类别码，详见商品类型码表，required；
+参数 identity_id[string] 为用户标识,商户生成的用户账号唯一标识，最长 50 位字符串，required；
+参数 identity_type[int] 为用户标识类型，详见用户标识类型码表，required；
+参数 terminal_type[int] 为终端类型，对应取值 0:IMEI, 1:MAC, 2:UUID, 3:other，required；
+参数 terminal_id[string] 为终端 ID，required；
+参数 user_ua[string] 为用户使用的移动终端的 UserAgent 信息，required；
+参数 result_url[string] 为前台通知地址，required。
+jdpay_wap:
+(京东
+手机网页支付)。
+参数 success_url[string] 为支付成功页面跳转路径，required；
+参数 fail_url[string] 为支付失败页面跳转路径，required；
+参数 token[string] 为用户交易令牌，用于识别用户信息，支付成功后会调用 success_url 返回给商户。商户可以记录这个 token 值，当用户再次支付的时候传入该 token，用户无需再次输入银行卡信息，直接输入短信验证码进行支付。32 位字符串，optional；
+cnp_u:
+应用内快捷支付（银联）
+参数 source[string] 为 Token 对象 id，required；
+参数 sms_code[id][string] 为 SMS Code 对象 id，当为银联卡时必填，required；
+参数 sms_code[code][string] 为短信验证码，当为银联卡时必填。，required；
+cnp_f:
+应用内快捷支付（外卡）
+参数 source[string] Token 对象 id，required；
+fqlpay_wap:
+(分期乐支付)
+参数 c_merch_id [string]子商户编号，需要提交该订单商户的所属子商户编号，required；
+参数 return_url [string]前端回调地址，交易完成跳转的链接，不能带自定义参数，optional；
+qgbc_wap:
+(量化派支付)
+参数 phone [string]手机号码，required；
+参数 term [integer]分期参数，0 代表不分期，1 代表分 3 期，2 代表分 6 期，3 代表分 9 期，4 代表分 12 期，optional；
+参数 return_url [string]交易完成跳转的地址，optional；
+参数 activate_url [string]账户激活中状态跳转链接，optional；
+参数 has_header [boolean]是否显示量化派页面顶部 header，即是否显示 H5 顶部标题栏，默认 true 显示，optional；
+cmb_wallet:
+(招行一网通)
+参数 result_url[string] 为支付完成的前端回调地址，required；
+参数 p_no[string] 为客户协议号，不超过 30 位的纯数字字符串，required；
+参数 seq[string] 为协议开通请求流水号，不超过 20 位的纯数字字符串，请保证系统内唯一，required；
+参数 m_uid[string] 为协议用户 ID，不超过 20 位的纯数字字符串，required；
+参数 mobile[string] 为协议手机号，11 位数字，required；
+注:p_no, seq, m_uid, mobile 这几个参数决定是否签约，传同样的参数，就不会重新签约；所以，同一个用户，最好用同一套参数，否则签约次数超限，就无法正常使用，且目前没有提供解约接口。
+wx_wap:
+(微信WAP支付)。
+参数 limit_pay[string] 为指定支付方式，指定不能使用信用卡支付可设置为no_credit，optional；
+支付完成将额外返回付款用户的 open_id 和付款银行类型 bank_type 。
+参数 goods_tag[string] 为商品标记，代金券或立减优惠功能的参数，optional；</p>
+
+<h2 id="charge">创建 Charge 对象</h2>
+
+<p>发起一次支付请求时需要创建一个新的 <code class="prettyprint">charge</code> 对象，获取一个可用的支付凭证用于客户端向第三方渠道发起支付请求。如果使用测试模式的 API Key，则不会发生真实交易。当支付成功后，Ping++ 会发送 Webhooks 通知。</p>
+
+<h3 id="can-channel-extra">can数  channel 和 extra参数部分 和上面一样</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>order_no</td>
+<td>商户订单号，适配每个渠道对此参数的要求，必须在商户系统内唯一。(alipay: 1-64 位， wx: 1-32 位，bfb: 1-20 位，upacp: 8-40 位，yeepay_wap:1-50 位，jdpay_wap:1-30 位，cnp_u:8-20 位，cnp_f:8-20 位，推荐使用 8-20 位，要求数字或字母，不允许特殊字符)。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>app[id]</td>
+<td>支付使用的 <code class="prettyprint">app</code> 对象的 <code class="prettyprint">id</code>。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>支付使用的第三方支付渠道，取值范围。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>订单总金额, 单位为对应币种的最小货币单位，例如：<b style="color: #f15467;">人民币为分</b>（如订单总金额为 1 元，此处请填 100）。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>client_ip</td>
+<td>发起支付请求终端的 IP 地址，格式为 IPV4，如: 127.0.0.1。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>currency</td>
+<td>三位 ISO 货币代码，目前仅支持人民币 <code class="prettyprint">cny</code>。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>subject</td>
+<td>商品的标题，该参数最长为 32 个 Unicode 字符，银联全渠道（upacp/upacp_wap）限制在 32 个字节。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>body</td>
+<td><strong>required</strong> 商品的描述信息，该参数最长为 128 个 Unicode 字符，yeepay_wap 对于该参数长度限制为 100 个 Unicode 字符。</td>
+<td></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>特定渠道发起交易时需要的额外参数以及部分渠道支付成功返回的额外参数。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>time_expire</td>
+<td>订单失效时间，用 Unix 时间戳表示。时间范围在订单创建后的 1 分钟到 15 天，默认为 1 天，创建时间以 Ping++ 服务器时间为准。 微信对该参数的有效值限制为 2 小时内；银联对该参数的有效值限制为 1 小时内。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>metadata</td>
+<td><a href="https://www.pingxx.com/document/api#api-metadata">参考 Metadata 元数据</a>。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>description</td>
+<td>订单附加说明，最多 255 个 Unicode 字符。</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="shu">返回参shu</h3>
+
+<p>鉴于支付渠道对 order_no 的合法性要求，为了保证支付请求的正确处理，请务必保证对于同一支付渠道下，不同支付产品间 order_no 的唯一性。例如：已在微信公众号下使用的 order_no 则无法在微信支付以及微信公众号扫码下重复使用，该规则同样适用于其他同类渠道。如果发生错误，则会返回错误码和错误详情，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h2 id="charge">查询 Charge  对象//点击二级标题有的没反应 或不对应</h2>
+
+<p>通过<code class="prettyprint">charge</code>对象的<code class="prettyprint">id</code>查询一个已创建的<code class="prettyprint">charge</code>对象。可以在后台异步通知之前，通过查询接口确认支付状态。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>required</strong> 查询的 <code class="prettyprint">charge</code> 对象 <code class="prettyprint">id</code>。</td>
+</tr>
+</tbody></table>
+
+<h3 id="s">返回s</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">charge</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h2 id="charge">查询 Charge 对象列表</h2>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述  </th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>限制每页可以返回多少对象，范围为 1-100 项，默认是 10 项。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>starting_after</td>
+<td>在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_end</code>，你可以使用 <code class="prettyprint">starting_after</code> = <code>obj_end </code> 去获取下一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>ending_before</td>
+<td>在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_start</code>，你可以使用 <code class="prettyprint">ending_before</code> = <code class="prettyprint">obj_start</code> 去获取上一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>对象的创建时间，用 Unix 时间戳表示，详情参考<a href="链接">created参数说明</a>。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>app[id]</td>
+<td>支付使用的 <code class="prettyprint">app</code> 对象的 <code class="prettyprint">id</code>。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>支付使用的支付渠道：alipay, alipay_wap, wx, upacp<sup><em></sup>, upacp_wap<sup></em></sup>, bfb, wx_pub 对应支付宝，支付宝手机网页支付，微信，银联，银联手机网页支付，百度钱包，微信公众账号支付。<br />(*工作室用户使用 upmp、upmp_wap，公司用户使用 upacp、upacp_wap)</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>paid</td>
+<td>是否已付款。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>refunded</td>
+<td>是否存在退款信息，无论退款是否成功。</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="created">created参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created[gt]</td>
+<td>大于 charge 对象的创建时间，用 Unix 时间戳表示。</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>created[gte]</td>
+<td>大于或等于 charge 对象的创建时间，用 Unix 时间戳表示。</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>created[lt]</td>
+<td>小于 charge 对象的创建时间，用 Unix 时间戳表示。</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>created[lte]</td>
+<td>小于或等于 charge 对象的创建时间，用 Unix 时间戳表示。</td>
+<td>optional</td>
+</tr>
+</tbody></table>
+
+<h3 id=">返回内容</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">charge</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
 
           <h1 id="errors">Errors</h1>
 
@@ -453,11 +1391,2698 @@ api.kittens.get
 </tr>
 </tbody></table>
 
+          <h1 id="refunds">Refunds退款</h1>
+
+<p><code class="prettyprint">refund</code> 对象允许你可以对已经支付的 <code class="prettyprint">charge</code> 对象发起退款请求。</p>
+
+<h3 id="can">can数</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>string</strong></td>
+<td>退款对象 id ，由 Ping++ 生成，27 位长度字符串。</td>
+</tr>
+<tr>
+<td>object</td>
+<td><strong>string</strong></td>
+<td>值为 refund。</td>
+</tr>
+<tr>
+<td>order_no</td>
+<td><strong>string</strong></td>
+<td>退款的订单号，<b style="color: #f15467;">由 Ping++ 生成</b>。这个地方的红色还是用html加的</td>
+</tr>
+<tr>
+<td>amount</td>
+<td><strong>integer and &gt; 0</strong></td>
+<td>退款金额，单位为对应币种的最小货币单位，例如：<b style="color: #f15467;">人民币为分</b>（如退款金额为 1 元，此处请填 100）。</td>
+</tr>
+<tr>
+<td>succeed</td>
+<td><strong>boolean</strong></td>
+<td>退款是否成功。</td>
+</tr>
+<tr>
+<td>status</td>
+<td><strong>string</strong></td>
+<td>退款状态（目前支持三种状态: pending: 处理中; succeeded: 成功; failed: 失败）。</td>
+</tr>
+<tr>
+<td>created</td>
+<td><strong>timestamp</strong></td>
+<td>退款创建的时间，用 Unix 时间戳表示。</td>
+</tr>
+<tr>
+<td>time_succeed</td>
+<td><strong>timestamp</strong></td>
+<td>退款成功的时间，用 Unix 时间戳表示。</td>
+</tr>
+<tr>
+<td>description</td>
+<td><strong>string</strong></td>
+<td>退款详情，最多 255 个 Unicode 字符。</td>
+</tr>
+<tr>
+<td>failure_code</td>
+<td><strong>string</strong></td>
+<td>退款的错误码，<a href="#api-errors">详见 Errors 错误处理机制</a>中的错误码。</td>
+</tr>
+<tr>
+<td>failure_msg</td>
+<td><strong>string</strong></td>
+<td>退款消息的描述。</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td><strong>metadata hash</strong></td>
+<td><a href="#api-metadata">参考 Metadata 元数据</a>。</td>
+</tr>
+<tr>
+<td>charge</td>
+<td><strong>string</strong></td>
+<td><code class="prettyprint">refund</code> 对象的所在 <code class="prettyprint">charge</code> 对象的 <code class="prettyprint">id</code>。</td>
+</tr>
+<tr>
+<td>charge_order_no</td>
+<td><strong>string</strong></td>
+<td>商户订单号，这边返回的是charge对象中的order_no参数。</td>
+</tr>
+<tr>
+<td>transaction_no</td>
+<td><strong>string</strong></td>
+<td>支付渠道返回的交易流水号，部分渠道返回该字段为空。</td>
+</tr>
+</tbody></table>
+
+<h2 id="refund">创建 Refund 对象</h2>
+
+<p>通过发起一次退款请求创建一个新的 <code class="prettyprint">refund</code> 对象，只能对已经发生交易并且没有全额退款的 <code class="prettyprint">charge</code> 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>required</strong> <code class="prettyprint">charge</code> 对象的 id。</td>
+</tr>
+<tr>
+<td>amount</td>
+<td><strong>optional</strong> 退款的金额, 单位为对应币种的最小货币单位，例如：<b style="color: #f15467;">人民币为分</b>（如退款金额为 1 元，此处请填 100）。必须小于等于可退款金额，默认为全额退款，应用内快捷支付目前只支持全额退款。</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td><strong>optional</strong> <a href="#api-metadata">参考 Metadata 元数据</a>。</td>
+</tr>
+<tr>
+<td>description</td>
+<td><strong>required</strong> 退款详情，最多 255 个 Unicode 字符。</td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui参数</h3>
+
+<p>如果发起退款成功，返回一个退款 <code class="prettyprint">refund</code> 对象。如果发生错误，则会返回错误码和错误详情，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h2 id="refund">查询 Refund 对象</h2>
+
+<p>可以通过 <code class="prettyprint">charge</code> 对象的查询接口查询某一个 <code class="prettyprint">charge</code> 对象的退款列表，也可以通过 <code class="prettyprint">refund</code> 对象的 <code class="prettyprint">id</code> 查询一个已创建的 <code class="prettyprint">refund</code> 对象。可以在 Webhooks 通知之前，通过查询接口确认退款状态。</p>
+
+<h3 id="can">can数</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>required</strong> 查询的 <code class="prettyprint">refund</code> 对象 <code class="prettyprint">id</code>。</td>
+</tr>
+<tr>
+<td>charge</td>
+<td><strong>required</strong> 退款的 <code class="prettyprint">charge</code> 对象 <code class="prettyprint">id</code>。</td>
+</tr>
+</tbody></table>
+
+<h3 id="fan">fan回</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">refund</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h3 id="refund">查询 Refund 对象列表</h3>
+
+<p>返回之前创建 <code class="prettyprint">charge</code> 对象的一个 <code class="prettyprint">refund</code> 对象列表。列表是按创建时间进行排序，总是将最新的 <code class="prettyprint">refund</code> 对象显示在最前。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>required</strong> 指定退款所在 <code class="prettyprint">charge</code> 对象的 <code class="prettyprint">id</code>。</td>
+</tr>
+<tr>
+<td>limit</td>
+<td><strong>optional</strong> 限制每页可以返回多少对象，范围为 1-20 项，默认是 10 项。</td>
+</tr>
+<tr>
+<td>starting_after</td>
+<td><strong>optional</strong> 在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_end</code>，你可以使用 <code class="prettyprint">starting_after</code> = <code class="prettyprint">obj_end</code> 去获取下一页。</td>
+</tr>
+<tr>
+<td>ending_before</td>
+<td><strong>optional</strong> 在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_start</code>，你可以使用 <code class="prettyprint">ending_before</code> = <code class="prettyprint">obj_start</code> 去获取上一页。</td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>根据请求参数返回一个 <code class="prettyprint">refund</code> 对象列表，如果列表为空，则返回的 <code class="prettyprint">data</code> 为空数组。遇到错误时返回相应错误信息，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+          <h1 id="red-envelope">Red envelope 红包</h1>
+
+<p>所有和红包支付相关的要素信息都存储在 <code class="prettyprint">red_envelope</code> 对象之中，你可以通过发起红包请求创建新的 <code class="prettyprint">red_envelope</code> 对象，也可以随时查看红包对象的状态。每个 <code class="prettyprint">red_envelope</code> 对象都拥有一个标识 <code class="prettyprint">id</code>，该 <code class="prettyprint">id</code> 在系统内唯一。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>string</strong></td>
+<td>红包对象 id ，由 Ping++ 生成，28 位长度字符串。</td>
+</tr>
+<tr>
+<td>object</td>
+<td><strong>string</strong></td>
+<td>值为 red_envelope。</td>
+</tr>
+<tr>
+<td>created</td>
+<td><strong>timestamp</strong></td>
+<td>支付红包的时间，用 Unix 时间戳表示。</td>
+</tr>
+<tr>
+<td>received</td>
+<td><strong>timestamp</strong></td>
+<td>红包的接收时间，用 Unix 时间戳表示。</td>
+</tr>
+<tr>
+<td>livemode</td>
+<td><strong>boolean</strong></td>
+<td>支付是否处于 live 模式。</td>
+</tr>
+<tr>
+<td>status</td>
+<td><strong>string</strong></td>
+<td>红包状态。目前支持 5 种状态（sending: 发放中; sent: 已发放待领取; failed: 发放失败; received: 已领取; refund: 已退款）。</td>
+</tr>
+<tr>
+<td>app</td>
+<td><strong>string</strong></td>
+<td>红包使用的 app 对象的 id。expandable 可展开。</td>
+</tr>
+<tr>
+<td>channel</td>
+<td><strong>string</strong></td>
+<td>红包使用的第三方支付渠道。目前支持 wx(新渠道)、 wx_pub。</td>
+</tr>
+<tr>
+<td>order_no</td>
+<td><strong>string</strong></td>
+<td>红包使用的商户订单号。wx(新渠道)、wx_pub 规定为 1 ~ 28 位一天内不能重复的数字。</td>
+</tr>
+<tr>
+<td>transaction_no</td>
+<td><strong>string</strong></td>
+<td>第三方支付渠道侧的交易流水号。</td>
+</tr>
+<tr>
+<td>amount</td>
+<td><strong>integer and &gt; 0</strong></td>
+<td>总金额，单位为对应币种的最小货币单位，例如：<b style="color: #f15467;">人民币为分</b>。wx_pub 限制在 100 ~ 20000 之间，即 1 ~ 200 元。</td>
+</tr>
+<tr>
+<td>currency</td>
+<td><strong>currency</strong></td>
+<td>三位 ISO 货币代码，目前仅支持人民币 cny。</td>
+</tr>
+<tr>
+<td>recipient</td>
+<td><strong>string</strong></td>
+<td>接收者 id， 为用户在 wx(新渠道)、wx_pub 为用户的 open id。</td>
+</tr>
+<tr>
+<td>subject</td>
+<td><strong>string</strong></td>
+<td>红包主题名称，最多 32 个字节。</td>
+</tr>
+<tr>
+<td>body</td>
+<td><strong>string</strong></td>
+<td>红包祝福语，最多 128 个字节。</td>
+</tr>
+<tr>
+<td>description</td>
+<td><strong>string</strong></td>
+<td>备注信息，最多 255 个字节。</td>
+</tr>
+<tr>
+<td>extra</td>
+<td><strong>object</strong></td>
+<td>支付渠道相关的附加参数，参考<a href="#">extra参数说明</a>。</td>
+</tr>
+</tbody></table>
+
+<h3 id="extra">extra参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>send_name</td>
+<td><strong>string</strong></td>
+<td>商户名称，最多 32 个字节。</td>
+</tr>
+</tbody></table>
+
+<h2 id="red-envelope">创建 Red envelope 对象</h2>
+
+<p>发起一次红包请求需要创建一个新的 <code class="prettyprint">red_envelope</code> 对象。如果支付失败，请检查错误信息，一般是由于账户余额不足引起的。使用测试模式的 API Key，则不会发生真实交易。同步返回交易结果，不会发送 Webhooks 通知。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>app[id]</td>
+<td>红包使用的 <code class="prettyprint">app</code> 对象的 <code class="prettyprint">id</code>。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>红包使用的第三方支付渠道。目前支持 wx(新渠道)、 wx_pub。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>order_no</td>
+<td>红包使用的商户订单号。wx(新渠道)、wx_pub 规定为 1 ~ 28 位一天内不能重复的数字。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>总金额，单位为对应币种的最小货币单位，例如：<b style="color: #f15467;">人民币为分</b>。wx_pub 限制在 100 ~ 20000 之间，即 1 ~ 200 元。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>currency</td>
+<td>三位 ISO 货币代码，目前仅支持人民币 cny。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>recipient</td>
+<td>接收者 id， 为用户在 wx(新渠道)、wx_pub 为用户的 open id。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>subject</td>
+<td>红包主题名称，最多 32 个字节。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>body</td>
+<td>红包祝福语，最多 128 个字节。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>description</td>
+<td>备注信息，最多 255 个字节。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>支付渠道相关的附加参数，参考<a href="#">extra参数说明</a>。</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="extra">extra参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>send_name</td>
+<td>商户名称，最多 32 个字节。</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>同步返回红包支付结果。如果发生错误，则会返回错误码和错误详情，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h3 id="red-envelope">查询 Red envelope 对象</h3>
+
+<p>通过 <code class="prettyprint">red_envelope</code> 对象的 id 查询一个已创建的 <code class="prettyprint">red_envelope</code> 对象。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>required</strong> 红包 id。</td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">red_envelope</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h2 id="red-envelope">查询 Red envelope 对象列表</h2>
+
+<p>返回之前创建 <code class="prettyprint">red_envelope</code> 对象的一个列表。列表是按创建时间进行排序，总是将最新的 <code class="prettyprint">red_envelope</code> 对象显示在最前。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>限制每页可以返回多少对象，范围为 1-100 项，默认是 10 项。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>starting_after</td>
+<td>在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_end</code>，你可以使用 <code class="prettyprint">starting_after</code> = <code class="prettyprint">obj_end</code> 去获取下一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>ending_before</td>
+<td>在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_start</code>，你可以使用 <code class="prettyprint">ending_before</code> = <code class="prettyprint">obj_start</code> 去获取上一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>对象的创建时间，用 Unix 时间戳表示，参考<a href="链接">created参数说明</a>。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>app[id]</td>
+<td>支付使用的 <code class="prettyprint">app</code> 对象的 <code class="prettyprint">id</code>。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>支付使用的第三方支付渠道，目前支持 wx(新渠道)、 wx_pub。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>status</td>
+<td>红包状态。目前支持 5 种状态（sending: 发放中; sent: 已发放待领取; failed: 发放失败; received: 已领取; refund: 已退款）。</td>
+<td><strong>string</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="created">created参数说明</h2>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created[gt]</td>
+<td>大于 <code class="prettyprint">red_envelope</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[gte]</td>
+<td>大于或等于 <code class="prettyprint">red_envelope</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lt]</td>
+<td>小于 <code class="prettyprint">red_envelope</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lte]</td>
+<td>小于或等于 <code class="prettyprint">red_envelope</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+          <h1 id="event">Event事件</h1>
+
+<p><code class="prettyprint">Event</code> 对象属性定义如下。</p>
+
+<h3 id="canshu">Canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>事件对象 id ，由 Ping++ 生成，28 位长度字符串。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>object</td>
+<td>值为 event。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>livemode</td>
+<td>事件是否发生在生产环境。</td>
+<td><strong>boolean</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>事件发生的时间。</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>data</td>
+<td>绑定在事件上的数据对象，详情参考<a href="link">date参数说明</a>。</td>
+<td><strong>hash</strong></td>
+</tr>
+<tr>
+<td>pending_webhooks</td>
+<td>推送未成功的 webhooks 数量。</td>
+<td><strong>positive integer or zero</strong></td>
+</tr>
+<tr>
+<td>type</td>
+<td>事件类型，详见事件类型。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>request</td>
+<td>API Request ID。值 null 表示该事件不是由 API 请求触发的。</td>
+<td><strong>string</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="date">date参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>object</td>
+<td>值为Event</td>
+<td><strong>hash</strong></td>
+</tr>
+<tr>
+<td>previous_attributes</td>
+<td>绑定对象属性变化之前的值。只有 *.updated 事件有这个属性。</td>
+<td><strong>hash</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="s">事件类型s</h2>
+
+<p>目前支持的事件包括：</p>
+
+<table><thead>
+<tr>
+<th>事件类型</th>
+<th>作用域</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>summary.daily.available</td>
+<td>单个应用</td>
+<td>上一天 0 点到 23 点 59 分 59 秒的交易金额和交易量统计，在每日 02:00 点左右触发</td>
+</tr>
+<tr>
+<td>summary.weekly.available</td>
+<td>单个应用</td>
+<td>上周一 0 点至上周日 23 点 59 分 59 秒的交易金额和交易量统计，在每周一 02:00 点左右触发</td>
+</tr>
+<tr>
+<td>summary.monthly.available</td>
+<td>单个应用</td>
+<td>上月一日 0 点至上月末 23 点 59 分 59 秒的交易金额和交易量统计，在每月一日 02:00 点左右触发</td>
+</tr>
+<tr>
+<td>charge.succeeded</td>
+<td>单个应用</td>
+<td>支付对象，支付成功时触发</td>
+</tr>
+<tr>
+<td>refund.succeeded</td>
+<td>单个应用</td>
+<td>退款对象，退款成功时触发</td>
+</tr>
+<tr>
+<td>transfer.succeeded</td>
+<td>单个应用</td>
+<td>企业支付对象，支付成功时触发</td>
+</tr>
+<tr>
+<td>red_envelope.sent</td>
+<td>单个应用</td>
+<td>红包对象，红包发送成功时触发</td>
+</tr>
+<tr>
+<td>red_envelope.received</td>
+<td>单个应用</td>
+<td>红包对象，红包接收成功时触发</td>
+</tr>
+</tbody></table>
+
+<p>下面用具体的 json 字符串展示针对 App 对象的各交易汇总事件类型的数据格式。</p>
+
+<p>当事件类型为 summary.daily.available、summary.weekly.available、summary.monthly.available 的时候， data 中的 object 为 App 对象。</p>
+
+<p>App 日/周/月统计对象主要字段定义如下：</p>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>app_id</td>
+<td>应用 ID。</td>
+</tr>
+<tr>
+<td>object</td>
+<td>对象类型。</td>
+</tr>
+<tr>
+<td>app_display_name</td>
+<td>应用名称。</td>
+</tr>
+<tr>
+<td>created</td>
+<td>创建时间（timestamp）。</td>
+</tr>
+<tr>
+<td>summary_from</td>
+<td>统计起始时间（timestamp）。</td>
+</tr>
+<tr>
+<td>summary_to</td>
+<td>统计终止时间（timestamp）。</td>
+</tr>
+<tr>
+<td>charges_amount</td>
+<td>交易金额（单位：分）。</td>
+</tr>
+<tr>
+<td>charges_count</td>
+<td>交易量（笔）。</td>
+</tr>
+</tbody></table>
+
+<p>当事件类型为 charge.succeeded、refund.succeeded、transfer.succeeded、red_envelope.sent、red_envelope.received  的时候， data 中的 object 分别为 <a href="/document/api#api-charges">charge</a>、<a href="/document/api#api-refunds">refund</a>、<a href="/document/api#api-transfer">transfer</a> 和 <a href="/document/api#api-envelope">red_envelope</a> 对象。</p>
+
+<h2 id="event">查询 Event 对象</h2>
+
+<p>通过 <code class="prettyprint">event</code> 对象的 id 查询一个已创建的 <code class="prettyprint">event</code> 对象。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>required</strong> 事件 id。</td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">event</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h2 id="event">查询 Event 对象列表</h2>
+
+<p>返回之前创建 <code class="prettyprint">event</code> 对象的一个列表。列表是按创建时间进行排序，总是将最新的 <code class="prettyprint">event</code> 对象显示在最前。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>限制每页可以返回多少对象，范围为 1-100 项，默认是 10 项。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>starting_after</td>
+<td>在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_end</code>，你可以使用 <code class="prettyprint">starting_after</code> = <code class="prettyprint">obj_end</code> 去获取下一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>ending_before</td>
+<td>在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_start</code>，你可以使用 <code class="prettyprint">ending_before</code> = <code class="prettyprint">obj_start</code> 去获取上一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>对象的创建时间，用 Unix 时间戳表示,参考<a href="link">created参数说明</a>。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>type</td>
+<td><code class="prettyprint">event</code> 对象的类型。</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="created">created参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created[gt]</td>
+<td>大于 <code class="prettyprint">event</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[gte]</td>
+<td>大于或等于 <code class="prettyprint">event</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lt]</td>
+<td>小于 <code class="prettyprint">event</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lte]</td>
+<td>小于或等于 <code class="prettyprint">event</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td>**optional</td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">event</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+          <h1 id="transfer">Transfer 对象</h1>
+
+<p>所有与企业付款相关的要素信息都存储在 <code class="prettyprint">transfer</code> 对象之中，你可以通过发起企业付款请求创建新的 <code class="prettyprint">transfer</code> 对象，也可以随时查看企业付款对象的状态。每个 <code class="prettyprint">transfer</code> 对象都拥有一个标识 <code class="prettyprint">id</code>，该 <code class="prettyprint">id</code> 在系统内唯一。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>企业付款对象 id ，由 Ping++ 生成，27 位长度字符串。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>object</td>
+<td>值为 transfer。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>type</td>
+<td>付款类型 (当前仅支持 B2C 企业付款: b2c)。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>创建时间，用 Unix 时间戳表示。</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>time_transferred</td>
+<td>支付完成时间, 用 Unix 时间戳表示。由第三方支付渠道返回。</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>livemode</td>
+<td>是否是 live 模式。</td>
+<td><strong>boolean</strong></td>
+</tr>
+<tr>
+<td>status</td>
+<td>付款状态。目前支持 3 种状态（pending: 处理中; paid: 付款成功; failed: 付款失败）。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>app</td>
+<td>付款对应的 app 对象的 id。expandable 可展开。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>付款使用的第三方支付渠道名称。目前支持 wx(新渠道)、 wx_pub。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>order_no</td>
+<td>付款使用的商户内部订单号。wx(新渠道)、wx_pub 规定为 1 ~ 50 位不能重复的数字字母组合。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>付款总金额。单位为对应币种的最小货币单位，例如：<b style="color: #f15467;">人民币为分</b>。</td>
+<td><strong>integer</strong></td>
+</tr>
+<tr>
+<td>currency</td>
+<td>三位 ISO 货币代码，目前仅支持人民币 cny。</td>
+<td><strong>currency</strong></td>
+</tr>
+<tr>
+<td>recipient</td>
+<td>接收者 id， 为用户在 wx(新渠道)、wx_pub 为用户的 open id。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>description</td>
+<td>备注信息，最多 255 个 Unicode 字符,渠道为 chinapay 时，最多 99 个 Unicode 字符，不可以包含特殊字符。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>transaction_no</td>
+<td>交易流水号，由于第三方渠道提供。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>支付渠道相关的附加参数，参考<a href="#">extra参数说明</a>。</td>
+<td><strong>object</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="extra-extra-html-extra-optional-required">extra参数说明  所有extra参数怎么写是个问题 若使用表格 那么这里需要改下语法 要么就要用html了 extra中不使用参数类型 只用optional 和required</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>wx(微信新渠道)</td>
+<td>参数 <code class="prettyprint">user_name</code>[string] 收款人姓名。当该参数为空，则不校验收款人姓名</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>wx(微信新渠道)</td>
+<td>参数 force_check[boolean] 是否强制校验收款人姓名。仅当 user_name 参数不为空时该参数生效</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>wx_pub(微信公众号)</td>
+<td>参数 user_name[string] 收款人姓名。当该参数为空，则不校验收款人姓名</td>
+<td>optional；</td>
+</tr>
+<tr>
+<td>wx_pub(微信公众号)</td>
+<td>参数 force_check[boolean] 是否强制校验收款人姓名。仅当 user_name 参数不为空时该参数生效</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>unionpay 企业付款（银行卡）</td>
+<td>参数 card_number[string] 1~32位,收款人银行卡号或者存折号</td>
+<td>required</td>
+</tr>
+</tbody></table>
+
+<p>参数 user_name[string] 1~100位,收款人姓名，required
+参数 open_bank[string] 1~50位,开户银行,required
+参数 prov[string] 1～20位，省份,required
+参数 city[string] 1～40位，城市,required
+参数 term_type[string] 2位，企业付款（银行卡）业务使用场景, 07:互联网, 08:移动端,required
+参数 sub_bank[string] 1～80位，开户支行名称,optional</p>
+
+<h2 id="transfer">创建 Transfer 对象</h2>
+
+<p>发起一次企业付款请求以创建一个新的 <code class="prettyprint">transfer</code> 对象。如果支付失败，请检查错误信息，一般是由于账户余额不足引起的。使用测试模式的 API Key，则不会发生真实交易。测试模式需要主动查询下 <code class="prettyprint">transfer</code> 的状态，才会发送 Webhooks 通知。<b style="color: #f15467;">注：渠道为unionpay时，强制要求签名（Pingplusplus-Signature），需在管理平台上配置商户公钥，但无须开启;unionpay渠道的转账会延时5分钟发送，5分钟内可以调用更新Transfer接口取消该笔转账。</b></p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否可选</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>app[id]</td>
+<td>付款使用的 <code class="prettyprint">app</code> 对象的 <code class="prettyprint">id</code>。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>付款使用的第三方支付渠道。目前只支持 wx(新渠道)、wx_pub。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>order_no</td>
+<td>付款使用的商户订单号。wx(新渠道)、wx_pub 规定为 1 ~ 50 位一天内不能重复的数字。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>付款金额。单位为对应币种的最小货币单位，例如：<b style="color: #f15467;">人民币为分</b>。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>type</td>
+<td>付款类型。 当前仅支持 B2C 企业付款。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>currency</td>
+<td>三位 ISO 货币代码，目前仅支持人民币: cny。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>recipient</td>
+<td>接收者 id，为用户在 wx(新渠道)、wx_pub 为用户的 open id。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>description</td>
+<td>付款备注信息，最多 255 个 Unicode 字符。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>支付渠道相关的附加参数，参考<a href="#">extra参数说明</a>。</td>
+<td><strong>object</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="cextra">cextra参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>wx(微信新渠道)</td>
+<td>参数 <code class="prettyprint">user_name</code>[string] 收款人姓名。当该参数为空，则不校验收款人姓名</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>wx(微信新渠道)</td>
+<td>参数 force_check[boolean] 是否强制校验收款人姓名。仅当 user_name 参数不为空时该参数生效</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>wx_pub(微信公众号)</td>
+<td>参数 user_name[string] 收款人姓名。当该参数为空，则不校验收款人姓名</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>wx_pub(微信公众号)</td>
+<td>参数 force_check[boolean] 是否强制校验收款人姓名。仅当 user_name 参数不为空时该参数生效</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>unionpay 企业付款（银行卡）</td>
+<td>参数 card_number[string] 1~32位,收款人银行卡号或者存折号</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<p>参数 user_name[string] 1~100位,收款人姓名，required
+参数 open_bank[string] 1~50位,开户银行,required
+参数 prov[string] 1～20位，省份,required
+参数 city[string] 1～40位，城市,required
+参数 term_type[string] 2位，企业付款（银行卡）业务使用场景, 07:互联网, 08:移动端,required
+参数 sub_bank[string] 1～80位，开户支行名称,optional</p>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>同步返回付款支付结果。如果发生错误，则会返回错误码和错误详情，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h2 id="transfer">查询 Transfer 对象</h2>
+
+<p>通过 <code class="prettyprint">transfer</code> 对象的 id 查询一个已创建的 <code class="prettyprint">transfer</code> 对象。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否可选</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>付款对象 id。</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">transfer</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h2 id="transfer">查询 Transfer 对象列表</h2>
+
+<p>返回之前创建过 <code class="prettyprint">transfer</code> 对象的一个列表。列表是按创建时间进行排序，总是将最新的 <code class="prettyprint">transfer</code> 对象显示在最前</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否可选</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>限制每页可以返回多少对象，范围为 1-100 项，默认是 10 项。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>starting_after</td>
+<td>在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_end</code>，你可以使用 <code class="prettyprint">starting_after</code> = <code class="prettyprint">obj_end</code> 去获取下一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>ending_before</td>
+<td>在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_start</code>，你可以使用 <code class="prettyprint">ending_before</code> = <code class="prettyprint">obj_start</code> 去获取上一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>对象的创建时间，用 Unix 时间戳表示，参考<a href="link">created参数说明</a>。</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>app[id]</td>
+<td>支付使用的 <code class="prettyprint">app</code> 对象的 <code class="prettyprint">id</code>。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>支付使用的第三方支付渠道，目前支持 wx(新渠道)、 wx_pub。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>status</td>
+<td>付款状态。目前支持 3 种状态（pending: 处理中; paid: 付款成功; failed: 付款失败)。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>type</td>
+<td>付款类型，目前仅支持 B2C。</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="created">created参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否可选</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created[gt]</td>
+<td>大于 <code class="prettyprint">transfer</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[gte]</td>
+<td>大于或等于 <code class="prettyprint">transfer</code> 对象的创建时间，用时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lt]</td>
+<td>小于 <code class="prettyprint">transfer</code> 对象的创建时间，用时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lte]</td>
+<td>小于或等于 <code class="prettyprint">transfer</code> 对象的创建时间，用时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">transfer</code> 对象的列表或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h2 id="transfer">更新 Transfer对象</h2>
+
+<p>更新 Transfer 对象接口只适用unionpay渠道，该渠道在 Transfer 对象请求成功后，延时5分钟发送转账，5分钟内订单处于scheduled的准备发送状态，且可调用该接口通过 Transfer 对象的 id 更新一个已创建的 Transfer 对象，即取消该笔转账。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>unionpay渠道的Transfer对象id。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>status</td>
+<td>更新Transfer的状态，只支持canceled。</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>返回一个更新成功的 transfer 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+          <h1 id="token">Token 令牌</h1>
+
+<p>顾客购买时在客户端输入完整卡片信息后 Ping++ Client SDK 会主动调用 <code class="prettyprint">token</code> 接口请求生成一个支付 <code class="prettyprint">token</code>，在请求 <code class="prettyprint">charge</code> 时 Ping++ Client SDK 会传入这个参数， <code class="prettyprint">token</code> 生成后用于支付的有效期是 15 分钟，15 分钟之后不能支付但仍可以绑卡。<strong>注意</strong>：支付时客户端不需要请求该<code class="prettyprint">token</code> 接口，以下仅为格式显示，如需要查询 <code class="prettyprint">token</code> 内的详细卡信息时可以调用以<code class="prettyprint">token</code>  查询接口。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Token 对象 id</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>object</td>
+<td>值为 token</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>Token 创建的时间，用 Unix 时间戳表示</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>livemode</td>
+<td>支付是否处于 live 模式</td>
+<td><strong>boolean</strong></td>
+</tr>
+<tr>
+<td>used</td>
+<td>是否已使用于付款</td>
+<td><strong>boolean</strong></td>
+</tr>
+<tr>
+<td>time_used</td>
+<td>使用于付款的时间</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>type</td>
+<td>对应的资源类型，值为 card</td>
+<td><strong>stringtoken</strong></td>
+</tr>
+<tr>
+<td>card</td>
+<td>Card 对象</td>
+<td><strong>hash</strong></td>
+</tr>
+<tr>
+<td>sms_code</td>
+<td>SMS Code 对象。外卡时，该对象内容为空</td>
+<td><strong>hash</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="token">查询 Token 对象</h2>
+
+<p>可根据 <code class="prettyprint">token id</code> 查询某条 <code class="prettyprint">token</code> 对象中的 <code class="prettyprint">card</code> 信息。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<p>参数 | 描述 | 是否必须
+&mdash;- | &mdash;-
+<dt>{TOKEN_ID}:  | Token 对象 id | <strong>required</strong></p>
+
+          <h1 id="customer">Customer 顾客</h1>
+
+<p>创建 Customer 对象用于存储用户信息。若在创建 <code class="prettyprint">Customer</code> 时传入 <code class="prettyprint">token id</code>则可以进行绑卡。<strong>注意</strong>：暂时不允许通过外卡创建</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Customer 对象 id</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>object</td>
+<td>值为 Customer</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>Customer 对象创建的时间，用 Unix 时间戳表示</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>livemode</td>
+<td>支付是否处于 live 模式</td>
+<td><strong>boolean</strong></td>
+</tr>
+<tr>
+<td>app</td>
+<td>App 对象的 id，expandable</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>name</td>
+<td>持卡人姓名</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>email</td>
+<td>地址</td>
+<td><strong>stringemail</strong></td>
+</tr>
+<tr>
+<td>currency</td>
+<td>三位货币代码</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>description</td>
+<td>描述信息</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>Metadata</td>
+<td><strong>hash</strong></td>
+</tr>
+<tr>
+<td>sources</td>
+<td>资源列表</td>
+<td><strong>list</strong></td>
+</tr>
+<tr>
+<td>default_source</td>
+<td>默认资源对象的 id，expandable</td>
+<td><strong>string</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="customer">创建 Customer 对象</h2>
+
+<p>创建一个用户同时附带一张卡片，即绑卡。
+绑卡时需要传入 <code class="prettyprint">token id</code> ，default_source 为该卡片 注：暂时不允许通过外卡创建。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>app</td>
+<td>App 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>source</td>
+<td>Token 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>sms_code[id]</td>
+<td>SMS Code 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>sms_code[code]</td>
+<td>短信验证码</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>description</td>
+<td>描述信息</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>email</td>
+<td>顾客的 email</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>Metadata</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>返回一个 Customer 对象。</p>
+
+<h2 id="customer">更新 Customer 对象</h2>
+
+<p>该接口支持更新已经绑定的 <code class="prettyprint">Customer</code> 的信息。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{CUS_ID}:</td>
+<td>Customer 对象的 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>description</td>
+<td>描述信息</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>email</td>
+<td>顾客的 Email</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>Metadata</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>default_source</td>
+<td>选择默认资源对象的 id，只能从已绑定资源中选择，不能设置为 null</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="customer">删除 Customer 对象</h2>
+
+<p>调用删除接口，传入 <code class="prettyprint">Customer id</code> 可以使对应的信息无法访问。
+注：绑定的资源信息不会被删除，但是无法访问</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><dt>{CUS_ID}:</td>
+<td>要删除的 Customer 对象的 id</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="customer">查询 Customer 对象</h2>
+
+<p>通过 <code class="prettyprint">Customer</code> 对象的 <code class="prettyprint">id</code> 查询一个已经创建的 <code class="prettyprint">Customer</code> 对象的详细信息。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{CUS_ID}:</td>
+<td>Customer 对象 id。</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="customer">查询 Customer 对象列表</h2>
+
+<p>返回之前创建过的 <code class="prettyprint">Customer</code> 对象的一个列表，列表是按创建时间进行排序，总是将最新的<code class="prettyprint">Customer</code> 对象显示在最前。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>限制每页可以返回多少对象，范围为 1-100 项，默认是 10 项。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>timestamp</strong></td>
+</tr>
+</tbody></table>
+
+          <h1 id="card">Card卡片</h1>
+
+<p>卡片对象，依附于 Customer 对象的资源列表。相同的卡片信息 + 同一个 App 对应唯一的 Card Number。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Card 对象 id</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>object</td>
+<td>值为 card</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>卡片第一次的创建时间</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>last4:</td>
+<td>卡号末 4 位</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>funding</td>
+<td>卡片借贷记类型 &ldquo;credit&rdquo; 信用卡，&quot;debit&quot; 储蓄卡，&quot;unknown&quot; 未知</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>brand</td>
+<td>卡品牌，值为 &ldquo;UnionPay&rdquo;, &ldquo;Visa&rdquo;, &ldquo;MasterCard&rdquo;, &ldquo;JCB&rdquo; 其中一种</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>bank</td>
+<td>发卡行，如 &ldquo;icbc&rdquo; 工商银行，具体<a href="#nocard_bank_id">银行列表见附录</a>。外卡此参数为 null</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>customer</td>
+<td>依附的 Customer 对象的 id</td>
+<td><strong>string</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="card">创建 Card 对象</h2>
+
+<p>在 Customer 对象的资源列表上添加一个新的卡片，之后就可以选卡支付，即绑卡。<br>
+注：暂时不允许通过外卡创建。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{CUS_ID}:</td>
+<td>Customer 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>source</td>
+<td>Token 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>sms_code[id]</td>
+<td>SMS Code 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>sms_code[code]</td>
+<td>短信验证码</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id=">返回</h3>
+
+<p>返回一个 Card 对象。</p>
+
+<h2 id="card">删除 Card 对象</h2>
+
+<p>取消与 Customer 对象的关联。删除的如果是该所属 Customer 对象的 default_source, 则 default_source 为最近一张绑定的资源 id 如果删除后资源列表为空，则 default_source 值为 null</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{CUS_ID}:</td>
+<td>Customer 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>{CARD_ID}:</td>
+<td>要删除的 Card 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="card">查询 Card 对象</h2>
+
+<p>通过 <code class="prettyprint">Card</code> 对象的 <code class="prettyprint">id</code> 查询一个已经创建的 <code class="prettyprint">Card</code> 对象的详细信息。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{CUS_ID}:</td>
+<td>Customer 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>{CARD_ID}:</td>
+<td>Card 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="card">查询 Card 对象列表</h2>
+
+<p>可以查询某 <code class="prettyprint">Customer</code> 对象中关联的所有 <code class="prettyprint">Card</code> 对象列表。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{CUS_ID}:</td>
+<td>Customer 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>limit</td>
+<td>限制每页可以返回多少对象，范围为 1-100 项，默认是 10 项。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>starting_after</td>
+<td>在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 id 是 obj_end，你可以使用 starting_after=obj_end 去获取下一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>ending_before</td>
+<td>在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的最后一项的 id 是 obj_start，你可以使用 ending_before=obj_start 去获取上一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>对象的创建时间，用 Unix 时间戳表示，参考<a href="#">created参数说明</a>。</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="created">created参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created[gt]</td>
+<td>大于 <code class="prettyprint">Customer</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[gte]</td>
+<td>大于或等于 <code class="prettyprint">Customer</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lt]</td>
+<td>小于 <code class="prettyprint">Customer</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lte]</td>
+<td>小于或等于 <code class="prettyprint">Customer</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+          <h1 id="2">2身份证银行卡信息认证接口</h1>
+
+<p>根据姓名、身份证、银行卡、手机号码，检测信息是否匹配。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>身份证信息或者银行卡信息串，参考<a href="#">type取值范围</a>。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>app</td>
+<td>应用 ID,可登录管理平台查看。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>data</td>
+<td>验证数据，<a href="#">data包含参数</a>。</td>
+<td><strong>map</strong></td>
+</tr>
+<tr>
+<td>result_code</td>
+<td>返回码 详情参照API文档附录的认证接口result_code说明。</td>
+<td><strong>int</strong></td>
+</tr>
+<tr>
+<td>message</td>
+<td>描述信息(接口调用失败时为错误描述，成功时为SUCCESS)。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>paid</td>
+<td>是否已扣款，扣款为true，未扣款为false。</td>
+<td><strong>boolean</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="type">type取值范围</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_card</td>
+<td>身份证信息串</td>
+</tr>
+<tr>
+<td>bank_card</td>
+<td>银行卡信息串</td>
+</tr>
+</tbody></table>
+
+<h3 id="data">data包含参数</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_name</td>
+<td>身份证姓名(1~16位)</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>id_number</td>
+<td>身份证号码(15位或18位)</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>card_number</td>
+<td>银行卡号(12～19位) 仅在type参数为bankcard的时候必需要传此参数</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>phone_number</td>
+<td>手机号(11位) 仅在type参数为bankcard的时候可以选择是否传此参数，暂不支持178开头的手机号</td>
+<td><strong>string</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="1">请求认证接口1</h2>
+
+<p>请求该接口，验证姓名、身份证、银行卡、手机号码的信息；每次请求可选择验证身份证信息或者银行卡信息是否匹配。<b style="color: #f15467;">注意：此接口强制要求签名（Pingplusplus-Signature），需在管理平台上配置商户公钥，但无须开启。</b></p>
+
+<h3 id="1">参数1</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>身份证信息或者银行卡信息串，参考<a href="#">type取值范围</a>。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>app</td>
+<td>应用 ID,可登录管理平台查看。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>data</td>
+<td>验证数据，<a href="#">data包含参数</a>。</td>
+<td><strong>map</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="type">type取值范围</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_card</td>
+<td>身份证信息串</td>
+</tr>
+<tr>
+<td>bank_card</td>
+<td>银行卡信息串</td>
+</tr>
+</tbody></table>
+
+<h3 id="data">data包含参数</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_name</td>
+<td>身份证姓名(1~16位)</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>id_number</td>
+<td>身份证号码(15位或18位)</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>card_number</td>
+<td>银行卡号(12～19位) 仅在type参数为bankcard的时候必需要传此参数</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>phone_number</td>
+<td>手机号(11位) 仅在type参数为bankcard的时候可以选择是否传此参数，暂不支持178开头的手机号</td>
+<td><strong>string</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>请求成功，返回result_code字段为返回码，详情参照API文档附录的认证接口result_code说明；message中是错误描述信息，仅在成功时返回success;paid表示本次调用接口认证是否产生费用，paid为true则需要付费，false不产生费用。</p>
+
+          <h1 id="2">报关接口2</h1>
+
+<p>目前只针对支付成功的订单进行报关，报关金额为订单金额；
+目前暂不支持拆单报关，报关渠道是支持的，
+customs_code<br />是海关编号字段说明。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>报关对象id</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>app</td>
+<td>应用 ID,可登录管理平台查看</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>支付使用的第三方支付渠道，<a href="link">取值范围</a></td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>trade_no</td>
+<td>商户报关订单号,8~20位</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>customs_code</td>
+<td>海关编号，详情参照API文档附录的<a href="#"><a href="https://www.pingxx.com/document/api#api-appendix-4" style="text-decoration:underline;color:red">海关编号说明</a></a></td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>报关金额,(1～1000000000)</td>
+<td><strong>int</strong></td>
+</tr>
+<tr>
+<td>charge_id</td>
+<td>charge对象id</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>自定义参数</td>
+<td><strong>metadata hash</strong></td>
+</tr>
+<tr>
+<td>object</td>
+<td>值为 customs</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>创建时间，用 Unix 时间戳表示</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>succeed</td>
+<td>处理时间，用 Unix 时间戳表示</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>status</td>
+<td>成功状态,成功返回true，失败返回false</td>
+<td><strong>boolean</strong></td>
+</tr>
+<tr>
+<td>failure_code</td>
+<td>错误码，详见 Errors 错误处理机制中的错误码描述。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>failure_msg</td>
+<td>错误信息描述</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>transaction_no</td>
+<td>渠道报关流水号</td>
+<td><strong>string</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="channel">channel取值范围</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>alipay</td>
+<td>支付宝手机支付</td>
+</tr>
+<tr>
+<td>wx</td>
+<td>微信支付</td>
+</tr>
+</tbody></table>
+
+<h2 id="111">请求报关接口111</h2>
+
+<p>请求报关接口，目前只针对支付成功的订单charge id进行报关请求，报关金额为订单金额，目前渠道限于alipay和wx，目前不支持拆单报关(报关渠道是支持的)，customs_code(海关编号)字段说明。<b style="color: #f15467;">注意：此接口强制要求签名（Pingplusplus-Signature），需在管理平台上配置商户公钥，但无须开启。</b></p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>app</td>
+<td>应用 ID,可登录管理平台查看</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>支付使用的第三方支付渠道，<a href="link">取值范围</a></td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>trade_no</td>
+<td>商户报关订单号,8~20位</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>customs_code</td>
+<td>海关编号，详情参照API文档附录的<a href="#"><a href="https://www.pingxx.com/document/api#api-appendix-4" style="text-decoration:underline;color:red">海关编号说明</a></a></td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>报关金额,(1～1000000000)</td>
+<td><strong>int</strong></td>
+</tr>
+<tr>
+<td>charge_id</td>
+<td>charge对象id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>自定义参数</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="channel">channel取值范围</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>alipay</td>
+<td>支付宝手机支付</td>
+</tr>
+<tr>
+<td>wx</td>
+<td>微信支付</td>
+</tr>
+</tbody></table>
+
+<h3 id="1">返回1</h3>
+
+<p>返回一个<code class="prettyprint">customs</code>报关对象，其中status为报关结果，为true时成功，false失败；<code class="prettyprint">transaction_no</code>为渠道报关流水号。</p>
+
+<h2 id="2">查询报关接口2</h2>
+
+<p>通过<code class="prettyprint">customs</code>对象的id查询一个已创建的<code class="prettyprint">customs</code>对象。通过查询接口确认报关的状态。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>报关对象id</td>
+<td>required</td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">customs</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+          <h1 id="11">附录11</h1>
+
+<h2 id="1">易宝支付1</h2>
+
+<h3 id="1">附录一 易宝支付附表1</h3>
+
+<h4 id="1">表一 易宝支付商品类型码表1</h4>
+
+<table><thead>
+<tr>
+<th>商品类别码</th>
+<th>作用域</th>
+<th>商品类别码</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>虚拟产品</td>
+<td>3</td>
+<td>公共事业缴费</td>
+</tr>
+<tr>
+<td>4</td>
+<td>手机充值</td>
+<td>6</td>
+<td>公益事业</td>
+</tr>
+<tr>
+<td>7</td>
+<td>实物电商</td>
+<td>8</td>
+<td>彩票业务</td>
+</tr>
+<tr>
+<td>10</td>
+<td>行政教育</td>
+<td>11</td>
+<td>线下服务业</td>
+</tr>
+<tr>
+<td>13</td>
+<td>微信实物电商</td>
+<td>14</td>
+<td>微信虚拟电商</td>
+</tr>
+<tr>
+<td>15</td>
+<td>保险行业</td>
+<td>16</td>
+<td>基金行业</td>
+</tr>
+<tr>
+<td>17</td>
+<td>电子票务</td>
+<td>18</td>
+<td>金融投资</td>
+</tr>
+<tr>
+<td>19</td>
+<td>大额支付</td>
+<td>20</td>
+<td>其他</td>
+</tr>
+<tr>
+<td>21</td>
+<td>旅游机票</td>
+<td>22</td>
+<td>畅付 D</td>
+</tr>
+</tbody></table>
+
+<h4 id="1">表二 用户标识类型码表1</h4>
+
+<table><thead>
+<tr>
+<th>代码</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td>IMEI</td>
+<td>国际移动设备身份码的缩写，国际移动装备辨识码，</td>
+</tr>
+<tr>
+<td>是由</td>
+<td>15</td>
+<td>位数字组成的&quot;电子串号&ldquo;，它与每台手机一一对应</td>
+</tr>
+<tr>
+<td>1</td>
+<td>MAC 地址</td>
+<td>MAC(Media Access Control)地址，或称为 MAC 位址、硬件位址，用来定义网络设备的位置。在 OSI模型中，第三层网络层负责IP 地址，第二层数据链路层则负责 MAC 位址。因此一个主机会有一个 IP 地址，而每个网络位置会有一个专属于它的 MAC 位址。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>用户 ID</td>
+<td>用户编号</td>
+</tr>
+<tr>
+<td>3</td>
+<td>用户 Email</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>用户手机号</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>用户身份证号</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>用户纸质订单协议号</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="1">应用内快捷支付1</h2>
+
+<h3 id="1">附录二 应用内快捷支付附表1</h3>
+
+<h4 id="1">表一 银行编码1</h4>
+
+<table><thead>
+<tr>
+<th>bank 参数</th>
+<th>银行名称</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>test</td>
+<td>测试银行 (测试环境下国内卡)</td>
+</tr>
+<tr>
+<td>test-foreign</td>
+<td>Test Foreign Brand (测试环境下外卡)</td>
+</tr>
+<tr>
+<td>icbc</td>
+<td>工商银行</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>农业银行</td>
+</tr>
+<tr>
+<td>ccb</td>
+<td>建设银行</td>
+</tr>
+<tr>
+<td>bcm</td>
+<td>交通银行</td>
+</tr>
+<tr>
+<td>boc</td>
+<td>中国银行</td>
+</tr>
+<tr>
+<td>cmb</td>
+<td>招商银行</td>
+</tr>
+<tr>
+<td>bob</td>
+<td>北京银行</td>
+</tr>
+<tr>
+<td>dlcb</td>
+<td>大连银行</td>
+</tr>
+<tr>
+<td>cgb</td>
+<td>广发银行</td>
+</tr>
+<tr>
+<td>gzcb</td>
+<td>广州银行</td>
+</tr>
+<tr>
+<td>hxb</td>
+<td>华夏银行</td>
+</tr>
+<tr>
+<td>jlbk</td>
+<td>吉林银行</td>
+</tr>
+<tr>
+<td>spdb</td>
+<td>浦发银行</td>
+</tr>
+<tr>
+<td>bosh</td>
+<td>上海银行</td>
+</tr>
+<tr>
+<td>pab</td>
+<td>平安银行</td>
+</tr>
+<tr>
+<td>sjbc</td>
+<td>盛京银行</td>
+</tr>
+<tr>
+<td>cib</td>
+<td>兴业银行</td>
+</tr>
+<tr>
+<td>czb</td>
+<td>浙商银行</td>
+</tr>
+<tr>
+<td>ceb</td>
+<td>光大银行</td>
+</tr>
+<tr>
+<td>cmbc</td>
+<td>民生银行</td>
+</tr>
+<tr>
+<td>psbc</td>
+<td>中国邮储</td>
+</tr>
+<tr>
+<td>cncb</td>
+<td>中信银行</td>
+</tr>
+</tbody></table>
+
+<h4 id="1">表二 测试模式 - 银联借记卡 1</h4>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>card_number</td>
+<td>6258333366661000</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>UnionPay</td>
+</tr>
+<tr>
+<td>funding</td>
+<td>debit</td>
+</tr>
+<tr>
+<td>bank</td>
+<td>test</td>
+</tr>
+<tr>
+<td>name</td>
+<td>张三</td>
+</tr>
+<tr>
+<td>cred_type</td>
+<td>ID</td>
+</tr>
+<tr>
+<td>cred_number</td>
+<td>310115201510101236</td>
+</tr>
+<tr>
+<td>phone_number</td>
+<td>13045678901</td>
+</tr>
+</tbody></table>
+
+<h4 id="2">表三 测试模式 - 银联借记卡 2</h4>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>card_number</td>
+<td>6258333366662000</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>UnionPay</td>
+</tr>
+<tr>
+<td>funding</td>
+<td>debit</td>
+</tr>
+<tr>
+<td>bank</td>
+<td>test</td>
+</tr>
+<tr>
+<td>name</td>
+<td>张三</td>
+</tr>
+<tr>
+<td>cred_type</td>
+<td>ID</td>
+</tr>
+<tr>
+<td>cred_number</td>
+<td>310115201510101236</td>
+</tr>
+<tr>
+<td>phone_number</td>
+<td>13045678901</td>
+</tr>
+</tbody></table>
+
+<h4 id="3">表四 测试模式 - 银联借记卡 3</h4>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>card_number</td>
+<td>6234555566663000</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>UnionPay</td>
+</tr>
+<tr>
+<td>funding</td>
+<td>debit</td>
+</tr>
+<tr>
+<td>bank</td>
+<td>test</td>
+</tr>
+<tr>
+<td>name</td>
+<td>李四</td>
+</tr>
+<tr>
+<td>cred_type</td>
+<td>ID</td>
+</tr>
+<tr>
+<td>cred_number</td>
+<td>310115201510104568</td>
+</tr>
+<tr>
+<td>phone_number</td>
+<td>13045678902</td>
+</tr>
+</tbody></table>
+
+<h4 id="4">表五 测试模式 - 银联借记卡 4</h4>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>card_number</td>
+<td>6234555566664000</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>UnionPay</td>
+</tr>
+<tr>
+<td>funding</td>
+<td>debit</td>
+</tr>
+<tr>
+<td>bank</td>
+<td>test</td>
+</tr>
+<tr>
+<td>name</td>
+<td>李四</td>
+</tr>
+<tr>
+<td>cred_type</td>
+<td>ID</td>
+</tr>
+<tr>
+<td>cred_number</td>
+<td>310115201510104568</td>
+</tr>
+<tr>
+<td>phone_number</td>
+<td>13045678902</td>
+</tr>
+</tbody></table>
+
+<h4 id=">表六 测试模式 - 外卡信用卡</h4>
+
+<p>参数  |值
+card_number|    4111111111111200
+brand   |Visa
+funding |credit
+bank    |test-foreign
+exp_month|  12
+exp_year|   2016
+cvc |300</p>
+
+<h4 id="1">表七 测试模式 - 外卡借记卡1</h4>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>card_number</td>
+<td>4222222222222200</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>Visa</td>
+</tr>
+<tr>
+<td>funding</td>
+<td>debit</td>
+</tr>
+<tr>
+<td>bank</td>
+<td>test-foreign</td>
+</tr>
+<tr>
+<td>exp_month</td>
+<td>12</td>
+</tr>
+<tr>
+<td>exp_year</td>
+<td>2016</td>
+</tr>
+<tr>
+<td>cvc</td>
+<td>400</td>
+</tr>
+</tbody></table>
+
+<h2 id="1">认证接口1</h2>
+
+<h3 id="1">附录三 认证接口1</h3>
+
+<h4 id="result_code-1">表一 result_code 说明1</h4>
+
+<table><thead>
+<tr>
+<th>返回码</th>
+<th>返回信息</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>3200</td>
+<td>无效的商户号</td>
+</tr>
+<tr>
+<td>3204</td>
+<td>无效的sessionId</td>
+</tr>
+<tr>
+<td>3300</td>
+<td>商户号未找到</td>
+</tr>
+<tr>
+<td>3303</td>
+<td>商户号与服务访问账号不匹配</td>
+</tr>
+<tr>
+<td>3420</td>
+<td>请求参数不合法</td>
+</tr>
+<tr>
+<td>3431</td>
+<td>身份证信息不匹配</td>
+</tr>
+<tr>
+<td>3432</td>
+<td>身份证信息匹配失败</td>
+</tr>
+<tr>
+<td>3433</td>
+<td>身份验证活体照片非法</td>
+</tr>
+<tr>
+<td>3434</td>
+<td>身份验证上传登记照失败</td>
+</tr>
+<tr>
+<td>3435</td>
+<td>身份验证照片比对失败</td>
+</tr>
+<tr>
+<td>3441</td>
+<td>银行卡信息认证失败</td>
+</tr>
+<tr>
+<td>3442</td>
+<td>银行卡信息认证请求异常</td>
+</tr>
+<tr>
+<td>3443</td>
+<td>银行卡信息认证请求超时</td>
+</tr>
+<tr>
+<td>3451</td>
+<td>银行卡信息认证校验失败</td>
+</tr>
+<tr>
+<td>3452</td>
+<td>银行卡信息认证校验异常</td>
+</tr>
+</tbody></table>
+
+<h2 id="1">报关接口1</h2>
+
+<h3 id="1">附录四 报关接口1</h3>
+
+<h4 id="1">表一 微信海关编号说明1</h4>
+
+<table><thead>
+<tr>
+<th>海关编号</th>
+<th>参数意义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GUANGZHOU</td>
+<td>广州海关</td>
+</tr>
+<tr>
+<td>HANGZHOU</td>
+<td>杭州海关</td>
+</tr>
+<tr>
+<td>NINGBO</td>
+<td>宁波海关</td>
+</tr>
+<tr>
+<td>SHANGHAI</td>
+<td>上海海关</td>
+</tr>
+<tr>
+<td>ZHENGZHOU_BS</td>
+<td>郑州海关(保税物流中心)</td>
+</tr>
+<tr>
+<td>ZHENGZHOU_ZH</td>
+<td>郑州海关(综合保税区)</td>
+</tr>
+<tr>
+<td>CHONGQING</td>
+<td>重庆海关</td>
+</tr>
+</tbody></table>
+
+<h4 id="1">表二 支付宝海关编号说明1</h4>
+
+<table><thead>
+<tr>
+<th>海关编号</th>
+<th>参数意义</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>HANGZHOU</td>
+<td>杭州海关</td>
+</tr>
+<tr>
+<td>ZHENGZHOU</td>
+<td>郑州海关</td>
+</tr>
+<tr>
+<td>GUANGZHOU</td>
+<td>广州海关</td>
+</tr>
+<tr>
+<td>CHONGQING</td>
+<td>重庆海关</td>
+</tr>
+<tr>
+<td>NINGBO</td>
+<td>宁波海关</td>
+</tr>
+<tr>
+<td>SHENZHEN</td>
+<td>深圳海关</td>
+</tr>
+<tr>
+<td>HENAN</td>
+<td>河南海关</td>
+</tr>
+<tr>
+<td>SHANGHAI</td>
+<td>上海海关</td>
+</tr>
+<tr>
+<td>XIAN</td>
+<td>西安海关</td>
+</tr>
+<tr>
+<td>FUJIAN</td>
+<td>福建海关</td>
+</tr>
+<tr>
+<td>TIANJIN</td>
+<td>天津海关</td>
+</tr>
+<tr>
+<td>NANSHAGJ</td>
+<td>南沙国检</td>
+</tr>
+<tr>
+<td>ZONGSHU</td>
+<td>海关总署</td>
+</tr>
+</tbody></table>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="Curl">Curl</a>
-                <a href="#" data-language-name="Php">Php</a>
+                <a href="#" data-language-name="PHP">PHP</a>
                 <a href="#" data-language-name="Java">Java</a>
                 <a href="#" data-language-name="Ruby">Ruby</a>
                 <a href="#" data-language-name="Node.js">Node.js</a>

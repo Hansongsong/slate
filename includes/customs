@@ -1,0 +1,205 @@
+<h1 id="2">报关接口2</h1>
+
+<p>目前只针对支付成功的订单进行报关，报关金额为订单金额；
+目前暂不支持拆单报关，报关渠道是支持的，
+customs_code<br />是海关编号字段说明。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>报关对象id</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>app</td>
+<td>应用 ID,可登录管理平台查看</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>支付使用的第三方支付渠道，<a href="link">取值范围</a></td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>trade_no</td>
+<td>商户报关订单号,8~20位</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>customs_code</td>
+<td>海关编号，详情参照API文档附录的<a href="#"><a href="https://www.pingxx.com/document/api#api-appendix-4" style="text-decoration:underline;color:red">海关编号说明</a></a></td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>报关金额,(1～1000000000)</td>
+<td><strong>int</strong></td>
+</tr>
+<tr>
+<td>charge_id</td>
+<td>charge对象id</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>自定义参数</td>
+<td><strong>metadata hash</strong></td>
+</tr>
+<tr>
+<td>object</td>
+<td>值为 customs</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>创建时间，用 Unix 时间戳表示</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>succeed</td>
+<td>处理时间，用 Unix 时间戳表示</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>status</td>
+<td>成功状态,成功返回true，失败返回false</td>
+<td><strong>boolean</strong></td>
+</tr>
+<tr>
+<td>failure_code</td>
+<td>错误码，详见 Errors 错误处理机制中的错误码描述。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>failure_msg</td>
+<td>错误信息描述</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>transaction_no</td>
+<td>渠道报关流水号</td>
+<td><strong>string</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="channel">channel取值范围</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>alipay</td>
+<td>支付宝手机支付</td>
+</tr>
+<tr>
+<td>wx</td>
+<td>微信支付</td>
+</tr>
+</tbody></table>
+
+<h2 id="111">请求报关接口111</h2>
+
+<p>请求报关接口，目前只针对支付成功的订单charge id进行报关请求，报关金额为订单金额，目前渠道限于alipay和wx，目前不支持拆单报关(报关渠道是支持的)，customs_code(海关编号)字段说明。<b style="color: #f15467;">注意：此接口强制要求签名（Pingplusplus-Signature），需在管理平台上配置商户公钥，但无须开启。</b></p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>app</td>
+<td>应用 ID,可登录管理平台查看</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>支付使用的第三方支付渠道，<a href="link">取值范围</a></td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>trade_no</td>
+<td>商户报关订单号,8~20位</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>customs_code</td>
+<td>海关编号，详情参照API文档附录的<a href="#"><a href="https://www.pingxx.com/document/api#api-appendix-4" style="text-decoration:underline;color:red">海关编号说明</a></a></td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>报关金额,(1～1000000000)</td>
+<td><strong>int</strong></td>
+</tr>
+<tr>
+<td>charge_id</td>
+<td>charge对象id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>自定义参数</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="channel">channel取值范围</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>alipay</td>
+<td>支付宝手机支付</td>
+</tr>
+<tr>
+<td>wx</td>
+<td>微信支付</td>
+</tr>
+</tbody></table>
+
+<h3 id="1">返回1</h3>
+
+<p>返回一个<code class="prettyprint">customs</code>报关对象，其中status为报关结果，为true时成功，false失败；<code class="prettyprint">transaction_no</code>为渠道报关流水号。</p>
+
+<h2 id="2">查询报关接口2</h2>
+
+<p>通过<code class="prettyprint">customs</code>对象的id查询一个已创建的<code class="prettyprint">customs</code>对象。通过查询接口确认报关的状态。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>报关对象id</td>
+<td>required</td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">customs</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>

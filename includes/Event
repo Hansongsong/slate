@@ -1,0 +1,273 @@
+<h1 id="event">Event事件</h1>
+
+<p><code class="prettyprint">Event</code> 对象属性定义如下。</p>
+
+<h3 id="canshu">Canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>事件对象 id ，由 Ping++ 生成，28 位长度字符串。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>object</td>
+<td>值为 event。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>livemode</td>
+<td>事件是否发生在生产环境。</td>
+<td><strong>boolean</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>事件发生的时间。</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>data</td>
+<td>绑定在事件上的数据对象，详情参考<a href="link">date参数说明</a>。</td>
+<td><strong>hash</strong></td>
+</tr>
+<tr>
+<td>pending_webhooks</td>
+<td>推送未成功的 webhooks 数量。</td>
+<td><strong>positive integer or zero</strong></td>
+</tr>
+<tr>
+<td>type</td>
+<td>事件类型，详见事件类型。</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>request</td>
+<td>API Request ID。值 null 表示该事件不是由 API 请求触发的。</td>
+<td><strong>string</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="date">date参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>object</td>
+<td>值为Event</td>
+<td><strong>hash</strong></td>
+</tr>
+<tr>
+<td>previous_attributes</td>
+<td>绑定对象属性变化之前的值。只有 *.updated 事件有这个属性。</td>
+<td><strong>hash</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="s">事件类型s</h2>
+
+<p>目前支持的事件包括：</p>
+
+<table><thead>
+<tr>
+<th>事件类型</th>
+<th>作用域</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>summary.daily.available</td>
+<td>单个应用</td>
+<td>上一天 0 点到 23 点 59 分 59 秒的交易金额和交易量统计，在每日 02:00 点左右触发</td>
+</tr>
+<tr>
+<td>summary.weekly.available</td>
+<td>单个应用</td>
+<td>上周一 0 点至上周日 23 点 59 分 59 秒的交易金额和交易量统计，在每周一 02:00 点左右触发</td>
+</tr>
+<tr>
+<td>summary.monthly.available</td>
+<td>单个应用</td>
+<td>上月一日 0 点至上月末 23 点 59 分 59 秒的交易金额和交易量统计，在每月一日 02:00 点左右触发</td>
+</tr>
+<tr>
+<td>charge.succeeded</td>
+<td>单个应用</td>
+<td>支付对象，支付成功时触发</td>
+</tr>
+<tr>
+<td>refund.succeeded</td>
+<td>单个应用</td>
+<td>退款对象，退款成功时触发</td>
+</tr>
+<tr>
+<td>transfer.succeeded</td>
+<td>单个应用</td>
+<td>企业支付对象，支付成功时触发</td>
+</tr>
+<tr>
+<td>red_envelope.sent</td>
+<td>单个应用</td>
+<td>红包对象，红包发送成功时触发</td>
+</tr>
+<tr>
+<td>red_envelope.received</td>
+<td>单个应用</td>
+<td>红包对象，红包接收成功时触发</td>
+</tr>
+</tbody></table>
+
+<p>下面用具体的 json 字符串展示针对 App 对象的各交易汇总事件类型的数据格式。</p>
+
+<p>当事件类型为 summary.daily.available、summary.weekly.available、summary.monthly.available 的时候， data 中的 object 为 App 对象。</p>
+
+<p>App 日/周/月统计对象主要字段定义如下：</p>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>app_id</td>
+<td>应用 ID。</td>
+</tr>
+<tr>
+<td>object</td>
+<td>对象类型。</td>
+</tr>
+<tr>
+<td>app_display_name</td>
+<td>应用名称。</td>
+</tr>
+<tr>
+<td>created</td>
+<td>创建时间（timestamp）。</td>
+</tr>
+<tr>
+<td>summary_from</td>
+<td>统计起始时间（timestamp）。</td>
+</tr>
+<tr>
+<td>summary_to</td>
+<td>统计终止时间（timestamp）。</td>
+</tr>
+<tr>
+<td>charges_amount</td>
+<td>交易金额（单位：分）。</td>
+</tr>
+<tr>
+<td>charges_count</td>
+<td>交易量（笔）。</td>
+</tr>
+</tbody></table>
+
+<p>当事件类型为 charge.succeeded、refund.succeeded、transfer.succeeded、red_envelope.sent、red_envelope.received  的时候， data 中的 object 分别为 <a href="/document/api#api-charges">charge</a>、<a href="/document/api#api-refunds">refund</a>、<a href="/document/api#api-transfer">transfer</a> 和 <a href="/document/api#api-envelope">red_envelope</a> 对象。</p>
+
+<h2 id="event">查询 Event 对象</h2>
+
+<p>通过 <code class="prettyprint">event</code> 对象的 id 查询一个已创建的 <code class="prettyprint">event</code> 对象。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>required</strong> 事件 id。</td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">event</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h2 id="event">查询 Event 对象列表</h2>
+
+<p>返回之前创建 <code class="prettyprint">event</code> 对象的一个列表。列表是按创建时间进行排序，总是将最新的 <code class="prettyprint">event</code> 对象显示在最前。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>限制每页可以返回多少对象，范围为 1-100 项，默认是 10 项。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>starting_after</td>
+<td>在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_end</code>，你可以使用 <code class="prettyprint">starting_after</code> = <code class="prettyprint">obj_end</code> 去获取下一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>ending_before</td>
+<td>在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_start</code>，你可以使用 <code class="prettyprint">ending_before</code> = <code class="prettyprint">obj_start</code> 去获取上一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>对象的创建时间，用 Unix 时间戳表示,参考<a href="link">created参数说明</a>。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>type</td>
+<td><code class="prettyprint">event</code> 对象的类型。</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="created">created参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created[gt]</td>
+<td>大于 <code class="prettyprint">event</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[gte]</td>
+<td>大于或等于 <code class="prettyprint">event</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lt]</td>
+<td>小于 <code class="prettyprint">event</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lte]</td>
+<td>小于或等于 <code class="prettyprint">event</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td>**optional</td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">event</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>

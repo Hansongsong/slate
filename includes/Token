@@ -1,0 +1,69 @@
+<h1 id="token">Token 令牌</h1>
+
+<p>顾客购买时在客户端输入完整卡片信息后 Ping++ Client SDK 会主动调用 <code class="prettyprint">token</code> 接口请求生成一个支付 <code class="prettyprint">token</code>，在请求 <code class="prettyprint">charge</code> 时 Ping++ Client SDK 会传入这个参数， <code class="prettyprint">token</code> 生成后用于支付的有效期是 15 分钟，15 分钟之后不能支付但仍可以绑卡。<strong>注意</strong>：支付时客户端不需要请求该<code class="prettyprint">token</code> 接口，以下仅为格式显示，如需要查询 <code class="prettyprint">token</code> 内的详细卡信息时可以调用以<code class="prettyprint">token</code>  查询接口。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Token 对象 id</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>object</td>
+<td>值为 token</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>Token 创建的时间，用 Unix 时间戳表示</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>livemode</td>
+<td>支付是否处于 live 模式</td>
+<td><strong>boolean</strong></td>
+</tr>
+<tr>
+<td>used</td>
+<td>是否已使用于付款</td>
+<td><strong>boolean</strong></td>
+</tr>
+<tr>
+<td>time_used</td>
+<td>使用于付款的时间</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>type</td>
+<td>对应的资源类型，值为 card</td>
+<td><strong>stringtoken</strong></td>
+</tr>
+<tr>
+<td>card</td>
+<td>Card 对象</td>
+<td><strong>hash</strong></td>
+</tr>
+<tr>
+<td>sms_code</td>
+<td>SMS Code 对象。外卡时，该对象内容为空</td>
+<td><strong>hash</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="token">查询 Token 对象</h2>
+
+<p>可根据 <code class="prettyprint">token id</code> 查询某条 <code class="prettyprint">token</code> 对象中的 <code class="prettyprint">card</code> 信息。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<p>参数 | 描述 | 是否必须
+&mdash;- | &mdash;-
+<dt>{TOKEN_ID}:  | Token 对象 id | <strong>required</strong></p>

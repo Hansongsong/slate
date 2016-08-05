@@ -1,0 +1,183 @@
+<h1 id="refunds">Refunds退款</h1>
+
+<p><code class="prettyprint">refund</code> 对象允许你可以对已经支付的 <code class="prettyprint">charge</code> 对象发起退款请求。</p>
+
+<h3 id="can">can数</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>string</strong></td>
+<td>退款对象 id ，由 Ping++ 生成，27 位长度字符串。</td>
+</tr>
+<tr>
+<td>object</td>
+<td><strong>string</strong></td>
+<td>值为 refund。</td>
+</tr>
+<tr>
+<td>order_no</td>
+<td><strong>string</strong></td>
+<td>退款的订单号，<b style="color: #f15467;">由 Ping++ 生成</b>。这个地方的红色还是用html加的</td>
+</tr>
+<tr>
+<td>amount</td>
+<td><strong>integer and &gt; 0</strong></td>
+<td>退款金额，单位为对应币种的最小货币单位，例如：<b style="color: #f15467;">人民币为分</b>（如退款金额为 1 元，此处请填 100）。</td>
+</tr>
+<tr>
+<td>succeed</td>
+<td><strong>boolean</strong></td>
+<td>退款是否成功。</td>
+</tr>
+<tr>
+<td>status</td>
+<td><strong>string</strong></td>
+<td>退款状态（目前支持三种状态: pending: 处理中; succeeded: 成功; failed: 失败）。</td>
+</tr>
+<tr>
+<td>created</td>
+<td><strong>timestamp</strong></td>
+<td>退款创建的时间，用 Unix 时间戳表示。</td>
+</tr>
+<tr>
+<td>time_succeed</td>
+<td><strong>timestamp</strong></td>
+<td>退款成功的时间，用 Unix 时间戳表示。</td>
+</tr>
+<tr>
+<td>description</td>
+<td><strong>string</strong></td>
+<td>退款详情，最多 255 个 Unicode 字符。</td>
+</tr>
+<tr>
+<td>failure_code</td>
+<td><strong>string</strong></td>
+<td>退款的错误码，<a href="#api-errors">详见 Errors 错误处理机制</a>中的错误码。</td>
+</tr>
+<tr>
+<td>failure_msg</td>
+<td><strong>string</strong></td>
+<td>退款消息的描述。</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td><strong>metadata hash</strong></td>
+<td><a href="#api-metadata">参考 Metadata 元数据</a>。</td>
+</tr>
+<tr>
+<td>charge</td>
+<td><strong>string</strong></td>
+<td><code class="prettyprint">refund</code> 对象的所在 <code class="prettyprint">charge</code> 对象的 <code class="prettyprint">id</code>。</td>
+</tr>
+<tr>
+<td>charge_order_no</td>
+<td><strong>string</strong></td>
+<td>商户订单号，这边返回的是charge对象中的order_no参数。</td>
+</tr>
+<tr>
+<td>transaction_no</td>
+<td><strong>string</strong></td>
+<td>支付渠道返回的交易流水号，部分渠道返回该字段为空。</td>
+</tr>
+</tbody></table>
+
+<h2 id="refund">创建 Refund 对象</h2>
+
+<p>通过发起一次退款请求创建一个新的 <code class="prettyprint">refund</code> 对象，只能对已经发生交易并且没有全额退款的 <code class="prettyprint">charge</code> 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>required</strong> <code class="prettyprint">charge</code> 对象的 id。</td>
+</tr>
+<tr>
+<td>amount</td>
+<td><strong>optional</strong> 退款的金额, 单位为对应币种的最小货币单位，例如：<b style="color: #f15467;">人民币为分</b>（如退款金额为 1 元，此处请填 100）。必须小于等于可退款金额，默认为全额退款，应用内快捷支付目前只支持全额退款。</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td><strong>optional</strong> <a href="#api-metadata">参考 Metadata 元数据</a>。</td>
+</tr>
+<tr>
+<td>description</td>
+<td><strong>required</strong> 退款详情，最多 255 个 Unicode 字符。</td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui参数</h3>
+
+<p>如果发起退款成功，返回一个退款 <code class="prettyprint">refund</code> 对象。如果发生错误，则会返回错误码和错误详情，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h2 id="refund">查询 Refund 对象</h2>
+
+<p>可以通过 <code class="prettyprint">charge</code> 对象的查询接口查询某一个 <code class="prettyprint">charge</code> 对象的退款列表，也可以通过 <code class="prettyprint">refund</code> 对象的 <code class="prettyprint">id</code> 查询一个已创建的 <code class="prettyprint">refund</code> 对象。可以在 Webhooks 通知之前，通过查询接口确认退款状态。</p>
+
+<h3 id="can">can数</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>required</strong> 查询的 <code class="prettyprint">refund</code> 对象 <code class="prettyprint">id</code>。</td>
+</tr>
+<tr>
+<td>charge</td>
+<td><strong>required</strong> 退款的 <code class="prettyprint">charge</code> 对象 <code class="prettyprint">id</code>。</td>
+</tr>
+</tbody></table>
+
+<h3 id="fan">fan回</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">refund</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h3 id="refund">查询 Refund 对象列表</h3>
+
+<p>返回之前创建 <code class="prettyprint">charge</code> 对象的一个 <code class="prettyprint">refund</code> 对象列表。列表是按创建时间进行排序，总是将最新的 <code class="prettyprint">refund</code> 对象显示在最前。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>required</strong> 指定退款所在 <code class="prettyprint">charge</code> 对象的 <code class="prettyprint">id</code>。</td>
+</tr>
+<tr>
+<td>limit</td>
+<td><strong>optional</strong> 限制每页可以返回多少对象，范围为 1-20 项，默认是 10 项。</td>
+</tr>
+<tr>
+<td>starting_after</td>
+<td><strong>optional</strong> 在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_end</code>，你可以使用 <code class="prettyprint">starting_after</code> = <code class="prettyprint">obj_end</code> 去获取下一页。</td>
+</tr>
+<tr>
+<td>ending_before</td>
+<td><strong>optional</strong> 在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_start</code>，你可以使用 <code class="prettyprint">ending_before</code> = <code class="prettyprint">obj_start</code> 去获取上一页。</td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>根据请求参数返回一个 <code class="prettyprint">refund</code> 对象列表，如果列表为空，则返回的 <code class="prettyprint">data</code> 为空数组。遇到错误时返回相应错误信息，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>

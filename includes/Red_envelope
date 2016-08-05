@@ -1,0 +1,303 @@
+<h1 id="red-envelope">Red envelope 红包</h1>
+
+<p>所有和红包支付相关的要素信息都存储在 <code class="prettyprint">red_envelope</code> 对象之中，你可以通过发起红包请求创建新的 <code class="prettyprint">red_envelope</code> 对象，也可以随时查看红包对象的状态。每个 <code class="prettyprint">red_envelope</code> 对象都拥有一个标识 <code class="prettyprint">id</code>，该 <code class="prettyprint">id</code> 在系统内唯一。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>string</strong></td>
+<td>红包对象 id ，由 Ping++ 生成，28 位长度字符串。</td>
+</tr>
+<tr>
+<td>object</td>
+<td><strong>string</strong></td>
+<td>值为 red_envelope。</td>
+</tr>
+<tr>
+<td>created</td>
+<td><strong>timestamp</strong></td>
+<td>支付红包的时间，用 Unix 时间戳表示。</td>
+</tr>
+<tr>
+<td>received</td>
+<td><strong>timestamp</strong></td>
+<td>红包的接收时间，用 Unix 时间戳表示。</td>
+</tr>
+<tr>
+<td>livemode</td>
+<td><strong>boolean</strong></td>
+<td>支付是否处于 live 模式。</td>
+</tr>
+<tr>
+<td>status</td>
+<td><strong>string</strong></td>
+<td>红包状态。目前支持 5 种状态（sending: 发放中; sent: 已发放待领取; failed: 发放失败; received: 已领取; refund: 已退款）。</td>
+</tr>
+<tr>
+<td>app</td>
+<td><strong>string</strong></td>
+<td>红包使用的 app 对象的 id。expandable 可展开。</td>
+</tr>
+<tr>
+<td>channel</td>
+<td><strong>string</strong></td>
+<td>红包使用的第三方支付渠道。目前支持 wx(新渠道)、 wx_pub。</td>
+</tr>
+<tr>
+<td>order_no</td>
+<td><strong>string</strong></td>
+<td>红包使用的商户订单号。wx(新渠道)、wx_pub 规定为 1 ~ 28 位一天内不能重复的数字。</td>
+</tr>
+<tr>
+<td>transaction_no</td>
+<td><strong>string</strong></td>
+<td>第三方支付渠道侧的交易流水号。</td>
+</tr>
+<tr>
+<td>amount</td>
+<td><strong>integer and &gt; 0</strong></td>
+<td>总金额，单位为对应币种的最小货币单位，例如：<b style="color: #f15467;">人民币为分</b>。wx_pub 限制在 100 ~ 20000 之间，即 1 ~ 200 元。</td>
+</tr>
+<tr>
+<td>currency</td>
+<td><strong>currency</strong></td>
+<td>三位 ISO 货币代码，目前仅支持人民币 cny。</td>
+</tr>
+<tr>
+<td>recipient</td>
+<td><strong>string</strong></td>
+<td>接收者 id， 为用户在 wx(新渠道)、wx_pub 为用户的 open id。</td>
+</tr>
+<tr>
+<td>subject</td>
+<td><strong>string</strong></td>
+<td>红包主题名称，最多 32 个字节。</td>
+</tr>
+<tr>
+<td>body</td>
+<td><strong>string</strong></td>
+<td>红包祝福语，最多 128 个字节。</td>
+</tr>
+<tr>
+<td>description</td>
+<td><strong>string</strong></td>
+<td>备注信息，最多 255 个字节。</td>
+</tr>
+<tr>
+<td>extra</td>
+<td><strong>object</strong></td>
+<td>支付渠道相关的附加参数，参考<a href="#">extra参数说明</a>。</td>
+</tr>
+</tbody></table>
+
+<h3 id="extra">extra参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>send_name</td>
+<td><strong>string</strong></td>
+<td>商户名称，最多 32 个字节。</td>
+</tr>
+</tbody></table>
+
+<h2 id="red-envelope">创建 Red envelope 对象</h2>
+
+<p>发起一次红包请求需要创建一个新的 <code class="prettyprint">red_envelope</code> 对象。如果支付失败，请检查错误信息，一般是由于账户余额不足引起的。使用测试模式的 API Key，则不会发生真实交易。同步返回交易结果，不会发送 Webhooks 通知。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>app[id]</td>
+<td>红包使用的 <code class="prettyprint">app</code> 对象的 <code class="prettyprint">id</code>。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>红包使用的第三方支付渠道。目前支持 wx(新渠道)、 wx_pub。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>order_no</td>
+<td>红包使用的商户订单号。wx(新渠道)、wx_pub 规定为 1 ~ 28 位一天内不能重复的数字。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>总金额，单位为对应币种的最小货币单位，例如：<b style="color: #f15467;">人民币为分</b>。wx_pub 限制在 100 ~ 20000 之间，即 1 ~ 200 元。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>currency</td>
+<td>三位 ISO 货币代码，目前仅支持人民币 cny。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>recipient</td>
+<td>接收者 id， 为用户在 wx(新渠道)、wx_pub 为用户的 open id。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>subject</td>
+<td>红包主题名称，最多 32 个字节。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>body</td>
+<td>红包祝福语，最多 128 个字节。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>description</td>
+<td>备注信息，最多 255 个字节。</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>extra</td>
+<td>支付渠道相关的附加参数，参考<a href="#">extra参数说明</a>。</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="extra">extra参数说明</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>send_name</td>
+<td>商户名称，最多 32 个字节。</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>同步返回红包支付结果。如果发生错误，则会返回错误码和错误详情，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h3 id="red-envelope">查询 Red envelope 对象</h3>
+
+<p>通过 <code class="prettyprint">red_envelope</code> 对象的 id 查询一个已创建的 <code class="prettyprint">red_envelope</code> 对象。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td><strong>required</strong> 红包 id。</td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>返回一个已存在的 <code class="prettyprint">red_envelope</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+
+<h2 id="red-envelope">查询 Red envelope 对象列表</h2>
+
+<p>返回之前创建 <code class="prettyprint">red_envelope</code> 对象的一个列表。列表是按创建时间进行排序，总是将最新的 <code class="prettyprint">red_envelope</code> 对象显示在最前。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>限制每页可以返回多少对象，范围为 1-100 项，默认是 10 项。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>starting_after</td>
+<td>在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_end</code>，你可以使用 <code class="prettyprint">starting_after</code> = <code class="prettyprint">obj_end</code> 去获取下一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>ending_before</td>
+<td>在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的最后一项的 <code class="prettyprint">id</code> 是 <code class="prettyprint">obj_start</code>，你可以使用 <code class="prettyprint">ending_before</code> = <code class="prettyprint">obj_start</code> 去获取上一页。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>对象的创建时间，用 Unix 时间戳表示，参考<a href="链接">created参数说明</a>。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>app[id]</td>
+<td>支付使用的 <code class="prettyprint">app</code> 对象的 <code class="prettyprint">id</code>。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>channel</td>
+<td>支付使用的第三方支付渠道，目前支持 wx(新渠道)、 wx_pub。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>status</td>
+<td>红包状态。目前支持 5 种状态（sending: 发放中; sent: 已发放待领取; failed: 发放失败; received: 已领取; refund: 已退款）。</td>
+<td><strong>string</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="created">created参数说明</h2>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created[gt]</td>
+<td>大于 <code class="prettyprint">red_envelope</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[gte]</td>
+<td>大于或等于 <code class="prettyprint">red_envelope</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lt]</td>
+<td>小于 <code class="prettyprint">red_envelope</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created[lte]</td>
+<td>小于或等于 <code class="prettyprint">red_envelope</code> 对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>

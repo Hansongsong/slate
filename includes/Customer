@@ -1,0 +1,235 @@
+<h1 id="customer">Customer 顾客</h1>
+
+<p>创建 Customer 对象用于存储用户信息。若在创建 <code class="prettyprint">Customer</code> 时传入 <code class="prettyprint">token id</code>则可以进行绑卡。<strong>注意</strong>：暂时不允许通过外卡创建</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>类型</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Customer 对象 id</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>object</td>
+<td>值为 Customer</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>Customer 对象创建的时间，用 Unix 时间戳表示</td>
+<td><strong>timestamp</strong></td>
+</tr>
+<tr>
+<td>livemode</td>
+<td>支付是否处于 live 模式</td>
+<td><strong>boolean</strong></td>
+</tr>
+<tr>
+<td>app</td>
+<td>App 对象的 id，expandable</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>name</td>
+<td>持卡人姓名</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>email</td>
+<td>地址</td>
+<td><strong>stringemail</strong></td>
+</tr>
+<tr>
+<td>currency</td>
+<td>三位货币代码</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>description</td>
+<td>描述信息</td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>Metadata</td>
+<td><strong>hash</strong></td>
+</tr>
+<tr>
+<td>sources</td>
+<td>资源列表</td>
+<td><strong>list</strong></td>
+</tr>
+<tr>
+<td>default_source</td>
+<td>默认资源对象的 id，expandable</td>
+<td><strong>string</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="customer">创建 Customer 对象</h2>
+
+<p>创建一个用户同时附带一张卡片，即绑卡。
+绑卡时需要传入 <code class="prettyprint">token id</code> ，default_source 为该卡片 注：暂时不允许通过外卡创建。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>app</td>
+<td>App 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>source</td>
+<td>Token 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>sms_code[id]</td>
+<td>SMS Code 对象 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>sms_code[code]</td>
+<td>短信验证码</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>description</td>
+<td>描述信息</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>email</td>
+<td>顾客的 email</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>Metadata</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h3 id="fanhui">fanhui</h3>
+
+<p>返回一个 Customer 对象。</p>
+
+<h2 id="customer">更新 Customer 对象</h2>
+
+<p>该接口支持更新已经绑定的 <code class="prettyprint">Customer</code> 的信息。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{CUS_ID}:</td>
+<td>Customer 对象的 id</td>
+<td><strong>required</strong></td>
+</tr>
+<tr>
+<td>description</td>
+<td>描述信息</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>email</td>
+<td>顾客的 Email</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>Metadata</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>default_source</td>
+<td>选择默认资源对象的 id，只能从已绑定资源中选择，不能设置为 null</td>
+<td><strong>optional</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="customer">删除 Customer 对象</h2>
+
+<p>调用删除接口，传入 <code class="prettyprint">Customer id</code> 可以使对应的信息无法访问。
+注：绑定的资源信息不会被删除，但是无法访问</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><dt>{CUS_ID}:</td>
+<td>要删除的 Customer 对象的 id</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="customer">查询 Customer 对象</h2>
+
+<p>通过 <code class="prettyprint">Customer</code> 对象的 <code class="prettyprint">id</code> 查询一个已经创建的 <code class="prettyprint">Customer</code> 对象的详细信息。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>{CUS_ID}:</td>
+<td>Customer 对象 id。</td>
+<td><strong>required</strong></td>
+</tr>
+</tbody></table>
+
+<h2 id="customer">查询 Customer 对象列表</h2>
+
+<p>返回之前创建过的 <code class="prettyprint">Customer</code> 对象的一个列表，列表是按创建时间进行排序，总是将最新的<code class="prettyprint">Customer</code> 对象显示在最前。</p>
+
+<h3 id="canshu">canshu</h3>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>是否必须</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>限制每页可以返回多少对象，范围为 1-100 项，默认是 10 项。</td>
+<td><strong>optional</strong></td>
+</tr>
+<tr>
+<td>created</td>
+<td>对象的创建时间，用 Unix 时间戳表示。</td>
+<td><strong>timestamp</strong></td>
+</tr>
+</tbody></table>
