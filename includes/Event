@@ -1,6 +1,182 @@
 <h1 id="event">Event事件</h1>
 
 <p><code class="prettyprint">Event</code> 对象属性定义如下。</p>
+<pre class="highlight plaintext"><code>{
+    "id": "evt_la06CoQAiPojSgJKe5gt3nwq",
+    "created": 1427555016,
+    "livemode": false,
+    "type": "summary.weekly.available",
+    "data": {
+        "object": {
+            "app_id": "app_b94eHsO1avrDyL8S",
+            "object": "app_weekly_summary",
+            "app_display_name": "App Name",
+            "created": 1425830460,
+            "summary_from": 1425225600,
+            "summary_to": 1425830399,
+            "charges_amount": 2000,
+            "charges_count" : 200
+        }
+    },
+    "object": "event",
+    "pending_webhooks": 0,
+    "request": null
+}
+</code></pre>
+<pre class="highlight php"><code>{
+    "id": "evt_la06CoQAiPojSgJKe5gt3nwq",
+    "created": 1427555016,
+    "livemode": false,
+    "type": "summary.weekly.available",
+    "data": {
+        "object": {
+            "app_id": "app_b94eHsO1avrDyL8S",
+            "object": "app_weekly_summary",
+            "app_display_name": "App Name",
+            "created": 1425830460,
+            "summary_from": 1425225600,
+            "summary_to": 1425830399,
+            "charges_amount": 2000,
+            "charges_count" : 200
+        }
+    },
+    "object": "event",
+    "pending_webhooks": 0,
+    "request": null
+}
+</code></pre>
+<pre class="highlight java"><code><span class="o">{</span>
+    <span class="s">"id"</span><span class="o">:</span> <span class="s">"evt_la06CoQAiPojSgJKe5gt3nwq"</span><span class="o">,</span>
+    <span class="s">"created"</span><span class="o">:</span> <span class="mi">1427555016</span><span class="o">,</span>
+    <span class="s">"livemode"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span>
+    <span class="s">"type"</span><span class="o">:</span> <span class="s">"summary.weekly.available"</span><span class="o">,</span>
+    <span class="s">"data"</span><span class="o">:</span> <span class="o">{</span>
+        <span class="s">"object"</span><span class="o">:</span> <span class="o">{</span>
+            <span class="s">"app_id"</span><span class="o">:</span> <span class="s">"app_b94eHsO1avrDyL8S"</span><span class="o">,</span>
+            <span class="s">"object"</span><span class="o">:</span> <span class="s">"app_weekly_summary"</span><span class="o">,</span>
+            <span class="s">"app_display_name"</span><span class="o">:</span> <span class="s">"App Name"</span><span class="o">,</span>
+            <span class="s">"created"</span><span class="o">:</span> <span class="mi">1425830460</span><span class="o">,</span>
+            <span class="s">"summary_from"</span><span class="o">:</span> <span class="mi">1425225600</span><span class="o">,</span>
+            <span class="s">"summary_to"</span><span class="o">:</span> <span class="mi">1425830399</span><span class="o">,</span>
+            <span class="s">"charges_amount"</span><span class="o">:</span> <span class="mi">2000</span><span class="o">,</span>
+            <span class="s">"charges_count"</span> <span class="o">:</span> <span class="mi">200</span>
+        <span class="o">}</span>
+    <span class="o">},</span>
+    <span class="s">"object"</span><span class="o">:</span> <span class="s">"event"</span><span class="o">,</span>
+    <span class="s">"pending_webhooks"</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+    <span class="s">"request"</span><span class="o">:</span> <span class="kc">null</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="p">{</span>
+    <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"evt_15lLTI2eZvKYlo2CcIuYBxl7"</span><span class="p">,</span>
+    <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1427555016</span><span class="p">,</span>
+    <span class="s2">"livemode"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+    <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"account.summary.available"</span><span class="p">,</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"object"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"acct_id"</span><span class="p">:</span> <span class="s2">"acct_0eHSiDyzv9G09ejT"</span><span class="p">,</span>
+            <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"account_daily_summary"</span><span class="p">,</span>
+            <span class="s2">"acct_display_name"</span><span class="p">:</span> <span class="s2">"xx 公司"</span><span class="p">,</span>
+            <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1425139260</span><span class="p">,</span>
+            <span class="s2">"summary_from"</span><span class="p">:</span> <span class="mi">1425052800</span><span class="p">,</span>
+            <span class="s2">"summary_to"</span><span class="p">:</span> <span class="mi">1425139199</span><span class="p">,</span>
+            <span class="s2">"charges_amount"</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+            <span class="s2">"charges_count"</span><span class="p">:</span> <span class="mi">100</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"event"</span><span class="p">,</span>
+    <span class="s2">"pending_webhooks"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">"request"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+    "id": "evt_la06CoQAiPojSgJKe5gt3nwq",
+    "created": 1427555016,
+    "livemode": false,
+    "type": "summary.weekly.available",
+    "data": {
+        "object": {
+            "app_id": "app_b94eHsO1avrDyL8S",
+            "object": "app_weekly_summary",
+            "app_display_name": "App Name",
+            "created": 1425830460,
+            "summary_from": 1425225600,
+            "summary_to": 1425830399,
+            "charges_amount": 2000,
+            "charges_count" : 200
+        }
+    },
+    "object": "event",
+    "pending_webhooks": 0,
+    "request": null
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+    <span class="s">"id"</span><span class="p">:</span> <span class="s">"evt_la06CoQAiPojSgJKe5gt3nwq"</span><span class="p">,</span>
+    <span class="s">"created"</span><span class="p">:</span> <span class="mi">1427555016</span><span class="p">,</span>
+    <span class="s">"livemode"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s">"type"</span><span class="p">:</span> <span class="s">"summary.weekly.available"</span><span class="p">,</span>
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">"object"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">"app_id"</span><span class="p">:</span> <span class="s">"app_b94eHsO1avrDyL8S"</span><span class="p">,</span>
+            <span class="s">"object"</span><span class="p">:</span> <span class="s">"app_weekly_summary"</span><span class="p">,</span>
+            <span class="s">"app_display_name"</span><span class="p">:</span> <span class="s">"App Name"</span><span class="p">,</span>
+            <span class="s">"created"</span><span class="p">:</span> <span class="mi">1425830460</span><span class="p">,</span>
+            <span class="s">"summary_from"</span><span class="p">:</span> <span class="mi">1425225600</span><span class="p">,</span>
+            <span class="s">"summary_to"</span><span class="p">:</span> <span class="mi">1425830399</span><span class="p">,</span>
+            <span class="s">"charges_amount"</span><span class="p">:</span> <span class="mi">2000</span><span class="p">,</span>
+            <span class="s">"charges_count"</span> <span class="p">:</span> <span class="mi">200</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"event"</span><span class="p">,</span>
+    <span class="s">"pending_webhooks"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s">"request"</span><span class="p">:</span> <span class="n">null</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+    </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"evt_la06CoQAiPojSgJKe5gt3nwq"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1427555016</span><span class="p">,</span><span class="x">
+    </span><span class="s">"livemode"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x">
+    </span><span class="s">"type"</span><span class="o">:</span><span class="x"> </span><span class="s">"summary.weekly.available"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"data"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+        </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+            </span><span class="s">"app_id"</span><span class="o">:</span><span class="x"> </span><span class="s">"app_b94eHsO1avrDyL8S"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"app_weekly_summary"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"app_display_name"</span><span class="o">:</span><span class="x"> </span><span class="s">"App Name"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1425830460</span><span class="p">,</span><span class="x">
+            </span><span class="s">"summary_from"</span><span class="o">:</span><span class="x"> </span><span class="m">1425225600</span><span class="p">,</span><span class="x">
+            </span><span class="s">"summary_to"</span><span class="o">:</span><span class="x"> </span><span class="m">1425830399</span><span class="p">,</span><span class="x">
+            </span><span class="s">"charges_amount"</span><span class="o">:</span><span class="x"> </span><span class="m">2000</span><span class="p">,</span><span class="x">
+            </span><span class="s">"charges_count"</span><span class="x"> </span><span class="o">:</span><span class="x"> </span><span class="m">200</span><span class="x">
+        </span><span class="p">}</span><span class="x">
+    </span><span class="p">},</span><span class="x">
+    </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"event"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"pending_webhooks"</span><span class="o">:</span><span class="x"> </span><span class="m">0</span><span class="p">,</span><span class="x">
+    </span><span class="s">"request"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+    <span class="s">"id"</span><span class="p">:</span> <span class="s">"evt_la06CoQAiPojSgJKe5gt3nwq"</span><span class="p">,</span>
+    <span class="s">"created"</span><span class="p">:</span> <span class="m">1427555016</span><span class="p">,</span>
+    <span class="s">"livemode"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>
+    <span class="s">"type"</span><span class="p">:</span> <span class="s">"summary.weekly.available"</span><span class="p">,</span>
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">"object"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">"app_id"</span><span class="p">:</span> <span class="s">"app_b94eHsO1avrDyL8S"</span><span class="p">,</span>
+            <span class="s">"object"</span><span class="p">:</span> <span class="s">"app_weekly_summary"</span><span class="p">,</span>
+            <span class="s">"app_display_name"</span><span class="p">:</span> <span class="s">"App Name"</span><span class="p">,</span>
+            <span class="s">"created"</span><span class="p">:</span> <span class="m">1425830460</span><span class="p">,</span>
+            <span class="s">"summary_from"</span><span class="p">:</span> <span class="m">1425225600</span><span class="p">,</span>
+            <span class="s">"summary_to"</span><span class="p">:</span> <span class="m">1425830399</span><span class="p">,</span>
+            <span class="s">"charges_amount"</span><span class="p">:</span> <span class="m">2000</span><span class="p">,</span>
+            <span class="s">"charges_count"</span> <span class="p">:</span> <span class="m">200</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"event"</span><span class="p">,</span>
+    <span class="s">"pending_webhooks"</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span>
+    <span class="s">"request"</span><span class="p">:</span> <span class="k">null</span>
+<span class="p">}</span>
+</code></pre>
 
 <h3 id="canshu">Canshu</h3>
 
@@ -196,6 +372,426 @@
 <h3 id="fanhui">fanhui</h3>
 
 <p>返回一个已存在的 <code class="prettyprint">event</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+<pre class="highlight plaintext"><code>  GET https://api.pingxx.com/v1/events/{EVENT_ID}
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\Event::retrieve('EVENT_ID');
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Event</span><span class="o">.</span><span class="na">retrieve</span><span class="o">({</span><span class="n">EVENT_ID</span><span class="o">});</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="no">Pingpp</span><span class="o">::</span><span class="no">Event</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">({</span><span class="no">EVENT_ID</span><span class="p">})</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  pingpp.event.retrieve({EVENT_ID});
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">pingpp</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">'EVENT_ID'</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">pingpp</span><span class="o">.</span><span class="n">EventClient</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">EVENT_ID</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>  <span class="nf">retrieve</span><span class="p">(</span><span class="n">String</span> <span class="n">id</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  curl https://api.pingxx.com/v1/events/evt_lqVSy5gbL0A68pS8YKvJzdWZ \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC:
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\Pingpp::setApiKey("sk_test_ibbTe5jLGCi5rzfH4OqPW9KC");
+  \Pingpp\Event::retrieve('evt_lqVSy5gbL0A68pS8YKvJzdWZ');
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Pingpp</span><span class="o">.</span><span class="na">apiKey</span> <span class="o">=</span> <span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="o">;</span>
+  <span class="n">Event</span><span class="o">.</span><span class="na">retrieve</span><span class="o">(</span><span class="s">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="o">);</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="nb">require</span> <span class="s2">"pingpp"</span>
+  <span class="no">Pingpp</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span>
+  <span class="no">Pingpp</span><span class="o">::</span><span class="no">Event</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s2">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  pingpp.event.retrieve(
+    "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+    function(err, event) {
+      // YOUR CODE
+    }
+  );
+</code></pre>
+<pre class="highlight python"><code>  <span class="kn">import</span> <span class="nn">pingpp</span>
+  <span class="n">pingpp</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'</span>
+  <span class="n">pingpp</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">'evt_lqVSy5gbL0A68pS8YKvJzdWZ'</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="k">import</span><span class="x"> </span><span class="p">(</span><span class="n">pingpp</span><span class="x"> </span><span class="s">"github.com/pingplusplus/pingpp-go"</span><span class="p">)</span><span class="x">
+  </span><span class="n">Event</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">Event</span> <span class="n">evt</span> <span class="p">=</span> <span class="n">Event</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">evt</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+    <span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+    "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+    "created": 1430915345,
+    "livemode": true,
+    "object": "event",
+    "data": {
+        "object": {
+            "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+            "object": "charge",
+            "created": 1430915284,
+            "livemode": true,
+            "paid": true,
+            "refunded": false,
+            "app": "app_Xz9iXLn9ebX1SOe1",
+            "channel": "wx",
+            "order_no": "as223af2ds",
+            "client_ip": "127.0.0.1",
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "extra": [],
+            "time_paid": 1430915344,
+            "time_expire": 1431001684,
+            "time_settle": null,
+            "transaction_no": "1001680021201505060112980000",
+            "refunds": {
+                "object": "list",
+                "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                "has_more": false,
+                "data": []
+            },
+            "amount_refunded": 0,
+            "failure_code": null,
+            "failure_msg": null,
+            "metadata": [],
+            "credential": [],
+            "description": null
+        }
+    },
+    "pending_webhooks": 0,
+    "type": "charge.succeeded",
+    "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+}
+</code></pre>
+<pre class="highlight php"><code>{
+    "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+    "created": 1430915345,
+    "livemode": true,
+    "object": "event",
+    "data": {
+        "object": {
+            "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+            "object": "charge",
+            "created": 1430915284,
+            "livemode": true,
+            "paid": true,
+            "refunded": false,
+            "app": "app_Xz9iXLn9ebX1SOe1",
+            "channel": "wx",
+            "order_no": "as223af2ds",
+            "client_ip": "127.0.0.1",
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "extra": [],
+            "time_paid": 1430915344,
+            "time_expire": 1431001684,
+            "time_settle": null,
+            "transaction_no": "1001680021201505060112980000",
+            "refunds": {
+                "object": "list",
+                "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                "has_more": false,
+                "data": []
+            },
+            "amount_refunded": 0,
+            "failure_code": null,
+            "failure_msg": null,
+            "metadata": [],
+            "credential": [],
+            "description": null
+        }
+    },
+    "pending_webhooks": 0,
+    "type": "charge.succeeded",
+    "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+}
+</code></pre>
+<pre class="highlight java"><code><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">Event</span> <span class="nl">JSON:</span> <span class="o">{</span>
+    <span class="s">"id"</span><span class="o">:</span> <span class="s">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="o">,</span>
+    <span class="s">"created"</span><span class="o">:</span> <span class="mi">1430915345</span><span class="o">,</span>
+    <span class="s">"livemode"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+    <span class="s">"object"</span><span class="o">:</span> <span class="s">"event"</span><span class="o">,</span>
+    <span class="s">"data"</span><span class="o">:</span> <span class="o">{</span>
+        <span class="s">"object"</span><span class="o">:</span> <span class="o">{</span>
+            <span class="s">"id"</span><span class="o">:</span> <span class="s">"ch_ebT0y9iPGCKCL0aPy9X1WLmT"</span><span class="o">,</span>
+            <span class="s">"object"</span><span class="o">:</span> <span class="s">"charge"</span><span class="o">,</span>
+            <span class="s">"created"</span><span class="o">:</span> <span class="mi">1430915284</span><span class="o">,</span>
+            <span class="s">"livemode"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+            <span class="s">"paid"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+            <span class="s">"refunded"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span>
+            <span class="s">"app"</span><span class="o">:</span> <span class="s">"app_Xz9iXLn9ebX1SOe1"</span><span class="o">,</span>
+            <span class="s">"channel"</span><span class="o">:</span> <span class="s">"wx"</span><span class="o">,</span>
+            <span class="s">"order_no"</span><span class="o">:</span> <span class="s">"as223af2ds"</span><span class="o">,</span>
+            <span class="s">"client_ip"</span><span class="o">:</span> <span class="s">"127.0.0.1"</span><span class="o">,</span>
+            <span class="s">"amount"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span>
+            <span class="s">"amount_settle"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span>
+            <span class="s">"currency"</span><span class="o">:</span> <span class="s">"cny"</span><span class="o">,</span>
+            <span class="s">"subject"</span><span class="o">:</span> <span class="s">"Your Subject"</span><span class="o">,</span>
+            <span class="s">"body"</span><span class="o">:</span> <span class="s">"Your Body"</span><span class="o">,</span>
+            <span class="s">"extra"</span><span class="o">:</span> <span class="o">[],</span>
+            <span class="s">"time_paid"</span><span class="o">:</span> <span class="mi">1430915344</span><span class="o">,</span>
+            <span class="s">"time_expire"</span><span class="o">:</span> <span class="mi">1431001684</span><span class="o">,</span>
+            <span class="s">"time_settle"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+            <span class="s">"transaction_no"</span><span class="o">:</span> <span class="s">"1001680021201505060112980000"</span><span class="o">,</span>
+            <span class="s">"refunds"</span><span class="o">:</span> <span class="o">{</span>
+                <span class="s">"object"</span><span class="o">:</span> <span class="s">"list"</span><span class="o">,</span>
+                <span class="s">"url"</span><span class="o">:</span> <span class="s">"/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds"</span><span class="o">,</span>
+                <span class="s">"has_more"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span>
+                <span class="s">"data"</span><span class="o">:</span> <span class="o">[]</span>
+            <span class="o">},</span>
+            <span class="s">"amount_refunded"</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+            <span class="s">"failure_code"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+            <span class="s">"failure_msg"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+            <span class="s">"metadata"</span><span class="o">:</span> <span class="o">[],</span>
+            <span class="s">"credential"</span><span class="o">:</span> <span class="o">[],</span>
+            <span class="s">"description"</span><span class="o">:</span> <span class="kc">null</span>
+        <span class="o">}</span>
+    <span class="o">},</span>
+    <span class="s">"pending_webhooks"</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+    <span class="s">"type"</span><span class="o">:</span> <span class="s">"charge.succeeded"</span><span class="o">,</span>
+    <span class="s">"request"</span><span class="o">:</span> <span class="s">"iar_0K8m90CCeDK8PabXD00yfTq"</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1">#&amp;lt;Pingpp::Event id=evt_lqVSy5gbL0A68pS8YKvJzdWZ&gt; JSON: {</span>
+    <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="p">,</span>
+    <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1430915345</span><span class="p">,</span>
+    <span class="s2">"livemode"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+    <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"event"</span><span class="p">,</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"object"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"ch_ebT0y9iPGCKCL0aPy9X1WLmT"</span><span class="p">,</span>
+            <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"charge"</span><span class="p">,</span>
+            <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1430915284</span><span class="p">,</span>
+            <span class="s2">"livemode"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+            <span class="s2">"paid"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+            <span class="s2">"refunded"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+            <span class="s2">"app"</span><span class="p">:</span> <span class="s2">"app_Xz9iXLn9ebX1SOe1"</span><span class="p">,</span>
+            <span class="s2">"channel"</span><span class="p">:</span> <span class="s2">"wx"</span><span class="p">,</span>
+            <span class="s2">"order_no"</span><span class="p">:</span> <span class="s2">"as223af2ds"</span><span class="p">,</span>
+            <span class="s2">"client_ip"</span><span class="p">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>
+            <span class="s2">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s2">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s2">"currency"</span><span class="p">:</span> <span class="s2">"cny"</span><span class="p">,</span>
+            <span class="s2">"subject"</span><span class="p">:</span> <span class="s2">"Your Subject"</span><span class="p">,</span>
+            <span class="s2">"body"</span><span class="p">:</span> <span class="s2">"Your Body"</span><span class="p">,</span>
+            <span class="s2">"extra"</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">"time_paid"</span><span class="p">:</span> <span class="mi">1430915344</span><span class="p">,</span>
+            <span class="s2">"time_expire"</span><span class="p">:</span> <span class="mi">1431001684</span><span class="p">,</span>
+            <span class="s2">"time_settle"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">"transaction_no"</span><span class="p">:</span> <span class="s2">"1001680021201505060112980000"</span><span class="p">,</span>
+            <span class="s2">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"list"</span><span class="p">,</span>
+                <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds"</span><span class="p">,</span>
+                <span class="s2">"has_more"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+                <span class="s2">"data"</span><span class="p">:</span> <span class="p">[]</span>
+            <span class="p">},</span>
+            <span class="s2">"amount_refunded"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">"credential"</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="n">null</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">"pending_webhooks"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"charge.succeeded"</span><span class="p">,</span>
+    <span class="s2">"request"</span><span class="p">:</span> <span class="s2">"iar_0K8m90CCeDK8PabXD00yfTq"</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+    "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+    "created": 1430915345,
+    "livemode": true,
+    "object": "event",
+    "data": {
+        "object": {
+            "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+            "object": "charge",
+            "created": 1430915284,
+            "livemode": true,
+            "paid": true,
+            "refunded": false,
+            "app": "app_Xz9iXLn9ebX1SOe1",
+            "channel": "wx",
+            "order_no": "as223af2ds",
+            "client_ip": "127.0.0.1",
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "extra": [],
+            "time_paid": 1430915344,
+            "time_expire": 1431001684,
+            "time_settle": null,
+            "transaction_no": "1001680021201505060112980000",
+            "refunds": {
+                "object": "list",
+                "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                "has_more": false,
+                "data": []
+            },
+            "amount_refunded": 0,
+            "failure_code": null,
+            "failure_msg": null,
+            "metadata": [],
+            "credential": [],
+            "description": null
+        }
+    },
+    "pending_webhooks": 0,
+    "type": "charge.succeeded",
+    "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+    <span class="s">"id"</span><span class="p">:</span> <span class="s">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="p">,</span>
+    <span class="s">"created"</span><span class="p">:</span> <span class="mi">1430915345</span><span class="p">,</span>
+    <span class="s">"livemode"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"event"</span><span class="p">,</span>
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">"object"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">"id"</span><span class="p">:</span> <span class="s">"ch_ebT0y9iPGCKCL0aPy9X1WLmT"</span><span class="p">,</span>
+            <span class="s">"object"</span><span class="p">:</span> <span class="s">"charge"</span><span class="p">,</span>
+            <span class="s">"created"</span><span class="p">:</span> <span class="mi">1430915284</span><span class="p">,</span>
+            <span class="s">"livemode"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+            <span class="s">"paid"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+            <span class="s">"refunded"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+            <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_Xz9iXLn9ebX1SOe1"</span><span class="p">,</span>
+            <span class="s">"channel"</span><span class="p">:</span> <span class="s">"wx"</span><span class="p">,</span>
+            <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"as223af2ds"</span><span class="p">,</span>
+            <span class="s">"client_ip"</span><span class="p">:</span> <span class="s">"127.0.0.1"</span><span class="p">,</span>
+            <span class="s">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span>
+            <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+            <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+            <span class="s">"extra"</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s">"time_paid"</span><span class="p">:</span> <span class="mi">1430915344</span><span class="p">,</span>
+            <span class="s">"time_expire"</span><span class="p">:</span> <span class="mi">1431001684</span><span class="p">,</span>
+            <span class="s">"time_settle"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s">"transaction_no"</span><span class="p">:</span> <span class="s">"1001680021201505060112980000"</span><span class="p">,</span>
+            <span class="s">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span>
+                <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds"</span><span class="p">,</span>
+                <span class="s">"has_more"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                <span class="s">"data"</span><span class="p">:</span> <span class="p">[]</span>
+            <span class="p">},</span>
+            <span class="s">"amount_refunded"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s">"metadata"</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s">"credential"</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s">"description"</span><span class="p">:</span> <span class="n">null</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s">"pending_webhooks"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s">"type"</span><span class="p">:</span> <span class="s">"charge.succeeded"</span><span class="p">,</span>
+    <span class="s">"request"</span><span class="p">:</span> <span class="s">"iar_0K8m90CCeDK8PabXD00yfTq"</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+    </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1430915345</span><span class="p">,</span><span class="x">
+    </span><span class="s">"livemode"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+    </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"event"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"data"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+        </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+            </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"ch_ebT0y9iPGCKCL0aPy9X1WLmT"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"charge"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1430915284</span><span class="p">,</span><span class="x">
+            </span><span class="s">"livemode"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+            </span><span class="s">"paid"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+            </span><span class="s">"refunded"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x">
+            </span><span class="s">"app"</span><span class="o">:</span><span class="x"> </span><span class="s">"app_Xz9iXLn9ebX1SOe1"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"channel"</span><span class="o">:</span><span class="x"> </span><span class="s">"wx"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"as223af2ds"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"client_ip"</span><span class="o">:</span><span class="x"> </span><span class="s">"127.0.0.1"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"amount"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x">
+            </span><span class="s">"amount_settle"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x">
+            </span><span class="s">"currency"</span><span class="o">:</span><span class="x"> </span><span class="s">"cny"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"subject"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Subject"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"body"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Body"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"extra"</span><span class="o">:</span><span class="x"> </span><span class="p">[],</span><span class="x">
+            </span><span class="s">"time_paid"</span><span class="o">:</span><span class="x"> </span><span class="m">1430915344</span><span class="p">,</span><span class="x">
+            </span><span class="s">"time_expire"</span><span class="o">:</span><span class="x"> </span><span class="m">1431001684</span><span class="p">,</span><span class="x">
+            </span><span class="s">"time_settle"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+            </span><span class="s">"transaction_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"1001680021201505060112980000"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"refunds"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+                </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"list"</span><span class="p">,</span><span class="x">
+                </span><span class="s">"url"</span><span class="o">:</span><span class="x"> </span><span class="s">"/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds"</span><span class="p">,</span><span class="x">
+                </span><span class="s">"has_more"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x">
+                </span><span class="s">"data"</span><span class="o">:</span><span class="x"> </span><span class="p">[]</span><span class="x">
+            </span><span class="p">},</span><span class="x">
+            </span><span class="s">"amount_refunded"</span><span class="o">:</span><span class="x"> </span><span class="m">0</span><span class="p">,</span><span class="x">
+            </span><span class="s">"failure_code"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+            </span><span class="s">"failure_msg"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+            </span><span class="s">"metadata"</span><span class="o">:</span><span class="x"> </span><span class="p">[],</span><span class="x">
+            </span><span class="s">"credential"</span><span class="o">:</span><span class="x"> </span><span class="p">[],</span><span class="x">
+            </span><span class="s">"description"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="x">
+        </span><span class="p">}</span><span class="x">
+    </span><span class="p">},</span><span class="x">
+    </span><span class="s">"pending_webhooks"</span><span class="o">:</span><span class="x"> </span><span class="m">0</span><span class="p">,</span><span class="x">
+    </span><span class="s">"type"</span><span class="o">:</span><span class="x"> </span><span class="s">"charge.succeeded"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"request"</span><span class="o">:</span><span class="x"> </span><span class="s">"iar_0K8m90CCeDK8PabXD00yfTq"</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+    <span class="s">"id"</span><span class="p">:</span> <span class="s">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="p">,</span>
+    <span class="s">"created"</span><span class="p">:</span> <span class="m">1430915345</span><span class="p">,</span>
+    <span class="s">"livemode"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"event"</span><span class="p">,</span>
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">"object"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">"id"</span><span class="p">:</span> <span class="s">"ch_ebT0y9iPGCKCL0aPy9X1WLmT"</span><span class="p">,</span>
+            <span class="s">"object"</span><span class="p">:</span> <span class="s">"charge"</span><span class="p">,</span>
+            <span class="s">"created"</span><span class="p">:</span> <span class="m">1430915284</span><span class="p">,</span>
+            <span class="s">"livemode"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+            <span class="s">"paid"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+            <span class="s">"refunded"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>
+            <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_Xz9iXLn9ebX1SOe1"</span><span class="p">,</span>
+            <span class="s">"channel"</span><span class="p">:</span> <span class="s">"wx"</span><span class="p">,</span>
+            <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"as223af2ds"</span><span class="p">,</span>
+            <span class="s">"client_ip"</span><span class="p">:</span> <span class="s">"127.0.0.1"</span><span class="p">,</span>
+            <span class="s">"amount"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span>
+            <span class="s">"amount_settle"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span>
+            <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span>
+            <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+            <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+            <span class="s">"extra"</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s">"time_paid"</span><span class="p">:</span> <span class="m">1430915344</span><span class="p">,</span>
+            <span class="s">"time_expire"</span><span class="p">:</span> <span class="m">1431001684</span><span class="p">,</span>
+            <span class="s">"time_settle"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+            <span class="s">"transaction_no"</span><span class="p">:</span> <span class="s">"1001680021201505060112980000"</span><span class="p">,</span>
+            <span class="s">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span>
+                <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds"</span><span class="p">,</span>
+                <span class="s">"has_more"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>
+                <span class="s">"data"</span><span class="p">:</span> <span class="p">[]</span>
+            <span class="p">},</span>
+            <span class="s">"amount_refunded"</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span>
+            <span class="s">"failure_code"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+            <span class="s">"failure_msg"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+            <span class="s">"metadata"</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s">"credential"</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s">"description"</span><span class="p">:</span> <span class="k">null</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s">"pending_webhooks"</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span>
+    <span class="s">"type"</span><span class="p">:</span> <span class="s">"charge.succeeded"</span><span class="p">,</span>
+    <span class="s">"request"</span><span class="p">:</span> <span class="s">"iar_0K8m90CCeDK8PabXD00yfTq"</span>
+<span class="p">}</span>
+</code></pre>
 
 <h2 id="event">查询 Event 对象列表</h2>
 
@@ -271,3 +867,502 @@
 <h3 id="fanhui">fanhui</h3>
 
 <p>返回一个已存在的 <code class="prettyprint">event</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+<pre class="highlight plaintext"><code>  GET https://api.pingxx.com/v1/events/
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\Event::all();
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Event</span><span class="o">.</span><span class="na">all</span><span class="o">(</span><span class="n">Map</span> <span class="n">options</span><span class="o">);</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="no">Pingpp</span><span class="o">::</span><span class="no">Event</span><span class="p">.</span><span class="nf">all</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  pingpp.event.list();
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">pingpp</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="nb">all</span><span class="p">()</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">pingpp</span><span class="o">.</span><span class="n">EventClient</span><span class="o">.</span><span class="n">List</span><span class="p">()</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>  <span class="nf">list</span><span class="p">(</span><span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="k">params</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  curl https://api.pingxx.com/v1/events/?limit=3 \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC:
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  \Pingpp\Event::all(array('limit' =<span class="ni">&amp;gt;</span> 3));
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Pingpp</span><span class="o">.</span><span class="na">apiKey</span> <span class="o">=</span> <span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="o">;</span>
+
+  <span class="n">Map</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="n">eventParams</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;();</span>
+  <span class="n">eventParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"limit"</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>
+
+  <span class="n">Event</span><span class="o">.</span><span class="na">all</span><span class="o">(</span><span class="n">eventParams</span><span class="o">);</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="nb">require</span> <span class="s2">"pingpp"</span>
+  <span class="no">Pingpp</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span>
+  <span class="no">Pingpp</span><span class="o">::</span><span class="no">Event</span><span class="p">.</span><span class="nf">all</span><span class="p">(</span><span class="ss">:limit</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  pingpp.event.list({ limit: 3 }, function(err, events) {
+    // 异步调用
+  });
+</code></pre>
+<pre class="highlight python"><code>  <span class="kn">import</span> <span class="nn">pingpp</span>
+  <span class="n">pingpp</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'</span>
+  <span class="n">res</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="nb">all</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="k">import</span><span class="x"> </span><span class="p">(</span><span class="n">pingpp</span><span class="x"> </span><span class="s">"github.com/pingplusplus/pingpp-go"</span><span class="p">)</span><span class="x">
+  </span><span class="n">event</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">params</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>    <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="k">params</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;();</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"limit"</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">EventList</span> <span class="n">evts</span> <span class="p">=</span> <span class="n">Event</span><span class="p">.</span><span class="nf">list</span><span class="p">(</span><span class="k">params</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">evts</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+    <span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+    "object": "list",
+    "url": "/v1/events",
+    "has_more": true,
+    "data": [
+        {
+            "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+            "created": 1430915345,
+            "livemode": true,
+            "object": "event",
+            "data": {
+                "object": {
+                    "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+                    "object": "charge",
+                    "created": 1430915284,
+                    "livemode": true,
+                    "paid": true,
+                    "refunded": false,
+                    "app": "app_Xz9iXLn9ebX1SOe1",
+                    "channel": "wx",
+                    "order_no": "as223af2ds",
+                    "client_ip": "127.0.0.1",
+                    "amount": 100,
+                    "amount_settle": 100,
+                    "currency": "cny",
+                    "subject": "Your Subject",
+                    "body": "Your Body",
+                    "extra": [],
+                    "time_paid": 1430915344,
+                    "time_expire": 1431001684,
+                    "time_settle": null,
+                    "transaction_no": "1001680021201505060112980000",
+                    "refunds": {
+                        "object": "list",
+                        "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                        "has_more": false,
+                        "data": []
+                    },
+                    "amount_refunded": 0,
+                    "failure_code": null,
+                    "failure_msg": null,
+                    "metadata": [],
+                    "credential": [],
+                    "description": null
+                }
+            },
+            "pending_webhooks": 0,
+            "type": "charge.succeeded",
+            "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+        },
+        {...},
+        {...}
+    ]
+}
+</code></pre>
+<pre class="highlight php"><code>{
+    "object": "list",
+    "url": "/v1/events",
+    "has_more": true,
+    "data": [
+        {
+            "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+            "created": 1430915345,
+            "livemode": true,
+            "object": "event",
+            "data": {
+                "object": {
+                    "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+                    "object": "charge",
+                    "created": 1430915284,
+                    "livemode": true,
+                    "paid": true,
+                    "refunded": false,
+                    "app": "app_Xz9iXLn9ebX1SOe1",
+                    "channel": "wx",
+                    "order_no": "as223af2ds",
+                    "client_ip": "127.0.0.1",
+                    "amount": 100,
+                    "amount_settle": 100,
+                    "currency": "cny",
+                    "subject": "Your Subject",
+                    "body": "Your Body",
+                    "extra": [],
+                    "time_paid": 1430915344,
+                    "time_expire": 1431001684,
+                    "time_settle": null,
+                    "transaction_no": "1001680021201505060112980000",
+                    "refunds": {
+                        "object": "list",
+                        "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                        "has_more": false,
+                        "data": []
+                    },
+                    "amount_refunded": 0,
+                    "failure_code": null,
+                    "failure_msg": null,
+                    "metadata": [],
+                    "credential": [],
+                    "description": null
+                }
+            },
+            "pending_webhooks": 0,
+            "type": "charge.succeeded",
+            "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+        },
+        {...},
+        {...}
+    ]
+}
+</code></pre>
+<pre class="highlight java"><code><span class="err">#</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">EventCollection</span> <span class="n">id</span><span class="o">=</span><span class="err">#</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="nl">JSON:</span> <span class="o">{</span>
+  <span class="s">"data"</span><span class="o">:</span> <span class="o">[</span>
+        <span class="o">{</span>
+    <span class="s">"object"</span><span class="o">:</span> <span class="s">"list"</span><span class="o">,</span>
+    <span class="s">"url"</span><span class="o">:</span> <span class="s">"/v1/events"</span><span class="o">,</span>
+    <span class="s">"has_more"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+    <span class="s">"data"</span><span class="o">:</span> <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s">"id"</span><span class="o">:</span> <span class="s">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="o">,</span>
+            <span class="s">"created"</span><span class="o">:</span> <span class="mi">1430915345</span><span class="o">,</span>
+            <span class="s">"livemode"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+            <span class="s">"object"</span><span class="o">:</span> <span class="s">"event"</span><span class="o">,</span>
+            <span class="s">"data"</span><span class="o">:</span> <span class="o">{</span>
+                <span class="s">"object"</span><span class="o">:</span> <span class="o">{</span>
+                    <span class="s">"id"</span><span class="o">:</span> <span class="s">"ch_ebT0y9iPGCKCL0aPy9X1WLmT"</span><span class="o">,</span>
+                    <span class="s">"object"</span><span class="o">:</span> <span class="s">"charge"</span><span class="o">,</span>
+                    <span class="s">"created"</span><span class="o">:</span> <span class="mi">1430915284</span><span class="o">,</span>
+                    <span class="s">"livemode"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+                    <span class="s">"paid"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+                    <span class="s">"refunded"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span>
+                    <span class="s">"app"</span><span class="o">:</span> <span class="s">"app_Xz9iXLn9ebX1SOe1"</span><span class="o">,</span>
+                    <span class="s">"channel"</span><span class="o">:</span> <span class="s">"wx"</span><span class="o">,</span>
+                    <span class="s">"order_no"</span><span class="o">:</span> <span class="s">"as223af2ds"</span><span class="o">,</span>
+                    <span class="s">"client_ip"</span><span class="o">:</span> <span class="s">"127.0.0.1"</span><span class="o">,</span>
+                    <span class="s">"amount"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span>
+                    <span class="s">"amount_settle"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span>
+                    <span class="s">"currency"</span><span class="o">:</span> <span class="s">"cny"</span><span class="o">,</span>
+                    <span class="s">"subject"</span><span class="o">:</span> <span class="s">"Your Subject"</span><span class="o">,</span>
+                    <span class="s">"body"</span><span class="o">:</span> <span class="s">"Your Body"</span><span class="o">,</span>
+                    <span class="s">"extra"</span><span class="o">:</span> <span class="o">[],</span>
+                    <span class="s">"time_paid"</span><span class="o">:</span> <span class="mi">1430915344</span><span class="o">,</span>
+                    <span class="s">"time_expire"</span><span class="o">:</span> <span class="mi">1431001684</span><span class="o">,</span>
+                    <span class="s">"time_settle"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+                    <span class="s">"transaction_no"</span><span class="o">:</span> <span class="s">"1001680021201505060112980000"</span><span class="o">,</span>
+                    <span class="s">"refunds"</span><span class="o">:</span> <span class="o">{</span>
+                        <span class="s">"object"</span><span class="o">:</span> <span class="s">"list"</span><span class="o">,</span>
+                        <span class="s">"url"</span><span class="o">:</span> <span class="s">"/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds"</span><span class="o">,</span>
+                        <span class="s">"has_more"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span>
+                        <span class="s">"data"</span><span class="o">:</span> <span class="o">[]</span>
+                    <span class="o">},</span>
+                    <span class="s">"amount_refunded"</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+                    <span class="s">"failure_code"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+                    <span class="s">"failure_msg"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+                    <span class="s">"metadata"</span><span class="o">:</span> <span class="o">[],</span>
+                    <span class="s">"credential"</span><span class="o">:</span> <span class="o">[],</span>
+                    <span class="s">"description"</span><span class="o">:</span> <span class="kc">null</span>
+                <span class="o">}</span>
+            <span class="o">},</span>
+            <span class="s">"pending_webhooks"</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+            <span class="s">"type"</span><span class="o">:</span> <span class="s">"charge.succeeded"</span><span class="o">,</span>
+            <span class="s">"request"</span><span class="o">:</span> <span class="s">"iar_0K8m90CCeDK8PabXD00yfTq"</span>
+        <span class="o">}</span>
+
+    <span class="err">#</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">Event</span><span class="o">[...]</span> <span class="o">...&amp;</span><span class="n">gt</span><span class="o">;,</span>
+    <span class="err">#</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">Event</span><span class="o">[...]</span> <span class="o">...&amp;</span><span class="n">gt</span><span class="o">;</span>
+  <span class="o">],</span>
+  <span class="s">"has_more"</span><span class="o">:</span> <span class="kc">false</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="p">{</span>
+    <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"list"</span><span class="p">,</span>
+    <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/v1/events"</span><span class="p">,</span>
+    <span class="s2">"has_more"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="p">,</span>
+            <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1430915345</span><span class="p">,</span>
+            <span class="s2">"livemode"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+            <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"event"</span><span class="p">,</span>
+            <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"object"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"ch_ebT0y9iPGCKCL0aPy9X1WLmT"</span><span class="p">,</span>
+                    <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"charge"</span><span class="p">,</span>
+                    <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1430915284</span><span class="p">,</span>
+                    <span class="s2">"livemode"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+                    <span class="s2">"paid"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+                    <span class="s2">"refunded"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+                    <span class="s2">"app"</span><span class="p">:</span> <span class="s2">"app_Xz9iXLn9ebX1SOe1"</span><span class="p">,</span>
+                    <span class="s2">"channel"</span><span class="p">:</span> <span class="s2">"wx"</span><span class="p">,</span>
+                    <span class="s2">"order_no"</span><span class="p">:</span> <span class="s2">"as223af2ds"</span><span class="p">,</span>
+                    <span class="s2">"client_ip"</span><span class="p">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>
+                    <span class="s2">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+                    <span class="s2">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+                    <span class="s2">"currency"</span><span class="p">:</span> <span class="s2">"cny"</span><span class="p">,</span>
+                    <span class="s2">"subject"</span><span class="p">:</span> <span class="s2">"Your Subject"</span><span class="p">,</span>
+                    <span class="s2">"body"</span><span class="p">:</span> <span class="s2">"Your Body"</span><span class="p">,</span>
+                    <span class="s2">"extra"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">"time_paid"</span><span class="p">:</span> <span class="mi">1430915344</span><span class="p">,</span>
+                    <span class="s2">"time_expire"</span><span class="p">:</span> <span class="mi">1431001684</span><span class="p">,</span>
+                    <span class="s2">"time_settle"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">"transaction_no"</span><span class="p">:</span> <span class="s2">"1001680021201505060112980000"</span><span class="p">,</span>
+                    <span class="s2">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"list"</span><span class="p">,</span>
+                        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds"</span><span class="p">,</span>
+                        <span class="s2">"has_more"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+                        <span class="s2">"data"</span><span class="p">:</span> <span class="p">[]</span>
+                    <span class="p">},</span>
+                    <span class="s2">"amount_refunded"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">"credential"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">"description"</span><span class="p">:</span> <span class="n">null</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">"pending_webhooks"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"charge.succeeded"</span><span class="p">,</span>
+            <span class="s2">"request"</span><span class="p">:</span> <span class="s2">"iar_0K8m90CCeDK8PabXD00yfTq"</span>
+        <span class="p">}</span>
+
+    <span class="c1">#&amp;lt;Pingpp::Event[...] ...&amp;gt;,</span>
+    <span class="c1">#&amp;lt;Pingpp::Event[...] ...&amp;gt;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+    "object": "list",
+    "url": "/v1/events",
+    "has_more": true,
+    "data": [
+        {
+            "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+            "created": 1430915345,
+            "livemode": true,
+            "object": "event",
+            "data": {
+                "object": {
+                    "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+                    "object": "charge",
+                    "created": 1430915284,
+                    "livemode": true,
+                    "paid": true,
+                    "refunded": false,
+                    "app": "app_Xz9iXLn9ebX1SOe1",
+                    "channel": "wx",
+                    "order_no": "as223af2ds",
+                    "client_ip": "127.0.0.1",
+                    "amount": 100,
+                    "amount_settle": 100,
+                    "currency": "cny",
+                    "subject": "Your Subject",
+                    "body": "Your Body",
+                    "extra": [],
+                    "time_paid": 1430915344,
+                    "time_expire": 1431001684,
+                    "time_settle": null,
+                    "transaction_no": "1001680021201505060112980000",
+                    "refunds": {
+                        "object": "list",
+                        "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                        "has_more": false,
+                        "data": []
+                    },
+                    "amount_refunded": 0,
+                    "failure_code": null,
+                    "failure_msg": null,
+                    "metadata": [],
+                    "credential": [],
+                    "description": null
+                }
+            },
+            "pending_webhooks": 0,
+            "type": "charge.succeeded",
+            "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+        },
+        {...},
+        {...}
+    ]
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span>
+    <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/events"</span><span class="p">,</span>
+    <span class="s">"has_more"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s">"id"</span><span class="p">:</span> <span class="s">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="p">,</span>
+            <span class="s">"created"</span><span class="p">:</span> <span class="mi">1430915345</span><span class="p">,</span>
+            <span class="s">"livemode"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+            <span class="s">"object"</span><span class="p">:</span> <span class="s">"event"</span><span class="p">,</span>
+            <span class="s">"data"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s">"object"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s">"id"</span><span class="p">:</span> <span class="s">"ch_ebT0y9iPGCKCL0aPy9X1WLmT"</span><span class="p">,</span>
+                    <span class="s">"object"</span><span class="p">:</span> <span class="s">"charge"</span><span class="p">,</span>
+                    <span class="s">"created"</span><span class="p">:</span> <span class="mi">1430915284</span><span class="p">,</span>
+                    <span class="s">"livemode"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                    <span class="s">"paid"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                    <span class="s">"refunded"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_Xz9iXLn9ebX1SOe1"</span><span class="p">,</span>
+                    <span class="s">"channel"</span><span class="p">:</span> <span class="s">"wx"</span><span class="p">,</span>
+                    <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"as223af2ds"</span><span class="p">,</span>
+                    <span class="s">"client_ip"</span><span class="p">:</span> <span class="s">"127.0.0.1"</span><span class="p">,</span>
+                    <span class="s">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+                    <span class="s">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+                    <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span>
+                    <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+                    <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+                    <span class="s">"extra"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s">"time_paid"</span><span class="p">:</span> <span class="mi">1430915344</span><span class="p">,</span>
+                    <span class="s">"time_expire"</span><span class="p">:</span> <span class="mi">1431001684</span><span class="p">,</span>
+                    <span class="s">"time_settle"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s">"transaction_no"</span><span class="p">:</span> <span class="s">"1001680021201505060112980000"</span><span class="p">,</span>
+                    <span class="s">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span>
+                        <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds"</span><span class="p">,</span>
+                        <span class="s">"has_more"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                        <span class="s">"data"</span><span class="p">:</span> <span class="p">[]</span>
+                    <span class="p">},</span>
+                    <span class="s">"amount_refunded"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s">"metadata"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s">"credential"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s">"description"</span><span class="p">:</span> <span class="n">null</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s">"pending_webhooks"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s">"type"</span><span class="p">:</span> <span class="s">"charge.succeeded"</span><span class="p">,</span>
+            <span class="s">"request"</span><span class="p">:</span> <span class="s">"iar_0K8m90CCeDK8PabXD00yfTq"</span>
+        <span class="p">},</span>
+        <span class="p">{</span><span class="o">...</span><span class="p">},</span>
+        <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+    </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"list"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"url"</span><span class="o">:</span><span class="x"> </span><span class="s">"/v1/events"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"has_more"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+    </span><span class="s">"data"</span><span class="o">:</span><span class="x"> </span><span class="p">[</span><span class="x">
+        </span><span class="p">{</span><span class="x">
+            </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1430915345</span><span class="p">,</span><span class="x">
+            </span><span class="s">"livemode"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+            </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"event"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"data"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+                </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+                    </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"ch_ebT0y9iPGCKCL0aPy9X1WLmT"</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"charge"</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1430915284</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"livemode"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"paid"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"refunded"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"app"</span><span class="o">:</span><span class="x"> </span><span class="s">"app_Xz9iXLn9ebX1SOe1"</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"channel"</span><span class="o">:</span><span class="x"> </span><span class="s">"wx"</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"as223af2ds"</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"client_ip"</span><span class="o">:</span><span class="x"> </span><span class="s">"127.0.0.1"</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"amount"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"amount_settle"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"currency"</span><span class="o">:</span><span class="x"> </span><span class="s">"cny"</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"subject"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Subject"</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"body"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Body"</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"extra"</span><span class="o">:</span><span class="x"> </span><span class="p">[],</span><span class="x">
+                    </span><span class="s">"time_paid"</span><span class="o">:</span><span class="x"> </span><span class="m">1430915344</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"time_expire"</span><span class="o">:</span><span class="x"> </span><span class="m">1431001684</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"time_settle"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"transaction_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"1001680021201505060112980000"</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"refunds"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+                        </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"list"</span><span class="p">,</span><span class="x">
+                        </span><span class="s">"url"</span><span class="o">:</span><span class="x"> </span><span class="s">"/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds"</span><span class="p">,</span><span class="x">
+                        </span><span class="s">"has_more"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x">
+                        </span><span class="s">"data"</span><span class="o">:</span><span class="x"> </span><span class="p">[]</span><span class="x">
+                    </span><span class="p">},</span><span class="x">
+                    </span><span class="s">"amount_refunded"</span><span class="o">:</span><span class="x"> </span><span class="m">0</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"failure_code"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"failure_msg"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+                    </span><span class="s">"metadata"</span><span class="o">:</span><span class="x"> </span><span class="p">[],</span><span class="x">
+                    </span><span class="s">"credential"</span><span class="o">:</span><span class="x"> </span><span class="p">[],</span><span class="x">
+                    </span><span class="s">"description"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="x">
+                </span><span class="p">}</span><span class="x">
+            </span><span class="p">},</span><span class="x">
+            </span><span class="s">"pending_webhooks"</span><span class="o">:</span><span class="x"> </span><span class="m">0</span><span class="p">,</span><span class="x">
+            </span><span class="s">"type"</span><span class="o">:</span><span class="x"> </span><span class="s">"charge.succeeded"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"request"</span><span class="o">:</span><span class="x"> </span><span class="s">"iar_0K8m90CCeDK8PabXD00yfTq"</span><span class="x">
+        </span><span class="p">},</span><span class="x">
+        </span><span class="p">{</span><span class="o">...</span><span class="p">},</span><span class="x">
+        </span><span class="p">{</span><span class="o">...</span><span class="p">}</span><span class="x">
+    </span><span class="p">]</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span>
+    <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/events"</span><span class="p">,</span>
+    <span class="s">"has_more"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s">"id"</span><span class="p">:</span> <span class="s">"evt_lqVSy5gbL0A68pS8YKvJzdWZ"</span><span class="p">,</span>
+            <span class="s">"created"</span><span class="p">:</span> <span class="m">1430915345</span><span class="p">,</span>
+            <span class="s">"livemode"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+            <span class="s">"object"</span><span class="p">:</span> <span class="s">"event"</span><span class="p">,</span>
+            <span class="s">"data"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s">"object"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s">"id"</span><span class="p">:</span> <span class="s">"ch_ebT0y9iPGCKCL0aPy9X1WLmT"</span><span class="p">,</span>
+                    <span class="s">"object"</span><span class="p">:</span> <span class="s">"charge"</span><span class="p">,</span>
+                    <span class="s">"created"</span><span class="p">:</span> <span class="m">1430915284</span><span class="p">,</span>
+                    <span class="s">"livemode"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+                    <span class="s">"paid"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+                    <span class="s">"refunded"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>
+                    <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_Xz9iXLn9ebX1SOe1"</span><span class="p">,</span>
+                    <span class="s">"channel"</span><span class="p">:</span> <span class="s">"wx"</span><span class="p">,</span>
+                    <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"as223af2ds"</span><span class="p">,</span>
+                    <span class="s">"client_ip"</span><span class="p">:</span> <span class="s">"127.0.0.1"</span><span class="p">,</span>
+                    <span class="s">"amount"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span>
+                    <span class="s">"amount_settle"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span>
+                    <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span>
+                    <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+                    <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+                    <span class="s">"extra"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s">"time_paid"</span><span class="p">:</span> <span class="m">1430915344</span><span class="p">,</span>
+                    <span class="s">"time_expire"</span><span class="p">:</span> <span class="m">1431001684</span><span class="p">,</span>
+                    <span class="s">"time_settle"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+                    <span class="s">"transaction_no"</span><span class="p">:</span> <span class="s">"1001680021201505060112980000"</span><span class="p">,</span>
+                    <span class="s">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span>
+                        <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds"</span><span class="p">,</span>
+                        <span class="s">"has_more"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>
+                        <span class="s">"data"</span><span class="p">:</span> <span class="p">[]</span>
+                    <span class="p">},</span>
+                    <span class="s">"amount_refunded"</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span>
+                    <span class="s">"failure_code"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+                    <span class="s">"failure_msg"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+                    <span class="s">"metadata"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s">"credential"</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s">"description"</span><span class="p">:</span> <span class="k">null</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s">"pending_webhooks"</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span>
+            <span class="s">"type"</span><span class="p">:</span> <span class="s">"charge.succeeded"</span><span class="p">,</span>
+            <span class="s">"request"</span><span class="p">:</span> <span class="s">"iar_0K8m90CCeDK8PabXD00yfTq"</span>
+        <span class="p">},</span>
+        <span class="p">{...},</span>
+        <span class="p">{...}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>

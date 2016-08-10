@@ -113,6 +113,206 @@
 <td>商户名称，最多 32 个字节。</td>
 </tr>
 </tbody></table>
+<pre class="highlight plaintext"><code>{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+</code></pre>
+<pre class="highlight php"><code>{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+</code></pre>
+<pre class="highlight java"><code><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">RedEnvelope</span> <span class="nl">JSON:</span> <span class="o">{</span>
+    <span class="s">"id"</span><span class="o">:</span> <span class="s">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="o">,</span>
+    <span class="s">"object"</span><span class="o">:</span> <span class="s">"red_envelope"</span><span class="o">,</span>
+    <span class="s">"created"</span><span class="o">:</span> <span class="mi">1428499439</span><span class="o">,</span>
+    <span class="s">"received"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"refunded"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"livemode"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+    <span class="s">"status"</span><span class="o">:</span> <span class="s">"sending"</span><span class="o">,</span>
+    <span class="s">"app"</span><span class="o">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="o">,</span>
+    <span class="s">"channel"</span><span class="o">:</span> <span class="s">"wx_pub"</span><span class="o">,</span>
+    <span class="s">"order_no"</span><span class="o">:</span> <span class="s">"123456789"</span><span class="o">,</span>
+    <span class="s">"transaction_no"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"amount"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span>
+    <span class="s">"amount_settle"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span>
+    <span class="s">"currency"</span><span class="o">:</span> <span class="s">"cny"</span><span class="o">,</span>
+    <span class="s">"recipient"</span><span class="o">:</span> <span class="s">"Openid"</span><span class="o">,</span>
+    <span class="s">"subject"</span><span class="o">:</span> <span class="s">"Your Subject"</span><span class="o">,</span>
+    <span class="s">"body"</span><span class="o">:</span> <span class="s">"Your Body"</span><span class="o">,</span>
+    <span class="s">"description"</span><span class="o">:</span> <span class="s">"Your Description"</span><span class="o">,</span>
+    <span class="s">"failure_msg"</span><span class="o">:</span><span class="kc">null</span><span class="o">,</span>
+    <span class="s">"extra"</span><span class="o">:</span> <span class="o">{</span>
+        <span class="s">"send_name"</span><span class="o">:</span> <span class="s">"Send Name"</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1">#&amp;lt;Pingpp::RedEnvelope id=red_KCabLO58W5G0rX90iT0az5a9&amp;gt; JSON: {</span>
+    <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="p">,</span>
+    <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"red_envelope"</span><span class="p">,</span>
+    <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1428499439</span><span class="p">,</span>
+    <span class="s2">"received"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">"refunded"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">"livemode"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+    <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"sending"</span><span class="p">,</span>
+    <span class="s2">"app"</span><span class="p">:</span> <span class="s2">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+    <span class="s2">"channel"</span><span class="p">:</span> <span class="s2">"wx_pub"</span><span class="p">,</span>
+    <span class="s2">"order_no"</span><span class="p">:</span> <span class="s2">"123456789"</span><span class="p">,</span>
+    <span class="s2">"transaction_no"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s2">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s2">"currency"</span><span class="p">:</span> <span class="s2">"cny"</span><span class="p">,</span>
+    <span class="s2">"recipient"</span><span class="p">:</span> <span class="s2">"Openid"</span><span class="p">,</span>
+    <span class="s2">"subject"</span><span class="p">:</span> <span class="s2">"Your Subject"</span><span class="p">,</span>
+    <span class="s2">"body"</span><span class="p">:</span> <span class="s2">"Your Body"</span><span class="p">,</span>
+    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Your Description"</span><span class="p">,</span>
+    <span class="s2">"failure_msg"</span><span class="ss">:null</span><span class="p">,</span>
+    <span class="s2">"extra"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"send_name"</span><span class="p">:</span> <span class="s2">"Send Name"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+    <span class="s">"id"</span><span class="p">:</span> <span class="s">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="p">,</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"red_envelope"</span><span class="p">,</span>
+    <span class="s">"created"</span><span class="p">:</span> <span class="mi">1428499439</span><span class="p">,</span>
+    <span class="s">"received"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"refunded"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"livemode"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s">"status"</span><span class="p">:</span> <span class="s">"sending"</span><span class="p">,</span>
+    <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+    <span class="s">"channel"</span><span class="p">:</span> <span class="s">"wx_pub"</span><span class="p">,</span>
+    <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+    <span class="s">"transaction_no"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span>
+    <span class="s">"recipient"</span><span class="p">:</span> <span class="s">"Openid"</span><span class="p">,</span>
+    <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+    <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+    <span class="s">"description"</span><span class="p">:</span> <span class="s">"Your Description"</span><span class="p">,</span>
+    <span class="s">"failure_msg"</span><span class="p">:</span><span class="n">null</span><span class="p">,</span>
+    <span class="s">"extra"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">"send_name"</span><span class="p">:</span> <span class="s">"Send Name"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+    </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"red_envelope"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1428499439</span><span class="p">,</span><span class="x">
+    </span><span class="s">"received"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+    </span><span class="s">"refunded"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+    </span><span class="s">"livemode"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+    </span><span class="s">"status"</span><span class="o">:</span><span class="x"> </span><span class="s">"sending"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"app"</span><span class="o">:</span><span class="x"> </span><span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"channel"</span><span class="o">:</span><span class="x"> </span><span class="s">"wx_pub"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"123456789"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"transaction_no"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+    </span><span class="s">"amount"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x">
+    </span><span class="s">"amount_settle"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x">
+    </span><span class="s">"currency"</span><span class="o">:</span><span class="x"> </span><span class="s">"cny"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"recipient"</span><span class="o">:</span><span class="x"> </span><span class="s">"Openid"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"subject"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Subject"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"body"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Body"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"description"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Description"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"failure_msg"</span><span class="o">:</span><span class="n">null</span><span class="p">,</span><span class="x">
+    </span><span class="s">"extra"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+        </span><span class="s">"send_name"</span><span class="o">:</span><span class="x"> </span><span class="s">"Send Name"</span><span class="x">
+    </span><span class="p">}</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+    <span class="s">"id"</span><span class="p">:</span> <span class="s">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="p">,</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"red_envelope"</span><span class="p">,</span>
+    <span class="s">"created"</span><span class="p">:</span> <span class="m">1428499439</span><span class="p">,</span>
+    <span class="s">"received"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+    <span class="s">"refunded"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+    <span class="s">"livemode"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+    <span class="s">"status"</span><span class="p">:</span> <span class="s">"sending"</span><span class="p">,</span>
+    <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+    <span class="s">"channel"</span><span class="p">:</span> <span class="s">"wx_pub"</span><span class="p">,</span>
+    <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+    <span class="s">"transaction_no"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+    <span class="s">"amount"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span>
+    <span class="s">"amount_settle"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span>
+    <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span>
+    <span class="s">"recipient"</span><span class="p">:</span> <span class="s">"Openid"</span><span class="p">,</span>
+    <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+    <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+    <span class="s">"description"</span><span class="p">:</span> <span class="s">"Your Description"</span><span class="p">,</span>
+    <span class="s">"failure_msg"</span><span class="p">:</span><span class="k">null</span><span class="p">,</span>
+    <span class="s">"extra"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">"send_name"</span><span class="p">:</span> <span class="s">"Send Name"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 
 <h2 id="red-envelope">创建 Red envelope 对象</h2>
 
@@ -198,6 +398,368 @@
 <h3 id="fanhui">fanhui</h3>
 
 <p>同步返回红包支付结果。如果发生错误，则会返回错误码和错误详情，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+<pre class="highlight plaintext"><code>  POST https://api.pingxx.com/v1/red_envelopes
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\RedEnvelope::create();
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">RedEnvelope</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="no">Pingpp</span><span class="o">::</span><span class="no">RedEnvelope</span><span class="p">.</span><span class="nf">create</span><span class="p">()</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  pingpp.redEnvelopes.create();
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">pingpp</span><span class="o">.</span><span class="n">RedEnvelope</span><span class="o">.</span><span class="n">create</span><span class="p">();</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">redEnvelope</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">redEnvelope</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="o">&amp;</span><span class="n">RedenvelopeParams</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>  <span class="nf">create</span><span class="p">(</span><span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="k">params</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  curl https://api.pingxx.com/v1/red_envelopes \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC: \
+  -d order_no=123456789 \
+  -d app[id]=app_1Gqj58ynP0mHeX1q \
+  -d channel=wx_pub \
+  -d amount=100 \
+  -d currency=cny \
+  -d subject="Your Subject" \
+  -d body="Your Body" \
+  -d extra[send_name]="Send Name" \
+  -d reciprent=Openid \
+  -d description="Your Description"
+</code></pre>
+<pre class="highlight php"><code>\Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+
+\Pingpp\RedEnvelope::create(
+    array(
+        'subject'     =<span class="ni">&amp;gt;</span> 'Your Subject',
+        'body'        =<span class="ni">&amp;gt;</span> 'Your Body',
+        'amount'      =<span class="ni">&amp;gt;</span> 100,
+        'order_no'    =<span class="ni">&amp;gt;</span> '123456789',
+        'currency'    =<span class="ni">&amp;gt;</span> 'cny',
+        'extra'       =<span class="ni">&amp;gt;</span> array(
+            'send_name' =<span class="ni">&amp;gt;</span> 'Send Name'
+        ),
+        'recipient'   =<span class="ni">&amp;gt;</span> 'Openid',
+        'channel'     =<span class="ni">&amp;gt;</span> 'wx_pub',
+        'app'         =<span class="ni">&amp;gt;</span> array('id' =<span class="ni">&amp;gt;</span> 'app_1Gqj58ynP0mHeX1q'),
+        'description' =<span class="ni">&amp;gt;</span> 'Your Description'
+    )
+);
+</code></pre>
+<pre class="highlight java"><code><span class="n">Pingpp</span><span class="o">.</span><span class="na">apiKey</span> <span class="o">=</span> <span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="o">;</span>
+
+<span class="n">Map</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="n">redenvelope</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;();</span>
+<span class="n">redenvelope</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"amount"</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span>
+<span class="n">redenvelope</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"currency"</span><span class="o">,</span> <span class="s">"cny"</span><span class="o">);</span>
+<span class="n">redenvelope</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"subject"</span><span class="o">,</span>  <span class="s">"Your Subject"</span><span class="o">);</span>
+<span class="n">redenvelope</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"body"</span><span class="o">,</span>  <span class="s">"Your Body"</span><span class="o">);</span>
+<span class="n">redenvelope</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"order_no"</span><span class="o">,</span>  <span class="s">"123456789"</span><span class="o">);</span>
+<span class="n">redenvelope</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"channel"</span><span class="o">,</span>  <span class="s">"wx_pub"</span><span class="o">);</span>
+<span class="n">redenvelope</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"recipient"</span><span class="o">,</span> <span class="s">"Openid"</span><span class="o">);</span>
+<span class="n">redenvelope</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"description"</span><span class="o">,</span> <span class="s">"Your Description"</span><span class="o">);</span>
+<span class="n">Map</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="n">app</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;();</span>
+<span class="n">app</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="o">);</span>
+<span class="n">redenvelope</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"app"</span><span class="o">,</span> <span class="n">app</span><span class="o">);</span>
+<span class="n">Map</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="n">extra</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;();</span>
+<span class="n">extra</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"send_name"</span><span class="o">,</span> <span class="s">"Send Name"</span><span class="o">);</span>
+<span class="n">redenvelope</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"extra"</span><span class="o">,</span> <span class="n">extra</span><span class="o">);</span>
+<span class="n">RedEnvelope</span> <span class="n">red</span> <span class="o">=</span> <span class="n">RedEnvelope</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">redenvelope</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">red</span><span class="o">);</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"pingpp"</span>
+<span class="nb">require</span> <span class="s2">"digest/md5"</span>
+
+<span class="no">Pingpp</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span>
+
+<span class="n">red</span> <span class="o">=</span> <span class="no">Pingpp</span><span class="o">::</span><span class="no">RedEnvelope</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span>
+  <span class="ss">:order_no</span>    <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"123456789"</span><span class="p">,</span>
+  <span class="ss">:app</span>         <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="p">{</span> <span class="ss">:id</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"app_1Gqj58ynP0mHeX1q"</span> <span class="p">},</span>
+  <span class="ss">:channel</span>     <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"wx_pub"</span><span class="p">,</span>
+  <span class="ss">:amount</span>      <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="ss">:currency</span>    <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"cny"</span><span class="p">,</span>
+  <span class="ss">:subject</span>     <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"Your Subject"</span><span class="p">,</span>
+  <span class="ss">:body</span>        <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"Your Body"</span><span class="p">,</span>
+  <span class="ss">:extra</span>       <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="p">{</span>
+    <span class="ss">:send_name</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"Send Name"</span>
+  <span class="p">},</span>
+  <span class="ss">:recipient</span>   <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"Openid"</span><span class="p">,</span>
+  <span class="ss">:description</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"Your Description"</span>
+<span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+
+pingpp.redEnvelopes.create({
+  order_no:    "123456789",
+  app:         { id: "app_1Gqj58ynP0mHeX1q" },
+  channel:     "wx_pub",
+  amount:      100,
+  currency:    "cny",
+  subject:     "Your Subject",
+  body:        "Your Body",
+  extra: {
+    send_name: "Send Name"
+  },
+  recipient:   "Openid",
+  description: "Your Description"
+}, function(err, redEnvelope) {
+  // YOUR CODE
+});
+</code></pre>
+<pre class="highlight python"><code><span class="n">pingpp</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'</span>
+
+<span class="n">redenvelope</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">RedEnvelope</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">order_no</span><span class="o">=</span><span class="s">'123456789'</span><span class="p">,</span>
+    <span class="n">channel</span><span class="o">=</span><span class="s">'wx_pub'</span><span class="p">,</span>
+    <span class="n">amount</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">subject</span><span class="o">=</span><span class="s">'Your Subject'</span><span class="p">,</span>
+    <span class="n">body</span><span class="o">=</span><span class="s">'Your Body'</span><span class="p">,</span>
+    <span class="n">currency</span><span class="o">=</span><span class="s">'cny'</span><span class="p">,</span>
+    <span class="n">app</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s">'app_1Gqj58ynP0mHeX1q'</span><span class="p">),</span>
+    <span class="n">extra</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">send_name</span><span class="o">=</span><span class="s">'Send Name'</span><span class="p">),</span>
+    <span class="n">recipient</span><span class="o">=</span><span class="s">'Openid'</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s">'Your Description'</span>
+<span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">extra</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="nb">make</span><span class="p">(</span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="k">interface</span><span class="p">{})</span><span class="x">
+  </span><span class="n">extra</span><span class="p">[</span><span class="s">"send_name"</span><span class="p">]</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="s">"Send Name"</span><span class="x">
+
+  </span><span class="n">redenvelopeParams</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">pingpp</span><span class="o">.</span><span class="n">RedEnvelopeParams</span><span class="p">{</span><span class="x">
+    </span><span class="n">App</span><span class="o">:</span><span class="x">         </span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">pingpp</span><span class="o">.</span><span class="n">App</span><span class="p">{</span><span class="n">Id</span><span class="o">:</span><span class="x"> </span><span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">},</span><span class="x">
+    </span><span class="n">Channel</span><span class="o">:</span><span class="x">     </span><span class="s">"wx_pub"</span><span class="p">,</span><span class="x">
+    </span><span class="n">Order_no</span><span class="o">:</span><span class="x">    </span><span class="s">"123456789"</span><span class="p">,</span><span class="x">
+    </span><span class="n">Amount</span><span class="o">:</span><span class="x">      </span><span class="m">100</span><span class="p">,</span><span class="x">
+    </span><span class="n">Currency</span><span class="o">:</span><span class="x">    </span><span class="s">"cny"</span><span class="p">,</span><span class="x">
+    </span><span class="n">Recipient</span><span class="o">:</span><span class="x">   </span><span class="s">"Openid"</span><span class="p">,</span><span class="c">//指定用户的 open_id</span><span class="x">
+    </span><span class="n">Subject</span><span class="o">:</span><span class="x">     </span><span class="s">"Your Subject"</span><span class="p">,</span><span class="x">
+    </span><span class="n">Body</span><span class="o">:</span><span class="x">        </span><span class="s">"Your Body"</span><span class="p">,</span><span class="x">
+    </span><span class="n">Description</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Description"</span><span class="p">,</span><span class="x">
+    </span><span class="n">Extra</span><span class="o">:</span><span class="x">       </span><span class="n">extra</span><span class="p">,</span><span class="x">
+  </span><span class="p">}</span><span class="x">
+  </span><span class="n">redEnvelope</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">redEnvelope</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="n">redenvelopeParams</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>    <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">app</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;();</span>
+    <span class="n">app</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"id"</span><span class="p">,</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">);</span>
+    <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">extra</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;();</span>
+    <span class="n">extra</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"Nick Name"</span><span class="p">);</span>
+    <span class="n">extra</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"send_name"</span><span class="p">,</span> <span class="s">"Send Name"</span><span class="p">);</span>
+    <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="k">params</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;();</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"amount"</span><span class="p">,</span> <span class="m">100</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"currency"</span><span class="p">,</span> <span class="s">"cny"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"subject"</span><span class="p">,</span>  <span class="s">"Your Subject"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"body"</span><span class="p">,</span>  <span class="s">"Your Body"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"order_no"</span><span class="p">,</span>  <span class="s">"123456789"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"channel"</span><span class="p">,</span>  <span class="s">"wx_pub"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"recipient"</span><span class="p">,</span> <span class="s">"Your Openid"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"description"</span><span class="p">,</span> <span class="s">"Your Description"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"app"</span><span class="p">,</span> <span class="n">app</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"extra"</span><span class="p">,</span> <span class="n">extra</span><span class="p">);</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">RedEnvelope</span> <span class="n">red</span> <span class="p">=</span> <span class="n">RedEnvelope</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="k">params</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">red</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+    <span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+</code></pre>
+<pre class="highlight php"><code>{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+</code></pre>
+<pre class="highlight java"><code><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">RedEnvelope</span> <span class="nl">JSON:</span> <span class="o">{</span>
+    <span class="s">"id"</span><span class="o">:</span> <span class="s">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="o">,</span>
+    <span class="s">"object"</span><span class="o">:</span> <span class="s">"red_envelope"</span><span class="o">,</span>
+    <span class="s">"created"</span><span class="o">:</span> <span class="mi">1428499439</span><span class="o">,</span>
+    <span class="s">"received"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"refunded"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"livemode"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+    <span class="s">"status"</span><span class="o">:</span> <span class="s">"sending"</span><span class="o">,</span>
+    <span class="s">"app"</span><span class="o">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="o">,</span>
+    <span class="s">"channel"</span><span class="o">:</span> <span class="s">"wx_pub"</span><span class="o">,</span>
+    <span class="s">"order_no"</span><span class="o">:</span> <span class="s">"123456789"</span><span class="o">,</span>
+    <span class="s">"transaction_no"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"amount"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span>
+    <span class="s">"amount_settle"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span>
+    <span class="s">"currency"</span><span class="o">:</span> <span class="s">"cny"</span><span class="o">,</span>
+    <span class="s">"recipient"</span><span class="o">:</span> <span class="s">"Openid"</span><span class="o">,</span>
+    <span class="s">"subject"</span><span class="o">:</span> <span class="s">"Your Subject"</span><span class="o">,</span>
+    <span class="s">"body"</span><span class="o">:</span> <span class="s">"Your Body"</span><span class="o">,</span>
+    <span class="s">"description"</span><span class="o">:</span> <span class="s">"Your Description"</span><span class="o">,</span>
+    <span class="s">"failure_msg"</span><span class="o">:</span><span class="kc">null</span><span class="o">,</span>
+    <span class="s">"extra"</span><span class="o">:</span> <span class="o">{</span>
+        <span class="s">"send_name"</span><span class="o">:</span> <span class="s">"Send Name"</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1">#&amp;lt;Pingpp::RedEnvelope id=red_KCabLO58W5G0rX90iT0az5a9&amp;gt; JSON: {</span>
+    <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="p">,</span>
+    <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"red_envelope"</span><span class="p">,</span>
+    <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1428499439</span><span class="p">,</span>
+    <span class="s2">"received"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">"refunded"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">"livemode"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+    <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"sending"</span><span class="p">,</span>
+    <span class="s2">"app"</span><span class="p">:</span> <span class="s2">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+    <span class="s2">"channel"</span><span class="p">:</span> <span class="s2">"wx_pub"</span><span class="p">,</span>
+    <span class="s2">"order_no"</span><span class="p">:</span> <span class="s2">"123456789"</span><span class="p">,</span>
+    <span class="s2">"transaction_no"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s2">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s2">"currency"</span><span class="p">:</span> <span class="s2">"cny"</span><span class="p">,</span>
+    <span class="s2">"recipient"</span><span class="p">:</span> <span class="s2">"Openid"</span><span class="p">,</span>
+    <span class="s2">"subject"</span><span class="p">:</span> <span class="s2">"Your Subject"</span><span class="p">,</span>
+    <span class="s2">"body"</span><span class="p">:</span> <span class="s2">"Your Body"</span><span class="p">,</span>
+    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Your Description"</span><span class="p">,</span>
+    <span class="s2">"failure_msg"</span><span class="ss">:null</span><span class="p">,</span>
+    <span class="s2">"extra"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"send_name"</span><span class="p">:</span> <span class="s2">"Send Name"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+    <span class="s">"id"</span><span class="p">:</span> <span class="s">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="p">,</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"red_envelope"</span><span class="p">,</span>
+    <span class="s">"created"</span><span class="p">:</span> <span class="mi">1428499439</span><span class="p">,</span>
+    <span class="s">"received"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"refunded"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"livemode"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s">"status"</span><span class="p">:</span> <span class="s">"sending"</span><span class="p">,</span>
+    <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+    <span class="s">"channel"</span><span class="p">:</span> <span class="s">"wx_pub"</span><span class="p">,</span>
+    <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+    <span class="s">"transaction_no"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span>
+    <span class="s">"recipient"</span><span class="p">:</span> <span class="s">"Openid"</span><span class="p">,</span>
+    <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+    <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+    <span class="s">"description"</span><span class="p">:</span> <span class="s">"Your Description"</span><span class="p">,</span>
+    <span class="s">"failure_msg"</span><span class="p">:</span><span class="n">null</span><span class="p">,</span>
+    <span class="s">"extra"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">"send_name"</span><span class="p">:</span> <span class="s">"Send Name"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+    </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"red_envelope"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1428499439</span><span class="p">,</span><span class="x">
+    </span><span class="s">"received"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+    </span><span class="s">"refunded"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+    </span><span class="s">"livemode"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+    </span><span class="s">"status"</span><span class="o">:</span><span class="x"> </span><span class="s">"sending"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"app"</span><span class="o">:</span><span class="x"> </span><span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"channel"</span><span class="o">:</span><span class="x"> </span><span class="s">"wx_pub"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"123456789"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"transaction_no"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+    </span><span class="s">"amount"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x">
+    </span><span class="s">"amount_settle"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x">
+    </span><span class="s">"currency"</span><span class="o">:</span><span class="x"> </span><span class="s">"cny"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"recipient"</span><span class="o">:</span><span class="x"> </span><span class="s">"Openid"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"subject"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Subject"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"body"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Body"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"description"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Description"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"failure_msg"</span><span class="o">:</span><span class="n">null</span><span class="p">,</span><span class="x">
+    </span><span class="s">"extra"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+        </span><span class="s">"send_name"</span><span class="o">:</span><span class="x"> </span><span class="s">"Send Name"</span><span class="x">
+    </span><span class="p">}</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+    <span class="s">"id"</span><span class="p">:</span> <span class="s">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="p">,</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"red_envelope"</span><span class="p">,</span>
+    <span class="s">"created"</span><span class="p">:</span> <span class="m">1428499439</span><span class="p">,</span>
+    <span class="s">"received"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+    <span class="s">"refunded"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+    <span class="s">"livemode"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+    <span class="s">"status"</span><span class="p">:</span> <span class="s">"sending"</span><span class="p">,</span>
+    <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+    <span class="s">"channel"</span><span class="p">:</span> <span class="s">"wx_pub"</span><span class="p">,</span>
+    <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+    <span class="s">"transaction_no"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+    <span class="s">"amount"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span>
+    <span class="s">"amount_settle"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span>
+    <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span>
+    <span class="s">"recipient"</span><span class="p">:</span> <span class="s">"Openid"</span><span class="p">,</span>
+    <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+    <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+    <span class="s">"description"</span><span class="p">:</span> <span class="s">"Your Description"</span><span class="p">,</span>
+    <span class="s">"failure_msg"</span><span class="p">:</span><span class="k">null</span><span class="p">,</span>
+    <span class="s">"extra"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">"send_name"</span><span class="p">:</span> <span class="s">"Send Name"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 
 <h2 id="red-envelope">查询 Red envelope 对象</h2>
 
@@ -305,3 +867,331 @@
 <h3 id="fanhui">fanhui</h3>
 
 <p>根据请求参数返回一个 <code class="prettyprint">red_envelope</code> 对象列表，如果列表为空，则返回的 <code class="prettyprint">data</code> 为空数组。遇到错误时返回相应错误信息，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+<pre class="highlight plaintext"><code>  GET https://api.pingxx.com/v1/red_envelopes/
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\RedEnvelope::all();
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">RedEnvelope</span><span class="o">.</span><span class="na">all</span><span class="o">(</span><span class="n">Map</span> <span class="n">options</span><span class="o">);</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="no">Pingpp</span><span class="o">::</span><span class="no">RedEnvelope</span><span class="p">.</span><span class="nf">all</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  pingpp.RedEnvelope.list();
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">pingpp</span><span class="o">.</span><span class="n">RedEnvelope</span><span class="o">.</span><span class="nb">all</span><span class="p">()</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">redEnvelope</span><span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="o">&amp;</span><span class="n">RedenvelopeListParams</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>  <span class="nf">list</span><span class="p">(</span><span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="k">params</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  curl https://api.pingxx.com/v1/red_envelopes/?limit=3 \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC:
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+
+  \Pingpp\RedEnvelope::all(array('limit' =<span class="ni">&amp;gt;</span> 3));
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Pingpp</span><span class="o">.</span><span class="na">apiKey</span> <span class="o">=</span> <span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="o">;</span>
+
+  <span class="n">Map</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="n">redEnvelopeParams</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;();</span>
+  <span class="n">redEnvelopeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"limit"</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>
+
+  <span class="n">RedEnvelope</span><span class="o">.</span><span class="na">all</span><span class="o">(</span><span class="n">redEnvelopeParams</span><span class="o">);</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="no">Pingpp</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span>
+  <span class="no">Pingpp</span><span class="o">::</span><span class="no">RedEnvelope</span><span class="p">.</span><span class="nf">all</span><span class="p">(</span><span class="ss">:limit</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  pingpp.RedEnvelope.list({ limit: 3 }, function(err, RedEnvelope) {
+    // 异步调用
+  });
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">pingpp</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'</span>
+  <span class="n">res</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">RedEnvelope</span><span class="o">.</span><span class="nb">all</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">pingpp</span><span class="o">.</span><span class="n">Key</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="x">
+  </span><span class="n">params</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">pingpp</span><span class="o">.</span><span class="n">RedEnvelopeListParams</span><span class="p">{}</span><span class="x">
+  </span><span class="n">params</span><span class="o">.</span><span class="n">Filters</span><span class="o">.</span><span class="n">AddFilter</span><span class="p">(</span><span class="s">"limit"</span><span class="p">,</span><span class="x"> </span><span class="s">""</span><span class="p">,</span><span class="x"> </span><span class="s">"3"</span><span class="p">)</span><span class="x">
+  </span><span class="c">//设置是不是只需要之前设置的 limit 这一个查询参数</span><span class="x">
+  </span><span class="n">params</span><span class="o">.</span><span class="n">Single</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="no">true</span><span class="x">
+  </span><span class="n">i</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">redEnvelope</span><span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="n">params</span><span class="p">)</span><span class="x">
+  </span><span class="k">for</span><span class="x"> </span><span class="n">i</span><span class="o">.</span><span class="n">Next</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">c</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">i</span><span class="o">.</span><span class="n">RedEnvelope</span><span class="p">()</span><span class="x">
+  </span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>    <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="k">params</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;();</span>
+    <span class="n">chargeParams</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"limit"</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">RedEnvelopeList</span> <span class="n">reds</span> <span class="p">=</span> <span class="n">RedEnvelope</span><span class="p">.</span><span class="nf">list</span><span class="p">(</span><span class="k">params</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">reds</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+    <span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+    "object": "list",
+    "url": "/v1/red_envelopes",
+    "has_more": true,
+    "data": [
+        {
+            "id": "red_KCabLO58W5G0rX90iT0az5a9",
+            "object": "red_envelope",
+            "created": 1428499439,
+            "received": null,
+            "refunded": null,
+            "livemode": true,
+            "status": "sending",
+            "app": "app_1Gqj58ynP0mHeX1q",
+            "channel": "wx_pub",
+            "order_no": "123456789",
+            "transaction_no": null,
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "recipient": "Openid",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "description": "Your Description",
+            "failure_msg":null,
+            "extra": {
+                "send_name": "Send Name"
+            }
+        },
+        {...},
+        {...}
+    ]
+}
+</code></pre>
+<pre class="highlight php"><code>{
+    "object": "list",
+    "url": "/v1/red_envelopes",
+    "has_more": true,
+    "data": [
+        {
+            "id": "red_KCabLO58W5G0rX90iT0az5a9",
+            "object": "red_envelope",
+            "created": 1428499439,
+            "received": null,
+            "refunded": null,
+            "livemode": true,
+            "status": "sending",
+            "app": "app_1Gqj58ynP0mHeX1q",
+            "channel": "wx_pub",
+            "order_no": "123456789",
+            "transaction_no": null,
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "recipient": "Openid",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "description": "Your Description",
+            "failure_msg":null,
+            "extra": {
+                "send_name": "Send Name"
+            }
+        },
+        {...},
+        {...}
+    ]
+}
+</code></pre>
+<pre class="highlight java"><code><span class="err">#</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">RedEnvelopeCollection</span> <span class="n">id</span><span class="o">=</span><span class="err">#</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="nl">JSON:</span> <span class="o">{</span>
+  <span class="s">"data"</span><span class="o">:</span> <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s">"id"</span><span class="o">:</span> <span class="s">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="o">,</span>
+            <span class="s">"object"</span><span class="o">:</span> <span class="s">"red_envelope"</span><span class="o">,</span>
+            <span class="s">"created"</span><span class="o">:</span> <span class="mi">1428499439</span><span class="o">,</span>
+            <span class="s">"received"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+            <span class="s">"refunded"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+            <span class="s">"livemode"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+            <span class="s">"status"</span><span class="o">:</span> <span class="s">"sending"</span><span class="o">,</span>
+            <span class="s">"app"</span><span class="o">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="o">,</span>
+            <span class="s">"channel"</span><span class="o">:</span> <span class="s">"wx_pub"</span><span class="o">,</span>
+            <span class="s">"order_no"</span><span class="o">:</span> <span class="s">"123456789"</span><span class="o">,</span>
+            <span class="s">"transaction_no"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+            <span class="s">"amount"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span>
+            <span class="s">"amount_settle"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span>
+            <span class="s">"currency"</span><span class="o">:</span> <span class="s">"cny"</span><span class="o">,</span>
+            <span class="s">"recipient"</span><span class="o">:</span> <span class="s">"Openid"</span><span class="o">,</span>
+            <span class="s">"subject"</span><span class="o">:</span> <span class="s">"Your Subject"</span><span class="o">,</span>
+            <span class="s">"body"</span><span class="o">:</span> <span class="s">"Your Body"</span><span class="o">,</span>
+            <span class="s">"description"</span><span class="o">:</span> <span class="s">"Your Description"</span><span class="o">,</span>
+            <span class="s">"failure_msg"</span><span class="o">:</span><span class="kc">null</span><span class="o">,</span>
+            <span class="s">"extra"</span><span class="o">:</span> <span class="o">{</span>
+                <span class="s">"send_name"</span><span class="o">:</span> <span class="s">"Send Name"</span>
+            <span class="o">}</span>
+        <span class="o">},</span>
+    <span class="err">#</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">RedEnvelope</span><span class="o">[...]</span> <span class="o">...&amp;</span><span class="n">gt</span><span class="o">;,</span>
+    <span class="err">#</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">RedEnvelope</span><span class="o">[...]</span> <span class="o">...&amp;</span><span class="n">gt</span><span class="o">;</span>
+  <span class="o">],</span>
+  <span class="s">"has_more"</span><span class="o">:</span> <span class="kc">false</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="p">{</span>
+  <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"list"</span><span class="p">,</span>
+  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/v1/red_envelopes"</span><span class="p">,</span>
+  <span class="s2">"has_more"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="s2">"data"</span><span class="p">:</span> <span class="p">[</span>
+     <span class="p">{</span>
+            <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="p">,</span>
+            <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"red_envelope"</span><span class="p">,</span>
+            <span class="s2">"received"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">"refunded"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">"livemode"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+            <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"sending"</span><span class="p">,</span>
+            <span class="s2">"app"</span><span class="p">:</span> <span class="s2">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+            <span class="s2">"channel"</span><span class="p">:</span> <span class="s2">"wx_pub"</span><span class="p">,</span>
+            <span class="s2">"order_no"</span><span class="p">:</span> <span class="s2">"123456789"</span><span class="p">,</span>
+            <span class="s2">"transaction_no"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s2">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s2">"currency"</span><span class="p">:</span> <span class="s2">"cny"</span><span class="p">,</span>
+            <span class="s2">"recipient"</span><span class="p">:</span> <span class="s2">"Openid"</span><span class="p">,</span>
+            <span class="s2">"subject"</span><span class="p">:</span> <span class="s2">"Your Subject"</span><span class="p">,</span>
+            <span class="s2">"body"</span><span class="p">:</span> <span class="s2">"Your Body"</span><span class="p">,</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Your Description"</span><span class="p">,</span>
+            <span class="s2">"failure_msg"</span><span class="ss">:null</span><span class="p">,</span>
+            <span class="s2">"extra"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"send_name"</span><span class="p">:</span> <span class="s2">"Send Name"</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+    <span class="c1">#&amp;lt;Pingpp::RedEnvelope[...] ...&amp;gt;,</span>
+    <span class="c1">#&amp;lt;Pingpp::RedEnvelope[...] ...&amp;gt;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+    "object": "list",
+    "url": "/v1/red_envelopes",
+    "has_more": true,
+    "data": [
+        {
+            "id": "red_KCabLO58W5G0rX90iT0az5a9",
+            "object": "red_envelope",
+            "received": null,
+            "refunded": null,
+            "livemode": true,
+            "status": "sending",
+            "app": "app_1Gqj58ynP0mHeX1q",
+            "channel": "wx_pub",
+            "order_no": "123456789",
+            "transaction_no": null,
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "recipient": "Openid",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "description": "Your Description",
+            "failure_msg":null,
+            "extra": {
+                "send_name": "Send Name"
+            }
+        },
+        {...},
+        {...}
+    ]
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span>
+    <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/red_envelopes"</span><span class="p">,</span>
+    <span class="s">"has_more"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s">"id"</span><span class="p">:</span> <span class="s">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="p">,</span>
+            <span class="s">"object"</span><span class="p">:</span> <span class="s">"red_envelope"</span><span class="p">,</span>
+            <span class="s">"created"</span><span class="p">:</span> <span class="mi">1428499439</span><span class="p">,</span>
+            <span class="s">"received"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s">"refunded"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s">"livemode"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+            <span class="s">"status"</span><span class="p">:</span> <span class="s">"sending"</span><span class="p">,</span>
+            <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+            <span class="s">"channel"</span><span class="p">:</span> <span class="s">"wx_pub"</span><span class="p">,</span>
+            <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+            <span class="s">"transaction_no"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span>
+            <span class="s">"recipient"</span><span class="p">:</span> <span class="s">"Openid"</span><span class="p">,</span>
+            <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+            <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+            <span class="s">"description"</span><span class="p">:</span> <span class="s">"Your Description"</span><span class="p">,</span>
+            <span class="s">"failure_msg"</span><span class="p">:</span><span class="n">null</span><span class="p">,</span>
+            <span class="s">"extra"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s">"send_name"</span><span class="p">:</span> <span class="s">"Send Name"</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="p">{</span><span class="o">...</span><span class="p">},</span>
+        <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+    </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"list"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"url"</span><span class="o">:</span><span class="x"> </span><span class="s">"/v1/red_envelopes"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"has_more"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+    </span><span class="s">"data"</span><span class="o">:</span><span class="x"> </span><span class="p">[</span><span class="x">
+        </span><span class="p">{</span><span class="x">
+            </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"red_envelope"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1428499439</span><span class="p">,</span><span class="x">
+            </span><span class="s">"received"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+            </span><span class="s">"refunded"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+            </span><span class="s">"livemode"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+            </span><span class="s">"status"</span><span class="o">:</span><span class="x"> </span><span class="s">"sending"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"app"</span><span class="o">:</span><span class="x"> </span><span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"channel"</span><span class="o">:</span><span class="x"> </span><span class="s">"wx_pub"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"123456789"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"transaction_no"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+            </span><span class="s">"amount"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x">
+            </span><span class="s">"amount_settle"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x">
+            </span><span class="s">"currency"</span><span class="o">:</span><span class="x"> </span><span class="s">"cny"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"recipient"</span><span class="o">:</span><span class="x"> </span><span class="s">"Openid"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"subject"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Subject"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"body"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Body"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"description"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Description"</span><span class="p">,</span><span class="x">
+            </span><span class="s">"failure_msg"</span><span class="o">:</span><span class="n">null</span><span class="p">,</span><span class="x">
+            </span><span class="s">"extra"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+                </span><span class="s">"send_name"</span><span class="o">:</span><span class="x"> </span><span class="s">"Send Name"</span><span class="x">
+            </span><span class="p">}</span><span class="x">
+        </span><span class="p">},</span><span class="x">
+        </span><span class="p">{</span><span class="o">...</span><span class="p">},</span><span class="x">
+        </span><span class="p">{</span><span class="o">...</span><span class="p">}</span><span class="x">
+    </span><span class="p">]</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span>
+    <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/red_envelopes"</span><span class="p">,</span>
+    <span class="s">"has_more"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s">"id"</span><span class="p">:</span> <span class="s">"red_KCabLO58W5G0rX90iT0az5a9"</span><span class="p">,</span>
+            <span class="s">"object"</span><span class="p">:</span> <span class="s">"red_envelope"</span><span class="p">,</span>
+            <span class="s">"created"</span><span class="p">:</span> <span class="m">1428499439</span><span class="p">,</span>
+            <span class="s">"received"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+            <span class="s">"refunded"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+            <span class="s">"livemode"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+            <span class="s">"status"</span><span class="p">:</span> <span class="s">"sending"</span><span class="p">,</span>
+            <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+            <span class="s">"channel"</span><span class="p">:</span> <span class="s">"wx_pub"</span><span class="p">,</span>
+            <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+            <span class="s">"transaction_no"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+            <span class="s">"amount"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span>
+            <span class="s">"amount_settle"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span>
+            <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span>
+            <span class="s">"recipient"</span><span class="p">:</span> <span class="s">"Openid"</span><span class="p">,</span>
+            <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+            <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+            <span class="s">"description"</span><span class="p">:</span> <span class="s">"Your Description"</span><span class="p">,</span>
+            <span class="s">"failure_msg"</span><span class="p">:</span><span class="k">null</span><span class="p">,</span>
+            <span class="s">"extra"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s">"send_name"</span><span class="p">:</span> <span class="s">"Send Name"</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="p">{...},</span>
+        <span class="p">{...}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>

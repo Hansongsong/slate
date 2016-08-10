@@ -72,6 +72,44 @@
 <td><strong>string</strong></td>
 </tr>
 </tbody></table>
+<pre class="highlight plaintext"><code>{
+    "id": "cus_yvn1m5SCG4eLCy",
+    "object": "customer",
+    "created": 1444390718,
+    "livemode": true,
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "name": "张三",
+    "email": null,
+    "currency": null,
+    "description": null,
+    "metadata": null,
+    "sources": {
+        "object": "list",
+        "url": "/v1/customers/cus_yvn1m5SCG4eLCy/sources",
+        "has_more": false,
+        "data": [
+            {
+                "id": "card_ubDu1GTmznz1P4OKCKqH8qzP",
+                "object": "card",
+                "created": 1444388292,
+                "last4": "8703",
+                "funding": "debit",
+                "brand": "UnionPay",
+                "bank": "boc",
+                "customer": "cus_yvn1m5SCG4eLCy"
+            }
+        ]
+    },
+    "default_source": "card_ubDu1GTmznz1P4OKCKqH8qzP"
+}
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
 
 <h2 id="customer">创建 Customer 对象</h2>
 
@@ -127,6 +165,71 @@
 <h3 id="fanhui">fanhui</h3>
 
 <p>返回一个 Customer 对象。</p>
+<pre class="highlight plaintext"><code>  POST https://api.pingxx.com/v1/customers
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>    curl https://api.pingxx.com/v1/customers \
+    -u sk_live_vjfr92jj3q925KuPO82iP8KO: \
+    -d '{
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "source": "tok_BHTPMJCtIJ8HaqXBDr4ILeLJ",
+    "sms_code":{
+    "code" : "123456",
+    "id" : "sms_BHTPMJCpGc8qiKvva3OgBV2V"
+    }
+}'
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>{
+    "id": "cus_yvn1m5SCG4eLCy",
+    "object": "customer",
+    "created": 1444390718,
+    "livemode": true,
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "name": "张三",
+    "email": null,
+    "currency": null,
+    "description": null,
+    "metadata": null,
+    "sources": {
+        "object": "list",
+        "url": "/v1/customers/cus_yvn1m5SCG4eLCy/sources",
+        "has_more": false,
+        "data": [
+            {
+                "id": "card_ubDu1GTmznz1P4OKCKqH8qzP",
+                "object": "card",
+                "created": 1444388292,
+                "last4": "8703",
+                "funding": "debit",
+                "brand": "UnionPay",
+                "bank": "boc",
+                "customer": "cus_yvn1m5SCG4eLCy"
+            }
+        ]
+    },
+    "default_source": "card_ubDu1GTmznz1P4OKCKqH8qzP"
+}
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
 
 <h2 id="customer">更新 Customer 对象</h2>
 
@@ -167,6 +270,67 @@
 <td><strong>optional</strong></td>
 </tr>
 </tbody></table>
+<pre class="highlight plaintext"><code>  PUT https://api.pingxx.com/v1/customers/{CUS_ID}
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>    curl -X PUT https://api.pingxx.com/v1/customers/cus_iHGeb9T8Ki5CeT \
+    -u sk_live_vjfr92jj3q925KuPO82iP8KO: \
+    -d app＝app_1Gqj58ynP0mHeX1q \
+    -d metadata[testkey]=test
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>{
+    "id": "cus_iHGeb9T8Ki5CeT",
+    "object": "customer",
+    "created": 1441698046,
+    "livemode": true,
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "name":"张三",
+    "email": null,
+    "currency": null,
+    "description": null,
+    "metadata": {
+        "testkey": "test"
+    },
+    "sources": {
+        "object": "list",
+        "url": "/v1/customers/cus_iHGeb9T8Ki5CeT/sources",
+        "has_more": false,
+        "data": [
+            {
+                "id": "card_5CazT8rPqDOGOqz5aPjzrvbH",
+                "object": "card",
+                "created": 1441698040,
+                "last4": "1261",
+                "funding": "debit",
+                "brand": "UnionPay",
+                "bank": "cmb",
+                "customer": "cus_iHGeb9T8Ki5CeT"
+            }
+        ]
+    },
+    "default_source": "card_5CazT8rPqDOGOqz5aPjzrvbH"
+}
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
 
 <h2 id="customer">删除 Customer 对象</h2>
 
@@ -208,6 +372,37 @@
 <td><strong>required</strong></td>
 </tr>
 </tbody></table>
+<pre class="highlight plaintext"><code>    DELETE https://api.pingxx.com/v1/customers
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>    curl -X DELETE https://api.pingxx.com/v1/cstomers/cus_K88iDSXX94eTmX \
+    -u sk_live_vjfr92jj3q925KuPO82iP8KO:
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>{
+    "deleted": true,
+    "id": "cus_K88iDSXX94eTmX"
+}
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
 
 <h2 id="customer">查询 Customer 对象列表</h2>
 
@@ -233,3 +428,60 @@
 <td><strong>timestamp</strong></td>
 </tr>
 </tbody></table>
+<pre class="highlight plaintext"><code>    GET https://api.pingxx.com/v1/customers
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>    curl https://api.pingxx.com/v1/customers/?limit=3 \
+    -u sk_live_vjfr92jj3q925KuPO82iP8KO:
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>{
+    "object": "list",
+    "url": "/v1/customers",
+    "has_more": false,
+    "data": [
+        {
+            "id": "cus_eHi1mD1iPS08Li",
+            "object": "customer",
+            "created": 1441796275,
+            "livemode": true,
+            "app": "app_1Gqj58ynP0mHeX1q",
+            "name":"张三",
+            "email": null,
+            "currency": null,
+            "description": null,
+            "metadata": {
+            },
+            "sources": {
+                "object": "list",
+                "url": "/v1/customers/cus_eHi1mD1iPS08Li/sources",
+                "has_more": false,
+                "data": [
+                ]
+            },
+            "default_source": null
+        },
+        {...},
+        {...}
+    ]
+}
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>

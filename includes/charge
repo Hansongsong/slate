@@ -1,5 +1,323 @@
 <h1 id="charges">Charges支付</h1>
-<pre class="highlight plaintext"><code>admin可以复制粘贴
+<pre class="highlight plaintext"><code>{
+  "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+  "object": "charge",
+  "created": 1410778843,
+  "livemode": true,
+  "paid": false,
+  "refunded": false,
+  "app": "app_1Gqj58ynP0mHeX1q",
+  "channel": "upacp",
+  "order_no": "123456789",
+  "client_ip": "127.0.0.1",
+  "amount": 100,
+  "amount_settle": 100,
+  "currency": "cny",
+  "subject": "Your Subject",
+  "body": "Your Body",
+  "extra":{},
+  "time_paid": null,
+  "time_expire": 1410782443,
+  "time_settle": null,
+  "transaction_no": null,
+  "refunds": {
+    "object": "list",
+    "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+    "has_more": false,
+    "data": []
+  },
+  "amount_refunded": 0,
+  "failure_code": null,
+  "failure_msg": null,
+  "credential": {
+    "object": "credential",
+    "upacp": {
+      "tn": "201409151900430000000",
+      "mode": "01"
+    }
+  },
+  "description": null
+}
+</code></pre>
+<pre class="highlight php"><code>{
+  "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+  "object": "charge",
+  "created": 1410778843,
+  "livemode": true,
+  "paid": false,
+  "refunded": false,
+  "app": "app_1Gqj58ynP0mHeX1q",
+  "channel": "upacp",
+  "order_no": "123456789",
+  "client_ip": "127.0.0.1",
+  "amount": 100,
+  "amount_settle": 100,
+  "currency": "cny",
+  "subject": "Your Subject",
+  "body": "Your Body",
+  "extra":{},
+  "time_paid": null,
+  "time_expire": 1410782443,
+  "time_settle": null,
+  "transaction_no": null,
+  "refunds": {
+    "object": "list",
+    "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+    "has_more": false,
+    "data": []
+  },
+  "amount_refunded": 0,
+  "failure_code": null,
+  "failure_msg": null,
+  "credential": {
+    "object": "credential",
+    "upacp": {
+      "tn": "201409151900430000000",
+      "mode": "01"
+    }
+  },
+  "description": null
+}
+</code></pre>
+<pre class="highlight java"><code><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">Charge</span> <span class="nl">JSON:</span> <span class="o">{</span>
+  <span class="s">"id"</span><span class="o">:</span> <span class="s">"ch_Hm5uTSifDOuTy9iLeLPSurrD"</span><span class="o">,</span>
+  <span class="s">"object"</span><span class="o">:</span> <span class="s">"charge"</span><span class="o">,</span>
+  <span class="s">"created"</span><span class="o">:</span> <span class="mi">1410778843</span><span class="o">,</span>
+  <span class="s">"livemode"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+  <span class="s">"paid"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span>
+  <span class="s">"refunded"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span>
+  <span class="s">"app"</span><span class="o">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="o">,</span>
+  <span class="s">"channel"</span><span class="o">:</span> <span class="s">"upacp"</span><span class="o">,</span>
+  <span class="s">"order_no"</span><span class="o">:</span> <span class="s">"123456789"</span><span class="o">,</span>
+  <span class="s">"client_ip"</span><span class="o">:</span> <span class="s">"127.0.0.1"</span><span class="o">,</span>
+  <span class="s">"amount"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span>
+  <span class="s">"amount_settle"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span>
+  <span class="s">"currency"</span><span class="o">:</span> <span class="s">"cny"</span><span class="o">,</span>
+  <span class="s">"subject"</span><span class="o">:</span> <span class="s">"Your Subject"</span><span class="o">,</span>
+  <span class="s">"body"</span><span class="o">:</span> <span class="s">"Your Body"</span><span class="o">,</span>
+  <span class="s">"extra"</span><span class="o">:{},</span>
+  <span class="s">"time_paid"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"time_expire"</span><span class="o">:</span> <span class="mi">1410782443</span><span class="o">,</span>
+  <span class="s">"time_settle"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"transaction_no"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"refunds"</span><span class="o">:</span> <span class="o">{</span>
+    <span class="s">"object"</span><span class="o">:</span> <span class="s">"list"</span><span class="o">,</span>
+    <span class="s">"url"</span><span class="o">:</span> <span class="s">"/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds"</span><span class="o">,</span>
+    <span class="s">"has_more"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span>
+    <span class="s">"data"</span><span class="o">:</span> <span class="o">[]</span>
+  <span class="o">},</span>
+  <span class="s">"amount_refunded"</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+  <span class="s">"failure_code"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"failure_msg"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"credential"</span><span class="o">:</span> <span class="o">{</span>
+    <span class="s">"object"</span><span class="o">:</span> <span class="s">"credential"</span><span class="o">,</span>
+    <span class="s">"upacp"</span><span class="o">:</span> <span class="o">{</span>
+      <span class="s">"tn"</span><span class="o">:</span> <span class="s">"201409151900430000000"</span><span class="o">,</span>
+      <span class="s">"mode"</span><span class="o">:</span> <span class="s">"01"</span>
+    <span class="o">}</span>
+  <span class="o">},</span>
+  <span class="s">"description"</span><span class="o">:</span> <span class="kc">null</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1">#&amp;lt;Pingpp::Charge id=ch_Hm5uTSifDOuTy9iLeLPSurrD&amp;gt; JSON: {</span>
+  <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"ch_Hm5uTSifDOuTy9iLeLPSurrD"</span><span class="p">,</span>
+  <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"charge"</span><span class="p">,</span>
+  <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1410778843</span><span class="p">,</span>
+  <span class="s2">"livemode"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="s2">"paid"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="s2">"refunded"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="s2">"app"</span><span class="p">:</span> <span class="s2">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+  <span class="s2">"channel"</span><span class="p">:</span> <span class="s2">"upacp"</span><span class="p">,</span>
+  <span class="s2">"order_no"</span><span class="p">:</span> <span class="s2">"123456789"</span><span class="p">,</span>
+  <span class="s2">"client_ip"</span><span class="p">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>
+  <span class="s2">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="s2">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="s2">"currency"</span><span class="p">:</span> <span class="s2">"cny"</span><span class="p">,</span>
+  <span class="s2">"subject"</span><span class="p">:</span> <span class="s2">"Your Subject"</span><span class="p">,</span>
+  <span class="s2">"body"</span><span class="p">:</span> <span class="s2">"Your Body"</span><span class="p">,</span>
+  <span class="s2">"extra"</span><span class="p">:{},</span>
+  <span class="s2">"time_paid"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"time_expire"</span><span class="p">:</span> <span class="mi">1410782443</span><span class="p">,</span>
+  <span class="s2">"time_settle"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"transaction_no"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"list"</span><span class="p">,</span>
+    <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds"</span><span class="p">,</span>
+    <span class="s2">"has_more"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="p">},</span>
+  <span class="s2">"amount_refunded"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"credential"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"credential"</span><span class="p">,</span>
+    <span class="s2">"upacp"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"tn"</span><span class="p">:</span> <span class="s2">"201409151900430000000"</span><span class="p">,</span>
+      <span class="s2">"mode"</span><span class="p">:</span> <span class="s2">"01"</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">"description"</span><span class="p">:</span> <span class="n">null</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+  "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+  "object": "charge",
+  "created": 1410778843,
+  "livemode": true,
+  "paid": false,
+  "refunded": false,
+  "app": "app_1Gqj58ynP0mHeX1q",
+  "channel": "upacp",
+  "order_no": "123456789",
+  "client_ip": "127.0.0.1",
+  "amount": 100,
+  "amount_settle": 100,
+  "currency": "cny",
+  "subject": "Your Subject",
+  "body": "Your Body",
+  "extra":{},
+  "time_paid": null,
+  "time_expire": 1410782443,
+  "time_settle": null,
+  "transaction_no": null,
+  "refunds": {
+    "object": "list",
+    "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+    "has_more": false,
+    "data": []
+  },
+  "amount_refunded": 0,
+  "failure_code": null,
+  "failure_msg": null,
+  "credential": {
+    "object": "credential",
+    "upacp": {
+      "tn": "201409151900430000000",
+      "mode": "01"
+    }
+  },
+  "description": null
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+  <span class="s">"id"</span><span class="p">:</span> <span class="s">"ch_Hm5uTSifDOuTy9iLeLPSurrD"</span><span class="p">,</span>
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"charge"</span><span class="p">,</span>
+  <span class="s">"created"</span><span class="p">:</span> <span class="mi">1410778843</span><span class="p">,</span>
+  <span class="s">"livemode"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+  <span class="s">"paid"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s">"refunded"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+  <span class="s">"channel"</span><span class="p">:</span> <span class="s">"upacp"</span><span class="p">,</span>
+  <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+  <span class="s">"client_ip"</span><span class="p">:</span> <span class="s">"127.0.0.1"</span><span class="p">,</span>
+  <span class="s">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="s">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span>
+  <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+  <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+  <span class="s">"extra"</span><span class="p">:{},</span>
+  <span class="s">"time_paid"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"time_expire"</span><span class="p">:</span> <span class="mi">1410782443</span><span class="p">,</span>
+  <span class="s">"time_settle"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"transaction_no"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span>
+    <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds"</span><span class="p">,</span>
+    <span class="s">"has_more"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="p">},</span>
+  <span class="s">"amount_refunded"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"credential"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"credential"</span><span class="p">,</span>
+    <span class="s">"upacp"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s">"tn"</span><span class="p">:</span> <span class="s">"201409151900430000000"</span><span class="p">,</span>
+      <span class="s">"mode"</span><span class="p">:</span> <span class="s">"01"</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s">"description"</span><span class="p">:</span> <span class="n">null</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+  </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"ch_Hm5uTSifDOuTy9iLeLPSurrD"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"charge"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1410778843</span><span class="p">,</span><span class="x">
+  </span><span class="s">"livemode"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+  </span><span class="s">"paid"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x">
+  </span><span class="s">"refunded"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x">
+  </span><span class="s">"app"</span><span class="o">:</span><span class="x"> </span><span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"channel"</span><span class="o">:</span><span class="x"> </span><span class="s">"upacp"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"123456789"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"client_ip"</span><span class="o">:</span><span class="x"> </span><span class="s">"127.0.0.1"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"amount"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x">
+  </span><span class="s">"amount_settle"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x">
+  </span><span class="s">"currency"</span><span class="o">:</span><span class="x"> </span><span class="s">"cny"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"subject"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Subject"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"body"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Body"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"extra"</span><span class="o">:</span><span class="p">{},</span><span class="x">
+  </span><span class="s">"time_paid"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+  </span><span class="s">"time_expire"</span><span class="o">:</span><span class="x"> </span><span class="m">1410782443</span><span class="p">,</span><span class="x">
+  </span><span class="s">"time_settle"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+  </span><span class="s">"transaction_no"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+  </span><span class="s">"refunds"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"list"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"url"</span><span class="o">:</span><span class="x"> </span><span class="s">"/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"has_more"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x">
+    </span><span class="s">"data"</span><span class="o">:</span><span class="x"> </span><span class="p">[]</span><span class="x">
+  </span><span class="p">},</span><span class="x">
+  </span><span class="s">"amount_refunded"</span><span class="o">:</span><span class="x"> </span><span class="m">0</span><span class="p">,</span><span class="x">
+  </span><span class="s">"failure_code"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+  </span><span class="s">"failure_msg"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+  </span><span class="s">"credential"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"credential"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"upacp"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+      </span><span class="s">"tn"</span><span class="o">:</span><span class="x"> </span><span class="s">"201409151900430000000"</span><span class="p">,</span><span class="x">
+      </span><span class="s">"mode"</span><span class="o">:</span><span class="x"> </span><span class="s">"01"</span><span class="x">
+    </span><span class="p">}</span><span class="x">
+  </span><span class="p">},</span><span class="x">
+  </span><span class="s">"description"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+  <span class="s">"id"</span><span class="p">:</span> <span class="s">"ch_Hm5uTSifDOuTy9iLeLPSurrD"</span><span class="p">,</span>
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"charge"</span><span class="p">,</span>
+  <span class="s">"created"</span><span class="p">:</span> <span class="m">1410778843</span><span class="p">,</span>
+  <span class="s">"livemode"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+  <span class="s">"paid"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>
+  <span class="s">"refunded"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>
+  <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+  <span class="s">"channel"</span><span class="p">:</span> <span class="s">"upacp"</span><span class="p">,</span>
+  <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+  <span class="s">"client_ip"</span><span class="p">:</span> <span class="s">"127.0.0.1"</span><span class="p">,</span>
+  <span class="s">"amount"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span>
+  <span class="s">"amount_settle"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span>
+  <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span>
+  <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+  <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+  <span class="s">"extra"</span><span class="p">:{},</span>
+  <span class="s">"time_paid"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+  <span class="s">"time_expire"</span><span class="p">:</span> <span class="m">1410782443</span><span class="p">,</span>
+  <span class="s">"time_settle"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+  <span class="s">"transaction_no"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+  <span class="s">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span>
+    <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds"</span><span class="p">,</span>
+    <span class="s">"has_more"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="p">},</span>
+  <span class="s">"amount_refunded"</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span>
+  <span class="s">"failure_code"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+  <span class="s">"failure_msg"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+  <span class="s">"credential"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"credential"</span><span class="p">,</span>
+    <span class="s">"upacp"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s">"tn"</span><span class="p">:</span> <span class="s">"201409151900430000000"</span><span class="p">,</span>
+      <span class="s">"mode"</span><span class="p">:</span> <span class="s">"01"</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s">"description"</span><span class="p">:</span> <span class="k">null</span>
+<span class="p">}</span>
 </code></pre>
 
 <p>一些 Ping++ 对象支持加入用户指定的 <code class="prettyprint">metadata</code> 参数。你可以使用键值对的形式来构建自己的 <code class="prettyprint">metadata</code>，例如 metadata[color] = red，你可以在每一个 <code class="prettyprint">charge</code> 对象中加入订单的一些详情，如颜色、型号等属性，在查询时获得更多信息。每一个对象的 <code class="prettyprint">metadata</code> 最多可以拥有 10 个键值对，数据总长度在 1000 个 Unicode 字符以内。</p>
@@ -500,6 +818,462 @@ wx_wap:
 <p>鉴于支付渠道对 order_no 的合法性要求，为了保证支付请求的正确处理，请务必保证对于同一支付渠道下，不同支付产品间 order_no 的唯一性。例如：已在微信公众号下使用的 order_no 则无法在微信支付以及微信公众号扫码下重复使用，该规则同样适用于其他同类渠道。如果发生错误，则会返回错误码和错误详情，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
 
 <h2 id="charge">查询 Charge  对象//点击二级标题有的没反应 或不对应</h2>
+<pre class="highlight plaintext"><code>  POST https://api.pingxx.com/v1/charges
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\Charge::create();
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Charge</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="no">Pingpp</span><span class="o">::</span><span class="no">Charge</span><span class="p">.</span><span class="nf">create</span><span class="p">()</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  pingpp.charges.create();
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">pingpp</span><span class="o">.</span><span class="n">Charge</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">ch</span><span class="p">,</span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">charge</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ChargeParams</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>  <span class="nf">create</span><span class="p">(</span><span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">param</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  curl https://api.pingxx.com/v1/charges \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC: \
+  -d order_no=123456789 \
+  -d amount=100 \
+  -d app[id]=app_1Gqj58ynP0mHeX1q \
+  -d channel=upacp \
+  -d currency=cny \
+  -d client_ip=127.0.0.1 \
+  -d subject="Your Subject" \
+  -d body="Your Body"
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+
+  \Pingpp\Charge::create(array(
+    'order_no'  =<span class="ni">&amp;gt;</span> '123456789',
+    'amount'    =<span class="ni">&amp;gt;</span> '100',
+    'app'       =<span class="ni">&amp;gt;</span> array('id' =<span class="ni">&amp;gt;</span> 'app_1Gqj58ynP0mHeX1q'),
+    'channel'   =<span class="ni">&amp;gt;</span> 'upacp',
+    'currency'  =<span class="ni">&amp;gt;</span> 'cny',
+    'client_ip' =<span class="ni">&amp;gt;</span> '127.0.0.1',
+    'subject'   =<span class="ni">&amp;gt;</span> 'Your Subject',
+    'body'      =<span class="ni">&amp;gt;</span> 'Your Body'
+  ));
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Pingpp</span><span class="o">.</span><span class="na">apiKey</span> <span class="o">=</span> <span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="o">;</span>
+
+  <span class="n">Map</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="n">chargeParams</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;();</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"order_no"</span><span class="o">,</span>  <span class="s">"123456789"</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"amount"</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span>
+  <span class="n">Map</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="n">app</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;();</span>
+  <span class="n">app</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"app"</span><span class="o">,</span> <span class="n">app</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"channel"</span><span class="o">,</span>  <span class="s">"upacp"</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"currency"</span><span class="o">,</span> <span class="s">"cny"</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"client_ip"</span><span class="o">,</span>  <span class="s">"127.0.0.1"</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"subject"</span><span class="o">,</span>  <span class="s">"Your Subject"</span><span class="o">);</span>
+  <span class="n">chargeParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"body"</span><span class="o">,</span>  <span class="s">"Your Body"</span><span class="o">);</span>
+
+  <span class="n">Charge</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">chargeParams</span><span class="o">);</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="nb">require</span> <span class="s2">"pingpp"</span>
+  <span class="no">Pingpp</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span>
+  <span class="no">Pingpp</span><span class="o">::</span><span class="no">Charge</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span>
+    <span class="ss">:subject</span>  <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"Your Subject"</span><span class="p">,</span>
+    <span class="ss">:body</span>     <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"Your Body"</span><span class="p">,</span>
+    <span class="ss">:amount</span>   <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="ss">:order_no</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"123456789"</span><span class="p">,</span>
+    <span class="ss">:channel</span>  <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"upacp"</span><span class="p">,</span>
+    <span class="ss">:currency</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"cny"</span><span class="p">,</span>
+    <span class="ss">:client_ip</span><span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s1">'127.0.0.1'</span><span class="p">,</span>
+    <span class="ss">:app</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="p">{</span><span class="s1">'id'</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"app_1Gqj58ynP0mHeX1q"</span><span class="p">}</span>
+  <span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  pingpp.charges.create({
+    subject: "Your Subject",
+    body: "Your Body",
+    amount: 100,
+    order_no: "123456789",
+    channel: "upacp",
+    currency: "cny",
+    client_ip: "127.0.0.1",
+    app: {id: "app_1Gqj58ynP0mHeX1q"}
+  }, function(err, charge) {
+    // 异步调用
+  });
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">ch</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">Charge</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">order_no</span><span class="o">=</span><span class="s">'1234567890'</span><span class="p">,</span>
+    <span class="n">amount</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">app</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s">'app_1Gqj58ynP0mHeX1q'</span><span class="p">),</span>
+    <span class="n">channel</span><span class="o">=</span><span class="s">'upacp'</span><span class="p">,</span>
+    <span class="n">currency</span><span class="o">=</span><span class="s">'cny'</span><span class="p">,</span>
+    <span class="n">client_ip</span><span class="o">=</span><span class="s">'127.0.0.1'</span><span class="p">,</span>
+    <span class="n">subject</span><span class="o">=</span><span class="s">'Your Subject'</span><span class="p">,</span>
+    <span class="n">body</span><span class="o">=</span><span class="s">'Your Body'</span><span class="p">,</span>
+  <span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">params</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="o">&amp;</span><span class="n">ChargeParams</span><span class="p">{</span><span class="x">
+    </span><span class="n">Order_no</span><span class="o">:</span><span class="x">  </span><span class="s">"123456789"</span><span class="p">,</span><span class="x">
+    </span><span class="n">App</span><span class="o">:</span><span class="x">       </span><span class="n">pingpp</span><span class="o">.</span><span class="n">App</span><span class="p">{</span><span class="n">Id</span><span class="o">:</span><span class="x"> </span><span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">},</span><span class="x">
+    </span><span class="n">Channel</span><span class="o">:</span><span class="x">   </span><span class="s">"upacp"</span><span class="p">,</span><span class="x">
+    </span><span class="n">Amount</span><span class="o">:</span><span class="x">    </span><span class="m">100</span><span class="p">,</span><span class="x">
+    </span><span class="n">Currency</span><span class="o">:</span><span class="x">  </span><span class="s">"cny"</span><span class="p">,</span><span class="x">
+    </span><span class="n">Client_ip</span><span class="o">:</span><span class="x"> </span><span class="s">"127.0.0.1"</span><span class="p">,</span><span class="x">
+    </span><span class="n">Subject</span><span class="o">:</span><span class="x">   </span><span class="s">"Your Subject"</span><span class="p">,</span><span class="x">
+    </span><span class="n">Body</span><span class="o">:</span><span class="x">      </span><span class="s">"Your Body"</span><span class="p">,</span><span class="x">
+  </span><span class="p">}</span><span class="x">
+  </span><span class="c">//获得的第一个参数即是 Charge 对象</span><span class="x">
+  </span><span class="n">ch</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">charge</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="n">params</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>    <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">app</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;();</span>
+    <span class="n">app</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"id"</span><span class="p">,</span> <span class="n">app_1Gqj58ynP0mHeX1q</span><span class="p">);</span>
+    <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span><span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">extra</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span><span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;();</span>
+    <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="k">params</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;();</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"amount"</span><span class="p">,</span> <span class="m">100</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"currency"</span><span class="p">,</span> <span class="s">"cny"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"subject"</span><span class="p">,</span> <span class="s">"Your Subject"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"body"</span><span class="p">,</span> <span class="s">"Your Body"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"order_no"</span><span class="p">,</span> <span class="s">"123456789"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"channel"</span><span class="p">,</span> <span class="s">"upacp"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"client_ip"</span><span class="p">,</span> <span class="s">"127.0.0.1"</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"app"</span><span class="p">,</span> <span class="n">app</span><span class="p">);</span>     
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"extra"</span><span class="p">,</span> <span class="n">extra</span><span class="p">);</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="c1">//发起交易请求
+</span>        <span class="n">Charge</span> <span class="n">ch</span> <span class="p">=</span> <span class="n">Charge</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="k">params</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">ch</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+    <span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+  "id": "ch_L8qn10mLmr1GS8e5OODmHaL4", 
+  "object": "charge", 
+  "created": 1410834527, 
+  "livemode": true, 
+  "paid": false, 
+  "refunded": false, 
+  "app": "app_1Gqj58ynP0mHeX1q", 
+  "channel": "upacp",
+  "order_no": "123456789", 
+  "client_ip": "127.0.0.1", 
+  "amount": 100, 
+  "amount_settle": 100, 
+  "currency": "cny", 
+  "subject": "Your Subject",
+  "body": "Your Body",
+  "extra":{},
+  "time_paid": null,
+  "time_expire": 1410838127, 
+  "time_settle": null, 
+  "transaction_no": null, 
+  "refunds": {
+    "object": "list", 
+    "url": "/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds", 
+    "has_more": false, 
+    "data": [ ]
+  }, 
+  "amount_refunded": 0, 
+  "failure_code": null, 
+  "failure_msg": null, 
+  "metadata": {}, 
+  "credential": {
+    "object": "credential", 
+    "upacp": {
+      "tn": "201409161028470000000", 
+      "mode": "01"
+    }
+  }, 
+  "description": null
+}
+</code></pre>
+<pre class="highlight php"><code>{
+  "id": "ch_L8qn10mLmr1GS8e5OODmHaL4", 
+  "object": "charge", 
+  "created": 1410834527, 
+  "livemode": true, 
+  "paid": false, 
+  "refunded": false, 
+  "app": "app_1Gqj58ynP0mHeX1q", 
+  "channel": "upacp",
+  "order_no": "123456789", 
+  "client_ip": "127.0.0.1", 
+  "amount": 100, 
+  "amount_settle": 100, 
+  "currency": "cny", 
+  "subject": "Your Subject",
+  "body": "Your Body",
+  "extra":{},
+  "time_paid": null,
+  "time_expire": 1410838127, 
+  "time_settle": null, 
+  "transaction_no": null, 
+  "refunds": {
+    "object": "list", 
+    "url": "/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds", 
+    "has_more": false, 
+    "data": [ ]
+  }, 
+  "amount_refunded": 0, 
+  "failure_code": null, 
+  "failure_msg": null, 
+  "metadata": {}, 
+  "credential": {
+    "object": "credential", 
+    "upacp": {
+      "tn": "201409161028470000000", 
+      "mode": "01"
+    }
+  }, 
+  "description": null
+}
+</code></pre>
+<pre class="highlight java"><code><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">Charge</span> <span class="nl">JSON:</span> <span class="o">{</span>
+  <span class="s">"id"</span><span class="o">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="o">,</span> 
+  <span class="s">"object"</span><span class="o">:</span> <span class="s">"charge"</span><span class="o">,</span> 
+  <span class="s">"created"</span><span class="o">:</span> <span class="mi">1410834527</span><span class="o">,</span> 
+  <span class="s">"livemode"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span> 
+  <span class="s">"paid"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span> 
+  <span class="s">"refunded"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span> 
+  <span class="s">"app"</span><span class="o">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="o">,</span> 
+  <span class="s">"channel"</span><span class="o">:</span> <span class="s">"upacp"</span><span class="o">,</span>
+  <span class="s">"order_no"</span><span class="o">:</span> <span class="s">"123456789"</span><span class="o">,</span> 
+  <span class="s">"client_ip"</span><span class="o">:</span> <span class="s">"127.0.0.1"</span><span class="o">,</span> 
+  <span class="s">"amount"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span> 
+  <span class="s">"amount_settle"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span> 
+  <span class="s">"currency"</span><span class="o">:</span> <span class="s">"cny"</span><span class="o">,</span> 
+  <span class="s">"subject"</span><span class="o">:</span> <span class="s">"Your Subject"</span><span class="o">,</span>
+  <span class="s">"body"</span><span class="o">:</span> <span class="s">"Your Body"</span><span class="o">,</span>
+  <span class="s">"extra"</span><span class="o">:{},</span>
+  <span class="s">"time_paid"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"time_expire"</span><span class="o">:</span> <span class="mi">1410838127</span><span class="o">,</span> 
+  <span class="s">"time_settle"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span> 
+  <span class="s">"transaction_no"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span> 
+  <span class="s">"refunds"</span><span class="o">:</span> <span class="o">{</span>
+    <span class="s">"object"</span><span class="o">:</span> <span class="s">"list"</span><span class="o">,</span> 
+    <span class="s">"url"</span><span class="o">:</span> <span class="s">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="o">,</span> 
+    <span class="s">"has_more"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span> 
+    <span class="s">"data"</span><span class="o">:</span> <span class="o">[</span> <span class="o">]</span>
+  <span class="o">},</span> 
+  <span class="s">"amount_refunded"</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span> 
+  <span class="s">"failure_code"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span> 
+  <span class="s">"failure_msg"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span> 
+  <span class="s">"metadata"</span><span class="o">:</span> <span class="o">{},</span> 
+  <span class="s">"credential"</span><span class="o">:</span> <span class="o">{</span>
+    <span class="s">"object"</span><span class="o">:</span> <span class="s">"credential"</span><span class="o">,</span> 
+    <span class="s">"upacp"</span><span class="o">:</span> <span class="o">{</span>
+      <span class="s">"tn"</span><span class="o">:</span> <span class="s">"201409161028470000000"</span><span class="o">,</span> 
+      <span class="s">"mode"</span><span class="o">:</span> <span class="s">"01"</span>
+    <span class="o">}</span>
+  <span class="o">},</span> 
+  <span class="s">"description"</span><span class="o">:</span> <span class="kc">null</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1">#&amp;lt;Pingpp::Charge id=ch_L8qn10mLmr1GS8e5OODmHaL4&amp;gt; JSON: {</span>
+  <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+  <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"charge"</span><span class="p">,</span>
+  <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1410834527</span><span class="p">,</span>
+  <span class="s2">"livemode"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="s2">"paid"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="s2">"refunded"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="s2">"app"</span><span class="p">:</span> <span class="s2">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+  <span class="s2">"channel"</span><span class="p">:</span> <span class="s2">"upacp"</span><span class="p">,</span>
+  <span class="s2">"order_no"</span><span class="p">:</span> <span class="s2">"123456789"</span><span class="p">,</span>
+  <span class="s2">"client_ip"</span><span class="p">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>
+  <span class="s2">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="s2">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="s2">"currency"</span><span class="p">:</span> <span class="s2">"cny"</span><span class="p">,</span>
+  <span class="s2">"subject"</span><span class="p">:</span> <span class="s2">"Your Subject"</span><span class="p">,</span>
+  <span class="s2">"body"</span><span class="p">:</span> <span class="s2">"Your Body"</span><span class="p">,</span>
+  <span class="s2">"extra"</span><span class="p">:{},</span>
+  <span class="s2">"time_paid"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"time_expire"</span><span class="p">:</span> <span class="mi">1410838127</span><span class="p">,</span>
+  <span class="s2">"time_settle"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"transaction_no"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"list"</span><span class="p">,</span>
+    <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="p">,</span>
+    <span class="s2">"has_more"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="p">},</span>
+  <span class="s2">"amount_refunded"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="s2">"credential"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"credential"</span><span class="p">,</span>
+    <span class="s2">"upacp"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"tn"</span><span class="p">:</span> <span class="s2">"201409161028470000000"</span><span class="p">,</span>
+      <span class="s2">"mode"</span><span class="p">:</span> <span class="s2">"01"</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">"description"</span><span class="p">:</span> <span class="n">null</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+  "id": "ch_L8qn10mLmr1GS8e5OODmHaL4", 
+  "object": "charge", 
+  "created": 1410834527, 
+  "livemode": true, 
+  "paid": false, 
+  "refunded": false, 
+  "app": "app_1Gqj58ynP0mHeX1q", 
+  "channel": "upacp",
+  "order_no": "123456789", 
+  "client_ip": "127.0.0.1", 
+  "amount": 100, 
+  "amount_settle": 100, 
+  "currency": "cny", 
+  "subject": "Your Subject",
+  "body": "Your Body",
+  "extra":{},
+  "time_paid": null,
+  "time_expire": 1410838127, 
+  "time_settle": null, 
+  "transaction_no": null, 
+  "refunds": {
+    "object": "list", 
+    "url": "/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds", 
+    "has_more": false, 
+    "data": [ ]
+  }, 
+  "amount_refunded": 0, 
+  "failure_code": null, 
+  "failure_msg": null, 
+  "metadata": {}, 
+  "credential": {
+    "object": "credential", 
+    "upacp": {
+      "tn": "201409161028470000000", 
+      "mode": "01"
+    }
+  }, 
+  "description": null
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+  <span class="s">"id"</span><span class="p">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span> 
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"charge"</span><span class="p">,</span> 
+  <span class="s">"created"</span><span class="p">:</span> <span class="mi">1410834527</span><span class="p">,</span> 
+  <span class="s">"livemode"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span> 
+  <span class="s">"paid"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> 
+  <span class="s">"refunded"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> 
+  <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span> 
+  <span class="s">"channel"</span><span class="p">:</span> <span class="s">"upacp"</span><span class="p">,</span>
+  <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span> 
+  <span class="s">"client_ip"</span><span class="p">:</span> <span class="s">"127.0.0.1"</span><span class="p">,</span> 
+  <span class="s">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> 
+  <span class="s">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> 
+  <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span> 
+  <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+  <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+  <span class="s">"extra"</span><span class="p">:{},</span>
+  <span class="s">"time_paid"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"time_expire"</span><span class="p">:</span> <span class="mi">1410838127</span><span class="p">,</span> 
+  <span class="s">"time_settle"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> 
+  <span class="s">"transaction_no"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> 
+  <span class="s">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span> 
+    <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="p">,</span> 
+    <span class="s">"has_more"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> 
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span> <span class="p">]</span>
+  <span class="p">},</span> 
+  <span class="s">"amount_refunded"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> 
+  <span class="s">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> 
+  <span class="s">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> 
+  <span class="s">"metadata"</span><span class="p">:</span> <span class="p">{},</span> 
+  <span class="s">"credential"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"credential"</span><span class="p">,</span> 
+    <span class="s">"upacp"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s">"tn"</span><span class="p">:</span> <span class="s">"201409161028470000000"</span><span class="p">,</span> 
+      <span class="s">"mode"</span><span class="p">:</span> <span class="s">"01"</span>
+    <span class="p">}</span>
+  <span class="p">},</span> 
+  <span class="s">"description"</span><span class="p">:</span> <span class="n">null</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+  </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"charge"</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1410834527</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"livemode"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"paid"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"refunded"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"app"</span><span class="o">:</span><span class="x"> </span><span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"channel"</span><span class="o">:</span><span class="x"> </span><span class="s">"upacp"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"123456789"</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"client_ip"</span><span class="o">:</span><span class="x"> </span><span class="s">"127.0.0.1"</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"amount"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"amount_settle"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"currency"</span><span class="o">:</span><span class="x"> </span><span class="s">"cny"</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"subject"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Subject"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"body"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Body"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"extra"</span><span class="o">:</span><span class="p">{},</span><span class="x">
+  </span><span class="s">"time_paid"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+  </span><span class="s">"time_expire"</span><span class="o">:</span><span class="x"> </span><span class="m">1410838127</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"time_settle"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"transaction_no"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"refunds"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"list"</span><span class="p">,</span><span class="x"> 
+    </span><span class="s">"url"</span><span class="o">:</span><span class="x"> </span><span class="s">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="p">,</span><span class="x"> 
+    </span><span class="s">"has_more"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x"> 
+    </span><span class="s">"data"</span><span class="o">:</span><span class="x"> </span><span class="p">[</span><span class="x"> </span><span class="p">]</span><span class="x">
+  </span><span class="p">},</span><span class="x"> 
+  </span><span class="s">"amount_refunded"</span><span class="o">:</span><span class="x"> </span><span class="m">0</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"failure_code"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"failure_msg"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"metadata"</span><span class="o">:</span><span class="x"> </span><span class="p">{},</span><span class="x"> 
+  </span><span class="s">"credential"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"credential"</span><span class="p">,</span><span class="x"> 
+    </span><span class="s">"upacp"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+      </span><span class="s">"tn"</span><span class="o">:</span><span class="x"> </span><span class="s">"201409161028470000000"</span><span class="p">,</span><span class="x"> 
+      </span><span class="s">"mode"</span><span class="o">:</span><span class="x"> </span><span class="s">"01"</span><span class="x">
+    </span><span class="p">}</span><span class="x">
+  </span><span class="p">},</span><span class="x"> 
+  </span><span class="s">"description"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+  <span class="s">"id"</span><span class="p">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span> 
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"charge"</span><span class="p">,</span> 
+  <span class="s">"created"</span><span class="p">:</span> <span class="m">1410834527</span><span class="p">,</span> 
+  <span class="s">"livemode"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span> 
+  <span class="s">"paid"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span> 
+  <span class="s">"refunded"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span> 
+  <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span> 
+  <span class="s">"channel"</span><span class="p">:</span> <span class="s">"upacp"</span><span class="p">,</span>
+  <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span> 
+  <span class="s">"client_ip"</span><span class="p">:</span> <span class="s">"127.0.0.1"</span><span class="p">,</span> 
+  <span class="s">"amount"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span> 
+  <span class="s">"amount_settle"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span> 
+  <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span> 
+  <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+  <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+  <span class="s">"extra"</span><span class="p">:{},</span>
+  <span class="s">"time_paid"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+  <span class="s">"time_expire"</span><span class="p">:</span> <span class="m">1410838127</span><span class="p">,</span> 
+  <span class="s">"time_settle"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span> 
+  <span class="s">"transaction_no"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span> 
+  <span class="s">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span> 
+    <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="p">,</span> 
+    <span class="s">"has_more"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span> 
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span> <span class="p">]</span>
+  <span class="p">},</span> 
+  <span class="s">"amount_refunded"</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span> 
+  <span class="s">"failure_code"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span> 
+  <span class="s">"failure_msg"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span> 
+  <span class="s">"metadata"</span><span class="p">:</span> <span class="p">{},</span> 
+  <span class="s">"credential"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"credential"</span><span class="p">,</span> 
+    <span class="s">"upacp"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s">"tn"</span><span class="p">:</span> <span class="s">"201409161028470000000"</span><span class="p">,</span> 
+      <span class="s">"mode"</span><span class="p">:</span> <span class="s">"01"</span>
+    <span class="p">}</span>
+  <span class="p">},</span> 
+  <span class="s">"description"</span><span class="p">:</span> <span class="k">null</span>
+<span class="p">}</span>
+</code></pre>
 
 <p>通过<code class="prettyprint">charge</code>对象的<code class="prettyprint">id</code>查询一个已创建的<code class="prettyprint">charge</code>对象。可以在后台异步通知之前，通过查询接口确认支付状态。</p>
 
@@ -608,3 +1382,382 @@ wx_wap:
 <h3 id="1">返回内容1</h3>
 
 <p>返回一个已存在的 <code class="prettyprint">charge</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+<pre class="highlight plaintext"><code>  GET https://api.pingxx.com/v1/charges/{CHARGE_ID}
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\Charge::retrieve({CHARGE_ID});
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Charge</span><span class="o">.</span><span class="na">retrieve</span><span class="o">({</span><span class="n">CHARGE_ID</span><span class="o">});</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="no">Pingpp</span><span class="o">::</span><span class="no">Charge</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">({</span><span class="no">CHARGE_ID</span><span class="p">})</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  pingpp.charges.retrieve({CHARGE_ID});
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">ch</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">Charge</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">'CHARGE_ID'</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">ch</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">charge</span><span class="o">.</span><span class="n">Get</span><span class="p">(</span><span class="s">"CHARGE_ID"</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>  <span class="nf">retrieve</span><span class="p">(</span><span class="n">String</span> <span class="n">id</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  curl https://api.pingxx.com/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4 \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC:
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+
+  \Pingpp\Charge::retrieve('ch_L8qn10mLmr1GS8e5OODmHaL4');
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Pingpp</span><span class="o">.</span><span class="na">apiKey</span> <span class="o">=</span> <span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="o">;</span>
+
+  <span class="n">Charge</span><span class="o">.</span><span class="na">retrieve</span><span class="o">(</span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="o">);</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="no">Pingpp</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span>
+  <span class="no">Pingpp</span><span class="o">::</span><span class="no">Charge</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s2">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  pingpp.charges.retrieve(
+    "ch_L8qn10mLmr1GS8e5OODmHaL4",
+    function(err, charge) {
+      // 异步调用
+    }
+  );
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">pingpp</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'</span>
+  <span class="n">ch</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">Charge</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">'ch_L8qn10mLmr1GS8e5OODmHaL4'</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">pingpp</span><span class="o">.</span><span class="n">Key</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="x">
+  </span><span class="n">ch</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">charge</span><span class="o">.</span><span class="n">Get</span><span class="p">(</span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">Charge</span> <span class="n">ch</span> <span class="p">=</span> <span class="n">Charge</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">ch</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+    <span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+  "id": "ch_L8qn10mLmr1GS8e5OODmHaL4", 
+  "object": "charge", 
+  "created": 1410834527, 
+  "livemode": true, 
+  "paid": false, 
+  "refunded": false, 
+  "app": "app_1Gqj58ynP0mHeX1q", 
+  "channel": "upacp",
+  "order_no": "123456789", 
+  "client_ip": "127.0.0.1", 
+  "amount": 100, 
+  "amount_settle": 100, 
+  "currency": "cny", 
+  "subject": "Your Subject",
+  "body": "Your Body",
+  "extra":{},
+  "time_paid": null,
+  "time_expire": 1410838127, 
+  "time_settle": null, 
+  "transaction_no": null, 
+  "refunds": {
+    "object": "list", 
+    "url": "/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds", 
+    "has_more": false, 
+    "data": [ ]
+  }, 
+  "amount_refunded": 0, 
+  "failure_code": null, 
+  "failure_msg": null, 
+  "metadata": {}, 
+  "credential": {
+    "object": "credential", 
+    "upacp": {
+      "tn": "201409161028470000000", 
+      "mode": "01"
+    }
+  }, 
+  "description": null
+}
+</code></pre>
+<pre class="highlight php"><code>{
+  "id": "ch_L8qn10mLmr1GS8e5OODmHaL4", 
+  "object": "charge", 
+  "created": 1410834527, 
+  "livemode": true, 
+  "paid": false, 
+  "refunded": false, 
+  "app": "app_1Gqj58ynP0mHeX1q", 
+  "channel": "upacp",
+  "order_no": "123456789", 
+  "client_ip": "127.0.0.1", 
+  "amount": 100, 
+  "amount_settle": 100, 
+  "currency": "cny", 
+  "subject": "Your Subject",
+  "body": "Your Body",
+  "extra":{},
+  "time_paid": null,
+  "time_expire": 1410838127, 
+  "time_settle": null, 
+  "transaction_no": null, 
+  "refunds": {
+    "object": "list", 
+    "url": "/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds", 
+    "has_more": false, 
+    "data": [ ]
+  }, 
+  "amount_refunded": 0, 
+  "failure_code": null, 
+  "failure_msg": null, 
+  "metadata": {}, 
+  "credential": {
+    "object": "credential", 
+    "upacp": {
+      "tn": "201409161028470000000", 
+      "mode": "01"
+    }
+  }, 
+  "description": null
+}
+</code></pre>
+<pre class="highlight java"><code><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">Charge</span> <span class="nl">JSON:</span> <span class="o">{</span>
+  <span class="s">"id"</span><span class="o">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="o">,</span> 
+  <span class="s">"object"</span><span class="o">:</span> <span class="s">"charge"</span><span class="o">,</span> 
+  <span class="s">"created"</span><span class="o">:</span> <span class="mi">1410834527</span><span class="o">,</span> 
+  <span class="s">"livemode"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span> 
+  <span class="s">"paid"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span> 
+  <span class="s">"refunded"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span> 
+  <span class="s">"app"</span><span class="o">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="o">,</span> 
+  <span class="s">"channel"</span><span class="o">:</span> <span class="s">"upacp"</span><span class="o">,</span>
+  <span class="s">"order_no"</span><span class="o">:</span> <span class="s">"123456789"</span><span class="o">,</span> 
+  <span class="s">"client_ip"</span><span class="o">:</span> <span class="s">"127.0.0.1"</span><span class="o">,</span> 
+  <span class="s">"amount"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span> 
+  <span class="s">"amount_settle"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span> 
+  <span class="s">"currency"</span><span class="o">:</span> <span class="s">"cny"</span><span class="o">,</span> 
+  <span class="s">"subject"</span><span class="o">:</span> <span class="s">"Your Subject"</span><span class="o">,</span>
+  <span class="s">"body"</span><span class="o">:</span> <span class="s">"Your Body"</span><span class="o">,</span>
+  <span class="s">"extra"</span><span class="o">:{},</span>
+  <span class="s">"time_paid"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"time_expire"</span><span class="o">:</span> <span class="mi">1410838127</span><span class="o">,</span> 
+  <span class="s">"time_settle"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span> 
+  <span class="s">"transaction_no"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span> 
+  <span class="s">"refunds"</span><span class="o">:</span> <span class="o">{</span>
+    <span class="s">"object"</span><span class="o">:</span> <span class="s">"list"</span><span class="o">,</span> 
+    <span class="s">"url"</span><span class="o">:</span> <span class="s">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="o">,</span> 
+    <span class="s">"has_more"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span> 
+    <span class="s">"data"</span><span class="o">:</span> <span class="o">[</span> <span class="o">]</span>
+  <span class="o">},</span> 
+  <span class="s">"amount_refunded"</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span> 
+  <span class="s">"failure_code"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span> 
+  <span class="s">"failure_msg"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span> 
+  <span class="s">"metadata"</span><span class="o">:</span> <span class="o">{},</span> 
+  <span class="s">"credential"</span><span class="o">:</span> <span class="o">{</span>
+    <span class="s">"object"</span><span class="o">:</span> <span class="s">"credential"</span><span class="o">,</span> 
+    <span class="s">"upacp"</span><span class="o">:</span> <span class="o">{</span>
+      <span class="s">"tn"</span><span class="o">:</span> <span class="s">"201409161028470000000"</span><span class="o">,</span> 
+      <span class="s">"mode"</span><span class="o">:</span> <span class="s">"01"</span>
+    <span class="o">}</span>
+  <span class="o">},</span> 
+  <span class="s">"description"</span><span class="o">:</span> <span class="kc">null</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1">#&amp;lt;Pingpp::Charge id=ch_L8qn10mLmr1GS8e5OODmHaL4&amp;gt; JSON: {</span>
+  <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+  <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"charge"</span><span class="p">,</span>
+  <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1410834527</span><span class="p">,</span>
+  <span class="s2">"livemode"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="s2">"paid"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="s2">"refunded"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="s2">"app"</span><span class="p">:</span> <span class="s2">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+  <span class="s2">"channel"</span><span class="p">:</span> <span class="s2">"upacp"</span><span class="p">,</span>
+  <span class="s2">"order_no"</span><span class="p">:</span> <span class="s2">"123456789"</span><span class="p">,</span>
+  <span class="s2">"client_ip"</span><span class="p">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>
+  <span class="s2">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="s2">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="s2">"currency"</span><span class="p">:</span> <span class="s2">"cny"</span><span class="p">,</span>
+  <span class="s2">"subject"</span><span class="p">:</span> <span class="s2">"Your Subject"</span><span class="p">,</span>
+  <span class="s2">"body"</span><span class="p">:</span> <span class="s2">"Your Body"</span><span class="p">,</span>
+  <span class="s2">"extra"</span><span class="p">:{},</span>
+  <span class="s2">"time_paid"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"time_expire"</span><span class="p">:</span> <span class="mi">1410838127</span><span class="p">,</span>
+  <span class="s2">"time_settle"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"transaction_no"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"list"</span><span class="p">,</span>
+    <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="p">,</span>
+    <span class="s2">"has_more"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="p">},</span>
+  <span class="s2">"amount_refunded"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="s2">"credential"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"credential"</span><span class="p">,</span>
+    <span class="s2">"upacp"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"tn"</span><span class="p">:</span> <span class="s2">"201409161028470000000"</span><span class="p">,</span>
+      <span class="s2">"mode"</span><span class="p">:</span> <span class="s2">"01"</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">"description"</span><span class="p">:</span> <span class="n">null</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+  "id": "ch_L8qn10mLmr1GS8e5OODmHaL4", 
+  "object": "charge", 
+  "created": 1410834527, 
+  "livemode": true, 
+  "paid": false, 
+  "refunded": false, 
+  "app": "app_1Gqj58ynP0mHeX1q", 
+  "channel": "upacp",
+  "order_no": "123456789", 
+  "client_ip": "127.0.0.1", 
+  "amount": 100, 
+  "amount_settle": 100, 
+  "currency": "cny", 
+  "subject": "Your Subject",
+  "body": "Your Body",
+  "extra":{},
+  "time_paid": null,
+  "time_expire": 1410838127, 
+  "time_settle": null, 
+  "transaction_no": null, 
+  "refunds": {
+    "object": "list", 
+    "url": "/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds", 
+    "has_more": false, 
+    "data": [ ]
+  }, 
+  "amount_refunded": 0, 
+  "failure_code": null, 
+  "failure_msg": null, 
+  "metadata": {}, 
+  "credential": {
+    "object": "credential", 
+    "upacp": {
+      "tn": "201409161028470000000", 
+      "mode": "01"
+    }
+  }, 
+  "description": null
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+  <span class="s">"id"</span><span class="p">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span> 
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"charge"</span><span class="p">,</span> 
+  <span class="s">"created"</span><span class="p">:</span> <span class="mi">1410834527</span><span class="p">,</span> 
+  <span class="s">"livemode"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span> 
+  <span class="s">"paid"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> 
+  <span class="s">"refunded"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> 
+  <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span> 
+  <span class="s">"channel"</span><span class="p">:</span> <span class="s">"upacp"</span><span class="p">,</span>
+  <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span> 
+  <span class="s">"client_ip"</span><span class="p">:</span> <span class="s">"127.0.0.1"</span><span class="p">,</span> 
+  <span class="s">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> 
+  <span class="s">"amount_settle"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> 
+  <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span> 
+  <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+  <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+  <span class="s">"extra"</span><span class="p">:{},</span>
+  <span class="s">"time_paid"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"time_expire"</span><span class="p">:</span> <span class="mi">1410838127</span><span class="p">,</span> 
+  <span class="s">"time_settle"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> 
+  <span class="s">"transaction_no"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> 
+  <span class="s">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span> 
+    <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="p">,</span> 
+    <span class="s">"has_more"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> 
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span> <span class="p">]</span>
+  <span class="p">},</span> 
+  <span class="s">"amount_refunded"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> 
+  <span class="s">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> 
+  <span class="s">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> 
+  <span class="s">"metadata"</span><span class="p">:</span> <span class="p">{},</span> 
+  <span class="s">"credential"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"credential"</span><span class="p">,</span> 
+    <span class="s">"upacp"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s">"tn"</span><span class="p">:</span> <span class="s">"201409161028470000000"</span><span class="p">,</span> 
+      <span class="s">"mode"</span><span class="p">:</span> <span class="s">"01"</span>
+    <span class="p">}</span>
+  <span class="p">},</span> 
+  <span class="s">"description"</span><span class="p">:</span> <span class="n">null</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+  </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"charge"</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1410834527</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"livemode"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"paid"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"refunded"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"app"</span><span class="o">:</span><span class="x"> </span><span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"channel"</span><span class="o">:</span><span class="x"> </span><span class="s">"upacp"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"123456789"</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"client_ip"</span><span class="o">:</span><span class="x"> </span><span class="s">"127.0.0.1"</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"amount"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"amount_settle"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"currency"</span><span class="o">:</span><span class="x"> </span><span class="s">"cny"</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"subject"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Subject"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"body"</span><span class="o">:</span><span class="x"> </span><span class="s">"Your Body"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"extra"</span><span class="o">:</span><span class="p">{},</span><span class="x">
+  </span><span class="s">"time_paid"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+  </span><span class="s">"time_expire"</span><span class="o">:</span><span class="x"> </span><span class="m">1410838127</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"time_settle"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"transaction_no"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"refunds"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"list"</span><span class="p">,</span><span class="x"> 
+    </span><span class="s">"url"</span><span class="o">:</span><span class="x"> </span><span class="s">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="p">,</span><span class="x"> 
+    </span><span class="s">"has_more"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x"> 
+    </span><span class="s">"data"</span><span class="o">:</span><span class="x"> </span><span class="p">[</span><span class="x"> </span><span class="p">]</span><span class="x">
+  </span><span class="p">},</span><span class="x"> 
+  </span><span class="s">"amount_refunded"</span><span class="o">:</span><span class="x"> </span><span class="m">0</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"failure_code"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"failure_msg"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x"> 
+  </span><span class="s">"metadata"</span><span class="o">:</span><span class="x"> </span><span class="p">{},</span><span class="x"> 
+  </span><span class="s">"credential"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"credential"</span><span class="p">,</span><span class="x"> 
+    </span><span class="s">"upacp"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+      </span><span class="s">"tn"</span><span class="o">:</span><span class="x"> </span><span class="s">"201409161028470000000"</span><span class="p">,</span><span class="x"> 
+      </span><span class="s">"mode"</span><span class="o">:</span><span class="x"> </span><span class="s">"01"</span><span class="x">
+    </span><span class="p">}</span><span class="x">
+  </span><span class="p">},</span><span class="x"> 
+  </span><span class="s">"description"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+  <span class="s">"id"</span><span class="p">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span> 
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"charge"</span><span class="p">,</span> 
+  <span class="s">"created"</span><span class="p">:</span> <span class="m">1410834527</span><span class="p">,</span> 
+  <span class="s">"livemode"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span> 
+  <span class="s">"paid"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span> 
+  <span class="s">"refunded"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span> 
+  <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span> 
+  <span class="s">"channel"</span><span class="p">:</span> <span class="s">"upacp"</span><span class="p">,</span>
+  <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span> 
+  <span class="s">"client_ip"</span><span class="p">:</span> <span class="s">"127.0.0.1"</span><span class="p">,</span> 
+  <span class="s">"amount"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span> 
+  <span class="s">"amount_settle"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span> 
+  <span class="s">"currency"</span><span class="p">:</span> <span class="s">"cny"</span><span class="p">,</span> 
+  <span class="s">"subject"</span><span class="p">:</span> <span class="s">"Your Subject"</span><span class="p">,</span>
+  <span class="s">"body"</span><span class="p">:</span> <span class="s">"Your Body"</span><span class="p">,</span>
+  <span class="s">"extra"</span><span class="p">:{},</span>
+  <span class="s">"time_paid"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+  <span class="s">"time_expire"</span><span class="p">:</span> <span class="m">1410838127</span><span class="p">,</span> 
+  <span class="s">"time_settle"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span> 
+  <span class="s">"transaction_no"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span> 
+  <span class="s">"refunds"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span> 
+    <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="p">,</span> 
+    <span class="s">"has_more"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span> 
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span> <span class="p">]</span>
+  <span class="p">},</span> 
+  <span class="s">"amount_refunded"</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span> 
+  <span class="s">"failure_code"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span> 
+  <span class="s">"failure_msg"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span> 
+  <span class="s">"metadata"</span><span class="p">:</span> <span class="p">{},</span> 
+  <span class="s">"credential"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"object"</span><span class="p">:</span> <span class="s">"credential"</span><span class="p">,</span> 
+    <span class="s">"upacp"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s">"tn"</span><span class="p">:</span> <span class="s">"201409161028470000000"</span><span class="p">,</span> 
+      <span class="s">"mode"</span><span class="p">:</span> <span class="s">"01"</span>
+    <span class="p">}</span>
+  <span class="p">},</span> 
+  <span class="s">"description"</span><span class="p">:</span> <span class="k">null</span>
+<span class="p">}</span>
+</code></pre>

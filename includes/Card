@@ -52,6 +52,24 @@
 <td><strong>string</strong></td>
 </tr>
 </tbody></table>
+<pre class="highlight plaintext"><code>{
+    "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+    "object": "card",
+    "created": 1441699192,
+    "last4": "1261",
+    "funding": "debit",
+    "brand": "UnionPay",
+    "bank": "cmb",
+    "customer": "cus_eHi1mD1iPS08Li"
+}
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
 
 <h2 id="card">创建 Card 对象</h2>
 
@@ -92,6 +110,49 @@
 <h3 id="1">返回1</h3>
 
 <p>返回一个 Card 对象。</p>
+<pre class="highlight plaintext"><code>  POST https://api.pingxx.com/v1/customers/{CUS_ID}/sources
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>    curl https://api.pingxx.com/v1/customers/cus_eHi1mD1iPS08Li/sources \
+    -u sk_live_vjfr92jj3q925KuPO82iP8KO: \
+     -d '{
+    "source": "tok_BHTPMJCtIJ8HaqXBDr4ILeLJ",
+    "sms_code":{
+    "code" : "123456",
+    "id" : "sms_BHTPMJCpGc8qiKvva3OgBV2V"
+    }
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>{
+    "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+    "object": "card",
+    "created": 1441699192,
+    "last4": "1261",
+    "funding": "debit",
+    "brand": "UnionPay",
+    "bank": "cmb",
+    "customer": "cus_eHi1mD1iPS08Li"
+}
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
 
 <h2 id="card">删除 Card 对象</h2>
 
@@ -117,6 +178,49 @@
 <td><strong>required</strong></td>
 </tr>
 </tbody></table>
+<pre class="highlight plaintext"><code>  POST https://api.pingxx.com/v1/customers/{CUS_ID}/sources
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>    curl https://api.pingxx.com/v1/customers/cus_eHi1mD1iPS08Li/sources \
+    -u sk_live_vjfr92jj3q925KuPO82iP8KO: \
+     -d '{
+    "source": "tok_BHTPMJCtIJ8HaqXBDr4ILeLJ",
+    "sms_code":{
+    "code" : "123456",
+    "id" : "sms_BHTPMJCpGc8qiKvva3OgBV2V"
+    }
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>{
+    "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+    "object": "card",
+    "created": 1441699192,
+    "last4": "1261",
+    "funding": "debit",
+    "brand": "UnionPay",
+    "bank": "cmb",
+    "customer": "cus_eHi1mD1iPS08Li"
+}
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
 
 <h2 id="card">查询 Card 对象</h2>
 
@@ -142,6 +246,43 @@
 <td><strong>required</strong></td>
 </tr>
 </tbody></table>
+<pre class="highlight plaintext"><code>  GET https://api.pingxx.com/v1/customers/{CUS_ID}/sources/{CARD_ID}
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>    curl https://api.pingxx.com/v1/customers/cus_eHi1mD1iPS08Li/sources/card_C8mzP08COqb5vjP0OGXnHanH \
+    -u sk_live_vjfr92jj3q925KuPO82iP8KO:
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>{
+    "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+    "object": "card",
+    "created": 1441699192,
+    "last4": "1261",
+    "funding": "debit",
+    "brand": "UnionPay",
+    "bank": "cmb",
+    "customer": "cus_eHi1mD1iPS08Li"
+}
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
 
 <h2 id="card">查询 Card 对象列表</h2>
 
@@ -213,3 +354,49 @@
 <td><strong>optional</strong></td>
 </tr>
 </tbody></table>
+<pre class="highlight plaintext"><code>  GET https://api.pingxx.com/v1/customers/{CUS_ID}/sources
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>    curl https://api.pingxx.com/v1/customers/cus_eHi1mD1iPS08Li/sources/?limit=3 \
+    -u sk_live_vjfr92jj3q925KuPO82iP8KO:
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>
+<pre class="highlight plaintext"><code>{
+    "object": "list",
+    "url": "/v1/customers/cus_eHi1mD1iPS08Li/sources",
+    "has_more": false,
+    "data": [
+        {
+            "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+            "object": "card",
+            "created": 1441699192,
+            "last4": "1261",
+            "funding": "debit",
+            "brand": "UnionPay",
+            "bank": "cmb",
+            "customer": "cus_eHi1mD1iPS08Li"
+        },
+        {...},
+        {...}
+    ]
+}
+</code></pre>
+<pre class="highlight php"><code></code></pre>
+<pre class="highlight java"><code></code></pre>
+<pre class="highlight ruby"><code></code></pre>
+<pre class="highlight plaintext"><code></code></pre>
+<pre class="highlight python"><code></code></pre>
+<pre class="highlight go"><code></code></pre>
+<pre class="highlight csharp"><code></code></pre>

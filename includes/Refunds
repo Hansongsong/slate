@@ -87,6 +87,150 @@
 <td>支付渠道返回的交易流水号，部分渠道返回该字段为空。</td>
 </tr>
 </tbody></table>
+<pre class="highlight plaintext"><code>{
+  "id": "re_y1u944PmfnrTHyvnL0nD0iD1",
+  "object": "refund",
+  "order_no": "y1u944PmfnrTHyvnL0nD0iD1",
+  "amount": 9,
+  "created": 1409634160,
+  "succeed": true,
+  "status": "succeeded",
+  "time_succeed": 1409634192,
+  "description": "Refund Description",
+  "failure_code": null,
+  "failure_msg": null,
+  "metadata": {},
+  "charge": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+  "charge_order_no": "123456789",
+  "transaction_no": "2004450349201512090096425284"
+}
+</code></pre>
+<pre class="highlight php"><code>{
+  "id": "re_y1u944PmfnrTHyvnL0nD0iD1",
+  "object": "refund",
+  "order_no": "y1u944PmfnrTHyvnL0nD0iD1",
+  "amount": 9,
+  "created": 1409634160,
+  "succeed": true,
+  "status": "succeeded",
+  "time_succeed": 1409634192,
+  "description": "Refund Description",
+  "failure_code": null,
+  "failure_msg": null,
+  "metadata": {},
+  "charge": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+  "charge_order_no": "123456789",
+  "transaction_no": "2004450349201512090096425284"
+}
+</code></pre>
+<pre class="highlight java"><code><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">Refund</span> <span class="nl">JSON:</span> <span class="o">{</span>
+  <span class="s">"id"</span><span class="o">:</span> <span class="s">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="o">,</span>
+  <span class="s">"object"</span><span class="o">:</span> <span class="s">"refund"</span><span class="o">,</span>
+  <span class="s">"order_no"</span><span class="o">:</span> <span class="s">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="o">,</span>
+  <span class="s">"amount"</span><span class="o">:</span> <span class="mi">9</span><span class="o">,</span>
+  <span class="s">"created"</span><span class="o">:</span> <span class="mi">1409634160</span><span class="o">,</span>
+  <span class="s">"succeed"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+  <span class="s">"status"</span><span class="o">:</span> <span class="s">"succeeded"</span><span class="o">,</span>
+  <span class="s">"time_succeed"</span><span class="o">:</span> <span class="mi">1409634192</span><span class="o">,</span>
+  <span class="s">"description"</span><span class="o">:</span> <span class="s">"Refund Description"</span><span class="o">,</span>
+  <span class="s">"failure_code"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"failure_msg"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"metadata"</span><span class="o">:</span> <span class="o">{},</span>
+  <span class="s">"charge"</span><span class="o">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="o">,</span>
+  <span class="s">"charge_order_no"</span><span class="o">:</span> <span class="s">"123456789"</span><span class="o">,</span>
+  <span class="s">"transaction_no"</span><span class="o">:</span> <span class="s">"2004450349201512090096425284"</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1">#&amp;lt;Pingpp::Refund id=re_y1u944PmfnrTHyvnL0nD0iD1&amp;gt; JSON: {</span>
+  <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"refund"</span><span class="p">,</span>
+  <span class="s2">"order_no"</span><span class="p">:</span> <span class="s2">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s2">"amount"</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+  <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1409634160</span><span class="p">,</span>
+  <span class="s2">"succeed"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"succeeded"</span><span class="p">,</span>
+  <span class="s2">"time_succeed"</span><span class="p">:</span> <span class="mi">1409634192</span><span class="p">,</span>
+  <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Refund Description"</span><span class="p">,</span>
+  <span class="s2">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="s2">"charge"</span><span class="p">:</span> <span class="s2">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+  <span class="s2">"charge_order_no"</span><span class="p">:</span> <span class="s2">"123456789"</span><span class="p">,</span>
+  <span class="s2">"transaction_no"</span><span class="p">:</span> <span class="s2">"2004450349201512090096425284"</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+  "id": "re_y1u944PmfnrTHyvnL0nD0iD1",
+  "object": "refund",
+  "order_no": "y1u944PmfnrTHyvnL0nD0iD1",
+  "amount": 9,
+  "created": 1409634160,
+  "succeed": true,
+  "status": "succeeded",
+  "time_succeed": 1409634192,
+  "description": "Refund Description",
+  "failure_code": null,
+  "failure_msg": null,
+  "metadata": {},
+  "charge": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+  "charge_order_no": "123456789",
+  "transaction_no": "2004450349201512090096425284"
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+  <span class="s">"id"</span><span class="p">:</span> <span class="s">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"refund"</span><span class="p">,</span>
+  <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s">"amount"</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+  <span class="s">"created"</span><span class="p">:</span> <span class="mi">1409634160</span><span class="p">,</span>
+  <span class="s">"succeed"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+  <span class="s">"status"</span><span class="p">:</span> <span class="s">"succeeded"</span><span class="p">,</span>
+  <span class="s">"time_succeed"</span><span class="p">:</span> <span class="mi">1409634192</span><span class="p">,</span>
+  <span class="s">"description"</span><span class="p">:</span> <span class="s">"Refund Description"</span><span class="p">,</span>
+  <span class="s">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="s">"charge"</span><span class="p">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+  <span class="s">"charge_order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+  <span class="s">"transaction_no"</span><span class="p">:</span> <span class="s">"2004450349201512090096425284"</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+  </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"refund"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"amount"</span><span class="o">:</span><span class="x"> </span><span class="m">9</span><span class="p">,</span><span class="x">
+  </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1409634160</span><span class="p">,</span><span class="x">
+  </span><span class="s">"succeed"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+  </span><span class="s">"status"</span><span class="o">:</span><span class="x"> </span><span class="s">"succeeded"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"time_succeed"</span><span class="o">:</span><span class="x"> </span><span class="m">1409634192</span><span class="p">,</span><span class="x">
+  </span><span class="s">"description"</span><span class="o">:</span><span class="x"> </span><span class="s">"Refund Description"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"failure_code"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+  </span><span class="s">"failure_msg"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+  </span><span class="s">"metadata"</span><span class="o">:</span><span class="x"> </span><span class="p">{},</span><span class="x">
+  </span><span class="s">"charge"</span><span class="o">:</span><span class="x"> </span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"charge_order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"123456789"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"transaction_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"2004450349201512090096425284"</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+  <span class="s">"id"</span><span class="p">:</span> <span class="s">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"refund"</span><span class="p">,</span>
+  <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s">"amount"</span><span class="p">:</span> <span class="m">9</span><span class="p">,</span>
+  <span class="s">"created"</span><span class="p">:</span> <span class="m">1409634160</span><span class="p">,</span>
+  <span class="s">"succeed"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+  <span class="s">"status"</span><span class="p">:</span> <span class="s">"succeeded"</span><span class="p">,</span>
+  <span class="s">"time_succeed"</span><span class="p">:</span> <span class="m">1409634192</span><span class="p">,</span>
+  <span class="s">"description"</span><span class="p">:</span> <span class="s">"Refund Description"</span><span class="p">,</span>
+  <span class="s">"failure_code"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+  <span class="s">"failure_msg"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+  <span class="s">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="s">"charge"</span><span class="p">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+  <span class="s">"charge_order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+  <span class="s">"transaction_no"</span><span class="p">:</span> <span class="s">"2004450349201512090096425284"</span>
+<span class="p">}</span>
+</code></pre>
 
 <h2 id="refund">创建 Refund 对象</h2>
 
@@ -121,6 +265,227 @@
 <h3 id="fanhui">fanhui参数</h3>
 
 <p>如果发起退款成功，返回一个退款 <code class="prettyprint">refund</code> 对象。如果发生错误，则会返回错误码和错误详情，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+<pre class="highlight plaintext"><code>  POST https://api.pingxx.com/v1/charges/{CHARGE_ID}/refunds
+</code></pre>
+<pre class="highlight php"><code>  $ch = \Pingpp\Charge::retrieve({CHARGE_ID});
+  $re = $ch-&gt;refunds-&gt;create();
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Map</span> <span class="n">params</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">();</span>
+  <span class="n">Charge</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">Charge</span><span class="o">.</span><span class="na">retrieve</span><span class="o">({</span><span class="n">CHARGE_ID</span><span class="o">});</span>
+  <span class="n">Refund</span> <span class="n">re</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="na">getRefunds</span><span class="o">().</span><span class="na">create</span><span class="o">(</span><span class="n">params</span><span class="o">);</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="n">ch</span> <span class="o">=</span> <span class="no">Pingpp</span><span class="o">::</span><span class="no">Charge</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">({</span><span class="no">CHARGE_ID</span><span class="p">})</span>
+  <span class="n">re</span> <span class="o">=</span> <span class="n">ch</span><span class="p">.</span><span class="nf">refunds</span><span class="p">.</span><span class="nf">create</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  pingpp.charges.createRefund(
+    {CHARGE_ID},
+    {},
+    function(err, refund) {
+    }
+  );
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">ch</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">Charge</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">'CHARGE_ID'</span><span class="p">)</span>
+  <span class="n">re</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="n">refunds</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s">'desc'</span><span class="p">,</span> <span class="n">amount</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">re</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">refund</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="s">"CHARGE_ID"</span><span class="p">,</span><span class="x"> </span><span class="o">&amp;</span><span class="n">RefundParams</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>  <span class="nf">create</span><span class="p">(</span><span class="n">String</span> <span class="n">chId</span><span class="p">,</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="k">params</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  curl https://api.pingxx.com/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC: \
+  -d description="Refund Description" \
+  -X POST
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+
+  $ch = \Pingpp\Charge::retrieve('ch_L8qn10mLmr1GS8e5OODmHaL4');
+  $re = $ch-&gt;refunds-&gt;create(array('description'=<span class="ni">&amp;gt;</span>'Refund Description'));
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Pingpp</span><span class="o">.</span><span class="na">apiKey</span> <span class="o">=</span> <span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="o">;</span>
+
+  <span class="n">Map</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="n">params</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;();</span>
+  <span class="n">params</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"description"</span><span class="o">,</span> <span class="s">"Refund Description"</span><span class="o">);</span>
+  <span class="n">Charge</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">Charge</span><span class="o">.</span><span class="na">retrieve</span><span class="o">(</span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="o">);</span>
+  <span class="n">Refund</span> <span class="n">re</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="na">getRefunds</span><span class="o">().</span><span class="na">create</span><span class="o">(</span><span class="n">params</span><span class="o">);</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="no">Pingpp</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span>
+  <span class="n">ch</span> <span class="o">=</span> <span class="no">Pingpp</span><span class="o">::</span><span class="no">Charge</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s2">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">)</span>
+  <span class="n">re</span> <span class="o">=</span> <span class="n">ch</span><span class="p">.</span><span class="nf">refunds</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">:description</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="s2">"Refund Description"</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC')
+  pingpp.charges.createRefund(
+    "ch_L8qn10mLmr1GS8e5OODmHaL4",
+    { description: "Refund Description" },
+    function(err, refund) {
+      // 异步调用
+    }
+  );
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">pingpp</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'</span>
+  <span class="n">ch</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">Charge</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">'ch_L8qn10mLmr1GS8e5OODmHaL4'</span><span class="p">)</span>
+  <span class="n">re</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="n">refunds</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s">'Refund Description'</span><span class="p">,</span> <span class="n">amount</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">pingpp</span><span class="o">.</span><span class="n">Key</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="x">
+  </span><span class="n">refundParams</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">pingpp</span><span class="o">.</span><span class="n">RefundParams</span><span class="p">{</span><span class="x">
+    </span><span class="n">Description</span><span class="o">:</span><span class="x"> </span><span class="s">"Refund Description"</span><span class="p">,</span><span class="x">
+  </span><span class="p">}</span><span class="x">
+  </span><span class="c">//charge_id 为待退款的 Charge 的 ID</span><span class="x">
+  </span><span class="n">refund</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">refund</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span><span class="x"> </span><span class="n">refundParams</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>    <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="k">params</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;();</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"amount"</span><span class="p">,</span> <span class="m">100</span><span class="p">);</span>
+    <span class="k">params</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"description"</span><span class="p">,</span> <span class="s">"Your Description"</span><span class="p">);</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">Refund</span> <span class="n">re</span> <span class="p">=</span> <span class="n">Refund</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="n">chId</span><span class="p">,</span> <span class="k">params</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">re</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+    <span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+  "id": "re_y1u944PmfnrTHyvnL0nD0iD1",
+  "object": "refund",
+  "order_no": "y1u944PmfnrTHyvnL0nD0iD1",
+  "amount": 9,
+  "created": 1409634160,
+  "succeed": true,
+  "status": "succeeded",
+  "time_succeed": 1409634192,
+  "description": "Refund Description",
+  "failure_code": null,
+  "failure_msg": null,
+  "metadata": {},
+  "charge": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+  "charge_order_no": "123456789",
+  "transaction_no": "2004450349201512090096425284"
+}
+</code></pre>
+<pre class="highlight php"><code>{
+  "id": "re_y1u944PmfnrTHyvnL0nD0iD1",
+  "object": "refund",
+  "order_no": "y1u944PmfnrTHyvnL0nD0iD1",
+  "amount": 9,
+  "created": 1409634160,
+  "succeed": true,
+  "status": "succeeded",
+  "time_succeed": 1409634192,
+  "description": "Refund Description",
+  "failure_code": null,
+  "failure_msg": null,
+  "metadata": {},
+  "charge": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+  "charge_order_no": "123456789",
+  "transaction_no": "2004450349201512090096425284"
+}
+</code></pre>
+<pre class="highlight java"><code><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">Refund</span> <span class="nl">JSON:</span> <span class="o">{</span>
+  <span class="s">"id"</span><span class="o">:</span> <span class="s">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="o">,</span>
+  <span class="s">"object"</span><span class="o">:</span> <span class="s">"refund"</span><span class="o">,</span>
+  <span class="s">"order_no"</span><span class="o">:</span> <span class="s">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="o">,</span>
+  <span class="s">"amount"</span><span class="o">:</span> <span class="mi">9</span><span class="o">,</span>
+  <span class="s">"created"</span><span class="o">:</span> <span class="mi">1409634160</span><span class="o">,</span>
+  <span class="s">"succeed"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+  <span class="s">"status"</span><span class="o">:</span> <span class="s">"succeeded"</span><span class="o">,</span>
+  <span class="s">"time_succeed"</span><span class="o">:</span> <span class="mi">1409634192</span><span class="o">,</span>
+  <span class="s">"description"</span><span class="o">:</span> <span class="s">"Refund Description"</span><span class="o">,</span>
+  <span class="s">"failure_code"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"failure_msg"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"metadata"</span><span class="o">:</span> <span class="o">{},</span>
+  <span class="s">"charge"</span><span class="o">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="o">,</span>
+  <span class="s">"charge_order_no"</span><span class="o">:</span> <span class="s">"123456789"</span><span class="o">,</span>
+  <span class="s">"transaction_no"</span><span class="o">:</span> <span class="s">"2004450349201512090096425284"</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1">#&amp;lt;Pingpp::Refund id=re_y1u944PmfnrTHyvnL0nD0iD1&amp;gt; JSON: {</span>
+  <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"refund"</span><span class="p">,</span>
+  <span class="s2">"order_no"</span><span class="p">:</span> <span class="s2">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s2">"amount"</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+  <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1409634160</span><span class="p">,</span>
+  <span class="s2">"succeed"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"succeeded"</span><span class="p">,</span>
+  <span class="s2">"time_succeed"</span><span class="p">:</span> <span class="mi">1409634192</span><span class="p">,</span>
+  <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Refund Description"</span><span class="p">,</span>
+  <span class="s2">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="s2">"charge"</span><span class="p">:</span> <span class="s2">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+  <span class="s2">"charge_order_no"</span><span class="p">:</span> <span class="s2">"123456789"</span><span class="p">,</span>
+  <span class="s2">"transaction_no"</span><span class="p">:</span> <span class="s2">"2004450349201512090096425284"</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+  "id": "re_y1u944PmfnrTHyvnL0nD0iD1",
+  "object": "refund",
+  "order_no": "y1u944PmfnrTHyvnL0nD0iD1",
+  "amount": 9,
+  "created": 1409634160,
+  "succeed": true,
+  "status": "succeeded",
+  "time_succeed": 1409634192,
+  "description": "Refund Description",
+  "failure_code": null,
+  "failure_msg": null,
+  "metadata": {},
+  "charge": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+  "charge_order_no": "123456789",
+  "transaction_no": "2004450349201512090096425284"
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+  <span class="s">"id"</span><span class="p">:</span> <span class="s">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"refund"</span><span class="p">,</span>
+  <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s">"amount"</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+  <span class="s">"created"</span><span class="p">:</span> <span class="mi">1409634160</span><span class="p">,</span>
+  <span class="s">"succeed"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+  <span class="s">"status"</span><span class="p">:</span> <span class="s">"succeeded"</span><span class="p">,</span>
+  <span class="s">"time_succeed"</span><span class="p">:</span> <span class="mi">1409634192</span><span class="p">,</span>
+  <span class="s">"description"</span><span class="p">:</span> <span class="s">"Refund Description"</span><span class="p">,</span>
+  <span class="s">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="s">"charge"</span><span class="p">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+  <span class="s">"charge_order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+  <span class="s">"transaction_no"</span><span class="p">:</span> <span class="s">"2004450349201512090096425284"</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+  </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"refund"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"amount"</span><span class="o">:</span><span class="x"> </span><span class="m">9</span><span class="p">,</span><span class="x">
+  </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1409634160</span><span class="p">,</span><span class="x">
+  </span><span class="s">"succeed"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+  </span><span class="s">"status"</span><span class="o">:</span><span class="x"> </span><span class="s">"succeeded"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"time_succeed"</span><span class="o">:</span><span class="x"> </span><span class="m">1409634192</span><span class="p">,</span><span class="x">
+  </span><span class="s">"description"</span><span class="o">:</span><span class="x"> </span><span class="s">"Refund Description"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"failure_code"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+  </span><span class="s">"failure_msg"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+  </span><span class="s">"metadata"</span><span class="o">:</span><span class="x"> </span><span class="p">{},</span><span class="x">
+  </span><span class="s">"charge"</span><span class="o">:</span><span class="x"> </span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"charge_order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"123456789"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"transaction_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"2004450349201512090096425284"</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+  <span class="s">"id"</span><span class="p">:</span> <span class="s">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"refund"</span><span class="p">,</span>
+  <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s">"amount"</span><span class="p">:</span> <span class="m">9</span><span class="p">,</span>
+  <span class="s">"created"</span><span class="p">:</span> <span class="m">1409634160</span><span class="p">,</span>
+  <span class="s">"succeed"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+  <span class="s">"status"</span><span class="p">:</span> <span class="s">"succeeded"</span><span class="p">,</span>
+  <span class="s">"time_succeed"</span><span class="p">:</span> <span class="m">1409634192</span><span class="p">,</span>
+  <span class="s">"description"</span><span class="p">:</span> <span class="s">"Refund Description"</span><span class="p">,</span>
+  <span class="s">"failure_code"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+  <span class="s">"failure_msg"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+  <span class="s">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="s">"charge"</span><span class="p">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+  <span class="s">"charge_order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+  <span class="s">"transaction_no"</span><span class="p">:</span> <span class="s">"2004450349201512090096425284"</span>
+<span class="p">}</span>
+</code></pre>
 
 <h2 id="refund">查询 Refund 对象</h2>
 
@@ -147,8 +512,503 @@
 <h3 id="fan">fan回</h3>
 
 <p>返回一个已存在的 <code class="prettyprint">refund</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+<pre class="highlight plaintext"><code>  GET https://api.pingxx.com/v1/charges/{CHARGE_ID}/refunds/{REFUND_ID}
+</code></pre>
+<pre class="highlight php"><code>  $charge = \Pingpp\Charge::retrieve({CHARGE_ID});
+  $refund = $charge-&gt;refunds-&gt;retrieve({REFUND_ID});
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Charge</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">Charge</span><span class="o">.</span><span class="na">retrieve</span><span class="o">({</span><span class="n">CHARGE_ID</span><span class="o">});</span>
+  <span class="n">Refund</span> <span class="n">re</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="na">refunds</span><span class="o">-&gt;</span><span class="n">retrieve</span><span class="o">({</span><span class="n">REFUND_ID</span><span class="o">});</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="n">ch</span> <span class="o">=</span> <span class="no">Pingpp</span><span class="o">::</span><span class="no">Charge</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">({</span><span class="no">CHARGE_ID</span><span class="p">})</span>
+  <span class="n">re</span> <span class="o">=</span> <span class="n">ch</span><span class="p">.</span><span class="nf">refunds</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">({</span><span class="no">REFUND_ID</span><span class="p">})</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  pingpp.charges.retrieveRefund(
+    {CHARGE_ID},
+    {REFUND_ID},
+    function(err, refund) {
+    }
+  );
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">ch</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">Charge</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">'CHARGE_ID'</span><span class="p">)</span>
+  <span class="n">re</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="n">refunds</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">'REFUND_ID'</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">re</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">refund</span><span class="o">.</span><span class="n">Get</span><span class="p">(</span><span class="s">"CHARGE_ID"</span><span class="p">,</span><span class="x"> </span><span class="s">"REFUND_ID"</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>  <span class="nf">retrieve</span><span class="p">(</span><span class="n">String</span> <span class="n">chId</span><span class="p">,</span> <span class="n">String</span> <span class="n">reId</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  curl https://api.pingxx.com/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds/re_TmbvDKHiXLCSG0mnj9jnDyjA \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC:
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+
+  $ch = \Pingpp\Charge::retrieve('ch_L8qn10mLmr1GS8e5OODmHaL4');
+  $refund = $ch-&gt;refunds-&gt;retrieve('re_TmbvDKHiXLCSG0mnj9jnDyjA');
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Pingpp</span><span class="o">.</span><span class="na">apiKey</span> <span class="o">=</span> <span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="o">;</span>
+
+  <span class="n">Charge</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">Charge</span><span class="o">.</span><span class="na">retrieve</span><span class="o">(</span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="o">);</span>
+  <span class="n">Refund</span> <span class="n">re</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="na">getRefunds</span><span class="o">().</span><span class="na">retrieve</span><span class="o">(</span><span class="s">"re_TmbvDKHiXLCSG0mnj9jnDyjA"</span><span class="o">);</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="nb">require</span> <span class="s2">"pingpp"</span>
+  <span class="no">Pingpp</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span>
+  <span class="n">ch</span> <span class="o">=</span> <span class="no">Pingpp</span><span class="o">::</span><span class="no">Charge</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s2">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">)</span>
+  <span class="n">re</span> <span class="o">=</span> <span class="n">ch</span><span class="p">.</span><span class="nf">refunds</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s2">"re_TmbvDKHiXLCSG0mnj9jnDyjA"</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  pingpp.charges.retrieveRefund(
+    "ch_L8qn10mLmr1GS8e5OODmHaL4",
+    "re_TmbvDKHiXLCSG0mnj9jnDyjA",
+    function(err, refund) {
+      // 异步调用
+    }
+  );
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">pingpp</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'</span>
+  <span class="kn">import</span> <span class="nn">pingpp</span>
+  <span class="n">ch</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">Charge</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">'ch_L8qn10mLmr1GS8e5OODmHaL4'</span><span class="p">)</span>
+  <span class="n">re</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="n">refunds</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">'re_TmbvDKHiXLCSG0mnj9jnDyjA'</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">pingpp</span><span class="o">.</span><span class="n">Key</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="x">
+  </span><span class="n">refund</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">refund</span><span class="o">.</span><span class="n">Get</span><span class="p">(</span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span><span class="x"> </span><span class="s">"re_TmbvDKHiXLCSG0mnj9jnDyjA"</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">Refund</span> <span class="n">re</span> <span class="p">=</span> <span class="n">Refund</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="n">chId</span><span class="p">,</span> <span class="n">reId</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">re</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">AuthenticationException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+    <span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+  "id": "re_y1u944PmfnrTHyvnL0nD0iD1",
+  "object": "refund",
+  "order_no": "y1u944PmfnrTHyvnL0nD0iD1",
+  "amount": 9,
+  "created": 1409634160,
+  "succeed": true,
+  "status": "succeeded",
+  "time_succeed": 1409634192,
+  "description": "Refund Description",
+  "failure_code": null,
+  "failure_msg": null,
+  "metadata": {},
+  "charge": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+  "charge_order_no": "123456789",
+  "transaction_no": "2004450349201512090096425284"
+}
+</code></pre>
+<pre class="highlight php"><code>{
+  "id": "re_y1u944PmfnrTHyvnL0nD0iD1",
+  "object": "refund",
+  "order_no": "y1u944PmfnrTHyvnL0nD0iD1",
+  "amount": 9,
+  "created": 1409634160,
+  "succeed": true,
+  "status": "succeeded",
+  "time_succeed": 1409634192,
+  "description": "Refund Description",
+  "failure_code": null,
+  "failure_msg": null,
+  "metadata": {},
+  "charge": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+  "charge_order_no": "123456789",
+  "transaction_no": "2004450349201512090096425284"
+}
+</code></pre>
+<pre class="highlight java"><code><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">Refund</span> <span class="nl">JSON:</span> <span class="o">{</span>
+  <span class="s">"id"</span><span class="o">:</span> <span class="s">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="o">,</span>
+  <span class="s">"object"</span><span class="o">:</span> <span class="s">"refund"</span><span class="o">,</span>
+  <span class="s">"order_no"</span><span class="o">:</span> <span class="s">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="o">,</span>
+  <span class="s">"amount"</span><span class="o">:</span> <span class="mi">9</span><span class="o">,</span>
+  <span class="s">"created"</span><span class="o">:</span> <span class="mi">1409634160</span><span class="o">,</span>
+  <span class="s">"succeed"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+  <span class="s">"status"</span><span class="o">:</span> <span class="s">"succeeded"</span><span class="o">,</span>
+  <span class="s">"time_succeed"</span><span class="o">:</span> <span class="mi">1409634192</span><span class="o">,</span>
+  <span class="s">"description"</span><span class="o">:</span> <span class="s">"Refund Description"</span><span class="o">,</span>
+  <span class="s">"failure_code"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"failure_msg"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"metadata"</span><span class="o">:</span> <span class="o">{},</span>
+  <span class="s">"charge"</span><span class="o">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="o">,</span>
+  <span class="s">"charge_order_no"</span><span class="o">:</span> <span class="s">"123456789"</span><span class="o">,</span>
+  <span class="s">"transaction_no"</span><span class="o">:</span> <span class="s">"2004450349201512090096425284"</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1">#&amp;lt;Pingpp::Refund id=re_y1u944PmfnrTHyvnL0nD0iD1&amp;gt; JSON: {</span>
+  <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"refund"</span><span class="p">,</span>
+  <span class="s2">"order_no"</span><span class="p">:</span> <span class="s2">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s2">"amount"</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+  <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1409634160</span><span class="p">,</span>
+  <span class="s2">"succeed"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"succeeded"</span><span class="p">,</span>
+  <span class="s2">"time_succeed"</span><span class="p">:</span> <span class="mi">1409634192</span><span class="p">,</span>
+  <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Refund Description"</span><span class="p">,</span>
+  <span class="s2">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="s2">"charge"</span><span class="p">:</span> <span class="s2">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+  <span class="s2">"charge_order_no"</span><span class="p">:</span> <span class="s2">"123456789"</span><span class="p">,</span>
+  <span class="s2">"transaction_no"</span><span class="p">:</span> <span class="s2">"2004450349201512090096425284"</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+  "id": "re_y1u944PmfnrTHyvnL0nD0iD1",
+  "object": "refund",
+  "order_no": "y1u944PmfnrTHyvnL0nD0iD1",
+  "amount": 9,
+  "created": 1409634160,
+  "succeed": true,
+  "status": "succeeded",
+  "time_succeed": 1409634192,
+  "description": "Refund Description",
+  "failure_code": null,
+  "failure_msg": null,
+  "metadata": {},
+  "charge": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+  "charge_order_no": "123456789",
+  "transaction_no": "2004450349201512090096425284"
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+  <span class="s">"id"</span><span class="p">:</span> <span class="s">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"refund"</span><span class="p">,</span>
+  <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s">"amount"</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+  <span class="s">"created"</span><span class="p">:</span> <span class="mi">1409634160</span><span class="p">,</span>
+  <span class="s">"succeed"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+  <span class="s">"status"</span><span class="p">:</span> <span class="s">"succeeded"</span><span class="p">,</span>
+  <span class="s">"time_succeed"</span><span class="p">:</span> <span class="mi">1409634192</span><span class="p">,</span>
+  <span class="s">"description"</span><span class="p">:</span> <span class="s">"Refund Description"</span><span class="p">,</span>
+  <span class="s">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="s">"charge"</span><span class="p">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+  <span class="s">"charge_order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+  <span class="s">"transaction_no"</span><span class="p">:</span> <span class="s">"2004450349201512090096425284"</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+  </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"refund"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"amount"</span><span class="o">:</span><span class="x"> </span><span class="m">9</span><span class="p">,</span><span class="x">
+  </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1409634160</span><span class="p">,</span><span class="x">
+  </span><span class="s">"succeed"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+  </span><span class="s">"status"</span><span class="o">:</span><span class="x"> </span><span class="s">"succeeded"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"time_succeed"</span><span class="o">:</span><span class="x"> </span><span class="m">1409634192</span><span class="p">,</span><span class="x">
+  </span><span class="s">"description"</span><span class="o">:</span><span class="x"> </span><span class="s">"Refund Description"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"failure_code"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+  </span><span class="s">"failure_msg"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+  </span><span class="s">"metadata"</span><span class="o">:</span><span class="x"> </span><span class="p">{},</span><span class="x">
+  </span><span class="s">"charge"</span><span class="o">:</span><span class="x"> </span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"charge_order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"123456789"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"transaction_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"2004450349201512090096425284"</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+  <span class="s">"id"</span><span class="p">:</span> <span class="s">"re_y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"refund"</span><span class="p">,</span>
+  <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"y1u944PmfnrTHyvnL0nD0iD1"</span><span class="p">,</span>
+  <span class="s">"amount"</span><span class="p">:</span> <span class="m">9</span><span class="p">,</span>
+  <span class="s">"created"</span><span class="p">:</span> <span class="m">1409634160</span><span class="p">,</span>
+  <span class="s">"succeed"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+  <span class="s">"status"</span><span class="p">:</span> <span class="s">"succeeded"</span><span class="p">,</span>
+  <span class="s">"time_succeed"</span><span class="p">:</span> <span class="m">1409634192</span><span class="p">,</span>
+  <span class="s">"description"</span><span class="p">:</span> <span class="s">"Refund Description"</span><span class="p">,</span>
+  <span class="s">"failure_code"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+  <span class="s">"failure_msg"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+  <span class="s">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="s">"charge"</span><span class="p">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+  <span class="s">"charge_order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+  <span class="s">"transaction_no"</span><span class="p">:</span> <span class="s">"2004450349201512090096425284"</span>
+<span class="p">}</span>
+</code></pre>
 
 <h2 id="refund">查询 Refund 对象列表</h2>
+<pre class="highlight plaintext"><code>  GET https://api.pingxx.com/v1/charges/{CHARGE_ID}/refunds
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\Charge::retrieve({CHARGE_ID})-&gt;refunds-&gt;all();
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Charge</span><span class="o">.</span><span class="na">retrieve</span><span class="o">({</span><span class="n">CHARGE_ID</span><span class="o">}).</span><span class="na">getRefunds</span><span class="o">().</span><span class="na">all</span><span class="o">();</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="no">Pingpp</span><span class="o">::</span><span class="no">Charge</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">({</span><span class="no">CHARGE_ID</span><span class="p">}).</span><span class="nf">refunds</span><span class="p">.</span><span class="nf">all</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  pingpp.charges.listRefunds({CHARGE_ID});
+</code></pre>
+<pre class="highlight python"><code>
+  <span class="n">ch</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">Charge</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">'CHARGE_ID'</span><span class="p">)</span>
+  <span class="n">res</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="n">refunds</span><span class="o">.</span><span class="nb">all</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">refund</span><span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="s">"CHARGE_ID"</span><span class="p">,</span><span class="x"> </span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">pingpp</span><span class="o">.</span><span class="n">RefundListParams</span><span class="p">)</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>  <span class="nf">list</span><span class="p">(</span><span class="n">String</span> <span class="n">chId</span><span class="p">,</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="k">params</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  curl https://api.pingxx.com/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds?limit=3 \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC:
+</code></pre>
+<pre class="highlight php"><code>  \Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+
+  \Pingpp\Charge::retrieve('ch_L8qn10mLmr1GS8e5OODmHaL4')
+  -&gt;refunds-&gt;all(array('limit'=<span class="ni">&amp;gt;</span>3));
+</code></pre>
+<pre class="highlight java"><code>  <span class="n">Pingpp</span><span class="o">.</span><span class="na">apiKey</span> <span class="o">=</span> <span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="o">;</span>
+
+  <span class="n">Charge</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">Charge</span><span class="o">.</span><span class="na">retrieve</span><span class="o">(</span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="o">);</span>
+  <span class="n">Map</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="n">refundParams</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;();</span>
+  <span class="n">refundParams</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"limit"</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>
+  <span class="n">ChargeRefundCollection</span> <span class="n">refunds</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="na">getRefunds</span><span class="o">().</span><span class="na">all</span><span class="o">(</span><span class="n">refundParams</span><span class="o">);</span>
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="no">Pingpp</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span>
+  <span class="no">Pingpp</span><span class="o">::</span><span class="no">Charge</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s2">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">).</span><span class="nf">refunds</span><span class="p">.</span><span class="nf">all</span><span class="p">({</span><span class="ss">:limit</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">3</span><span class="p">})</span>
+</code></pre>
+<pre class="highlight plaintext"><code>  var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  pingpp.charges.listRefunds(
+    "ch_L8qn10mLmr1GS8e5OODmHaL4",
+    { limit: 3 },
+    function(err, refunds) {
+      // 异步调用
+    }
+  );
+</code></pre>
+<pre class="highlight python"><code>  <span class="n">pingpp</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'</span>
+  <span class="n">ch</span> <span class="o">=</span> <span class="n">pingpp</span><span class="o">.</span><span class="n">Charge</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">'ch_L8qn10mLmr1GS8e5OODmHaL4'</span><span class="p">)</span>
+  <span class="n">res</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="n">refunds</span><span class="o">.</span><span class="nb">all</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight go"><code><span class="x">  </span><span class="n">pingpp</span><span class="o">.</span><span class="n">Key</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="s">"sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"</span><span class="x">
+  </span><span class="n">params</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">pingpp</span><span class="o">.</span><span class="n">RefundListParams</span><span class="p">{}</span><span class="x">
+  </span><span class="n">params</span><span class="o">.</span><span class="n">Filters</span><span class="o">.</span><span class="n">AddFilter</span><span class="p">(</span><span class="s">"limit"</span><span class="p">,</span><span class="x"> </span><span class="s">""</span><span class="p">,</span><span class="x"> </span><span class="s">"3"</span><span class="p">)</span><span class="x">
+  </span><span class="c">//设置是不是只需要之前设置的 limit 这一个查询参数</span><span class="x">
+  </span><span class="n">params</span><span class="o">.</span><span class="n">Single</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="no">true</span><span class="x">
+  </span><span class="n">i</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">refund</span><span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span><span class="x"> </span><span class="n">params</span><span class="p">)</span><span class="x">
+  </span><span class="k">for</span><span class="x"> </span><span class="n">i</span><span class="o">.</span><span class="n">Next</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">c</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">i</span><span class="o">.</span><span class="n">Refund</span><span class="p">()</span><span class="x">
+  </span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code>    <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">refundParams</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">String</span><span class="p">,</span> <span class="n">Object</span><span class="p">&amp;</span><span class="n">gt</span><span class="p">;();</span>
+    <span class="n">refundParams</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"limit"</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">RefundList</span> <span class="n">res</span> <span class="p">=</span> <span class="n">Refund</span><span class="p">.</span><span class="nf">list</span><span class="p">(</span><span class="n">chId</span><span class="p">,</span> <span class="n">refundParams</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">res</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">AuthenticationException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Message</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+    <span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+  "object": "list",
+  "url": "/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds",
+  "has_more": false,
+  "data": [
+    {
+      "id": "re_TmbvDKHiXLCSG0mnj9jnDyjA",
+      "object": "refund",
+      "order_no": "TmbvDKHiXLCSG0mnj9jnDyjA",
+      "amount": 100,
+      "created": 1410835214,
+      "succeed": true,
+      "status": "succeeded",
+      "time_succeed": 1410835652,
+      "description": "Refund Description",
+      "failure_code": null,
+      "failure_msg": null,
+      "metadata": {},
+      "charge": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+      "charge_order_no": "123456789",
+      "transaction_no": "2004450349201512090096425284"
+    },
+    {...},
+    {...}
+  ]
+}
+</code></pre>
+<pre class="highlight php"><code>{
+  "object": "list",
+  "url": "/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds",
+  "has_more": false,
+  "data": [
+    {
+      "id": "re_TmbvDKHiXLCSG0mnj9jnDyjA",
+      "object": "refund",
+      "order_no": "TmbvDKHiXLCSG0mnj9jnDyjA",
+      "amount": 100,
+      "created": 1410835214,
+      "succeed": true,
+      "status": "succeeded",
+      "time_succeed": 1410835652,
+      "description": "Refund Description",
+      "failure_code": null,
+      "failure_msg": null,
+      "metadata": {},
+      "charge": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+      "charge_order_no": "123456789",
+      "transaction_no": "2004450349201512090096425284"
+    },
+    {...},
+    {...}
+  ]
+}
+</code></pre>
+<pre class="highlight java"><code><span class="err">#</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">RefundCollection</span> <span class="n">id</span><span class="o">=</span><span class="err">#</span><span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="nl">JSON:</span> <span class="o">{</span>
+  <span class="s">"object"</span><span class="o">:</span> <span class="s">"list"</span><span class="o">,</span>
+  <span class="s">"url"</span><span class="o">:</span> <span class="s">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="o">,</span>
+  <span class="s">"has_more"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span>
+  <span class="s">"data"</span><span class="o">:</span> <span class="o">[</span>
+    <span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">Refund</span> <span class="nl">JSON:</span> <span class="o">{</span>
+      <span class="s">"id"</span><span class="o">:</span> <span class="s">"re_TmbvDKHiXLCSG0mnj9jnDyjA"</span><span class="o">,</span>
+      <span class="s">"object"</span><span class="o">:</span> <span class="s">"refund"</span><span class="o">,</span>
+      <span class="s">"order_no"</span><span class="o">:</span> <span class="s">"TmbvDKHiXLCSG0mnj9jnDyjA"</span><span class="o">,</span>
+      <span class="s">"amount"</span><span class="o">:</span> <span class="mi">100</span><span class="o">,</span>
+      <span class="s">"created"</span><span class="o">:</span> <span class="mi">1410835214</span><span class="o">,</span>
+      <span class="s">"succeed"</span><span class="o">:</span> <span class="kc">true</span><span class="o">,</span>
+      <span class="s">"status"</span><span class="o">:</span> <span class="s">"succeeded"</span><span class="o">,</span>
+      <span class="s">"time_succeed"</span><span class="o">:</span> <span class="mi">1410835652</span><span class="o">,</span>
+      <span class="s">"description"</span><span class="o">:</span> <span class="s">"Refund Description"</span><span class="o">,</span>
+      <span class="s">"failure_code"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+      <span class="s">"failure_msg"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+      <span class="s">"metadata"</span><span class="o">:</span> <span class="o">{},</span>
+      <span class="s">"charge"</span><span class="o">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="o">,</span>
+      <span class="s">"charge_order_no"</span><span class="o">:</span> <span class="s">"123456789"</span><span class="o">,</span>
+      <span class="s">"transaction_no"</span><span class="o">:</span> <span class="s">"2004450349201512090096425284"</span>
+    <span class="o">}</span>
+    <span class="err">#</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">Refund</span><span class="o">[...]</span> <span class="o">...&amp;</span><span class="n">gt</span><span class="o">;,</span>
+    <span class="err">#</span><span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span><span class="n">com</span><span class="o">.</span><span class="na">pingplusplus</span><span class="o">.</span><span class="na">model</span><span class="o">.</span><span class="na">Refund</span><span class="o">[...]</span> <span class="o">...&amp;</span><span class="n">gt</span><span class="o">;</span>
+  <span class="o">]</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="c1">#&amp;lt;Pingpp::ListObject&gt;JSON: {</span>
+  <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"list"</span><span class="p">,</span>
+  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="p">,</span>
+  <span class="s2">"has_more"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="s2">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"re_TmbvDKHiXLCSG0mnj9jnDyjA"</span><span class="p">,</span>
+      <span class="s2">"object"</span><span class="p">:</span> <span class="s2">"refund"</span><span class="p">,</span>
+      <span class="s2">"order_no"</span><span class="p">:</span> <span class="s2">"TmbvDKHiXLCSG0mnj9jnDyjA"</span><span class="p">,</span>
+      <span class="s2">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="s2">"created"</span><span class="p">:</span> <span class="mi">1410835214</span><span class="p">,</span>
+      <span class="s2">"succeed"</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+      <span class="s2">"status"</span><span class="p">:</span> <span class="s2">"succeeded"</span><span class="p">,</span>
+      <span class="s2">"time_succeed"</span><span class="p">:</span> <span class="mi">1410835652</span><span class="p">,</span>
+      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Refund Description"</span><span class="p">,</span>
+      <span class="s2">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+      <span class="s2">"charge"</span><span class="p">:</span> <span class="s2">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+      <span class="s2">"charge_order_no"</span><span class="p">:</span> <span class="s2">"123456789"</span><span class="p">,</span>
+      <span class="s2">"transaction_no"</span><span class="p">:</span> <span class="s2">"2004450349201512090096425284"</span>
+    <span class="p">},</span>
+    <span class="c1">#&amp;lt;Pingpp::Refund[...] ...&amp;gt;,</span>
+    <span class="c1">#&amp;lt;Pingpp::Refund[...] ...&amp;gt;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+  "object": "list",
+  "url": "/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds",
+  "has_more": false,
+  "data": [
+    {
+      "id": "re_TmbvDKHiXLCSG0mnj9jnDyjA",
+      "object": "refund",
+      "order_no": "TmbvDKHiXLCSG0mnj9jnDyjA",
+      "amount": 100,
+      "created": 1410835214,
+      "succeed": true,
+      "status": "succeeded",
+      "time_succeed": 1410835652,
+      "description": "Refund Description",
+      "failure_code": null,
+      "failure_msg": null,
+      "metadata": {},
+      "charge": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+      "charge_order_no": "123456789",
+      "transaction_no": "2004450349201512090096425284"
+    },
+    {...},
+    {...}
+  ]
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span>
+  <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="p">,</span>
+  <span class="s">"has_more"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s">"id"</span><span class="p">:</span> <span class="s">"re_TmbvDKHiXLCSG0mnj9jnDyjA"</span><span class="p">,</span>
+      <span class="s">"object"</span><span class="p">:</span> <span class="s">"refund"</span><span class="p">,</span>
+      <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"TmbvDKHiXLCSG0mnj9jnDyjA"</span><span class="p">,</span>
+      <span class="s">"amount"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="s">"created"</span><span class="p">:</span> <span class="mi">1410835214</span><span class="p">,</span>
+      <span class="s">"succeed"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s">"status"</span><span class="p">:</span> <span class="s">"succeeded"</span><span class="p">,</span>
+      <span class="s">"time_succeed"</span><span class="p">:</span> <span class="mi">1410835652</span><span class="p">,</span>
+      <span class="s">"description"</span><span class="p">:</span> <span class="s">"Refund Description"</span><span class="p">,</span>
+      <span class="s">"failure_code"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s">"failure_msg"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+      <span class="s">"charge"</span><span class="p">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+      <span class="s">"charge_order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+      <span class="s">"transaction_no"</span><span class="p">:</span> <span class="s">"2004450349201512090096425284"</span>
+    <span class="p">},</span>
+    <span class="p">{</span><span class="o">...</span><span class="p">},</span>
+    <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+  </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"list"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"url"</span><span class="o">:</span><span class="x"> </span><span class="s">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="p">,</span><span class="x">
+  </span><span class="s">"has_more"</span><span class="o">:</span><span class="x"> </span><span class="no">false</span><span class="p">,</span><span class="x">
+  </span><span class="s">"data"</span><span class="o">:</span><span class="x"> </span><span class="p">[</span><span class="x">
+    </span><span class="p">{</span><span class="x">
+      </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"re_TmbvDKHiXLCSG0mnj9jnDyjA"</span><span class="p">,</span><span class="x">
+      </span><span class="s">"object"</span><span class="o">:</span><span class="x"> </span><span class="s">"refund"</span><span class="p">,</span><span class="x">
+      </span><span class="s">"order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"TmbvDKHiXLCSG0mnj9jnDyjA"</span><span class="p">,</span><span class="x">
+      </span><span class="s">"amount"</span><span class="o">:</span><span class="x"> </span><span class="m">100</span><span class="p">,</span><span class="x">
+      </span><span class="s">"created"</span><span class="o">:</span><span class="x"> </span><span class="m">1410835214</span><span class="p">,</span><span class="x">
+      </span><span class="s">"succeed"</span><span class="o">:</span><span class="x"> </span><span class="no">true</span><span class="p">,</span><span class="x">
+      </span><span class="s">"status"</span><span class="o">:</span><span class="x"> </span><span class="s">"succeeded"</span><span class="p">,</span><span class="x">
+      </span><span class="s">"time_succeed"</span><span class="o">:</span><span class="x"> </span><span class="m">1410835652</span><span class="p">,</span><span class="x">
+      </span><span class="s">"description"</span><span class="o">:</span><span class="x"> </span><span class="s">"Refund Description"</span><span class="p">,</span><span class="x">
+      </span><span class="s">"failure_code"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+      </span><span class="s">"failure_msg"</span><span class="o">:</span><span class="x"> </span><span class="n">null</span><span class="p">,</span><span class="x">
+      </span><span class="s">"metadata"</span><span class="o">:</span><span class="x"> </span><span class="p">{},</span><span class="x">
+      </span><span class="s">"charge"</span><span class="o">:</span><span class="x"> </span><span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span><span class="x">
+      </span><span class="s">"charge_order_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"123456789"</span><span class="p">,</span><span class="x">
+      </span><span class="s">"transaction_no"</span><span class="o">:</span><span class="x"> </span><span class="s">"2004450349201512090096425284"</span><span class="x">
+    </span><span class="p">},</span><span class="x">
+    </span><span class="p">{</span><span class="o">...</span><span class="p">},</span><span class="x">
+    </span><span class="p">{</span><span class="o">...</span><span class="p">}</span><span class="x">
+  </span><span class="p">]</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+  <span class="s">"object"</span><span class="p">:</span> <span class="s">"list"</span><span class="p">,</span>
+  <span class="s">"url"</span><span class="p">:</span> <span class="s">"/v1/charges/ch_L8qn10mLmr1GS8e5OODmHaL4/refunds"</span><span class="p">,</span>
+  <span class="s">"has_more"</span><span class="p">:</span> <span class="k">false</span><span class="p">,</span>
+  <span class="s">"data"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s">"id"</span><span class="p">:</span> <span class="s">"re_TmbvDKHiXLCSG0mnj9jnDyjA"</span><span class="p">,</span>
+      <span class="s">"object"</span><span class="p">:</span> <span class="s">"refund"</span><span class="p">,</span>
+      <span class="s">"order_no"</span><span class="p">:</span> <span class="s">"TmbvDKHiXLCSG0mnj9jnDyjA"</span><span class="p">,</span>
+      <span class="s">"amount"</span><span class="p">:</span> <span class="m">100</span><span class="p">,</span>
+      <span class="s">"created"</span><span class="p">:</span> <span class="m">1410835214</span><span class="p">,</span>
+      <span class="s">"succeed"</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+      <span class="s">"status"</span><span class="p">:</span> <span class="s">"succeeded"</span><span class="p">,</span>
+      <span class="s">"time_succeed"</span><span class="p">:</span> <span class="m">1410835652</span><span class="p">,</span>
+      <span class="s">"description"</span><span class="p">:</span> <span class="s">"Refund Description"</span><span class="p">,</span>
+      <span class="s">"failure_code"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+      <span class="s">"failure_msg"</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+      <span class="s">"metadata"</span><span class="p">:</span> <span class="p">{},</span>
+      <span class="s">"charge"</span><span class="p">:</span> <span class="s">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span>
+      <span class="s">"charge_order_no"</span><span class="p">:</span> <span class="s">"123456789"</span><span class="p">,</span>
+      <span class="s">"transaction_no"</span><span class="p">:</span> <span class="s">"2004450349201512090096425284"</span>
+    <span class="p">},</span>
+    <span class="p">{...},</span>
+    <span class="p">{...}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
 
 <p>返回之前创建 <code class="prettyprint">charge</code> 对象的一个 <code class="prettyprint">refund</code> 对象列表。列表是按创建时间进行排序，总是将最新的 <code class="prettyprint">refund</code> 对象显示在最前。</p>
 

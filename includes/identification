@@ -91,6 +91,102 @@
 <td><strong>string</strong></td>
 </tr>
 </tbody></table>
+<pre class="highlight plaintext"><code>{
+    "type": "id_card",
+    "app": "app_LibTW1n1SOq9Pin1",
+    "result_code": 0,
+    "message": "SUCCESS",
+    "paid":true,
+    "data": {
+        "id_name": "张三",
+        "id_number": "320291198811110000"
+    }
+}
+</code></pre>
+<pre class="highlight php"><code>{
+    "type": "id_card",
+    "app": "app_LibTW1n1SOq9Pin1",
+    "result_code": 0,
+    "message": "SUCCESS",
+    "paid":true,
+    "data": {
+        "id_name": "张三",
+        "id_number": "320291198811110000"
+    }
+}
+</code></pre>
+<pre class="highlight java"><code><span class="o">{</span>
+    <span class="s">"type"</span><span class="o">:</span> <span class="s">"id_card"</span><span class="o">,</span>
+    <span class="s">"app"</span><span class="o">:</span> <span class="s">"app_LibTW1n1SOq9Pin1"</span><span class="o">,</span>
+    <span class="s">"result_code"</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+    <span class="s">"message"</span><span class="o">:</span> <span class="s">"SUCCESS"</span><span class="o">,</span>
+    <span class="s">"paid"</span><span class="o">:</span><span class="kc">true</span><span class="o">,</span>
+    <span class="s">"data"</span><span class="o">:</span> <span class="o">{</span>
+        <span class="s">"id_name"</span><span class="o">:</span> <span class="s">"张三"</span><span class="o">,</span>
+        <span class="s">"id_number"</span><span class="o">:</span> <span class="s">"320291198811110000"</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<pre class="highlight ruby"><code><span class="p">{</span>
+    <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"id_card"</span><span class="p">,</span>
+    <span class="s2">"app"</span><span class="p">:</span> <span class="s2">"app_LibTW1n1SOq9Pin1"</span><span class="p">,</span>
+    <span class="s2">"result_code"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">"message"</span><span class="p">:</span> <span class="s2">"SUCCESS"</span><span class="p">,</span>
+    <span class="s2">"paid"</span><span class="ss">:true</span><span class="p">,</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"id_name"</span><span class="p">:</span> <span class="s2">"张三"</span><span class="p">,</span>
+        <span class="s2">"id_number"</span><span class="p">:</span> <span class="s2">"320291198811110000"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+    "type": "id_card",
+    "app": "app_LibTW1n1SOq9Pin1",
+    "result_code": 0,
+    "message": "SUCCESS",
+    "paid":true,
+    "data": {
+        "id_name": "张三",
+        "id_number": "320291198811110000"
+    }
+}
+</code></pre>
+<pre class="highlight python"><code><span class="p">{</span>
+    <span class="s">"type"</span><span class="p">:</span> <span class="s">"id_card"</span><span class="p">,</span>
+    <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_LibTW1n1SOq9Pin1"</span><span class="p">,</span>
+    <span class="s">"result_code"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s">"message"</span><span class="p">:</span> <span class="s">"SUCCESS"</span><span class="p">,</span>
+    <span class="s">"paid"</span><span class="p">:</span><span class="n">true</span><span class="p">,</span>
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">"id_name"</span><span class="p">:</span> <span class="s">"张三"</span><span class="p">,</span>
+        <span class="s">"id_number"</span><span class="p">:</span> <span class="s">"320291198811110000"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<pre class="highlight go"><code><span class="p">{</span><span class="x">
+    </span><span class="s">"type"</span><span class="o">:</span><span class="x"> </span><span class="s">"id_card"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"app"</span><span class="o">:</span><span class="x"> </span><span class="s">"app_LibTW1n1SOq9Pin1"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"result_code"</span><span class="o">:</span><span class="x"> </span><span class="m">0</span><span class="p">,</span><span class="x">
+    </span><span class="s">"message"</span><span class="o">:</span><span class="x"> </span><span class="s">"SUCCESS"</span><span class="p">,</span><span class="x">
+    </span><span class="s">"paid"</span><span class="o">:</span><span class="no">true</span><span class="p">,</span><span class="x">
+    </span><span class="s">"data"</span><span class="o">:</span><span class="x"> </span><span class="p">{</span><span class="x">
+        </span><span class="s">"id_name"</span><span class="o">:</span><span class="x"> </span><span class="s">"张三"</span><span class="p">,</span><span class="x">
+        </span><span class="s">"id_number"</span><span class="o">:</span><span class="x"> </span><span class="s">"320291198811110000"</span><span class="x">
+    </span><span class="p">}</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<pre class="highlight csharp"><code><span class="p">{</span>
+    <span class="s">"type"</span><span class="p">:</span> <span class="s">"id_card"</span><span class="p">,</span>
+    <span class="s">"app"</span><span class="p">:</span> <span class="s">"app_LibTW1n1SOq9Pin1"</span><span class="p">,</span>
+    <span class="s">"result_code"</span><span class="p">:</span> <span class="m">0</span><span class="p">,</span>
+    <span class="s">"message"</span><span class="p">:</span> <span class="s">"SUCCESS"</span><span class="p">,</span>
+    <span class="s">"paid"</span><span class="p">:</span><span class="k">true</span><span class="p">,</span>
+    <span class="s">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">"id_name"</span><span class="p">:</span> <span class="s">"张三"</span><span class="p">,</span>
+        <span class="s">"id_number"</span><span class="p">:</span> <span class="s">"320291198811110000"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 
 <h2 id="1">请求认证接口1</h2>
 
@@ -174,3 +270,122 @@
 <h3 id="fanhui">fanhui</h3>
 
 <p>请求成功，返回result_code字段为返回码，详情参照API文档附录的认证接口result_code说明；message中是错误描述信息，仅在成功时返回success;paid表示本次调用接口认证是否产生费用，paid为true则需要付费，false不产生费用。</p>
+<pre class="highlight plaintext"><code>  POST https://api.pingxx.com/v1/identification
+</code></pre>
+<pre class="highlight php"><code>  POST https://api.pingxx.com/v1/identification
+</code></pre>
+<pre class="highlight ruby"><code>  <span class="no">POST</span> <span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">api</span><span class="p">.</span><span class="nf">pingxx</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">identification</span>
+</code></pre>
+<pre class="highlight plaintext"><code>curl https://api.pingxx.com/v1/identification \
+-H "Pingplusplus-Signature: SIGNATURE" \
+-H "Content-Type: application/json" \
+-u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC: \
+-d '{
+    "type": "bank_card",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "data": {
+        "id_name": "张三",
+        "id_number": "320291198811110000",
+        "card_number": "6201111122223333"
+    }
+}'
+</code></pre>
+<pre class="highlight php"><code>\Pingpp\Identification::identify(array(
+    'type' =&gt; 'id_card',
+    'app' =&gt; $app_id,
+    'data' =&gt; array(
+        'id_name' =&gt; '张三', // 姓名
+        'id_number' =&gt; '310181198910107641' // 身份证号
+    )
+));
+\Pingpp\Identification::identify(array(
+    'type' =&gt; 'bank_card',
+    'app' =&gt; $app_id,
+    'data' =&gt; array(
+        'id_name' =&gt; '张三', // 姓名
+        'id_number' =&gt; '310181198910107641', // 身份证号,
+        'card_number' =&gt; '6201111122223333', // 银行卡号
+        'phone_number' =&gt; '18623234545' // 银行预留手机号，不支持 178 号段
+    )
+));
+</code></pre>
+<pre class="highlight ruby"><code><span class="no">Pingpp</span><span class="o">::</span><span class="no">Identification</span><span class="p">.</span><span class="nf">identify</span><span class="p">(</span>
+  <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s2">"id_card"</span><span class="p">,</span>
+  <span class="ss">:app</span>  <span class="o">=&gt;</span> <span class="no">APP_ID</span><span class="p">,</span>
+  <span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:id_name</span> <span class="o">=&gt;</span> <span class="s2">"张三"</span><span class="p">,</span> <span class="c1"># 姓名</span>
+      <span class="ss">:id_number</span> <span class="o">=&gt;</span> <span class="s2">"310181198910107641"</span> <span class="c1"># 身份证号</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+<span class="no">Pingpp</span><span class="o">::</span><span class="no">Identification</span><span class="p">.</span><span class="nf">identify</span><span class="p">(</span>
+  <span class="ss">:type</span>  <span class="o">=&gt;</span> <span class="s2">"bank_card"</span><span class="p">,</span>
+  <span class="ss">:app</span>  <span class="o">=&gt;</span> <span class="no">APP_ID</span><span class="p">,</span>
+  <span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:id_name</span> <span class="o">=&gt;</span> <span class="s2">"张三"</span><span class="p">,</span> <span class="c1"># 姓名</span>
+      <span class="ss">:id_number</span> <span class="o">=&gt;</span> <span class="s2">"310181198910107641"</span><span class="p">,</span> <span class="c1"># 身份证号</span>
+      <span class="ss">:card_number</span> <span class="o">=&gt;</span> <span class="s2">"6201111122223333"</span><span class="p">,</span> <span class="c1"># 银行卡号</span>
+      <span class="ss">:phone_number</span> <span class="o">=&gt;</span> <span class="s2">"18623234545"</span> <span class="c1"># 银行预留手机号，不支持 178 号段</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>{
+    "type": "bank_card",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "result_code": 3441,
+    "message": "银行卡信息认证失败",
+    "paid":true,
+    "data": {
+        "id_name": "张三",
+        "id_number": "320291198811110000",
+        "card_number": "6201111122223333"
+    }
+}
+</code></pre>
+<pre class="highlight php"><code>{
+    "type": "id_card",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "result_code": 3432,
+    "message": "身份证信息匹配失败",
+    "paid":true,
+    "data": {
+        "id_name": "张三",
+        "id_number": "320291198811110000"
+    }
+}
+{
+    "type": "bank_card",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "result_code": 3441,
+    "message": "银行卡信息认证失败",
+    "paid":true,
+    "data": {
+        "id_name": "张三",
+        "id_number": "320291198811110000",
+        "card_number": "6201111122223333"
+    }
+}
+</code></pre>
+<pre class="highlight ruby"><code><span class="p">{</span>
+    <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"id_card"</span><span class="p">,</span>
+    <span class="s2">"app"</span><span class="p">:</span> <span class="s2">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+    <span class="s2">"result_code"</span><span class="p">:</span> <span class="mi">3432</span><span class="p">,</span>
+    <span class="s2">"message"</span><span class="p">:</span> <span class="s2">"身份证信息匹配失败"</span><span class="p">,</span>
+    <span class="s2">"paid"</span><span class="ss">:true</span><span class="p">,</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"id_name"</span><span class="p">:</span> <span class="s2">"张三"</span><span class="p">,</span>
+        <span class="s2">"id_number"</span><span class="p">:</span> <span class="s2">"320291198811110000"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">{</span>
+    <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"bank_card"</span><span class="p">,</span>
+    <span class="s2">"app"</span><span class="p">:</span> <span class="s2">"app_1Gqj58ynP0mHeX1q"</span><span class="p">,</span>
+    <span class="s2">"result_code"</span><span class="p">:</span> <span class="mi">3441</span><span class="p">,</span>
+    <span class="s2">"message"</span><span class="p">:</span> <span class="s2">"银行卡信息认证失败"</span><span class="p">,</span>
+    <span class="s2">"paid"</span><span class="ss">:true</span><span class="p">,</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"id_name"</span><span class="p">:</span> <span class="s2">"张三"</span><span class="p">,</span>
+        <span class="s2">"id_number"</span><span class="p">:</span> <span class="s2">"320291198811110000"</span><span class="p">,</span>
+        <span class="s2">"card_number"</span><span class="p">:</span> <span class="s2">"6201111122223333"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>

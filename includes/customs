@@ -107,6 +107,24 @@ customs_code<br />是海关编号字段说明。</p>
 <td>微信支付</td>
 </tr>
 </tbody></table>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14201607013878045463"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customs"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"app"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app_LibTW1n1SOq9Pin1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"charge_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alipay"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"trade_no"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15112496832609"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"customs_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUANGZHOU"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1410834527</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1410838127</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"failure_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"failure_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"transaction_no"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"extra"</span><span class="p">:{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <h2 id="sss">请求报关接口sss</h2>
 
@@ -179,6 +197,38 @@ customs_code<br />是海关编号字段说明。</p>
 <h3 id="sss">返回sss</h3>
 
 <p>返回一个<code class="prettyprint">customs</code>报关对象，其中status为报关结果，为true时成功，false失败；<code class="prettyprint">transaction_no</code>为渠道报关流水号。</p>
+<pre class="highlight plaintext"><code>  POST https://api.pingxx.com/v1/customs
+</code></pre>
+<pre class="highlight plaintext"><code>curl https://api.pingxx.com/v1/customs \
+-H "Pingplusplus-Signature: SIGNATURE" \
+-H "Content-Type: application/json" \
+-d '{
+    "app":"app_1Gqj58ynP0mHeX1q",
+    "charge_id":"ch_L8qn10mLmr1GS8e5OODmHaL4"
+    "channel": "alipay",
+    "trade_no": "15112496832609",
+    "customs_code":"GUANGZHOU",
+    "amount":100
+}'
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14201607013878045463"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customs"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"app"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app_LibTW1n1SOq9Pin1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"charge_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alipay"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"trade_no"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15112496832609"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"customs_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUANGZHOU"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1410834527</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1410838127</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"failure_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"failure_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"transaction_no"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"extra"</span><span class="p">:{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
 <h2 id="sss">查询报关接口sss</h2>
 
@@ -203,3 +253,26 @@ customs_code<br />是海关编号字段说明。</p>
 <h3 id="fanhui">fanhui</h3>
 
 <p>返回一个已存在的 <code class="prettyprint">customs</code> 对象或者一个错误，<a href="#api-errors">详见 Errors 错误处理机制</a>。</p>
+<pre class="highlight plaintext"><code>  GET
+https://api.pingxx.com/v1/customs/{CUSTOMS_ID}
+</code></pre>
+<pre class="highlight plaintext"><code>curl https://api.pingxx.com/v1/customs/14201607013878045463 
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14201607013878045463"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customs"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"app"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app_LibTW1n1SOq9Pin1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"charge_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ch_L8qn10mLmr1GS8e5OODmHaL4"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alipay"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"trade_no"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15112496832609"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"customs_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GUANGZHOU"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1410834527</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"succeed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1410838127</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"failure_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"failure_msg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"transaction_no"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"extra"</span><span class="p">:{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
