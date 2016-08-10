@@ -212,6 +212,352 @@ charge.List(params)
   Charge.list(new Dictionary<String, Object>());
 ```
 
+``` curl
+{
+  "object": "list",
+  "url": "/v1/charges",
+  "has_more": false,
+  "data": [
+    {
+      "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+      "object": "charge",
+      "created": 1410767648,
+      "livemode": true,
+      "paid": false,
+      "refunded": false,
+      "app": "app_1Gqj58ynP0mHeX1q",
+      "channel": "upacp",
+      "order_no": "123456789012",
+      "client_ip": "127.0.0.1",
+      "amount": 900,
+      "amount_settle": 0,
+      "currency": "cny",
+      "subject": "Your Subject",
+      "body": "Your Body",
+      "time_expire": 1410771248,
+      "time_settle": null,
+      "transaction_no": null,
+      "refunds": {
+        "object": "list",
+        "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+        "has_more": false,
+        "data": [ ]
+      },
+      "amount_refunded": 0,
+      "failure_code": null,
+      "failure_msg": null,
+      "metadata": {},
+      "credential": {},
+      "description": null
+    },
+    {...},
+    {...}
+  ]
+}
+```
+``` php
+{
+  "object": "list",
+  "url": "/v1/charges",
+  "has_more": false,
+  "data": [
+    {
+      "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+      "object": "charge",
+      "created": 1410767648,
+      "livemode": true,
+      "paid": false,
+      "refunded": false,
+      "app": "app_1Gqj58ynP0mHeX1q",
+      "channel": "upacp",
+      "order_no": "123456789012",
+      "client_ip": "127.0.0.1",
+      "amount": 900,
+      "amount_settle": 0,
+      "currency": "cny",
+      "subject": "Your Subject",
+      "body": "Your Body",
+      "time_expire": 1410771248,
+      "time_settle": null,
+      "transaction_no": null,
+      "refunds": {
+        "object": "list",
+        "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+        "has_more": false,
+        "data": [ ]
+      },
+      "amount_refunded": 0,
+      "failure_code": null,
+      "failure_msg": null,
+      "metadata": {},
+      "credential": {},
+      "description": null
+    },
+    {...},
+    {...}
+  ]
+}
+```
+``` java
+#&lt;com.Pingpp.model.ChargeCollection id=#&gt; JSON: {
+  "data": [
+    com.pingplusplus.model.Charge JSON: {
+      "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+      "object": "charge",
+      "created": 1410767648,
+      "livemode": true,
+      "paid": false,
+      "refunded": false,
+      "app": "app_1Gqj58ynP0mHeX1q",
+      "channel": "upacp",
+      "order_no": "123456789012",
+      "client_ip": "127.0.0.1",
+      "amount": 900,
+      "amount_settle": 0,
+      "currency": "cny",
+      "subject": "Your Subject",
+      "body": "Your Body",
+      "time_expire": 1410771248,
+      "time_settle": null,
+      "transaction_no": null,
+      "refunds": {
+        "object": "list",
+        "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+        "has_more": false,
+        "data": []
+      },
+      "amount_refunded": 0,
+      "failure_code": null,
+      "failure_msg": null,
+      "metadata": {},
+      "credential": {},
+      "description": null
+    },
+    #&lt;com.Pingpp.model.Charge[...] ...&gt;,
+    #&lt;com.Pingpp.model.Charge[...] ...&gt;
+  ],
+  "has_more": false
+}
+```
+``` ruby
+#&lt;Pingpp::ListObject&gt; JSON:
+  "object": "list",
+  "url": "/v1/charges",
+  "has_more": false,
+  "data": [
+    #&lt;Pingpp::Charge id=ch_Hm5uTSifDOuTy9iLeLPSurrD&gt; JSON: {
+      "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+      "object": "charge",
+      "created": 1410767648,
+      "livemode": true,
+      "paid": false,
+      "refunded": false,
+      "app": "app_1Gqj58ynP0mHeX1q",
+      "channel": "upacp",
+      "order_no": "123456789012",
+      "client_ip": "127.0.0.1",
+      "amount": 900,
+      "amount_settle": 0,
+      "currency": "cny",
+      "subject": "Your Subject",
+      "body": "Your Body",
+      "extra":{},
+      "time_paid": null,
+      "time_expire": 1410771248,
+      "time_settle": null,
+      "transaction_no": null,
+      "refunds": {
+        "object": "list",
+        "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+        "has_more": false,
+        "data": []
+      },
+      "amount_refunded": 0,
+      "failure_code": null,
+      "failure_msg": null,
+      "metadata": {},
+      "credential": {},
+      "description": null
+    },
+    #&lt;Pingpp::Charge[...] ...&gt;,
+    #&lt;Pingpp::Charge[...] ...&gt;
+  ]
+}
+```
+``` nodejs
+{
+  "object": "list",
+  "url": "/v1/charges",
+  "has_more": false,
+  "data": [
+    {
+      "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+      "object": "charge",
+      "created": 1410767648,
+      "livemode": true,
+      "paid": false,
+      "refunded": false,
+      "app": "app_1Gqj58ynP0mHeX1q",
+      "channel": "upacp",
+      "order_no": "123456789012",
+      "client_ip": "127.0.0.1",
+      "amount": 900,
+      "amount_settle": 0,
+      "currency": "cny",
+      "subject": "Your Subject",
+      "body": "Your Body",
+      "time_expire": 1410771248,
+      "time_settle": null,
+      "transaction_no": null,
+      "refunds": {
+        "object": "list",
+        "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+        "has_more": false,
+        "data": [ ]
+      },
+      "amount_refunded": 0,
+      "failure_code": null,
+      "failure_msg": null,
+      "metadata": {},
+      "credential": {},
+      "description": null
+    },
+    {...},
+    {...}
+  ]
+}
+```
+``` python
+{
+  "object": "list",
+  "url": "/v1/charges",
+  "has_more": false,
+  "data": [
+    {
+      "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+      "object": "charge",
+      "created": 1410767648,
+      "livemode": true,
+      "paid": false,
+      "refunded": false,
+      "app": "app_1Gqj58ynP0mHeX1q",
+      "channel": "upacp",
+      "order_no": "123456789012",
+      "client_ip": "127.0.0.1",
+      "amount": 900,
+      "amount_settle": 0,
+      "currency": "cny",
+      "subject": "Your Subject",
+      "body": "Your Body",
+      "time_expire": 1410771248,
+      "time_settle": null,
+      "transaction_no": null,
+      "refunds": {
+        "object": "list",
+        "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+        "has_more": false,
+        "data": [ ]
+      },
+      "amount_refunded": 0,
+      "failure_code": null,
+      "failure_msg": null,
+      "metadata": {},
+      "credential": {},
+      "description": null
+    },
+    {...},
+    {...}
+  ]
+}
+```
+``` go
+{
+  "object": "list",
+  "url": "/v1/charges",
+  "has_more": false,
+  "data": [
+    {
+      "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+      "object": "charge",
+      "created": 1410767648,
+      "livemode": true,
+      "paid": false,
+      "refunded": false,
+      "app": "app_1Gqj58ynP0mHeX1q",
+      "channel": "upacp",
+      "order_no": "123456789012",
+      "client_ip": "127.0.0.1",
+      "amount": 900,
+      "amount_settle": 0,
+      "currency": "cny",
+      "subject": "Your Subject",
+      "body": "Your Body",
+      "time_expire": 1410771248,
+      "time_settle": null,
+      "transaction_no": null,
+      "refunds": {
+        "object": "list",
+        "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+        "has_more": false,
+        "data": [ ]
+      },
+      "amount_refunded": 0,
+      "failure_code": null,
+      "failure_msg": null,
+      "metadata": {},
+      "credential": {},
+      "description": null
+    },
+    {...},
+    {...}
+  ]
+}
+```
+``` csharp
+{
+  "object": "list",
+  "url": "/v1/charges",
+  "has_more": false,
+  "data": [
+    {
+      "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+      "object": "charge",
+      "created": 1410767648,
+      "livemode": true,
+      "paid": false,
+      "refunded": false,
+      "app": "app_1Gqj58ynP0mHeX1q",
+      "channel": "upacp",
+      "order_no": "123456789012",
+      "client_ip": "127.0.0.1",
+      "amount": 900,
+      "amount_settle": 0,
+      "currency": "cny",
+      "subject": "Your Subject",
+      "body": "Your Body",
+      "time_expire": 1410771248,
+      "time_settle": null,
+      "transaction_no": null,
+      "refunds": {
+        "object": "list",
+        "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+        "has_more": false,
+        "data": [ ]
+      },
+      "amount_refunded": 0,
+      "failure_code": null,
+      "failure_msg": null,
+      "metadata": {},
+      "credential": {},
+      "description": null
+    },
+    {...},
+    {...}
+  ]
+}
+```
+
+
 所有的 Ping++ 资源都可以被 list API 方法支持，例如分页 charges 和 refunds。这些 list API 方法拥有相同的数据结构。Ping++ 是基于 cursor 的分页机制，使用参数 starting_after 来决定列表从何处开始。
 
 ### canshu 所有标题不支持纯中文
@@ -419,6 +765,345 @@ ch = pingpp.Charge.create(
         Console.WriteLine(e.Message.ToString());
     }
 ```
+``` curl
+{
+  "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+  "object": "charge",
+  "created": 1410775686,
+  "livemode": true,
+  "paid": false,
+  "refunded": false,
+  "app": "app_1Gqj58ynP0mHeX1q",
+  "channel": "upacp",
+  "order_no": "123456789",
+  "client_ip": "127.0.0.1",
+  "amount": 100,
+  "amount_settle": 0,
+  "currency": "cny",
+  "subject": "Your Subject",
+  "body": "Your Body",
+  "time_expire": 1410779286,
+  "time_settle": null,
+  "transaction_no": null,
+  "refunds": {
+    "object": "list",
+    "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+    "has_more": false,
+    "data": []
+  },
+  "amount_refunded": 0,
+  "failure_code": null,
+  "failure_msg": null,
+  "metadata": {
+    "color": "red"
+  },
+  "credential": {
+    "object": "credential",
+    "upacp": {
+      "tn": "201409151808060000000",
+      "mode": "01"
+    }
+  },
+  "description": null
+}
+```
+``` php
+{
+    "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+    "object": "charge",
+    "created": 1410775686,
+    "livemode": true,
+    "paid": false,
+    "refunded": false,
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "upacp",
+    "order_no": "123456789",
+    "client_ip": "127.0.0.1",
+    "amount": 100,
+    "amount_settle": 0,
+    "currency": "cny",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "time_expire": 1410779286,
+    "time_settle": null,
+    "transaction_no": null,
+    "refunds": {
+      "object": "list",
+      "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+      "has_more": false,
+      "data": []
+    },
+    "amount_refunded": 0,
+    "failure_code": null,
+    "failure_msg": null,
+    "metadata": {
+      "color": "red"
+    },
+    "credential": {
+      "object": "credential",
+      "upacp": {
+        "tn": "201409151808060000000",
+        "mode": "01"
+      }
+    },
+    "description": null
+}
+```
+``` java
+com.pingplusplus.model.Charge JSON: {
+    "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+    "object": "charge",
+    "created": 1410775686,
+    "livemode": true,
+    "paid": false,
+    "refunded": false,
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "upacp",
+    "order_no": "123456789",
+    "client_ip": "127.0.0.1",
+    "amount": 100,
+    "amount_settle": 0,
+    "currency": "cny",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "time_expire": 1410779286,
+    "time_settle": null,
+    "transaction_no": null,
+    "refunds": {
+      "object": "list",
+      "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+      "has_more": false,
+      "data": []
+    },
+    "amount_refunded": 0,
+    "failure_code": null,
+    "failure_msg": null,
+    "metadata": {
+      "color": "red"
+    },
+    "credential": {
+      "object": "credential",
+      "upacp": {
+        "tn": "201409151808060000000",
+        "mode": "01"
+      }
+    },
+    "description": null
+}
+```
+``` ruby
+#&lt;Pingpp::Charge id=ch_Hm5uTSifDOuTy9iLeLPSurrD&gt; JSON: {
+    "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+    "object": "charge",
+    "created": 1410775686,
+    "livemode": true,
+    "paid": false,
+    "refunded": false,
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "upacp",
+    "order_no": "123456789",
+    "client_ip": "127.0.0.1",
+    "amount": 100,
+    "amount_settle": 0,
+    "currency": "cny",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "extra":{},
+    "time_paid": null,
+    "time_expire": 1410779286,
+    "time_settle": null,
+    "transaction_no": null,
+    "refunds": {
+      "object": "list",
+      "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+      "has_more": false,
+      "data": []
+    },
+    "amount_refunded": 0,
+    "failure_code": null,
+    "failure_msg": null,
+    "metadata": {
+      "color": "red"
+    },
+    "credential": {
+      "object": "credential",
+      "upacp": {
+        "tn": "201409151808060000000",
+        "mode": "01"
+      }
+    },
+    "description": null
+}
+```
+``` nodejs
+{
+    "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+    "object": "charge",
+    "created": 1410775686,
+    "livemode": true,
+    "paid": false,
+    "refunded": false,
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "upacp",
+    "order_no": "123456789",
+    "client_ip": "127.0.0.1",
+    "amount": 100,
+    "amount_settle": 0,
+    "currency": "cny",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "time_expire": 1410779286,
+    "time_settle": null,
+    "transaction_no": null,
+    "refunds": {
+      "object": "list",
+      "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+      "has_more": false,
+      "data": []
+    },
+    "amount_refunded": 0,
+    "failure_code": null,
+    "failure_msg": null,
+    "metadata": {
+      "color": "red"
+    },
+    "credential": {
+      "object": "credential",
+      "upacp": {
+        "tn": "201409151808060000000",
+        "mode": "01"
+      }
+    },
+    "description": null
+}
+```
+``` python
+{
+    "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+    "object": "charge",
+    "created": 1410775686,
+    "livemode": true,
+    "paid": false,
+    "refunded": false,
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "upacp",
+    "order_no": "123456789",
+    "client_ip": "127.0.0.1",
+    "amount": 100,
+    "amount_settle": 0,
+    "currency": "cny",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "time_expire": 1410779286,
+    "time_settle": null,
+    "transaction_no": null,
+    "refunds": {
+      "object": "list",
+      "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+      "has_more": false,
+      "data": []
+    },
+    "amount_refunded": 0,
+    "failure_code": null,
+    "failure_msg": null,
+    "metadata": {
+      "color": "red"
+    },
+    "credential": {
+      "object": "credential",
+      "upacp": {
+        "tn": "201409151808060000000",
+        "mode": "01"
+      }
+    },
+    "description": null
+}
+```
+``` go
+{
+    "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+    "object": "charge",
+    "created": 1410775686,
+    "livemode": true,
+    "paid": false,
+    "refunded": false,
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "upacp",
+    "order_no": "123456789",
+    "client_ip": "127.0.0.1",
+    "amount": 100,
+    "amount_settle": 0,
+    "currency": "cny",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "time_expire": 1410779286,
+    "time_settle": null,
+    "transaction_no": null,
+    "refunds": {
+      "object": "list",
+      "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+      "has_more": false,
+      "data": []
+    },
+    "amount_refunded": 0,
+    "failure_code": null,
+    "failure_msg": null,
+    "metadata": {
+      "color": "red"
+    },
+    "credential": {
+      "object": "credential",
+      "upacp": {
+        "tn": "201409151808060000000",
+        "mode": "01"
+      }
+    },
+    "description": null
+}
+```
+``` csharp
+{
+    "id": "ch_Hm5uTSifDOuTy9iLeLPSurrD",
+    "object": "charge",
+    "created": 1410775686,
+    "livemode": true,
+    "paid": false,
+    "refunded": false,
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "upacp",
+    "order_no": "123456789",
+    "client_ip": "127.0.0.1",
+    "amount": 100,
+    "amount_settle": 0,
+    "currency": "cny",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "time_expire": 1410779286,
+    "time_settle": null,
+    "transaction_no": null,
+    "refunds": {
+      "object": "list",
+      "url": "/v1/charges/ch_Hm5uTSifDOuTy9iLeLPSurrD/refunds",
+      "has_more": false,
+      "data": []
+    },
+    "amount_refunded": 0,
+    "failure_code": null,
+    "failure_msg": null,
+    "metadata": {
+      "color": "red"
+    },
+    "credential": {
+      "object": "credential",
+      "upacp": {
+        "tn": "201409151808060000000",
+        "mode": "01"
+      }
+    },
+    "description": null
+}
+```
+
 
 
 

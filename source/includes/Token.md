@@ -15,12 +15,704 @@ type | 对应的资源类型，值为 card| **stringtoken**
 card | Card 对象| **hash** 
 sms_code | SMS Code 对象。外卡时，该对象内容为空 | **hash** 
 
+
+``` curl
+	#### 银联卡
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+        "code": null
+    }
+}
+```
+``` php
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+        "code": null
+    }
+}
+```
+``` java
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+        "code": null
+    }
+}
+```
+``` ruby
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+        "code": null
+    }
+}
+```
+``` nodejs
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+        "code": null
+    }
+}
+```
+``` python
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+        "code": null
+    }
+}
+```
+``` go
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+        "code": null
+    }
+}
+```
+``` csharp
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+        "code": null
+    }
+}
+```
+
+``` curl
+	#### 外卡
+{
+    "id": "tok_Pav9qLDunDOSKivXDCjTOKa5",
+    "object": "token",
+    "created": 1441793037,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_14uv9KTm14yHP8u5S0SWjfX9",
+        "object": "card",
+        "created": 1441769298,
+        "last4": "0019",
+        "funding": "credit",
+        "brand": "MasterCard",
+        "bank": null,
+        "customer": null
+    },
+    "sms_code": {
+        
+    }
+}
+```
+``` php
+{
+    "id": "tok_Pav9qLDunDOSKivXDCjTOKa5",
+    "object": "token",
+    "created": 1441793037,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_14uv9KTm14yHP8u5S0SWjfX9",
+        "object": "card",
+        "created": 1441769298,
+        "last4": "0019",
+        "funding": "credit",
+        "brand": "MasterCard",
+        "bank": null,
+        "customer": null
+    },
+    "sms_code": {
+        
+    }
+}
+```
+``` java
+{
+    "id": "tok_Pav9qLDunDOSKivXDCjTOKa5",
+    "object": "token",
+    "created": 1441793037,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_14uv9KTm14yHP8u5S0SWjfX9",
+        "object": "card",
+        "created": 1441769298,
+        "last4": "0019",
+        "funding": "credit",
+        "brand": "MasterCard",
+        "bank": null,
+        "customer": null
+    },
+    "sms_code": {
+        
+    }
+}
+```
+``` ruby
+{
+    "id": "tok_Pav9qLDunDOSKivXDCjTOKa5",
+    "object": "token",
+    "created": 1441793037,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_14uv9KTm14yHP8u5S0SWjfX9",
+        "object": "card",
+        "created": 1441769298,
+        "last4": "0019",
+        "funding": "credit",
+        "brand": "MasterCard",
+        "bank": null,
+        "customer": null
+    },
+    "sms_code": {
+        
+    }
+}
+```
+``` nodejs
+{
+    "id": "tok_Pav9qLDunDOSKivXDCjTOKa5",
+    "object": "token",
+    "created": 1441793037,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_14uv9KTm14yHP8u5S0SWjfX9",
+        "object": "card",
+        "created": 1441769298,
+        "last4": "0019",
+        "funding": "credit",
+        "brand": "MasterCard",
+        "bank": null,
+        "customer": null
+    },
+    "sms_code": {
+        
+    }
+}
+```
+``` python
+{
+    "id": "tok_Pav9qLDunDOSKivXDCjTOKa5",
+    "object": "token",
+    "created": 1441793037,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_14uv9KTm14yHP8u5S0SWjfX9",
+        "object": "card",
+        "created": 1441769298,
+        "last4": "0019",
+        "funding": "credit",
+        "brand": "MasterCard",
+        "bank": null,
+        "customer": null
+    },
+    "sms_code": {
+        
+    }
+}
+```
+``` go
+{
+    "id": "tok_Pav9qLDunDOSKivXDCjTOKa5",
+    "object": "token",
+    "created": 1441793037,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_14uv9KTm14yHP8u5S0SWjfX9",
+        "object": "card",
+        "created": 1441769298,
+        "last4": "0019",
+        "funding": "credit",
+        "brand": "MasterCard",
+        "bank": null,
+        "customer": null
+    },
+    "sms_code": {
+        
+    }
+}
+```
+``` csharp
+{
+    "id": "tok_Pav9qLDunDOSKivXDCjTOKa5",
+    "object": "token",
+    "created": 1441793037,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_14uv9KTm14yHP8u5S0SWjfX9",
+        "object": "card",
+        "created": 1441769298,
+        "last4": "0019",
+        "funding": "credit",
+        "brand": "MasterCard",
+        "bank": null,
+        "customer": null
+    },
+    "sms_code": {
+        
+    }
+}
+```
+
+
 ##查询 Token 对象
 可根据 `token id` 查询某条 `token` 对象中的 `card` 信息。
 ###canshu
 参数 | 描述 | 是否必须
 ---- | ---- | ----
 <dt>{TOKEN_ID}:  | Token 对象 id | **required**
+
+``` curl
+  GET https://api.pingxx.com/v1/tokens/{TOKEN_ID}
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+``` curl
+    curl https://api.pingxx.com/v1/tokens/tok_Ca1GS4Ha9aL01i5ubHHC8CaP\
+    -u sk_live_vjfr92jj3q925KuPO82iP8KO:
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+``` curl
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP"
+    }
+}
+```
+``` php
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP"
+    }
+}
+```
+``` java
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP"
+    }
+}
+```
+``` ruby
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP"
+    }
+}
+```
+``` nodejs
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP"
+    }
+}
+```
+``` python
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP"
+    }
+}
+```
+``` go
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP"
+    }
+}
+```
+``` csharp
+{
+    "id": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP",
+    "object": "token",
+    "created": 1441792948,
+    "livemode": true,
+    "used": false,
+    "time_used": null,
+    "type": "card",
+    "card": {
+        "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+        "object": "card",
+        "created": 1441699192,
+        "last4": "1261",
+        "funding": "debit",
+        "brand": "UnionPay",
+        "bank": "cmb",
+        "customer": null
+    },
+    "sms_code": {
+        "id": "sms_WvbLC4aH0ifPnz90OCnDyvHO",
+        "object": "sms_code",
+        "created": 1441792949,
+        "validated": false,
+        "source": "tok_Ca1GS4Ha9aL01i5ubHHC8CaP"
+    }
+}
+```
+
+
 
 
 

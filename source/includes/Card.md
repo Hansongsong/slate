@@ -14,6 +14,34 @@ brand | 卡品牌，值为 "UnionPay", "Visa", "MasterCard", "JCB" 其中一种 
 bank | 发卡行，如 "icbc" 工商银行，具体[银行列表见附录](#nocard_bank_id)。外卡此参数为 null | **string**
 customer | 依附的 Customer 对象的 id | **string**
 
+``` curl
+{
+    "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+    "object": "card",
+    "created": 1441699192,
+    "last4": "1261",
+    "funding": "debit",
+    "brand": "UnionPay",
+    "bank": "cmb",
+    "customer": "cus_eHi1mD1iPS08Li"
+}
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+
+
 ##创建 Card 对象
 在 Customer 对象的资源列表上添加一个新的卡片，之后就可以选卡支付，即绑卡。  
 注：暂时不允许通过外卡创建。
@@ -28,6 +56,74 @@ sms_code[code] | 短信验证码| **required**
 ###返回1
 返回一个 Card 对象。
 
+``` curl
+  POST https://api.pingxx.com/v1/customers/{CUS_ID}/sources
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+``` curl
+    curl https://api.pingxx.com/v1/customers/cus_eHi1mD1iPS08Li/sources \
+    -u sk_live_vjfr92jj3q925KuPO82iP8KO: \
+     -d '{
+    "source": "tok_BHTPMJCtIJ8HaqXBDr4ILeLJ",
+    "sms_code":{
+    "code" : "123456",
+    "id" : "sms_BHTPMJCpGc8qiKvva3OgBV2V"
+    }
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+``` curl
+{
+    "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+    "object": "card",
+    "created": 1441699192,
+    "last4": "1261",
+    "funding": "debit",
+    "brand": "UnionPay",
+    "bank": "cmb",
+    "customer": "cus_eHi1mD1iPS08Li"
+}
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+
 ##删除 Card 对象
 取消与 Customer 对象的关联。删除的如果是该所属 Customer 对象的 default_source, 则 default_source 为最近一张绑定的资源 id 如果删除后资源列表为空，则 default_source 值为 null
 
@@ -37,6 +133,74 @@ sms_code[code] | 短信验证码| **required**
 {CUS_ID}:  | Customer 对象 id | **required**
 {CARD_ID}:  | 要删除的 Card 对象 id | **required**
 
+``` curl
+  POST https://api.pingxx.com/v1/customers/{CUS_ID}/sources
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+``` curl
+    curl https://api.pingxx.com/v1/customers/cus_eHi1mD1iPS08Li/sources \
+    -u sk_live_vjfr92jj3q925KuPO82iP8KO: \
+     -d '{
+    "source": "tok_BHTPMJCtIJ8HaqXBDr4ILeLJ",
+    "sms_code":{
+    "code" : "123456",
+    "id" : "sms_BHTPMJCpGc8qiKvva3OgBV2V"
+    }
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+``` curl
+{
+    "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+    "object": "card",
+    "created": 1441699192,
+    "last4": "1261",
+    "funding": "debit",
+    "brand": "UnionPay",
+    "bank": "cmb",
+    "customer": "cus_eHi1mD1iPS08Li"
+}
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+
 ##查询 Card 对象
 通过 `Card` 对象的 `id` 查询一个已经创建的 `Card` 对象的详细信息。
 
@@ -45,6 +209,69 @@ sms_code[code] | 短信验证码| **required**
 ---- | ---- | ----
 {CUS_ID}:  | Customer 对象 id | **required**
 {CARD_ID}:  | Card 对象 id | **required**
+
+``` curl
+  GET https://api.pingxx.com/v1/customers/{CUS_ID}/sources/{CARD_ID}
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+``` curl
+    curl https://api.pingxx.com/v1/customers/cus_eHi1mD1iPS08Li/sources/card_C8mzP08COqb5vjP0OGXnHanH \
+    -u sk_live_vjfr92jj3q925KuPO82iP8KO:
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+``` curl
+{
+    "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+    "object": "card",
+    "created": 1441699192,
+    "last4": "1261",
+    "funding": "debit",
+    "brand": "UnionPay",
+    "bank": "cmb",
+    "customer": "cus_eHi1mD1iPS08Li"
+}
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+
 
 ##查询 Card 对象列表
 可以查询某 `Customer` 对象中关联的所有 `Card` 对象列表。
@@ -66,6 +293,76 @@ created[gte] | 大于或等于 `Customer` 对象的创建时间，用 Unix 时�
 created[lt] | 小于 `Customer` 对象的创建时间，用 Unix 时间戳表示。| **optional**
 created[lte] | 小于或等于 `Customer` 对象的创建时间，用 Unix 时间戳表示。| **optional**
 
+``` curl
+  GET https://api.pingxx.com/v1/customers/{CUS_ID}/sources
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+``` curl
+    curl https://api.pingxx.com/v1/customers/cus_eHi1mD1iPS08Li/sources/?limit=3 \
+    -u sk_live_vjfr92jj3q925KuPO82iP8KO:
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
+``` curl
+{
+    "object": "list",
+    "url": "/v1/customers/cus_eHi1mD1iPS08Li/sources",
+    "has_more": false,
+    "data": [
+        {
+            "id": "card_C8mzP08COqb5vjP0OGXnHanH",
+            "object": "card",
+            "created": 1441699192,
+            "last4": "1261",
+            "funding": "debit",
+            "brand": "UnionPay",
+            "bank": "cmb",
+            "customer": "cus_eHi1mD1iPS08Li"
+        },
+        {...},
+        {...}
+    ]
+}
+```
+``` php
+```
+``` java
+```
+``` ruby
+```
+``` nodejs
+```
+``` python
+```
+``` go
+```
+``` csharp
+```
 
 
 

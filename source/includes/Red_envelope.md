@@ -27,6 +27,215 @@ extra | **object** | 支付渠道相关的附加参数，参考[extra参数说�
 参数 | 类型 | 描述
 ---- | ---- | ----
 send_name | **string** | 商户名称，最多 32 个字节。
+``` curl
+{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` php
+{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` java
+com.pingplusplus.model.RedEnvelope JSON: {
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` ruby
+#&lt;Pingpp::RedEnvelope id=red_KCabLO58W5G0rX90iT0az5a9&gt; JSON: {
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` nodejs
+{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` python
+{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` go
+{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` csharp
+{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+
 
 ##创建 Red envelope 对象
 发起一次红包请求需要创建一个新的 `red_envelope` 对象。如果支付失败，请检查错误信息，一般是由于账户余额不足引起的。使用测试模式的 API Key，则不会发生真实交易。同步返回交易结果，不会发送 Webhooks 通知。
@@ -52,6 +261,394 @@ send_name | 商户名称，最多 32 个字节。| **required**
 
 ###fanhui
 同步返回红包支付结果。如果发生错误，则会返回错误码和错误详情，[详见 Errors 错误处理机制](#api-errors)。
+
+``` curl
+  POST https://api.pingxx.com/v1/red_envelopes
+```
+``` php
+  \Pingpp\RedEnvelope::create();
+```
+``` java
+  RedEnvelope.create();
+```
+``` ruby
+  Pingpp::RedEnvelope.create()
+```
+``` nodejs
+  pingpp.redEnvelopes.create();
+```
+``` python
+  pingpp.RedEnvelope.create();
+```
+``` go
+  redEnvelope, err := redEnvelope.New(&RedenvelopeParams)
+```
+``` csharp
+  create(Dictionary&lt;String, Object&gt; params)
+```
+``` curl
+  curl https://api.pingxx.com/v1/red_envelopes \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC: \
+  -d order_no=123456789 \
+  -d app[id]=app_1Gqj58ynP0mHeX1q \
+  -d channel=wx_pub \
+  -d amount=100 \
+  -d currency=cny \
+  -d subject="Your Subject" \
+  -d body="Your Body" \
+  -d extra[send_name]="Send Name" \
+  -d reciprent=Openid \
+  -d description="Your Description"
+```
+``` php
+\Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+
+\Pingpp\RedEnvelope::create(
+    array(
+        'subject'     =&gt; 'Your Subject',
+        'body'        =&gt; 'Your Body',
+        'amount'      =&gt; 100,
+        'order_no'    =&gt; '123456789',
+        'currency'    =&gt; 'cny',
+        'extra'       =&gt; array(
+            'send_name' =&gt; 'Send Name'
+        ),
+        'recipient'   =&gt; 'Openid',
+        'channel'     =&gt; 'wx_pub',
+        'app'         =&gt; array('id' =&gt; 'app_1Gqj58ynP0mHeX1q'),
+        'description' =&gt; 'Your Description'
+    )
+);
+```
+``` java
+Pingpp.apiKey = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC";
+
+Map&lt;String, Object&gt; redenvelope = new HashMap&lt;String, Object&gt;();
+redenvelope.put("amount", 100);
+redenvelope.put("currency", "cny");
+redenvelope.put("subject",  "Your Subject");
+redenvelope.put("body",  "Your Body");
+redenvelope.put("order_no",  "123456789");
+redenvelope.put("channel",  "wx_pub");
+redenvelope.put("recipient", "Openid");
+redenvelope.put("description", "Your Description");
+Map&lt;String, String&gt; app = new HashMap&lt;String, String&gt;();
+app.put("id", "app_1Gqj58ynP0mHeX1q");
+redenvelope.put("app", app);
+Map&lt;String, String&gt; extra = new HashMap&lt;String, String&gt;();
+extra.put("send_name", "Send Name");
+redenvelope.put("extra", extra);
+RedEnvelope red = RedEnvelope.create(redenvelope);
+System.out.println(red);
+```
+``` ruby
+require "pingpp"
+require "digest/md5"
+
+Pingpp.api_key = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"
+
+red = Pingpp::RedEnvelope.create(
+  :order_no    =&gt; "123456789",
+  :app         =&gt; { :id =&gt; "app_1Gqj58ynP0mHeX1q" },
+  :channel     =&gt; "wx_pub",
+  :amount      =&gt; 100,
+  :currency    =&gt; "cny",
+  :subject     =&gt; "Your Subject",
+  :body        =&gt; "Your Body",
+  :extra       =&gt; {
+    :send_name =&gt; "Send Name"
+  },
+  :recipient   =&gt; "Openid",
+  :description =&gt; "Your Description"
+)
+```
+``` nodejs
+var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+
+pingpp.redEnvelopes.create({
+  order_no:    "123456789",
+  app:         { id: "app_1Gqj58ynP0mHeX1q" },
+  channel:     "wx_pub",
+  amount:      100,
+  currency:    "cny",
+  subject:     "Your Subject",
+  body:        "Your Body",
+  extra: {
+    send_name: "Send Name"
+  },
+  recipient:   "Openid",
+  description: "Your Description"
+}, function(err, redEnvelope) {
+  // YOUR CODE
+});
+```
+``` python
+pingpp.api_key = 'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'
+
+redenvelope = pingpp.RedEnvelope.create(
+    order_no='123456789',
+    channel='wx_pub',
+    amount=100,
+    subject='Your Subject',
+    body='Your Body',
+    currency='cny',
+    app=dict(id='app_1Gqj58ynP0mHeX1q'),
+    extra=dict(send_name='Send Name'),
+    recipient='Openid',
+    description='Your Description'
+)
+```
+``` go
+  extra := make(map[string]interface{})
+  extra["send_name"] = "Send Name"
+
+  redenvelopeParams := &amp;pingpp.RedEnvelopeParams{
+    App:         &amp;pingpp.App{Id: "app_1Gqj58ynP0mHeX1q"},
+    Channel:     "wx_pub",
+    Order_no:    "123456789",
+    Amount:      100,
+    Currency:    "cny",
+    Recipient:   "Openid",//指定用户的 open_id
+    Subject:     "Your Subject",
+    Body:        "Your Body",
+    Description: "Your Description",
+    Extra:       extra,
+  }
+  redEnvelope, err := redEnvelope.New(redenvelopeParams)
+```
+``` csharp
+    Dictionary&lt;String, String&gt; app = new Dictionary&lt;String, String&gt;();
+    app.Add("id", "app_1Gqj58ynP0mHeX1q");
+    Dictionary&lt;String, String&gt; extra = new Dictionary&lt;String, String&gt;();
+    extra.Add("Nick Name");
+    extra.Add("send_name", "Send Name");
+    Dictionary&lt;String, Object&gt; params = new Dictionary&lt;String, Object&gt;();
+    params.Add("amount", 100);
+    params.Add("currency", "cny");
+    params.Add("subject",  "Your Subject");
+    params.Add("body",  "Your Body");
+    params.Add("order_no",  "123456789");
+    params.Add("channel",  "wx_pub");
+    params.Add("recipient", "Your Openid");
+    params.Add("description", "Your Description");
+    params.Add("app", app);
+    params.Add("extra", extra);
+    try {
+        RedEnvelope red = RedEnvelope.create(params);
+        Console.WriteLine(red);
+    } catch (Exception e) {
+        Console.WriteLine(e.Message.ToString());
+    }
+```
+``` curl
+{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` php
+{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` java
+com.pingplusplus.model.RedEnvelope JSON: {
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` ruby
+#&lt;Pingpp::RedEnvelope id=red_KCabLO58W5G0rX90iT0az5a9&gt; JSON: {
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` nodejs
+{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` python
+{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` go
+{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+``` csharp
+{
+    "id": "red_KCabLO58W5G0rX90iT0az5a9",
+    "object": "red_envelope",
+    "created": 1428499439,
+    "received": null,
+    "refunded": null,
+    "livemode": true,
+    "status": "sending",
+    "app": "app_1Gqj58ynP0mHeX1q",
+    "channel": "wx_pub",
+    "order_no": "123456789",
+    "transaction_no": null,
+    "amount": 100,
+    "amount_settle": 100,
+    "currency": "cny",
+    "recipient": "Openid",
+    "subject": "Your Subject",
+    "body": "Your Body",
+    "description": "Your Description",
+    "failure_msg":null,
+    "extra": {
+        "send_name": "Send Name"
+    }
+}
+```
+
 
 ##查询 Red envelope 对象
 通过 `red_envelope` 对象的 id 查询一个已创建的 `red_envelope` 对象。
@@ -87,6 +684,359 @@ created[lte] | 小于或等于 `red_envelope` 对象的创建时间，用 Unix �
 
 ###fanhui
 根据请求参数返回一个 `red_envelope` 对象列表，如果列表为空，则返回的 `data` 为空数组。遇到错误时返回相应错误信息，[详见 Errors 错误处理机制](#api-errors)。
+
+``` curl
+  GET https://api.pingxx.com/v1/red_envelopes/
+```
+``` php
+  \Pingpp\RedEnvelope::all();
+```
+``` java
+  RedEnvelope.all(Map options);
+```
+``` ruby
+  Pingpp::RedEnvelope.all
+```
+``` nodejs
+  pingpp.RedEnvelope.list();
+```
+``` python
+  pingpp.RedEnvelope.all()
+```
+``` go
+  redEnvelope.List(&RedenvelopeListParams)
+```
+``` csharp
+  list(Dictionary&lt;String, Object&gt; params)
+```
+``` curl
+  curl https://api.pingxx.com/v1/red_envelopes/?limit=3 \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC:
+```
+``` php
+  \Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+
+  \Pingpp\RedEnvelope::all(array('limit' =&gt; 3));
+```
+``` java
+  Pingpp.apiKey = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC";
+
+  Map&lt;String, Object&gt; redEnvelopeParams = new HashMap&lt;String, Object&gt;();
+  redEnvelopeParams.put("limit", 3);
+
+  RedEnvelope.all(redEnvelopeParams);
+```
+``` ruby
+  Pingpp.api_key = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"
+  Pingpp::RedEnvelope.all(:limit =&gt; 3)
+```
+``` nodejs
+  var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  pingpp.RedEnvelope.list({ limit: 3 }, function(err, RedEnvelope) {
+    // 异步调用
+  });
+```
+``` python
+  pingpp.api_key = 'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'
+  res = pingpp.RedEnvelope.all(limit=3)
+```
+``` go
+  pingpp.Key = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"
+  params := &amp;pingpp.RedEnvelopeListParams{}
+  params.Filters.AddFilter("limit", "", "3")
+  //设置是不是只需要之前设置的 limit 这一个查询参数
+  params.Single = true
+  i := redEnvelope.List(params)
+  for i.Next() {
+    c := i.RedEnvelope()
+  }
+```
+``` csharp
+    Dictionary&lt;String, Object&gt; params = new Dictionary&lt;String, Object&gt;();
+    chargeParams.Add("limit", 3);
+    try {
+        RedEnvelopeList reds = RedEnvelope.list(params);
+        Console.WriteLine(reds);
+    } catch (Exception e) {
+        Console.WriteLine(e.Message.ToString());
+    }
+```
+``` curl
+{
+    "object": "list",
+    "url": "/v1/red_envelopes",
+    "has_more": true,
+    "data": [
+        {
+            "id": "red_KCabLO58W5G0rX90iT0az5a9",
+            "object": "red_envelope",
+            "created": 1428499439,
+            "received": null,
+            "refunded": null,
+            "livemode": true,
+            "status": "sending",
+            "app": "app_1Gqj58ynP0mHeX1q",
+            "channel": "wx_pub",
+            "order_no": "123456789",
+            "transaction_no": null,
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "recipient": "Openid",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "description": "Your Description",
+            "failure_msg":null,
+            "extra": {
+                "send_name": "Send Name"
+            }
+        },
+        {...},
+        {...}
+    ]
+}
+```
+``` php
+{
+    "object": "list",
+    "url": "/v1/red_envelopes",
+    "has_more": true,
+    "data": [
+        {
+            "id": "red_KCabLO58W5G0rX90iT0az5a9",
+            "object": "red_envelope",
+            "created": 1428499439,
+            "received": null,
+            "refunded": null,
+            "livemode": true,
+            "status": "sending",
+            "app": "app_1Gqj58ynP0mHeX1q",
+            "channel": "wx_pub",
+            "order_no": "123456789",
+            "transaction_no": null,
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "recipient": "Openid",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "description": "Your Description",
+            "failure_msg":null,
+            "extra": {
+                "send_name": "Send Name"
+            }
+        },
+        {...},
+        {...}
+    ]
+}
+```
+``` java
+#&lt;com.pingplusplus.model.RedEnvelopeCollection id=#&gt; JSON: {
+  "data": [
+        {
+            "id": "red_KCabLO58W5G0rX90iT0az5a9",
+            "object": "red_envelope",
+            "created": 1428499439,
+            "received": null,
+            "refunded": null,
+            "livemode": true,
+            "status": "sending",
+            "app": "app_1Gqj58ynP0mHeX1q",
+            "channel": "wx_pub",
+            "order_no": "123456789",
+            "transaction_no": null,
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "recipient": "Openid",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "description": "Your Description",
+            "failure_msg":null,
+            "extra": {
+                "send_name": "Send Name"
+            }
+        },
+    #&lt;com.pingplusplus.model.RedEnvelope[...] ...&gt;,
+    #&lt;com.pingplusplus.model.RedEnvelope[...] ...&gt;
+  ],
+  "has_more": false
+}
+```
+``` ruby
+{
+  "object": "list",
+  "url": "/v1/red_envelopes",
+  "has_more": false,
+  "data": [
+     {
+            "id": "red_KCabLO58W5G0rX90iT0az5a9",
+            "object": "red_envelope",
+            "received": null,
+            "refunded": null,
+            "livemode": true,
+            "status": "sending",
+            "app": "app_1Gqj58ynP0mHeX1q",
+            "channel": "wx_pub",
+            "order_no": "123456789",
+            "transaction_no": null,
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "recipient": "Openid",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "description": "Your Description",
+            "failure_msg":null,
+            "extra": {
+                "send_name": "Send Name"
+            }
+        },
+    #&lt;Pingpp::RedEnvelope[...] ...&gt;,
+    #&lt;Pingpp::RedEnvelope[...] ...&gt;
+  ]
+}
+```
+``` nodejs
+{
+    "object": "list",
+    "url": "/v1/red_envelopes",
+    "has_more": true,
+    "data": [
+        {
+            "id": "red_KCabLO58W5G0rX90iT0az5a9",
+            "object": "red_envelope",
+            "received": null,
+            "refunded": null,
+            "livemode": true,
+            "status": "sending",
+            "app": "app_1Gqj58ynP0mHeX1q",
+            "channel": "wx_pub",
+            "order_no": "123456789",
+            "transaction_no": null,
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "recipient": "Openid",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "description": "Your Description",
+            "failure_msg":null,
+            "extra": {
+                "send_name": "Send Name"
+            }
+        },
+        {...},
+        {...}
+    ]
+}
+```
+``` python
+{
+    "object": "list",
+    "url": "/v1/red_envelopes",
+    "has_more": true,
+    "data": [
+        {
+            "id": "red_KCabLO58W5G0rX90iT0az5a9",
+            "object": "red_envelope",
+            "created": 1428499439,
+            "received": null,
+            "refunded": null,
+            "livemode": true,
+            "status": "sending",
+            "app": "app_1Gqj58ynP0mHeX1q",
+            "channel": "wx_pub",
+            "order_no": "123456789",
+            "transaction_no": null,
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "recipient": "Openid",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "description": "Your Description",
+            "failure_msg":null,
+            "extra": {
+                "send_name": "Send Name"
+            }
+        },
+        {...},
+        {...}
+    ]
+}
+```
+``` go
+{
+    "object": "list",
+    "url": "/v1/red_envelopes",
+    "has_more": true,
+    "data": [
+        {
+            "id": "red_KCabLO58W5G0rX90iT0az5a9",
+            "object": "red_envelope",
+            "created": 1428499439,
+            "received": null,
+            "refunded": null,
+            "livemode": true,
+            "status": "sending",
+            "app": "app_1Gqj58ynP0mHeX1q",
+            "channel": "wx_pub",
+            "order_no": "123456789",
+            "transaction_no": null,
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "recipient": "Openid",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "description": "Your Description",
+            "failure_msg":null,
+            "extra": {
+                "send_name": "Send Name"
+            }
+        },
+        {...},
+        {...}
+    ]
+}
+```
+``` csharp
+{
+    "object": "list",
+    "url": "/v1/red_envelopes",
+    "has_more": true,
+    "data": [
+        {
+            "id": "red_KCabLO58W5G0rX90iT0az5a9",
+            "object": "red_envelope",
+            "created": 1428499439,
+            "received": null,
+            "refunded": null,
+            "livemode": true,
+            "status": "sending",
+            "app": "app_1Gqj58ynP0mHeX1q",
+            "channel": "wx_pub",
+            "order_no": "123456789",
+            "transaction_no": null,
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "recipient": "Openid",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "description": "Your Description",
+            "failure_msg":null,
+            "extra": {
+                "send_name": "Send Name"
+            }
+        },
+        {...},
+        {...}
+    ]
+}
+```
 
 
 

@@ -1,6 +1,192 @@
 #Event事件
 `Event` 对象属性定义如下。
 
+``` curl
+{
+    "id": "evt_la06CoQAiPojSgJKe5gt3nwq",
+    "created": 1427555016,
+    "livemode": false,
+    "type": "summary.weekly.available",
+    "data": {
+        "object": {
+            "app_id": "app_b94eHsO1avrDyL8S",
+            "object": "app_weekly_summary",
+            "app_display_name": "App Name",
+            "created": 1425830460,
+            "summary_from": 1425225600,
+            "summary_to": 1425830399,
+            "charges_amount": 2000,
+            "charges_count" : 200
+        }
+    },
+    "object": "event",
+    "pending_webhooks": 0,
+    "request": null
+}
+```
+``` php
+{
+    "id": "evt_la06CoQAiPojSgJKe5gt3nwq",
+    "created": 1427555016,
+    "livemode": false,
+    "type": "summary.weekly.available",
+    "data": {
+        "object": {
+            "app_id": "app_b94eHsO1avrDyL8S",
+            "object": "app_weekly_summary",
+            "app_display_name": "App Name",
+            "created": 1425830460,
+            "summary_from": 1425225600,
+            "summary_to": 1425830399,
+            "charges_amount": 2000,
+            "charges_count" : 200
+        }
+    },
+    "object": "event",
+    "pending_webhooks": 0,
+    "request": null
+}
+```
+``` java
+{
+    "id": "evt_la06CoQAiPojSgJKe5gt3nwq",
+    "created": 1427555016,
+    "livemode": false,
+    "type": "summary.weekly.available",
+    "data": {
+        "object": {
+            "app_id": "app_b94eHsO1avrDyL8S",
+            "object": "app_weekly_summary",
+            "app_display_name": "App Name",
+            "created": 1425830460,
+            "summary_from": 1425225600,
+            "summary_to": 1425830399,
+            "charges_amount": 2000,
+            "charges_count" : 200
+        }
+    },
+    "object": "event",
+    "pending_webhooks": 0,
+    "request": null
+}
+```
+``` ruby
+{
+    "id": "evt_15lLTI2eZvKYlo2CcIuYBxl7",
+    "created": 1427555016,
+    "livemode": false,
+    "type": "account.summary.available",
+    "data": {
+        "object": {
+            "acct_id": "acct_0eHSiDyzv9G09ejT",
+            "object": "account_daily_summary",
+            "acct_display_name": "xx 公司",
+            "created": 1425139260,
+            "summary_from": 1425052800,
+            "summary_to": 1425139199,
+            "charges_amount": 1000,
+            "charges_count": 100
+        }
+    },
+    "object": "event",
+    "pending_webhooks": 0,
+    "request": null,
+}
+```
+``` nodejs
+{
+    "id": "evt_la06CoQAiPojSgJKe5gt3nwq",
+    "created": 1427555016,
+    "livemode": false,
+    "type": "summary.weekly.available",
+    "data": {
+        "object": {
+            "app_id": "app_b94eHsO1avrDyL8S",
+            "object": "app_weekly_summary",
+            "app_display_name": "App Name",
+            "created": 1425830460,
+            "summary_from": 1425225600,
+            "summary_to": 1425830399,
+            "charges_amount": 2000,
+            "charges_count" : 200
+        }
+    },
+    "object": "event",
+    "pending_webhooks": 0,
+    "request": null
+}
+```
+``` python
+{
+    "id": "evt_la06CoQAiPojSgJKe5gt3nwq",
+    "created": 1427555016,
+    "livemode": false,
+    "type": "summary.weekly.available",
+    "data": {
+        "object": {
+            "app_id": "app_b94eHsO1avrDyL8S",
+            "object": "app_weekly_summary",
+            "app_display_name": "App Name",
+            "created": 1425830460,
+            "summary_from": 1425225600,
+            "summary_to": 1425830399,
+            "charges_amount": 2000,
+            "charges_count" : 200
+        }
+    },
+    "object": "event",
+    "pending_webhooks": 0,
+    "request": null
+}
+```
+``` go
+{
+    "id": "evt_la06CoQAiPojSgJKe5gt3nwq",
+    "created": 1427555016,
+    "livemode": false,
+    "type": "summary.weekly.available",
+    "data": {
+        "object": {
+            "app_id": "app_b94eHsO1avrDyL8S",
+            "object": "app_weekly_summary",
+            "app_display_name": "App Name",
+            "created": 1425830460,
+            "summary_from": 1425225600,
+            "summary_to": 1425830399,
+            "charges_amount": 2000,
+            "charges_count" : 200
+        }
+    },
+    "object": "event",
+    "pending_webhooks": 0,
+    "request": null
+}
+```
+``` csharp
+{
+    "id": "evt_la06CoQAiPojSgJKe5gt3nwq",
+    "created": 1427555016,
+    "livemode": false,
+    "type": "summary.weekly.available",
+    "data": {
+        "object": {
+            "app_id": "app_b94eHsO1avrDyL8S",
+            "object": "app_weekly_summary",
+            "app_display_name": "App Name",
+            "created": 1425830460,
+            "summary_from": 1425225600,
+            "summary_to": 1425830399,
+            "charges_amount": 2000,
+            "charges_count" : 200
+        }
+    },
+    "object": "event",
+    "pending_webhooks": 0,
+    "request": null
+}
+```
+
+
 ###Canshu
 
 参数 | 描述 | 类型
@@ -63,6 +249,451 @@ id | **required** 事件 id。
 ###fanhui 
 返回一个已存在的 `event` 对象或者一个错误，[详见 Errors 错误处理机制](#api-errors)。
 
+``` curl
+  GET https://api.pingxx.com/v1/events/{EVENT_ID}
+```
+``` php
+  \Pingpp\Event::retrieve('EVENT_ID');
+```
+``` java
+  Event.retrieve({EVENT_ID});
+```
+``` ruby
+  Pingpp::Event.retrieve({EVENT_ID})
+```
+``` nodejs
+  pingpp.event.retrieve({EVENT_ID});
+```
+``` python
+  pingpp.Event.retrieve('EVENT_ID')
+```
+``` go
+  pingpp.EventClient.get(EVENT_ID)
+```
+``` csharp
+  retrieve(String id)
+```
+``` curl
+  curl https://api.pingxx.com/v1/events/evt_lqVSy5gbL0A68pS8YKvJzdWZ \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC:
+```
+``` php
+  \Pingpp\Pingpp::setApiKey("sk_test_ibbTe5jLGCi5rzfH4OqPW9KC");
+  \Pingpp\Event::retrieve('evt_lqVSy5gbL0A68pS8YKvJzdWZ');
+```
+``` java
+  Pingpp.apiKey = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC";
+  Event.retrieve("evt_lqVSy5gbL0A68pS8YKvJzdWZ");
+```
+``` ruby
+  require "pingpp"
+  Pingpp.api_key = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"
+  Pingpp::Event.retrieve("evt_lqVSy5gbL0A68pS8YKvJzdWZ")
+```
+``` nodejs
+  var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  pingpp.event.retrieve(
+    "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+    function(err, event) {
+      // YOUR CODE
+    }
+  );
+```
+``` python
+  import pingpp
+  pingpp.api_key = 'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'
+  pingpp.Event.retrieve('evt_lqVSy5gbL0A68pS8YKvJzdWZ')
+```
+``` go
+  import (pingpp "github.com/pingplusplus/pingpp-go")
+  Event, err := client.get("evt_lqVSy5gbL0A68pS8YKvJzdWZ")
+```
+``` csharp
+    try {
+        Event evt = Event.retrieve("evt_lqVSy5gbL0A68pS8YKvJzdWZ");
+        Console.WriteLine(evt);
+    } catch (Exception e) {
+        Console.WriteLine(e.Message.ToString());
+    }
+```
+``` curl
+{
+    "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+    "created": 1430915345,
+    "livemode": true,
+    "object": "event",
+    "data": {
+        "object": {
+            "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+            "object": "charge",
+            "created": 1430915284,
+            "livemode": true,
+            "paid": true,
+            "refunded": false,
+            "app": "app_Xz9iXLn9ebX1SOe1",
+            "channel": "wx",
+            "order_no": "as223af2ds",
+            "client_ip": "127.0.0.1",
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "extra": [],
+            "time_paid": 1430915344,
+            "time_expire": 1431001684,
+            "time_settle": null,
+            "transaction_no": "1001680021201505060112980000",
+            "refunds": {
+                "object": "list",
+                "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                "has_more": false,
+                "data": []
+            },
+            "amount_refunded": 0,
+            "failure_code": null,
+            "failure_msg": null,
+            "metadata": [],
+            "credential": [],
+            "description": null
+        }
+    },
+    "pending_webhooks": 0,
+    "type": "charge.succeeded",
+    "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+}
+```
+``` php
+{
+    "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+    "created": 1430915345,
+    "livemode": true,
+    "object": "event",
+    "data": {
+        "object": {
+            "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+            "object": "charge",
+            "created": 1430915284,
+            "livemode": true,
+            "paid": true,
+            "refunded": false,
+            "app": "app_Xz9iXLn9ebX1SOe1",
+            "channel": "wx",
+            "order_no": "as223af2ds",
+            "client_ip": "127.0.0.1",
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "extra": [],
+            "time_paid": 1430915344,
+            "time_expire": 1431001684,
+            "time_settle": null,
+            "transaction_no": "1001680021201505060112980000",
+            "refunds": {
+                "object": "list",
+                "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                "has_more": false,
+                "data": []
+            },
+            "amount_refunded": 0,
+            "failure_code": null,
+            "failure_msg": null,
+            "metadata": [],
+            "credential": [],
+            "description": null
+        }
+    },
+    "pending_webhooks": 0,
+    "type": "charge.succeeded",
+    "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+}
+```
+``` java
+com.pingplusplus.model.Event JSON: {
+    "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+    "created": 1430915345,
+    "livemode": true,
+    "object": "event",
+    "data": {
+        "object": {
+            "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+            "object": "charge",
+            "created": 1430915284,
+            "livemode": true,
+            "paid": true,
+            "refunded": false,
+            "app": "app_Xz9iXLn9ebX1SOe1",
+            "channel": "wx",
+            "order_no": "as223af2ds",
+            "client_ip": "127.0.0.1",
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "extra": [],
+            "time_paid": 1430915344,
+            "time_expire": 1431001684,
+            "time_settle": null,
+            "transaction_no": "1001680021201505060112980000",
+            "refunds": {
+                "object": "list",
+                "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                "has_more": false,
+                "data": []
+            },
+            "amount_refunded": 0,
+            "failure_code": null,
+            "failure_msg": null,
+            "metadata": [],
+            "credential": [],
+            "description": null
+        }
+    },
+    "pending_webhooks": 0,
+    "type": "charge.succeeded",
+    "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+}
+```
+``` ruby
+#&lt;Pingpp::Event id=evt_lqVSy5gbL0A68pS8YKvJzdWZ> JSON: {
+    "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+    "created": 1430915345,
+    "livemode": true,
+    "object": "event",
+    "data": {
+        "object": {
+            "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+            "object": "charge",
+            "created": 1430915284,
+            "livemode": true,
+            "paid": true,
+            "refunded": false,
+            "app": "app_Xz9iXLn9ebX1SOe1",
+            "channel": "wx",
+            "order_no": "as223af2ds",
+            "client_ip": "127.0.0.1",
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "extra": [],
+            "time_paid": 1430915344,
+            "time_expire": 1431001684,
+            "time_settle": null,
+            "transaction_no": "1001680021201505060112980000",
+            "refunds": {
+                "object": "list",
+                "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                "has_more": false,
+                "data": []
+            },
+            "amount_refunded": 0,
+            "failure_code": null,
+            "failure_msg": null,
+            "metadata": [],
+            "credential": [],
+            "description": null
+        }
+    },
+    "pending_webhooks": 0,
+    "type": "charge.succeeded",
+    "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+}
+}
+```
+``` nodejs
+{
+    "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+    "created": 1430915345,
+    "livemode": true,
+    "object": "event",
+    "data": {
+        "object": {
+            "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+            "object": "charge",
+            "created": 1430915284,
+            "livemode": true,
+            "paid": true,
+            "refunded": false,
+            "app": "app_Xz9iXLn9ebX1SOe1",
+            "channel": "wx",
+            "order_no": "as223af2ds",
+            "client_ip": "127.0.0.1",
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "extra": [],
+            "time_paid": 1430915344,
+            "time_expire": 1431001684,
+            "time_settle": null,
+            "transaction_no": "1001680021201505060112980000",
+            "refunds": {
+                "object": "list",
+                "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                "has_more": false,
+                "data": []
+            },
+            "amount_refunded": 0,
+            "failure_code": null,
+            "failure_msg": null,
+            "metadata": [],
+            "credential": [],
+            "description": null
+        }
+    },
+    "pending_webhooks": 0,
+    "type": "charge.succeeded",
+    "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+}
+```
+``` python
+{
+    "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+    "created": 1430915345,
+    "livemode": true,
+    "object": "event",
+    "data": {
+        "object": {
+            "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+            "object": "charge",
+            "created": 1430915284,
+            "livemode": true,
+            "paid": true,
+            "refunded": false,
+            "app": "app_Xz9iXLn9ebX1SOe1",
+            "channel": "wx",
+            "order_no": "as223af2ds",
+            "client_ip": "127.0.0.1",
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "extra": [],
+            "time_paid": 1430915344,
+            "time_expire": 1431001684,
+            "time_settle": null,
+            "transaction_no": "1001680021201505060112980000",
+            "refunds": {
+                "object": "list",
+                "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                "has_more": false,
+                "data": []
+            },
+            "amount_refunded": 0,
+            "failure_code": null,
+            "failure_msg": null,
+            "metadata": [],
+            "credential": [],
+            "description": null
+        }
+    },
+    "pending_webhooks": 0,
+    "type": "charge.succeeded",
+    "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+}
+```
+``` go
+{
+    "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+    "created": 1430915345,
+    "livemode": true,
+    "object": "event",
+    "data": {
+        "object": {
+            "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+            "object": "charge",
+            "created": 1430915284,
+            "livemode": true,
+            "paid": true,
+            "refunded": false,
+            "app": "app_Xz9iXLn9ebX1SOe1",
+            "channel": "wx",
+            "order_no": "as223af2ds",
+            "client_ip": "127.0.0.1",
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "extra": [],
+            "time_paid": 1430915344,
+            "time_expire": 1431001684,
+            "time_settle": null,
+            "transaction_no": "1001680021201505060112980000",
+            "refunds": {
+                "object": "list",
+                "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                "has_more": false,
+                "data": []
+            },
+            "amount_refunded": 0,
+            "failure_code": null,
+            "failure_msg": null,
+            "metadata": [],
+            "credential": [],
+            "description": null
+        }
+    },
+    "pending_webhooks": 0,
+    "type": "charge.succeeded",
+    "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+}
+```
+``` csharp
+{
+    "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+    "created": 1430915345,
+    "livemode": true,
+    "object": "event",
+    "data": {
+        "object": {
+            "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+            "object": "charge",
+            "created": 1430915284,
+            "livemode": true,
+            "paid": true,
+            "refunded": false,
+            "app": "app_Xz9iXLn9ebX1SOe1",
+            "channel": "wx",
+            "order_no": "as223af2ds",
+            "client_ip": "127.0.0.1",
+            "amount": 100,
+            "amount_settle": 100,
+            "currency": "cny",
+            "subject": "Your Subject",
+            "body": "Your Body",
+            "extra": [],
+            "time_paid": 1430915344,
+            "time_expire": 1431001684,
+            "time_settle": null,
+            "transaction_no": "1001680021201505060112980000",
+            "refunds": {
+                "object": "list",
+                "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                "has_more": false,
+                "data": []
+            },
+            "amount_refunded": 0,
+            "failure_code": null,
+            "failure_msg": null,
+            "metadata": [],
+            "credential": [],
+            "description": null
+        }
+    },
+    "pending_webhooks": 0,
+    "type": "charge.succeeded",
+    "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+}
+```
+
 ##查询 Event 对象列表
 返回之前创建 `event` 对象的一个列表。列表是按创建时间进行排序，总是将最新的 `event` 对象显示在最前。
 
@@ -85,6 +716,530 @@ created[lte] | 小于或等于 `event` 对象的创建时间，用 Unix 时间�
 
 ###fanhui
 返回一个已存在的 `event` 对象或者一个错误，[详见 Errors 错误处理机制](#api-errors)。
+
+``` curl
+  GET https://api.pingxx.com/v1/events/
+```
+``` php
+  \Pingpp\Event::all();
+```
+``` java
+  Event.all(Map options);
+```
+``` ruby
+  Pingpp::Event.all
+```
+``` nodejs
+  pingpp.event.list();
+```
+``` python
+  pingpp.Event.all()
+```
+``` go
+  pingpp.EventClient.List()
+```
+``` csharp
+  list(Dictionary&lt;String, Object&gt; params)
+```
+``` curl
+  curl https://api.pingxx.com/v1/events/?limit=3 \
+  -u sk_test_ibbTe5jLGCi5rzfH4OqPW9KC:
+```
+``` php
+  \Pingpp\Pingpp::setApiKey('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  \Pingpp\Event::all(array('limit' =&gt; 3));
+```
+``` java
+  Pingpp.apiKey = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC";
+
+  Map&lt;String, Object&gt; eventParams = new HashMap&lt;String, Object&gt;();
+  eventParams.put("limit", 3);
+
+  Event.all(eventParams);
+```
+``` ruby
+  require "pingpp"
+  Pingpp.api_key = "sk_test_ibbTe5jLGCi5rzfH4OqPW9KC"
+  Pingpp::Event.all(:limit =&gt; 3)
+```
+``` nodejs
+  var pingpp = require('pingpp')('sk_test_ibbTe5jLGCi5rzfH4OqPW9KC');
+  pingpp.event.list({ limit: 3 }, function(err, events) {
+    // 异步调用
+  });
+```
+``` python
+  import pingpp
+  pingpp.api_key = 'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC'
+  res = pingpp.Event.all(limit=3)
+```
+``` go
+  import (pingpp "github.com/pingplusplus/pingpp-go")
+  event, err := client.list(params)
+```
+``` csharp
+    Dictionary&lt;String, Object&gt; params = new Dictionary&lt;String, Object&gt;();
+    params.Add("limit", 3);
+    try {
+        EventList evts = Event.list(params);
+        Console.WriteLine(evts);
+    } catch (Exception e) {
+        Console.WriteLine(e.Message.ToString());
+    }
+```
+``` curl
+{
+    "object": "list",
+    "url": "/v1/events",
+    "has_more": true,
+    "data": [
+        {
+            "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+            "created": 1430915345,
+            "livemode": true,
+            "object": "event",
+            "data": {
+                "object": {
+                    "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+                    "object": "charge",
+                    "created": 1430915284,
+                    "livemode": true,
+                    "paid": true,
+                    "refunded": false,
+                    "app": "app_Xz9iXLn9ebX1SOe1",
+                    "channel": "wx",
+                    "order_no": "as223af2ds",
+                    "client_ip": "127.0.0.1",
+                    "amount": 100,
+                    "amount_settle": 100,
+                    "currency": "cny",
+                    "subject": "Your Subject",
+                    "body": "Your Body",
+                    "extra": [],
+                    "time_paid": 1430915344,
+                    "time_expire": 1431001684,
+                    "time_settle": null,
+                    "transaction_no": "1001680021201505060112980000",
+                    "refunds": {
+                        "object": "list",
+                        "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                        "has_more": false,
+                        "data": []
+                    },
+                    "amount_refunded": 0,
+                    "failure_code": null,
+                    "failure_msg": null,
+                    "metadata": [],
+                    "credential": [],
+                    "description": null
+                }
+            },
+            "pending_webhooks": 0,
+            "type": "charge.succeeded",
+            "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+        },
+        {...},
+        {...}
+    ]
+}
+```
+``` php
+{
+    "object": "list",
+    "url": "/v1/events",
+    "has_more": true,
+    "data": [
+        {
+            "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+            "created": 1430915345,
+            "livemode": true,
+            "object": "event",
+            "data": {
+                "object": {
+                    "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+                    "object": "charge",
+                    "created": 1430915284,
+                    "livemode": true,
+                    "paid": true,
+                    "refunded": false,
+                    "app": "app_Xz9iXLn9ebX1SOe1",
+                    "channel": "wx",
+                    "order_no": "as223af2ds",
+                    "client_ip": "127.0.0.1",
+                    "amount": 100,
+                    "amount_settle": 100,
+                    "currency": "cny",
+                    "subject": "Your Subject",
+                    "body": "Your Body",
+                    "extra": [],
+                    "time_paid": 1430915344,
+                    "time_expire": 1431001684,
+                    "time_settle": null,
+                    "transaction_no": "1001680021201505060112980000",
+                    "refunds": {
+                        "object": "list",
+                        "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                        "has_more": false,
+                        "data": []
+                    },
+                    "amount_refunded": 0,
+                    "failure_code": null,
+                    "failure_msg": null,
+                    "metadata": [],
+                    "credential": [],
+                    "description": null
+                }
+            },
+            "pending_webhooks": 0,
+            "type": "charge.succeeded",
+            "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+        },
+        {...},
+        {...}
+    ]
+}
+```
+``` java
+#&lt;com.pingplusplus.model.EventCollection id=#&gt; JSON: {
+  "data": [
+        {
+    "object": "list",
+    "url": "/v1/events",
+    "has_more": true,
+    "data": [
+        {
+            "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+            "created": 1430915345,
+            "livemode": true,
+            "object": "event",
+            "data": {
+                "object": {
+                    "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+                    "object": "charge",
+                    "created": 1430915284,
+                    "livemode": true,
+                    "paid": true,
+                    "refunded": false,
+                    "app": "app_Xz9iXLn9ebX1SOe1",
+                    "channel": "wx",
+                    "order_no": "as223af2ds",
+                    "client_ip": "127.0.0.1",
+                    "amount": 100,
+                    "amount_settle": 100,
+                    "currency": "cny",
+                    "subject": "Your Subject",
+                    "body": "Your Body",
+                    "extra": [],
+                    "time_paid": 1430915344,
+                    "time_expire": 1431001684,
+                    "time_settle": null,
+                    "transaction_no": "1001680021201505060112980000",
+                    "refunds": {
+                        "object": "list",
+                        "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                        "has_more": false,
+                        "data": []
+                    },
+                    "amount_refunded": 0,
+                    "failure_code": null,
+                    "failure_msg": null,
+                    "metadata": [],
+                    "credential": [],
+                    "description": null
+                }
+            },
+            "pending_webhooks": 0,
+            "type": "charge.succeeded",
+            "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+        }
+
+    #&lt;com.pingplusplus.model.Event[...] ...&gt;,
+    #&lt;com.pingplusplus.model.Event[...] ...&gt;
+  ],
+  "has_more": false
+}
+```
+``` ruby
+{
+    "object": "list",
+    "url": "/v1/events",
+    "has_more": true,
+    "data": [
+        {
+            "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+            "created": 1430915345,
+            "livemode": true,
+            "object": "event",
+            "data": {
+                "object": {
+                    "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+                    "object": "charge",
+                    "created": 1430915284,
+                    "livemode": true,
+                    "paid": true,
+                    "refunded": false,
+                    "app": "app_Xz9iXLn9ebX1SOe1",
+                    "channel": "wx",
+                    "order_no": "as223af2ds",
+                    "client_ip": "127.0.0.1",
+                    "amount": 100,
+                    "amount_settle": 100,
+                    "currency": "cny",
+                    "subject": "Your Subject",
+                    "body": "Your Body",
+                    "extra": [],
+                    "time_paid": 1430915344,
+                    "time_expire": 1431001684,
+                    "time_settle": null,
+                    "transaction_no": "1001680021201505060112980000",
+                    "refunds": {
+                        "object": "list",
+                        "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                        "has_more": false,
+                        "data": []
+                    },
+                    "amount_refunded": 0,
+                    "failure_code": null,
+                    "failure_msg": null,
+                    "metadata": [],
+                    "credential": [],
+                    "description": null
+                }
+            },
+            "pending_webhooks": 0,
+            "type": "charge.succeeded",
+            "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+        }
+
+    #&lt;Pingpp::Event[...] ...&gt;,
+    #&lt;Pingpp::Event[...] ...&gt;
+  ]
+}
+```
+``` nodejs
+{
+    "object": "list",
+    "url": "/v1/events",
+    "has_more": true,
+    "data": [
+        {
+            "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+            "created": 1430915345,
+            "livemode": true,
+            "object": "event",
+            "data": {
+                "object": {
+                    "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+                    "object": "charge",
+                    "created": 1430915284,
+                    "livemode": true,
+                    "paid": true,
+                    "refunded": false,
+                    "app": "app_Xz9iXLn9ebX1SOe1",
+                    "channel": "wx",
+                    "order_no": "as223af2ds",
+                    "client_ip": "127.0.0.1",
+                    "amount": 100,
+                    "amount_settle": 100,
+                    "currency": "cny",
+                    "subject": "Your Subject",
+                    "body": "Your Body",
+                    "extra": [],
+                    "time_paid": 1430915344,
+                    "time_expire": 1431001684,
+                    "time_settle": null,
+                    "transaction_no": "1001680021201505060112980000",
+                    "refunds": {
+                        "object": "list",
+                        "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                        "has_more": false,
+                        "data": []
+                    },
+                    "amount_refunded": 0,
+                    "failure_code": null,
+                    "failure_msg": null,
+                    "metadata": [],
+                    "credential": [],
+                    "description": null
+                }
+            },
+            "pending_webhooks": 0,
+            "type": "charge.succeeded",
+            "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+        },
+        {...},
+        {...}
+    ]
+}
+```
+``` python
+{
+    "object": "list",
+    "url": "/v1/events",
+    "has_more": true,
+    "data": [
+        {
+            "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+            "created": 1430915345,
+            "livemode": true,
+            "object": "event",
+            "data": {
+                "object": {
+                    "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+                    "object": "charge",
+                    "created": 1430915284,
+                    "livemode": true,
+                    "paid": true,
+                    "refunded": false,
+                    "app": "app_Xz9iXLn9ebX1SOe1",
+                    "channel": "wx",
+                    "order_no": "as223af2ds",
+                    "client_ip": "127.0.0.1",
+                    "amount": 100,
+                    "amount_settle": 100,
+                    "currency": "cny",
+                    "subject": "Your Subject",
+                    "body": "Your Body",
+                    "extra": [],
+                    "time_paid": 1430915344,
+                    "time_expire": 1431001684,
+                    "time_settle": null,
+                    "transaction_no": "1001680021201505060112980000",
+                    "refunds": {
+                        "object": "list",
+                        "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                        "has_more": false,
+                        "data": []
+                    },
+                    "amount_refunded": 0,
+                    "failure_code": null,
+                    "failure_msg": null,
+                    "metadata": [],
+                    "credential": [],
+                    "description": null
+                }
+            },
+            "pending_webhooks": 0,
+            "type": "charge.succeeded",
+            "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+        },
+        {...},
+        {...}
+    ]
+}
+```
+``` go
+{
+    "object": "list",
+    "url": "/v1/events",
+    "has_more": true,
+    "data": [
+        {
+            "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+            "created": 1430915345,
+            "livemode": true,
+            "object": "event",
+            "data": {
+                "object": {
+                    "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+                    "object": "charge",
+                    "created": 1430915284,
+                    "livemode": true,
+                    "paid": true,
+                    "refunded": false,
+                    "app": "app_Xz9iXLn9ebX1SOe1",
+                    "channel": "wx",
+                    "order_no": "as223af2ds",
+                    "client_ip": "127.0.0.1",
+                    "amount": 100,
+                    "amount_settle": 100,
+                    "currency": "cny",
+                    "subject": "Your Subject",
+                    "body": "Your Body",
+                    "extra": [],
+                    "time_paid": 1430915344,
+                    "time_expire": 1431001684,
+                    "time_settle": null,
+                    "transaction_no": "1001680021201505060112980000",
+                    "refunds": {
+                        "object": "list",
+                        "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                        "has_more": false,
+                        "data": []
+                    },
+                    "amount_refunded": 0,
+                    "failure_code": null,
+                    "failure_msg": null,
+                    "metadata": [],
+                    "credential": [],
+                    "description": null
+                }
+            },
+            "pending_webhooks": 0,
+            "type": "charge.succeeded",
+            "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+        },
+        {...},
+        {...}
+    ]
+}
+```
+``` csharp
+{
+    "object": "list",
+    "url": "/v1/events",
+    "has_more": true,
+    "data": [
+        {
+            "id": "evt_lqVSy5gbL0A68pS8YKvJzdWZ",
+            "created": 1430915345,
+            "livemode": true,
+            "object": "event",
+            "data": {
+                "object": {
+                    "id": "ch_ebT0y9iPGCKCL0aPy9X1WLmT",
+                    "object": "charge",
+                    "created": 1430915284,
+                    "livemode": true,
+                    "paid": true,
+                    "refunded": false,
+                    "app": "app_Xz9iXLn9ebX1SOe1",
+                    "channel": "wx",
+                    "order_no": "as223af2ds",
+                    "client_ip": "127.0.0.1",
+                    "amount": 100,
+                    "amount_settle": 100,
+                    "currency": "cny",
+                    "subject": "Your Subject",
+                    "body": "Your Body",
+                    "extra": [],
+                    "time_paid": 1430915344,
+                    "time_expire": 1431001684,
+                    "time_settle": null,
+                    "transaction_no": "1001680021201505060112980000",
+                    "refunds": {
+                        "object": "list",
+                        "url": "/v1/charges/ch_ebT0y9iPGCKCL0aPy9X1WLmT/refunds",
+                        "has_more": false,
+                        "data": []
+                    },
+                    "amount_refunded": 0,
+                    "failure_code": null,
+                    "failure_msg": null,
+                    "metadata": [],
+                    "credential": [],
+                    "description": null
+                }
+            },
+            "pending_webhooks": 0,
+            "type": "charge.succeeded",
+            "request": "iar_0K8m90CCeDK8PabXD00yfTq"
+        },
+        {...},
+        {...}
+    ]
+}
+```
 
 
 

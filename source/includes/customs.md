@@ -30,6 +30,26 @@ transaction_no | 渠道报关流水号 | **string**
 alipay | 支付宝手机支付
 wx | 微信支付
 
+```
+{
+    "id": "14201607013878045463",
+    "object": "customs",
+    "app": "app_LibTW1n1SOq9Pin1",
+    "charge_id": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+    "channel": "alipay",
+    "trade_no": "15112496832609",
+    "customs_code": "GUANGZHOU",
+    "amount": 100,
+    "status": true,
+    "created": 1410834527,
+    "succeed": 1410838127,
+    "failure_code": null,
+    "failure_msg": null,
+    "transaction_no": null,
+    "extra":{}
+}
+```
+
 ##请求报关接口sss
 
 请求报关接口，目前只针对支付成功的订单charge id进行报关请求，报关金额为订单金额，目前渠道限于alipay和wx，目前不支持拆单报关(报关渠道是支持的)，customs_code(海关编号)字段说明。<b style="color: #f15467;">注意：此接口强制要求签名（Pingplusplus-Signature），需在管理平台上配置商户公钥，但无须开启。</b>
@@ -57,6 +77,45 @@ wx | 微信支付
 
 返回一个`customs`报关对象，其中status为报关结果，为true时成功，false失败；`transaction_no`为渠道报关流水号。
 
+``` curl
+  POST https://api.pingxx.com/v1/customs
+```
+``` curl
+curl https://api.pingxx.com/v1/customs \
+-H "Pingplusplus-Signature: SIGNATURE" \
+-H "Content-Type: application/json" \
+-d '{
+    "app":"app_1Gqj58ynP0mHeX1q",
+    "charge_id":"ch_L8qn10mLmr1GS8e5OODmHaL4"
+    "channel": "alipay",
+    "trade_no": "15112496832609",
+    "customs_code":"GUANGZHOU",
+    "amount":100
+}'
+```
+```
+{
+    "id": "14201607013878045463",
+    "object": "customs",
+    "app": "app_LibTW1n1SOq9Pin1",
+    "charge_id": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+    "channel": "alipay",
+    "trade_no": "15112496832609",
+    "customs_code": "GUANGZHOU",
+    "amount": 100,
+    "status": true,
+    "created": 1410834527,
+    "succeed": 1410838127,
+    "failure_code": null,
+    "failure_msg": null,
+    "transaction_no": null,
+    "extra":{}
+}
+```
+
+
+
+
 ##查询报关接口sss
 通过`customs`对象的id查询一个已创建的`customs`对象。通过查询接口确认报关的状态。
 
@@ -69,13 +128,29 @@ id | 报关对象id | required
 ###fanhui
 返回一个已存在的 `customs` 对象或者一个错误，[详见 Errors 错误处理机制](#api-errors)。
 
-
-
-
-
-
-
-
-
-
-
+``` curl
+  GET
+https://api.pingxx.com/v1/customs/{CUSTOMS_ID}
+```
+```curl 
+curl https://api.pingxx.com/v1/customs/14201607013878045463 
+```
+```
+{
+    "id": "14201607013878045463",
+    "object": "customs",
+    "app": "app_LibTW1n1SOq9Pin1",
+    "charge_id": "ch_L8qn10mLmr1GS8e5OODmHaL4",
+    "channel": "alipay",
+    "trade_no": "15112496832609",
+    "customs_code": "GUANGZHOU",
+    "amount": 100,
+    "status": true,
+    "created": 1410834527,
+    "succeed": 1410838127,
+    "failure_code": null,
+    "failure_msg": null,
+    "transaction_no": null,
+    "extra":{}
+}
+```
