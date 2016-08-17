@@ -396,8 +396,8 @@ cmb_wallet | 招行一网通
     <tr>
         <th>渠道</th>
         <th>参数</th>
-        <th>类型</th>
-        <th>描述</th>
+        <th>是否可选</th>
+        <th>说明</th>
     </tr>
     <tr>
         <td rowspan="4" valign="middle">alipay(支付宝手机支付)</td>
@@ -415,7 +415,7 @@ cmb_wallet | 招行一网通
         <th>返回参数</th>
         <th>支付完成将额外返回付款用户的支付宝账号</th>
     </tr>
-    <tr><th colspan="3">注:p_no, seq, m_uid, mobile 这几个参数决定是否签约，传同样的参数，就不会重新签约；所以，同一个用户，最好用同一套参数，否则签约次数超限，就无法正常使用，且目前没有提供解约接口。</th></tr>
+    <tr><th colspan="3">备注:p_no, seq, m_uid, mobile 这几个参数决定是否签约，传同样的参数，就不会重新签约；所以，同一个用户，最好用同一套参数，否则签约次数超限，就无法正常使用，且目前没有提供解约接口。</th></tr>
 </table>
 
 2.这个是创建Charge对象对应的表格
